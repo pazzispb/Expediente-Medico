@@ -16,7 +16,7 @@ namespace Sistema_de_Control_de_Historia_Medica
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new frmMenuPrincipal());
         }
     }
 }
