@@ -20,59 +20,37 @@ namespace Sistema_de_Control_de_Historia_Medica
 
         private void tsPerfilPersonal_Click(object sender, EventArgs e)
         {
-            if (!EstaAbierto()) //si no hay formularios abiertos
-            {
-                AbrirFormulario(new frmPerfilPersonal());
-            }
-            
+            AbrirFormulario(new frmPerfilPersonal());
         }
 
         private void tsAnaliticas_Click(object sender, EventArgs e)
         {
-            if (!EstaAbierto()) //si no hay formularios abiertos
-            {
-                AbrirFormulario(new frmAnaliticas());
-            }
+            AbrirFormulario(new frmAnaliticas());
         }
 
         private void tsCalendario_Click(object sender, EventArgs e)
         {
-            if (!EstaAbierto()) //si no hay formularios abiertos
-            {
-                AbrirFormulario(new frmCalendarioCitas());
-            }
+            AbrirFormulario(new frmCalendarioCitas());
         }
 
         private void tsDoctores_Click(object sender, EventArgs e)
         {
-            if (!EstaAbierto()) //si no hay formularios abiertos
-            {
-                AbrirFormulario(new frmDoctores());
-            }
+            AbrirFormulario(new frmDoctores());
         }
 
         private void tsIntervenciones_Click(object sender, EventArgs e)
         {
-            if (!EstaAbierto()) //si no hay formularios abiertos
-            {
-                AbrirFormulario(new frmDoctores());
-            }
+            AbrirFormulario(new frmDoctores());
         }
 
         private void tsPadecimientos_Click(object sender, EventArgs e)
         {
-            if (!EstaAbierto()) //si no hay formularios abiertos
-            {
-                AbrirFormulario(new frmPadecimientos());
-            }
+            AbrirFormulario(new frmPadecimientos());
         }
 
         private void tsResumen_Click(object sender, EventArgs e)
         {
-            if (!EstaAbierto()) //si no hay formularios abiertos
-            {
-                AbrirFormulario(new frmResumen());
-            }
+            AbrirFormulario(new frmResumen());
         }
         static public bool EstaAbierto()
         {
@@ -81,9 +59,12 @@ namespace Sistema_de_Control_de_Historia_Medica
         }
         private void AbrirFormulario(Form frm)
         {
-            frm.MdiParent = this; //Asignamos a ese objeto el formulario padre, que será este
-            frm.StartPosition = FormStartPosition.CenterScreen;//Centrar el formulario en la pantalla
-            frm.Show(); //Mostrar el formulario
+            if (!EstaAbierto()) //si no hay formularios abiertos
+            {
+                frm.MdiParent = this; //Asignamos a ese objeto el formulario padre, que será este
+                frm.StartPosition = FormStartPosition.CenterScreen;//Centrar el formulario en la pantalla
+                frm.Show(); //Mostrar el formulario
+            }
         }
         
     }
