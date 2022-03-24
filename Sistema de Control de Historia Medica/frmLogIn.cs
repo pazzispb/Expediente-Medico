@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace Sistema_de_Control_de_Historia_Medica
 {
-    public partial class frmMenuPrincipal : Form
+    public partial class frmLogIn : Form
     {
-        public frmMenuPrincipal()
+        public frmLogIn()
         {
             InitializeComponent();
         }
-
-        
     }
 }

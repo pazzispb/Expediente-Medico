@@ -46,16 +46,97 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAnaliticas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnaliticas.Designer.cs">
+      <DependentUpon>frmAnaliticas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCalendarioVisitas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCalendarioVisitas.Designer.cs">
+      <DependentUpon>frmCalendarioVisitas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDoctores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDoctores.Designer.cs">
+      <DependentUpon>frmDoctores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmIntervenciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIntervenciones.Designer.cs">
+      <DependentUpon>frmIntervenciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogIn.Designer.cs">
+      <DependentUpon>frmLogIn.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMenuPrincipal.Designer.cs">
       <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPadecimientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPadecimientos.Designer.cs">
+      <DependentUpon>frmPadecimientos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPerfilPersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPerfilPersonal.Designer.cs">
+      <DependentUpon>frmPerfilPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRecuperarContrasena.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRecuperarContrasena.Designer.cs">
+      <DependentUpon>frmRecuperarContrasena.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmResumen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmResumen.Designer.cs">
+      <DependentUpon>frmResumen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAnaliticas.resx">
+      <DependentUpon>frmAnaliticas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCalendarioVisitas.resx">
+      <DependentUpon>frmCalendarioVisitas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDoctores.resx">
+      <DependentUpon>frmDoctores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIntervenciones.resx">
+      <DependentUpon>frmIntervenciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogIn.resx">
+      <DependentUpon>frmLogIn.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMenuPrincipal.resx">
       <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPadecimientos.resx">
+      <DependentUpon>frmPadecimientos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPerfilPersonal.resx">
+      <DependentUpon>frmPerfilPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRecuperarContrasena.resx">
+      <DependentUpon>frmRecuperarContrasena.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmResumen.resx">
+      <DependentUpon>frmResumen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
