@@ -52,7 +52,7 @@
             this.tsResumen});
             this.ms_BarraMenu.Location = new System.Drawing.Point(0, 0);
             this.ms_BarraMenu.Name = "ms_BarraMenu";
-            this.ms_BarraMenu.Size = new System.Drawing.Size(974, 28);
+            this.ms_BarraMenu.Size = new System.Drawing.Size(932, 28);
             this.ms_BarraMenu.TabIndex = 1;
             this.ms_BarraMenu.Text = "menuStrip1";
             // 
@@ -109,7 +109,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(974, 699);
+            this.ClientSize = new System.Drawing.Size(932, 696);
             this.Controls.Add(this.ms_BarraMenu);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.ms_BarraMenu;
