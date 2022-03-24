@@ -52,11 +52,11 @@
     <Compile Include="frmAnaliticas.Designer.cs">
       <DependentUpon>frmAnaliticas.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCalendarioVisitas.cs">
+    <Compile Include="frmCalendarioCitas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCalendarioVisitas.Designer.cs">
-      <DependentUpon>frmCalendarioVisitas.cs</DependentUpon>
+    <Compile Include="frmCalendarioCitas.Designer.cs">
+      <DependentUpon>frmCalendarioCitas.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDoctores.cs">
       <SubType>Form</SubType>
@@ -111,8 +111,8 @@
     <EmbeddedResource Include="frmAnaliticas.resx">
       <DependentUpon>frmAnaliticas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCalendarioVisitas.resx">
-      <DependentUpon>frmCalendarioVisitas.cs</DependentUpon>
+    <EmbeddedResource Include="frmCalendarioCitas.resx">
+      <DependentUpon>frmCalendarioCitas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDoctores.resx">
       <DependentUpon>frmDoctores.cs</DependentUpon>
