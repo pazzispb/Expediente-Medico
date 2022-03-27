@@ -52,7 +52,7 @@
             this.tsResumen});
             this.ms_BarraMenu.Location = new System.Drawing.Point(0, 0);
             this.ms_BarraMenu.Name = "ms_BarraMenu";
-            this.ms_BarraMenu.Size = new System.Drawing.Size(915, 28);
+            this.ms_BarraMenu.Size = new System.Drawing.Size(1202, 28);
             this.ms_BarraMenu.TabIndex = 1;
             this.ms_BarraMenu.Text = "menuStrip1";
             // 
@@ -109,11 +109,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(915, 696);
+            this.ClientSize = new System.Drawing.Size(1202, 890);
             this.Controls.Add(this.ms_BarraMenu);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.ms_BarraMenu;
             this.Name = "frmMenuPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menú principal";
             this.ms_BarraMenu.ResumeLayout(false);
             this.ms_BarraMenu.PerformLayout();
