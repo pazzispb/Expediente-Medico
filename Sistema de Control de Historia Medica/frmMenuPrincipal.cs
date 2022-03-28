@@ -57,7 +57,7 @@ namespace Sistema_de_Control_de_Historia_Medica
             if(Application.OpenForms.Count > 1) return true;
             else return false;
         }
-        private void AbrirFormulario(Form frm)
+        public void AbrirFormulario(Form frm)
         {
             if (!EstaAbierto()) //si no hay formularios abiertos
             {

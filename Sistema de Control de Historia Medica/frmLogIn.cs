@@ -16,5 +16,21 @@ namespace Sistema_de_Control_de_Historia_Medica
         {
             InitializeComponent();
         }
+
+        private void lblCrearCuenta_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            AbrirFormulario(new frmCrearCuenta());
+        }
+        public void AbrirFormulario(Form frm)
+        {
+            if (Application.OpenForms.Count < 2)
+                frm.Show();
+            else MessageBox.Show("Cierre la funcionalidad abierta", "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        private void btnAcceder_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

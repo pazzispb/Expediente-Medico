@@ -58,6 +58,12 @@
     <Compile Include="frmCalendarioCitas.Designer.cs">
       <DependentUpon>frmCalendarioCitas.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCrearCuenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCrearCuenta.Designer.cs">
+      <DependentUpon>frmCrearCuenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDoctores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCalendarioCitas.resx">
       <DependentUpon>frmCalendarioCitas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCrearCuenta.resx">
+      <DependentUpon>frmCrearCuenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDoctores.resx">
       <DependentUpon>frmDoctores.cs</DependentUpon>

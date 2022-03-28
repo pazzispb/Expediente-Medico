@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Sistema_de_Control_de_Historia_Medica
 {
-    public partial class frmAnaliticas : Form
+    public partial class frmCrearCuenta : Form
     {
-        public frmAnaliticas()
+        public frmCrearCuenta()
         {
             InitializeComponent();
-        }
-
-        private void frmAnaliticas_Load(object sender, EventArgs e)
-        {
-            pdfVisorAnalitica.src = "C:/Users/pazzi/Downloads/La etica cientifica.pdf";
         }
     }
 }
