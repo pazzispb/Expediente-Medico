@@ -35,9 +35,10 @@
             // lblCrearCuenta
             // 
             this.lblCrearCuenta.AutoSize = true;
-            this.lblCrearCuenta.Location = new System.Drawing.Point(217, 362);
+            this.lblCrearCuenta.Location = new System.Drawing.Point(300, 437);
+            this.lblCrearCuenta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCrearCuenta.Name = "lblCrearCuenta";
-            this.lblCrearCuenta.Size = new System.Drawing.Size(68, 13);
+            this.lblCrearCuenta.Size = new System.Drawing.Size(83, 16);
             this.lblCrearCuenta.TabIndex = 0;
             this.lblCrearCuenta.TabStop = true;
             this.lblCrearCuenta.Text = "Crear cuenta";
@@ -45,9 +46,10 @@
             // 
             // btnAcceder
             // 
-            this.btnAcceder.Location = new System.Drawing.Point(220, 320);
+            this.btnAcceder.Location = new System.Drawing.Point(293, 394);
+            this.btnAcceder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAcceder.Name = "btnAcceder";
-            this.btnAcceder.Size = new System.Drawing.Size(75, 23);
+            this.btnAcceder.Size = new System.Drawing.Size(100, 28);
             this.btnAcceder.TabIndex = 1;
             this.btnAcceder.Text = "Acceder";
             this.btnAcceder.UseVisualStyleBackColor = true;
@@ -55,12 +57,12 @@
             // 
             // frmLogIn
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(541, 404);
+            this.ClientSize = new System.Drawing.Size(721, 511);
             this.Controls.Add(this.btnAcceder);
             this.Controls.Add(this.lblCrearCuenta);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmLogIn";
             this.Text = "LogIn";
             this.ResumeLayout(false);

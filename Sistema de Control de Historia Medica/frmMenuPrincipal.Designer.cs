@@ -33,7 +33,6 @@
             this.tsAnaliticas = new System.Windows.Forms.ToolStripMenuItem();
             this.tsCalendario = new System.Windows.Forms.ToolStripMenuItem();
             this.tsDoctores = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsIntervenciones = new System.Windows.Forms.ToolStripMenuItem();
             this.tsPadecimientos = new System.Windows.Forms.ToolStripMenuItem();
             this.tsResumen = new System.Windows.Forms.ToolStripMenuItem();
             this.tsLogOut = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,24 +49,23 @@
             this.tsAnaliticas,
             this.tsCalendario,
             this.tsDoctores,
-            this.tsIntervenciones,
             this.tsPadecimientos,
             this.tsResumen,
             this.tsLogOut});
             this.ms_BarraMenu.Location = new System.Drawing.Point(0, 0);
             this.ms_BarraMenu.Name = "ms_BarraMenu";
             this.ms_BarraMenu.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.ms_BarraMenu.Size = new System.Drawing.Size(1203, 32);
+            this.ms_BarraMenu.Size = new System.Drawing.Size(1300, 32);
             this.ms_BarraMenu.TabIndex = 1;
             this.ms_BarraMenu.Text = "menuStrip1";
             // 
             // tsPerfilPersonal
             // 
-            this.tsPerfilPersonal.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsPerfilPersonal.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsPerfilPersonal.ForeColor = System.Drawing.Color.White;
             this.tsPerfilPersonal.Name = "tsPerfilPersonal";
-            this.tsPerfilPersonal.Size = new System.Drawing.Size(153, 28);
-            this.tsPerfilPersonal.Text = "Perfil personal";
+            this.tsPerfilPersonal.Size = new System.Drawing.Size(112, 28);
+            this.tsPerfilPersonal.Text = "Mi cuenta";
             this.tsPerfilPersonal.Click += new System.EventHandler(this.tsPerfilPersonal_Click);
             // 
             // tsAnaliticas
@@ -96,15 +94,6 @@
             this.tsDoctores.Size = new System.Drawing.Size(104, 28);
             this.tsDoctores.Text = "Doctores";
             this.tsDoctores.Click += new System.EventHandler(this.tsDoctores_Click);
-            // 
-            // tsIntervenciones
-            // 
-            this.tsIntervenciones.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsIntervenciones.ForeColor = System.Drawing.Color.White;
-            this.tsIntervenciones.Name = "tsIntervenciones";
-            this.tsIntervenciones.Size = new System.Drawing.Size(158, 28);
-            this.tsIntervenciones.Text = "Intervenciones";
-            this.tsIntervenciones.Click += new System.EventHandler(this.tsIntervenciones_Click);
             // 
             // tsPadecimientos
             // 
@@ -137,7 +126,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1203, 846);
+            this.ClientSize = new System.Drawing.Size(1300, 846);
             this.Controls.Add(this.ms_BarraMenu);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.ms_BarraMenu;
@@ -160,7 +149,6 @@
         private System.Windows.Forms.ToolStripMenuItem tsAnaliticas;
         private System.Windows.Forms.ToolStripMenuItem tsCalendario;
         private System.Windows.Forms.ToolStripMenuItem tsDoctores;
-        private System.Windows.Forms.ToolStripMenuItem tsIntervenciones;
         private System.Windows.Forms.ToolStripMenuItem tsPadecimientos;
         private System.Windows.Forms.ToolStripMenuItem tsResumen;
         private System.Windows.Forms.ToolStripMenuItem tsLogOut;
