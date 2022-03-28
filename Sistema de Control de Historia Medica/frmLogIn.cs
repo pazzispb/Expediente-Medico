@@ -30,7 +30,8 @@ namespace Sistema_de_Control_de_Historia_Medica
 
         private void btnAcceder_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
+            AbrirFormulario(new frmMenuPrincipal());
         }
     }
 }
