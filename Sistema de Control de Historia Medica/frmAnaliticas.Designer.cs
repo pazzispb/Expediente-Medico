@@ -37,7 +37,7 @@
             this.cObservaciones = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbDetalleAnalitica = new System.Windows.Forms.GroupBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.axAcroPDF1 = new AxAcroPDFLib.AxAcroPDF();
+            this.pdfVisualizador = new AxAcroPDFLib.AxAcroPDF();
             this.label6 = new System.Windows.Forms.Label();
             this.txtTipoAnalitica = new System.Windows.Forms.TextBox();
             this.txtObservaciones = new System.Windows.Forms.TextBox();
@@ -54,7 +54,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvAnaliticas)).BeginInit();
             this.gbDetalleAnalitica.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pdfVisualizador)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -138,7 +138,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(236)))), ((int)(((byte)(177)))));
-            this.panel2.Controls.Add(this.axAcroPDF1);
+            this.panel2.Controls.Add(this.pdfVisualizador);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.txtTipoAnalitica);
             this.panel2.Controls.Add(this.txtObservaciones);
@@ -157,16 +157,16 @@
             this.panel2.Size = new System.Drawing.Size(845, 492);
             this.panel2.TabIndex = 30;
             // 
-            // axAcroPDF1
+            // pdfVisualizador
             // 
-            this.axAcroPDF1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.axAcroPDF1.Enabled = true;
-            this.axAcroPDF1.Location = new System.Drawing.Point(0, 252);
-            this.axAcroPDF1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.axAcroPDF1.Name = "axAcroPDF1";
-            this.axAcroPDF1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axAcroPDF1.OcxState")));
-            this.axAcroPDF1.Size = new System.Drawing.Size(845, 240);
-            this.axAcroPDF1.TabIndex = 14;
+            this.pdfVisualizador.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pdfVisualizador.Enabled = true;
+            this.pdfVisualizador.Location = new System.Drawing.Point(0, 191);
+            this.pdfVisualizador.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pdfVisualizador.Name = "pdfVisualizador";
+            this.pdfVisualizador.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("pdfVisualizador.OcxState")));
+            this.pdfVisualizador.Size = new System.Drawing.Size(845, 301);
+            this.pdfVisualizador.TabIndex = 14;
             // 
             // label6
             // 
@@ -337,7 +337,7 @@
             this.gbDetalleAnalitica.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pdfVisualizador)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -367,6 +367,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cTipoAnalitica;
         private System.Windows.Forms.DataGridViewTextBoxColumn cPropositoAnalitica;
         private System.Windows.Forms.DataGridViewTextBoxColumn cObservaciones;
-        private AxAcroPDFLib.AxAcroPDF axAcroPDF1;
+        private AxAcroPDFLib.AxAcroPDF pdfVisualizador;
     }
 }
