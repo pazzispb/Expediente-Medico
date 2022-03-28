@@ -16,5 +16,10 @@ namespace Sistema_de_Control_de_Historia_Medica
         {
             InitializeComponent();
         }
+
+        private void frmAnaliticas_Load(object sender, EventArgs e)
+        {
+            pdfVisorAnalitica.src = "C:/Users/pazzi/Downloads/La etica cientifica.pdf";
+        }
     }
 }
