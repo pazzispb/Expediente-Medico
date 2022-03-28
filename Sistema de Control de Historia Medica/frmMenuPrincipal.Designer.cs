@@ -36,6 +36,7 @@
             this.tsIntervenciones = new System.Windows.Forms.ToolStripMenuItem();
             this.tsPadecimientos = new System.Windows.Forms.ToolStripMenuItem();
             this.tsResumen = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsLogOut = new System.Windows.Forms.ToolStripMenuItem();
             this.ms_BarraMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,7 +52,8 @@
             this.tsDoctores,
             this.tsIntervenciones,
             this.tsPadecimientos,
-            this.tsResumen});
+            this.tsResumen,
+            this.tsLogOut});
             this.ms_BarraMenu.Location = new System.Drawing.Point(0, 0);
             this.ms_BarraMenu.Name = "ms_BarraMenu";
             this.ms_BarraMenu.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
@@ -122,6 +124,15 @@
             this.tsResumen.Text = "Resumen";
             this.tsResumen.Click += new System.EventHandler(this.tsResumen_Click);
             // 
+            // tsLogOut
+            // 
+            this.tsLogOut.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.tsLogOut.ForeColor = System.Drawing.Color.White;
+            this.tsLogOut.Name = "tsLogOut";
+            this.tsLogOut.Size = new System.Drawing.Size(90, 28);
+            this.tsLogOut.Text = "LogOut";
+            this.tsLogOut.Click += new System.EventHandler(this.tsLogOut_Click);
+            // 
             // frmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -152,6 +163,7 @@
         private System.Windows.Forms.ToolStripMenuItem tsIntervenciones;
         private System.Windows.Forms.ToolStripMenuItem tsPadecimientos;
         private System.Windows.Forms.ToolStripMenuItem tsResumen;
+        private System.Windows.Forms.ToolStripMenuItem tsLogOut;
     }
 }
 

@@ -12,6 +12,7 @@ namespace Sistema_de_Control_de_Historia_Medica
 {
     public partial class frmMenuPrincipal : Form
     {
+        bool vCancelarCierre = true;
         static public int vIdUsuario = 0;
         public frmMenuPrincipal()
         {
@@ -70,7 +71,19 @@ namespace Sistema_de_Control_de_Historia_Medica
 
         private void frmMenuPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
-            e.Cancel = true;
+            e.Cancel = vCancelarCierre; //Evita el cierre del formulario
+        }
+
+        private void tsLogOut_Click(object sender, EventArgs e)
+        {
+            foreach (Form frm in Application.OpenForms) //Recorre los formularios abiertos
+                if (typeof(frmLogIn) == frm.GetType()) //Buscar el formulario de LogIn
+                {
+                    frm.Show(); //Muestra el formulario
+                    vCancelarCierre = false; //Permite el cierre del formulario de Menu
+                    this.Close(); //Cierra el formulario
+                    break;
+                }
         }
     }
 }
