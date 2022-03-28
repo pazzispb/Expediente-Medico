@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAnaliticas));
             this.dgvAnaliticas = new System.Windows.Forms.DataGridView();
             this.cID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,10 +50,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnRegistrarAnalitica = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.axAcroPDF1 = new AxAcroPDFLib.AxAcroPDF();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAnaliticas)).BeginInit();
             this.gbDetalleAnalitica.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvAnaliticas
@@ -135,6 +138,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(236)))), ((int)(((byte)(177)))));
+            this.panel2.Controls.Add(this.axAcroPDF1);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.txtTipoAnalitica);
             this.panel2.Controls.Add(this.txtObservaciones);
@@ -157,7 +161,7 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Montserrat SemiBold", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(286, 148);
+            this.label6.Location = new System.Drawing.Point(289, 23);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(121, 18);
@@ -169,7 +173,7 @@
             this.txtTipoAnalitica.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtTipoAnalitica.Enabled = false;
             this.txtTipoAnalitica.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTipoAnalitica.Location = new System.Drawing.Point(419, 143);
+            this.txtTipoAnalitica.Location = new System.Drawing.Point(422, 18);
             this.txtTipoAnalitica.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtTipoAnalitica.Multiline = true;
             this.txtTipoAnalitica.Name = "txtTipoAnalitica";
@@ -181,7 +185,7 @@
             this.txtObservaciones.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtObservaciones.Enabled = false;
             this.txtObservaciones.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtObservaciones.Location = new System.Drawing.Point(136, 213);
+            this.txtObservaciones.Location = new System.Drawing.Point(139, 88);
             this.txtObservaciones.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtObservaciones.Multiline = true;
             this.txtObservaciones.Name = "txtObservaciones";
@@ -193,7 +197,7 @@
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Montserrat SemiBold", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(17, 230);
+            this.label8.Location = new System.Drawing.Point(20, 105);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(108, 18);
@@ -205,7 +209,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Montserrat SemiBold", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(17, 148);
+            this.label2.Location = new System.Drawing.Point(20, 23);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(23, 18);
@@ -217,7 +221,7 @@
             this.txtPropositoAnalitica.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPropositoAnalitica.Enabled = false;
             this.txtPropositoAnalitica.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPropositoAnalitica.Location = new System.Drawing.Point(185, 178);
+            this.txtPropositoAnalitica.Location = new System.Drawing.Point(188, 53);
             this.txtPropositoAnalitica.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPropositoAnalitica.Multiline = true;
             this.txtPropositoAnalitica.Name = "txtPropositoAnalitica";
@@ -229,7 +233,7 @@
             this.lblID.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblID.AutoSize = true;
             this.lblID.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.Location = new System.Drawing.Point(44, 148);
+            this.lblID.Location = new System.Drawing.Point(47, 23);
             this.lblID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(26, 18);
@@ -241,7 +245,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Montserrat SemiBold", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(80, 148);
+            this.label4.Location = new System.Drawing.Point(83, 23);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 18);
@@ -253,7 +257,7 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Montserrat SemiBold", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(13, 181);
+            this.label7.Location = new System.Drawing.Point(16, 57);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(174, 18);
@@ -266,7 +270,7 @@
             this.dtpFecha.Enabled = false;
             this.dtpFecha.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFecha.Location = new System.Drawing.Point(140, 144);
+            this.dtpFecha.Location = new System.Drawing.Point(143, 19);
             this.dtpFecha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(138, 23);
@@ -310,6 +314,16 @@
             this.panel1.Size = new System.Drawing.Size(638, 182);
             this.panel1.TabIndex = 4;
             // 
+            // axAcroPDF1
+            // 
+            this.axAcroPDF1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.axAcroPDF1.Enabled = true;
+            this.axAcroPDF1.Location = new System.Drawing.Point(0, 160);
+            this.axAcroPDF1.Name = "axAcroPDF1";
+            this.axAcroPDF1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axAcroPDF1.OcxState")));
+            this.axAcroPDF1.Size = new System.Drawing.Size(634, 239);
+            this.axAcroPDF1.TabIndex = 14;
+            // 
             // frmAnaliticas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -329,6 +343,7 @@
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -356,5 +371,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cTipoAnalitica;
         private System.Windows.Forms.DataGridViewTextBoxColumn cPropositoAnalitica;
         private System.Windows.Forms.DataGridViewTextBoxColumn cObservaciones;
+        private AxAcroPDFLib.AxAcroPDF axAcroPDF1;
     }
 }
