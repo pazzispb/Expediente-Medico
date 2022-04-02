@@ -312,6 +312,7 @@
             this.btnRegistrarAnalitica.TabIndex = 3;
             this.btnRegistrarAnalitica.Text = "Registrar nueva analítica";
             this.btnRegistrarAnalitica.UseVisualStyleBackColor = false;
+            this.btnRegistrarAnalitica.Click += new System.EventHandler(this.btnRegistrarAnalitica_Click);
             // 
             // panel1
             // 
