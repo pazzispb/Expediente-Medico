@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SQLite;
+using System.Data;
 using System.Windows.Forms;
 
 namespace Sistema_de_Control_de_Historia_Medica
@@ -11,7 +12,7 @@ namespace Sistema_de_Control_de_Historia_Medica
     internal class clsBaseDatos
     {
         //string vCadenaConexion = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\"\\..\\..\\BaseDatos.accdb\"";
-        string vCadenaConexion = "";
+        string vCadenaConexion = "Data Source=database.db; Version=3;New=True;Compress=True;";
         SQLiteConnection conexion;
         public clsBaseDatos()
         {
@@ -24,7 +25,7 @@ namespace Sistema_de_Control_de_Historia_Medica
                 MessageBox.Show(ex.Message);
             }
         }
-        public void AbrirConexion()
+        void AbrirConexion()
         {
             try
             {
@@ -32,8 +33,79 @@ namespace Sistema_de_Control_de_Historia_Medica
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+        void CerrarConexion()
+        {
+            try
+            {
+                conexion.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+        public bool EjecutarComando(string vConsulta)
+        {
+            try
+            {
+                AbrirConexion();
+                SQLiteCommand sQLiteCommand = new SQLiteCommand(vConsulta, conexion);
+                if (sQLiteCommand.ExecuteNonQuery() > 0)
+                {
+                    CerrarConexion();
+                    return true;
+                }
+                else
+                {
+                    CerrarConexion();
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            return false;
+        }
+        public DataSet ConsultarInfomacion(string vConsulta)
+        {
+            try
+            {
+                AbrirConexion();
+                DataSet ds = new DataSet();
+                SQLiteCommand sQLiteCommand = new SQLiteCommand(vConsulta, conexion);
+                SQLiteDataAdapter sQLiteDataAdapter = new SQLiteDataAdapter(sQLiteCommand);
+                sQLiteDataAdapter.Fill(ds);
+                CerrarConexion();
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            return null;
+            
+        }
+        public object ConsultarValor(string vConsulta)
+        {
+            try
+            {
+                AbrirConexion();
+                DataSet ds = new DataSet();
+                SQLiteCommand sQLiteCommand = new SQLiteCommand(vConsulta, conexion);
+                object var = sQLiteCommand.ExecuteScalar();
+                CerrarConexion();
+                return var;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            return null;
+        }
+
     }
 }
