@@ -121,7 +121,7 @@ namespace Sistema_de_Control_de_Historia_Medica
 
         private void btnEliminarDoctor_Click(object sender, EventArgs e)
         {
-            //dataGridView1.Rows.Remove(dataGridView1.SelectedCells);
+            dataGridView1.Rows.Remove(dataGridView1.CurrentRow);
         }
     }
 
