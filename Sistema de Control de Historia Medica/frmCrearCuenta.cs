@@ -20,18 +20,20 @@ namespace Sistema_de_Control_de_Historia_Medica
 
         private void btnCrearCuenta_Click(object sender, EventArgs e)
         {
-            string vConsulta;
-            vConsulta = $"INSERT INTO Usuarios (usuario, clave, nombre, " +
+            if (ValidarClaves())
+            {
+                string vConsulta = $"INSERT INTO Usuarios (usuario, clave, nombre, " +
                 $"apellido, cedula, fechaNacimiento, altura, peso, tipoSangre, seguroMedico, telefono) " +
                 $"VALUES ('{txtUsuario.Text}', '{txtClave.Text}', '{txtNombre.Text}', '{txtApellido.Text}', '{txtCedula.Text}', " +
                 $"'{dtpFecha.Text}', {txtAltura.Text}, {txtPeso.Text}, '{cmbTipoSangre.Text}', '{txtSeguroMedico.Text}', '{txtTelefono.Text}')";
-            if (ValidarCamposRellenos())//Si todos los campos tienen un contenido
-                if (bd.EjecutarComando(vConsulta))
-                {
-                    MessageBox.Show("Usuario registrado con éxito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LimpiarCampos();
-                }
-                else MessageBox.Show("Hubo un error al registrar el usuario", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                if (ValidarCamposRellenos())//Si todos los campos tienen un contenido
+                    if (bd.EjecutarComando(vConsulta))
+                    {
+                        MessageBox.Show("Usuario registrado con éxito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LimpiarCampos();
+                    }
+                    else MessageBox.Show("Hubo un error al registrar el usuario", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
         }
         bool ValidarClaves()
         {
@@ -41,7 +43,7 @@ namespace Sistema_de_Control_de_Historia_Medica
             }
             else
             {
-                MessageBox.Show("las contraseñas introducidas no son iguales", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("Las contraseñas introducidas no son iguales", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 return false;
             }
         }

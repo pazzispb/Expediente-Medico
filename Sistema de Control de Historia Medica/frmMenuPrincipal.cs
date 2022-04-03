@@ -13,7 +13,7 @@ namespace Sistema_de_Control_de_Historia_Medica
     public partial class frmMenuPrincipal : Form
     {
         bool vCancelarCierre = true;
-        static public int vIdUsuario = 0;
+        static public string vIdUsuario;
         public frmMenuPrincipal()
         {
             InitializeComponent();

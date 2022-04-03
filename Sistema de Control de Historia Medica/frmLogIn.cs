@@ -16,7 +16,6 @@ namespace Sistema_de_Control_de_Historia_Medica
         {
             InitializeComponent();
         }
-
         private void lblCrearCuenta_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             AbrirFormulario(new frmCrearCuenta()); //Muestra el formulario de Crear Cuenta
@@ -24,14 +23,16 @@ namespace Sistema_de_Control_de_Historia_Medica
         public void AbrirFormulario(Form frm) //Recibe el formulario que deseo abrir
         {
             if (Application.OpenForms.Count < 2) //Verificamos que solamente este abierto el formulario de LogIn
-                frm.Show();
+            {
+                frm.Show(); 
+            }
             else MessageBox.Show("Cierre la funcionalidad abierta", "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
-
         private void btnAcceder_Click(object sender, EventArgs e)
         {
             if (Application.OpenForms.Count < 2) this.Hide(); //Verifica que solo tiene el LogIn abierto
             AbrirFormulario(new frmMenuPrincipal()); //Abre el formulario de Menu Principal
+            frmMenuPrincipal.vIdUsuario = "2";//Indicamos el ID del usuario que ingreso al sistema
         }
     }
 }

@@ -11,7 +11,6 @@ namespace Sistema_de_Control_de_Historia_Medica
 {
     internal class clsBaseDatos
     {
-        //string vCadenaConexion = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\"\\..\\..\\BaseDatos.accdb\"";
         string vCadenaConexion = "Data Source=database.db; Version=3;New=True;Compress=True;";
         SQLiteConnection conexion;
         public clsBaseDatos()
@@ -47,6 +46,32 @@ namespace Sistema_de_Control_de_Historia_Medica
                 MessageBox.Show(ex.Message, "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+        //public (bool, int) EjecutarComandoConRetorno(string vConsulta)
+        //{//INSERT INTO TABLA(CAMPOS) VALUES ()
+        //    try
+        //    {
+        //        AbrirConexion();
+        //        SQLiteCommand sQLiteCommand = new SQLiteCommand(vConsulta, conexion);
+        //        if (sQLiteCommand.ExecuteNonQuery() > 0)
+        //        {
+        //            CerrarConexion();
+        //            var vResultado = vConsulta.Split(' ')[2].Substring(0,vConsulta.Split(' ')[2].IndexOf("("));
+        //            var valor = ConsultarValor($"SELECT * FROM {vResultado} WHERE  = (SELECT MAX(ID)  FROM TABLE);
+        //            ");
+        //            return (true, 1);
+        //        }
+        //        else
+        //        {
+        //            CerrarConexion();
+        //            return false;
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show(ex.Message, "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        //    }
+        //    return false;
+        //}
         public bool EjecutarComando(string vConsulta)
         {
             try
