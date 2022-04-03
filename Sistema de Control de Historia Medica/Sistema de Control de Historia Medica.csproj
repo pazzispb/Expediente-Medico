@@ -122,6 +122,12 @@
     <Compile Include="frmRecuperarContrasena.Designer.cs">
       <DependentUpon>frmRecuperarContrasena.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmRegistrarAnalitica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistrarAnalitica.Designer.cs">
+      <DependentUpon>frmRegistrarAnalitica.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmResumen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmRecuperarContrasena.resx">
       <DependentUpon>frmRecuperarContrasena.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistrarAnalitica.resx">
+      <DependentUpon>frmRegistrarAnalitica.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmResumen.resx">
       <DependentUpon>frmResumen.cs</DependentUpon>
