@@ -16,5 +16,20 @@ namespace Sistema_de_Control_de_Historia_Medica
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEnviar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbLogIn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
