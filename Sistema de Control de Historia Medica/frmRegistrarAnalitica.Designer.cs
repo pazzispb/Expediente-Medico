@@ -57,7 +57,7 @@
             this.pnContenedor.Controls.Add(this.label7);
             this.pnContenedor.Controls.Add(this.dtpFecha);
             this.pnContenedor.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.pnContenedor.Location = new System.Drawing.Point(12, 49);
+            this.pnContenedor.Location = new System.Drawing.Point(12, 51);
             this.pnContenedor.Name = "pnContenedor";
             this.pnContenedor.Size = new System.Drawing.Size(624, 218);
             this.pnContenedor.TabIndex = 31;

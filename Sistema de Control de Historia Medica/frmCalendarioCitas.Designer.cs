@@ -83,7 +83,6 @@
             // 
             // MonthCalendar
             // 
-            this.MonthCalendar.Enabled = false;
             this.MonthCalendar.Location = new System.Drawing.Point(517, 9);
             this.MonthCalendar.MaxDate = new System.DateTime(2022, 12, 31, 0, 0, 0, 0);
             this.MonthCalendar.Name = "MonthCalendar";
