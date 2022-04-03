@@ -32,7 +32,6 @@
             this.dgvAnaliticas = new System.Windows.Forms.DataGridView();
             this.gbDetalleAnalitica = new System.Windows.Forms.GroupBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pdfVisualizador = new AxAcroPDFLib.AxAcroPDF();
             this.txtObservaciones = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -44,15 +43,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnRegistrarAnalitica = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cPropositoAnalitica = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cObservaciones = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnCargar = new System.Windows.Forms.Button();
+            this.pdfVisualizador = new AxAcroPDFLib.AxAcroPDF();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAnaliticas)).BeginInit();
             this.gbDetalleAnalitica.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pdfVisualizador)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pdfVisualizador)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvAnaliticas
@@ -60,11 +57,6 @@
             this.dgvAnaliticas.AllowUserToAddRows = false;
             this.dgvAnaliticas.AllowUserToDeleteRows = false;
             this.dgvAnaliticas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAnaliticas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.cID,
-            this.cFecha,
-            this.cPropositoAnalitica,
-            this.cObservaciones});
             this.dgvAnaliticas.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvAnaliticas.Location = new System.Drawing.Point(0, 53);
             this.dgvAnaliticas.Margin = new System.Windows.Forms.Padding(2);
@@ -75,6 +67,7 @@
             this.dgvAnaliticas.RowTemplate.Height = 24;
             this.dgvAnaliticas.Size = new System.Drawing.Size(638, 129);
             this.dgvAnaliticas.TabIndex = 0;
+            this.dgvAnaliticas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAnaliticas_CellDoubleClick);
             // 
             // gbDetalleAnalitica
             // 
@@ -109,16 +102,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(634, 399);
             this.panel2.TabIndex = 30;
-            // 
-            // pdfVisualizador
-            // 
-            this.pdfVisualizador.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pdfVisualizador.Enabled = true;
-            this.pdfVisualizador.Location = new System.Drawing.Point(0, 156);
-            this.pdfVisualizador.Name = "pdfVisualizador";
-            this.pdfVisualizador.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("pdfVisualizador.OcxState")));
-            this.pdfVisualizador.Size = new System.Drawing.Size(634, 243);
-            this.pdfVisualizador.TabIndex = 14;
             // 
             // txtObservaciones
             // 
@@ -235,10 +218,10 @@
             this.btnRegistrarAnalitica.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRegistrarAnalitica.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrarAnalitica.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrarAnalitica.Location = new System.Drawing.Point(310, 15);
+            this.btnRegistrarAnalitica.Location = new System.Drawing.Point(366, 15);
             this.btnRegistrarAnalitica.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegistrarAnalitica.Name = "btnRegistrarAnalitica";
-            this.btnRegistrarAnalitica.Size = new System.Drawing.Size(312, 30);
+            this.btnRegistrarAnalitica.Size = new System.Drawing.Size(256, 30);
             this.btnRegistrarAnalitica.TabIndex = 3;
             this.btnRegistrarAnalitica.Text = "Registrar nueva analítica";
             this.btnRegistrarAnalitica.UseVisualStyleBackColor = false;
@@ -246,6 +229,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnCargar);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btnRegistrarAnalitica);
             this.panel1.Controls.Add(this.dgvAnaliticas);
@@ -255,37 +239,31 @@
             this.panel1.Size = new System.Drawing.Size(638, 182);
             this.panel1.TabIndex = 4;
             // 
-            // cID
+            // btnCargar
             // 
-            this.cID.HeaderText = "ID";
-            this.cID.MinimumWidth = 6;
-            this.cID.Name = "cID";
-            this.cID.ReadOnly = true;
-            this.cID.Width = 125;
+            this.btnCargar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnCargar.BackColor = System.Drawing.Color.Gray;
+            this.btnCargar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCargar.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCargar.ForeColor = System.Drawing.Color.White;
+            this.btnCargar.Location = new System.Drawing.Point(264, 15);
+            this.btnCargar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCargar.Name = "btnCargar";
+            this.btnCargar.Size = new System.Drawing.Size(98, 30);
+            this.btnCargar.TabIndex = 35;
+            this.btnCargar.Text = "Cargar";
+            this.btnCargar.UseVisualStyleBackColor = false;
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
-            // cFecha
+            // pdfVisualizador
             // 
-            this.cFecha.HeaderText = "Fecha";
-            this.cFecha.MinimumWidth = 6;
-            this.cFecha.Name = "cFecha";
-            this.cFecha.ReadOnly = true;
-            this.cFecha.Width = 125;
-            // 
-            // cPropositoAnalitica
-            // 
-            this.cPropositoAnalitica.HeaderText = "Propósito Analítica";
-            this.cPropositoAnalitica.MinimumWidth = 6;
-            this.cPropositoAnalitica.Name = "cPropositoAnalitica";
-            this.cPropositoAnalitica.ReadOnly = true;
-            this.cPropositoAnalitica.Width = 125;
-            // 
-            // cObservaciones
-            // 
-            this.cObservaciones.HeaderText = "Observaciones";
-            this.cObservaciones.MinimumWidth = 6;
-            this.cObservaciones.Name = "cObservaciones";
-            this.cObservaciones.ReadOnly = true;
-            this.cObservaciones.Width = 125;
+            this.pdfVisualizador.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pdfVisualizador.Enabled = true;
+            this.pdfVisualizador.Location = new System.Drawing.Point(0, 155);
+            this.pdfVisualizador.Name = "pdfVisualizador";
+            this.pdfVisualizador.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("pdfVisualizador.OcxState")));
+            this.pdfVisualizador.Size = new System.Drawing.Size(634, 244);
+            this.pdfVisualizador.TabIndex = 13;
             // 
             // frmAnaliticas
             // 
@@ -304,9 +282,9 @@
             this.gbDetalleAnalitica.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pdfVisualizador)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pdfVisualizador)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -327,10 +305,7 @@
         private System.Windows.Forms.TextBox txtPropositoAnalitica;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnCargar;
         private AxAcroPDFLib.AxAcroPDF pdfVisualizador;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cFecha;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cPropositoAnalitica;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cObservaciones;
     }
 }

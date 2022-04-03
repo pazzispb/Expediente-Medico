@@ -32,7 +32,7 @@ namespace Sistema_de_Control_de_Historia_Medica
         {
             if (Application.OpenForms.Count < 2) this.Hide(); //Verifica que solo tiene el LogIn abierto
             AbrirFormulario(new frmMenuPrincipal()); //Abre el formulario de Menu Principal
-            frmMenuPrincipal.vIdUsuario = "2";//Indicamos el ID del usuario que ingreso al sistema
+            frmMenuPrincipal.vIdUsuario = "1";//Indicamos el ID del usuario que ingreso al sistema
         }
     }
 }

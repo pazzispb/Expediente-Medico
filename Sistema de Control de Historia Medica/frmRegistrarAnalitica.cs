@@ -13,7 +13,7 @@ namespace Sistema_de_Control_de_Historia_Medica
 {
     public partial class frmRegistrarAnalitica : Form
     {
-        string vIDUsuario = frmMenuPrincipal.vIdUsuario;
+        string vIDUsuario = frmMenuPrincipal.vIdUsuario;//Id del usuario que tiene la sesion iniciada
         clsBaseDatos bd = new clsBaseDatos();
         public frmRegistrarAnalitica()
         {
@@ -24,7 +24,6 @@ namespace Sistema_de_Control_de_Historia_Medica
         {
             fdBuscarArchivo.ShowDialog();//Muestra la ventana para buscar el archivo
         }
-
         private void fdBuscarArchivo_FileOk(object sender, CancelEventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(fdBuscarArchivo.FileName))//Si se selecciono un archivo
@@ -32,10 +31,8 @@ namespace Sistema_de_Control_de_Historia_Medica
                 lblDireccion.Text = fdBuscarArchivo.FileName;//Escribe el nombre del archivo en el label
             }
         }
-
         private void frmRegistrarAnalitica_Load(object sender, EventArgs e)
         {
-            MessageBox.Show(vIDUsuario);
         }
         private void btnRegistrarAnalitica_Click(object sender, EventArgs e)
         {
