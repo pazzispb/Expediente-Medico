@@ -17,7 +17,7 @@ namespace Sistema_de_Control_de_Historia_Medica
         {
             try
             {
-                conexion = new SQLiteConnection(vCadenaConexion);
+                conexion = new SQLiteConnection(vCadenaConexion);//Iniciamos el objeto para la conexion con la base de datos
             }
             catch(Exception ex)
             {
@@ -28,7 +28,7 @@ namespace Sistema_de_Control_de_Historia_Medica
         {
             try
             {
-                conexion.Open();
+                conexion.Open(); //Abrimos la conexion
             }
             catch (Exception ex)
             {
@@ -39,54 +39,28 @@ namespace Sistema_de_Control_de_Historia_Medica
         {
             try
             {
-                conexion.Close();
+                conexion.Close(); //Cerramos la conexion
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-        //public (bool, int) EjecutarComandoConRetorno(string vConsulta)
-        //{//INSERT INTO TABLA(CAMPOS) VALUES ()
-        //    try
-        //    {
-        //        AbrirConexion();
-        //        SQLiteCommand sQLiteCommand = new SQLiteCommand(vConsulta, conexion);
-        //        if (sQLiteCommand.ExecuteNonQuery() > 0)
-        //        {
-        //            CerrarConexion();
-        //            var vResultado = vConsulta.Split(' ')[2].Substring(0,vConsulta.Split(' ')[2].IndexOf("("));
-        //            var valor = ConsultarValor($"SELECT * FROM {vResultado} WHERE  = (SELECT MAX(ID)  FROM TABLE);
-        //            ");
-        //            return (true, 1);
-        //        }
-        //        else
-        //        {
-        //            CerrarConexion();
-        //            return false;
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show(ex.Message, "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        //    }
-        //    return false;
-        //}
-        public bool EjecutarComando(string vConsulta)
+        public bool EjecutarComando(string vConsulta) //Para realizar INSERTS o UPDATES
         {
             try
             {
                 AbrirConexion();
-                SQLiteCommand sQLiteCommand = new SQLiteCommand(vConsulta, conexion);
-                if (sQLiteCommand.ExecuteNonQuery() > 0)
+                SQLiteCommand sQLiteCommand = new SQLiteCommand(vConsulta, conexion);//Iniciamos un objeto para ejecutar comando en la base de datos
+                if (sQLiteCommand.ExecuteNonQuery() > 0) //Si afecto registros
                 {
-                    CerrarConexion();
-                    return true;
+                    CerrarConexion(); 
+                    return true; //Retornar que fue exitosa
                 }
                 else
                 {
-                    CerrarConexion();
-                    return false;
+                    CerrarConexion(); 
+                    return false; //Retornar que hubo un fallo
                 }
             }
             catch (Exception ex)
@@ -95,35 +69,34 @@ namespace Sistema_de_Control_de_Historia_Medica
             }
             return false;
         }
-        public DataSet ConsultarInfomacion(string vConsulta)
+        public DataSet ConsultarInfomacion(string vConsulta) //Para solicitar registros a la base de datos
         {
             try
             {
                 AbrirConexion();
-                DataSet ds = new DataSet();
-                SQLiteCommand sQLiteCommand = new SQLiteCommand(vConsulta, conexion);
-                SQLiteDataAdapter sQLiteDataAdapter = new SQLiteDataAdapter(sQLiteCommand);
-                sQLiteDataAdapter.Fill(ds);
+                DataSet ds = new DataSet(); //Tabla en memoria
+                SQLiteCommand sQLiteCommand = new SQLiteCommand(vConsulta, conexion); //Objeto para ejecutar comandos
+                SQLiteDataAdapter sQLiteDataAdapter = new SQLiteDataAdapter(sQLiteCommand); //Objeto para adaptar los datos de una consulta
+                sQLiteDataAdapter.Fill(ds); //Carga los resultados de la consulta al DataSet
                 CerrarConexion();
-                return ds;
+                return ds; //Retorna el dataset con los resultados de la consulta
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            return null;
+            return null; //retorna null si hubo errores en la ejecucion
             
         }
-        public object ConsultarValor(string vConsulta)
+        public object ConsultarValor(string vConsulta) //Para solicitar un valor en concreto a la base de datos
         {
             try
             {
                 AbrirConexion();
-                DataSet ds = new DataSet();
-                SQLiteCommand sQLiteCommand = new SQLiteCommand(vConsulta, conexion);
-                object var = sQLiteCommand.ExecuteScalar();
+                SQLiteCommand sQLiteCommand = new SQLiteCommand(vConsulta, conexion); //Objeto para ejecutar comandos sobre la base de datos
+                object var = sQLiteCommand.ExecuteScalar(); //Ejecutar la consulta sobre la base de datos
                 CerrarConexion();
-                return var;
+                return var; //retornamos el valor de la peticion
             }
             catch (Exception ex)
             {
