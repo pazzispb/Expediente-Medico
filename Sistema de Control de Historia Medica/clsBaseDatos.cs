@@ -11,7 +11,7 @@ namespace Sistema_de_Control_de_Historia_Medica
 {
     internal class clsBaseDatos
     {
-        string vCadenaConexion = "Data Source=database.db; Version=3;New=True;Compress=True;";
+        string vCadenaConexion = "Data Source=\"..\\..\\database.db\"; Version=3;New=True;Compress=True;";
         SQLiteConnection conexion;
         public clsBaseDatos()
         {
