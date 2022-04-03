@@ -34,5 +34,31 @@ namespace Sistema_de_Control_de_Historia_Medica
             AbrirFormulario(new frmMenuPrincipal()); //Abre el formulario de Menu Principal
             frmMenuPrincipal.vIdUsuario = "1";//Indicamos el ID del usuario que ingreso al sistema
         }
+
+        private void frmLogIn_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (Application.OpenForms.Count < 2) this.Hide(); //Verifica que solo tiene el LogIn abierto
+            AbrirFormulario(new frmRecuperarContrasena()); //Abre el formulario de Menu Principal
+        }
     }
 }

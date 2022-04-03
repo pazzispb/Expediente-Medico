@@ -46,11 +46,6 @@ namespace Sistema_de_Control_de_Historia_Medica
             MonthCalendar.MinDate = fechaActual;
         }
 
-        private void btnAñadirDoctor_Click(object sender, EventArgs e)
-        {
-
-        }
-
 
         private void listBoxInfoCitas_SelectedIndexChanged(object sender, EventArgs e)
         {

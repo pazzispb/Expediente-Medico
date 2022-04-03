@@ -15,7 +15,7 @@ namespace Sistema_de_Control_de_Historia_Medica
         SQLiteConnection conexion;
         public clsBaseDatos()
         {
-            try
+            try 
             {
                 conexion = new SQLiteConnection(vCadenaConexion);//Iniciamos el objeto para la conexion con la base de datos
             }
