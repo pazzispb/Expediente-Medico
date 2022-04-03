@@ -57,7 +57,11 @@ namespace Sistema_de_Control_de_Historia_Medica
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if (Application.OpenForms.Count < 2) this.Hide(); //Verifica que solo tiene el LogIn abierto
+            AbrirFormulario(new frmRecuperarContrasena()); //Abre el formulario de Menu Principal
+        }
+
+        private void lbRecuperarContrasena_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
             AbrirFormulario(new frmRecuperarContrasena()); //Abre el formulario de Menu Principal
         }
     }

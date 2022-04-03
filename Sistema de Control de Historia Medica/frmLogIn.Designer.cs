@@ -33,7 +33,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.lbRecuperarContrasena = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // lblCrearCuenta
@@ -89,17 +89,17 @@
             this.label1.Text = "LogIn";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // linkLabel1
+            // lbRecuperarContrasena
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel1.Location = new System.Drawing.Point(189, 378);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(113, 13);
-            this.linkLabel1.TabIndex = 5;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Recuperar contraseña";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.lbRecuperarContrasena.AutoSize = true;
+            this.lbRecuperarContrasena.LinkColor = System.Drawing.Color.Black;
+            this.lbRecuperarContrasena.Location = new System.Drawing.Point(189, 378);
+            this.lbRecuperarContrasena.Name = "lbRecuperarContrasena";
+            this.lbRecuperarContrasena.Size = new System.Drawing.Size(113, 13);
+            this.lbRecuperarContrasena.TabIndex = 5;
+            this.lbRecuperarContrasena.TabStop = true;
+            this.lbRecuperarContrasena.Text = "Recuperar contraseña";
+            this.lbRecuperarContrasena.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbRecuperarContrasena_LinkClicked);
             // 
             // frmLogIn
             // 
@@ -107,7 +107,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
             this.ClientSize = new System.Drawing.Size(541, 415);
-            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.lbRecuperarContrasena);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
@@ -129,6 +129,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel lbRecuperarContrasena;
     }
 }
