@@ -49,8 +49,8 @@
             this.Especialidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Teléfono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CentroDeSalud = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnEditarDoctor = new System.Windows.Forms.Button();
+            this.btnEliminarDoctor = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -271,38 +271,38 @@
             this.CentroDeSalud.ReadOnly = true;
             this.CentroDeSalud.Width = 140;
             // 
-            // button1
+            // btnEditarDoctor
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(252, 325);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(99, 34);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Editar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnEditarDoctor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
+            this.btnEditarDoctor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarDoctor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnEditarDoctor.Location = new System.Drawing.Point(252, 325);
+            this.btnEditarDoctor.Name = "btnEditarDoctor";
+            this.btnEditarDoctor.Size = new System.Drawing.Size(99, 34);
+            this.btnEditarDoctor.TabIndex = 10;
+            this.btnEditarDoctor.Text = "Editar";
+            this.btnEditarDoctor.UseVisualStyleBackColor = false;
+            this.btnEditarDoctor.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // btnEliminarDoctor
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(70, 325);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(136, 34);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Eliminar";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnEliminarDoctor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
+            this.btnEliminarDoctor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarDoctor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnEliminarDoctor.Location = new System.Drawing.Point(70, 325);
+            this.btnEliminarDoctor.Name = "btnEliminarDoctor";
+            this.btnEliminarDoctor.Size = new System.Drawing.Size(136, 34);
+            this.btnEliminarDoctor.TabIndex = 11;
+            this.btnEliminarDoctor.Text = "Eliminar";
+            this.btnEliminarDoctor.UseVisualStyleBackColor = false;
             // 
             // frmDoctores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 366);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnEliminarDoctor);
+            this.Controls.Add(this.btnEditarDoctor);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -343,7 +343,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Especialidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Teléfono;
         private System.Windows.Forms.DataGridViewTextBoxColumn CentroDeSalud;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnEditarDoctor;
+        private System.Windows.Forms.Button btnEliminarDoctor;
     }
 }
