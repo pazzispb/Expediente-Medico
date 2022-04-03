@@ -32,6 +32,8 @@ namespace Sistema_de_Control_de_Historia_Medica
         private void tsCalendario_Click(object sender, EventArgs e)
         {
             AbrirFormulario(new frmCalendarioCitas());
+            
+            
         }
 
         private void tsDoctores_Click(object sender, EventArgs e)

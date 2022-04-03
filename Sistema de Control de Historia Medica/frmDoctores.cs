@@ -24,8 +24,11 @@ namespace Sistema_de_Control_de_Historia_Medica
 
         private void btnAñadirDoctor_Click(object sender, EventArgs e)
         {
-
+            dataGridView1.Rows.Add(txtNombre.Text, txtEspecialidad.Text, txtTelefono.Text, txtCentroDeSalud.Text);
+            LimpiarCampos();
         }
+
+
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -101,5 +104,25 @@ namespace Sistema_de_Control_de_Historia_Medica
         {
 
         }
+
+        void LimpiarCampos()
+        {
+            foreach (Control c in panel2.Controls) //Recorremos cada elemento del formulario
+                if (typeof(TextBox) == c.GetType()) //Si esta vacio
+                {
+                    c.Text = "";
+                }
+        }
+
+        private void btnCitasAgendadas_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEliminarDoctor_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Rows.Remove(dataGridView1.SelectedCells);
+        }
     }
+
 }

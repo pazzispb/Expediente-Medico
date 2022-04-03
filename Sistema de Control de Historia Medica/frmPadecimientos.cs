@@ -16,5 +16,30 @@ namespace Sistema_de_Control_de_Historia_Medica
         {
             InitializeComponent();
         }
+
+        private void labTitulo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labNombre_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtTelefono_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labCentroDeSalud_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
