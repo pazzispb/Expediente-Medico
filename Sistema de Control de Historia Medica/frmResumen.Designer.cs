@@ -59,7 +59,7 @@
             this.btnGenerar.Location = new System.Drawing.Point(0, 0);
             this.btnGenerar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGenerar.Name = "btnGenerar";
-            this.btnGenerar.Size = new System.Drawing.Size(624, 45);
+            this.btnGenerar.Size = new System.Drawing.Size(624, 42);
             this.btnGenerar.TabIndex = 34;
             this.btnGenerar.Text = "Generar reporte";
             this.btnGenerar.UseVisualStyleBackColor = false;
