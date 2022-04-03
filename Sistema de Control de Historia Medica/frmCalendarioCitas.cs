@@ -20,10 +20,7 @@ namespace Sistema_de_Control_de_Historia_Medica
 
         }
 
-        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
-        {
-
-        }
+        
 
         private void labTitulo_Click(object sender, EventArgs e)
         {
@@ -61,12 +58,7 @@ namespace Sistema_de_Control_de_Historia_Medica
         }
 
         private void btnAñadirCita_Click_1(object sender, EventArgs e)
-        {
-            string vConsulta;
-            vConsulta = $"INSERT INTO Usuarios (Doctor, Fecha, Centro medico,Hora)" +
-                $"VALUES ('{cmbDesplegarDoctor.Text}', '{dateTimePicker1.Text}', '{cmbCentro.Text}', '{cmbDesplegarHorario.Text}')";
-            if (ValidarCamposRellenos())
-            {
+        {          
                 listBoxInfoCitas.Items.Add("Doctor: " + cmbDesplegarDoctor.Text + "\tFecha: " + dateTimePicker1.Text + "\tCentro Médico: " +
                 cmbCentro.Text + "\tHora" + cmbDesplegarHorario.Text);
 
@@ -74,14 +66,7 @@ namespace Sistema_de_Control_de_Historia_Medica
                 StreamWriter sw = new StreamWriter("Agenda de citas.txt", true);
                 sw.WriteLine("Doctor: " + cmbDesplegarDoctor.Text + "\tFecha: " + dateTimePicker1.Text + "\tCentro Médico: " +
                     cmbCentro.Text + "\tHora" + cmbDesplegarHorario.Text);
-                sw.Close();
-            }
-            else
-            {
-                MessageBox.Show("Hubo un error al registrar el usuario", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-            }
-
-            
+                sw.Close();                             
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -89,12 +74,6 @@ namespace Sistema_de_Control_de_Historia_Medica
             MonthCalendar.SetDate(dateTimePicker1.Value);
         }
 
-        private void btnRegresarMain_Click(object sender, EventArgs e)
-        {
-            frmMenuPrincipal frm1 = new frmMenuPrincipal();
-            frm1.Show();
-            this.Close();
-        }
 
         private void btnCitasAgendadas_Click(object sender, EventArgs e)
         {
@@ -120,15 +99,7 @@ namespace Sistema_de_Control_de_Historia_Medica
             
             
         }
-        bool ValidarCamposRellenos()
-        {
-            foreach (Control c in panel1.Controls) //Recorremos cada elemento del formulario
-                if (String.IsNullOrWhiteSpace(c.Text)) //Si esta vacio
-                {
-                    MessageBox.Show("Rellene los campos vacios", "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return false; //retorna que hay campos no rellenos
-                }
-            return true; //retorna que los campos estan rellenos
-        }
+        
+
     }
 }

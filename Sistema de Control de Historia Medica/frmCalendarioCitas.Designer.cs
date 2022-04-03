@@ -43,7 +43,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.labcondiciones = new System.Windows.Forms.Label();
             this.btnCitasAgendadas = new System.Windows.Forms.Button();
-            this.btnRegresarMain = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -105,6 +104,22 @@
             // cmbDesplegarHorario
             // 
             this.cmbDesplegarHorario.FormattingEnabled = true;
+            this.cmbDesplegarHorario.Items.AddRange(new object[] {
+            "10:00 AM",
+            "10:30 AM",
+            "11:00 AM",
+            "11:30 AM",
+            "12:00 PM",
+            "12:30 PM",
+            "1:00 PM",
+            "1:30 PM",
+            "2:00 PM",
+            "2:30 PM",
+            "3:00 PM",
+            "3:30 PM",
+            "4:00 PM",
+            "4:30 PM",
+            "5:00 PM"});
             this.cmbDesplegarHorario.Location = new System.Drawing.Point(84, 109);
             this.cmbDesplegarHorario.Name = "cmbDesplegarHorario";
             this.cmbDesplegarHorario.Size = new System.Drawing.Size(184, 21);
@@ -131,7 +146,7 @@
             this.btnEditarCita.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
             this.btnEditarCita.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditarCita.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnEditarCita.Location = new System.Drawing.Point(365, 406);
+            this.btnEditarCita.Location = new System.Drawing.Point(330, 406);
             this.btnEditarCita.Name = "btnEditarCita";
             this.btnEditarCita.Size = new System.Drawing.Size(99, 34);
             this.btnEditarCita.TabIndex = 32;
@@ -143,7 +158,7 @@
             this.btnEliminarCita.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
             this.btnEliminarCita.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarCita.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnEliminarCita.Location = new System.Drawing.Point(215, 406);
+            this.btnEliminarCita.Location = new System.Drawing.Point(158, 406);
             this.btnEliminarCita.Name = "btnEliminarCita";
             this.btnEliminarCita.Size = new System.Drawing.Size(110, 34);
             this.btnEliminarCita.TabIndex = 31;
@@ -197,7 +212,7 @@
             this.btnCitasAgendadas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
             this.btnCitasAgendadas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCitasAgendadas.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCitasAgendadas.Location = new System.Drawing.Point(510, 399);
+            this.btnCitasAgendadas.Location = new System.Drawing.Point(483, 399);
             this.btnCitasAgendadas.Name = "btnCitasAgendadas";
             this.btnCitasAgendadas.Size = new System.Drawing.Size(145, 48);
             this.btnCitasAgendadas.TabIndex = 34;
@@ -205,25 +220,11 @@
             this.btnCitasAgendadas.UseVisualStyleBackColor = false;
             this.btnCitasAgendadas.Click += new System.EventHandler(this.btnCitasAgendadas_Click);
             // 
-            // btnRegresarMain
-            // 
-            this.btnRegresarMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
-            this.btnRegresarMain.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegresarMain.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnRegresarMain.Location = new System.Drawing.Point(78, 406);
-            this.btnRegresarMain.Name = "btnRegresarMain";
-            this.btnRegresarMain.Size = new System.Drawing.Size(110, 34);
-            this.btnRegresarMain.TabIndex = 38;
-            this.btnRegresarMain.Text = "Regresar";
-            this.btnRegresarMain.UseVisualStyleBackColor = false;
-            this.btnRegresarMain.Click += new System.EventHandler(this.btnRegresarMain_Click);
-            // 
             // frmCalendarioCitas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(790, 455);
-            this.Controls.Add(this.btnRegresarMain);
             this.Controls.Add(this.btnCitasAgendadas);
             this.Controls.Add(this.listBoxInfoCitas);
             this.Controls.Add(this.cmbDesplegarHorario);
@@ -264,6 +265,5 @@
         private System.Windows.Forms.MonthCalendar MonthCalendar;
         private System.Windows.Forms.Button btnCitasAgendadas;
         private System.Windows.Forms.Button btnAñadirCita;
-        private System.Windows.Forms.Button btnRegresarMain;
     }
 }
