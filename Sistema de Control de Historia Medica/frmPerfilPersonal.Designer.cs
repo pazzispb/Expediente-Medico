@@ -30,6 +30,7 @@
         {
             this.frmPerfilPersonalbox = new System.Data.SQLite.SQLiteCommand();
             this.pnContenedor = new System.Windows.Forms.Panel();
+            this.btnEditarPerfil = new System.Windows.Forms.Button();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.txtSeguroMedico = new System.Windows.Forms.TextBox();
@@ -55,7 +56,6 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblMiCuenta = new System.Windows.Forms.Label();
-            this.btnEditarPerfil = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.pnContenedor.SuspendLayout();
             this.SuspendLayout();
@@ -98,8 +98,21 @@
             this.pnContenedor.Size = new System.Drawing.Size(578, 299);
             this.pnContenedor.TabIndex = 30;
             // 
+            // btnEditarPerfil
+            // 
+            this.btnEditarPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
+            this.btnEditarPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarPerfil.ForeColor = System.Drawing.Color.White;
+            this.btnEditarPerfil.Location = new System.Drawing.Point(156, 263);
+            this.btnEditarPerfil.Name = "btnEditarPerfil";
+            this.btnEditarPerfil.Size = new System.Drawing.Size(238, 23);
+            this.btnEditarPerfil.TabIndex = 53;
+            this.btnEditarPerfil.Text = "Editar Perfil";
+            this.btnEditarPerfil.UseVisualStyleBackColor = false;
+            // 
             // txtUsuario
             // 
+            this.txtUsuario.Enabled = false;
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.Location = new System.Drawing.Point(400, 221);
             this.txtUsuario.Name = "txtUsuario";
@@ -345,18 +358,6 @@
             this.lblMiCuenta.Text = "Mi Cuenta";
             this.lblMiCuenta.Click += new System.EventHandler(this.label1_Click);
             // 
-            // btnEditarPerfil
-            // 
-            this.btnEditarPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
-            this.btnEditarPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditarPerfil.ForeColor = System.Drawing.Color.White;
-            this.btnEditarPerfil.Location = new System.Drawing.Point(156, 263);
-            this.btnEditarPerfil.Name = "btnEditarPerfil";
-            this.btnEditarPerfil.Size = new System.Drawing.Size(238, 23);
-            this.btnEditarPerfil.TabIndex = 53;
-            this.btnEditarPerfil.Text = "Editar Perfil";
-            this.btnEditarPerfil.UseVisualStyleBackColor = false;
-            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(464, 363);
@@ -374,7 +375,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.lblMiCuenta);
             this.Controls.Add(this.pnContenedor);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimizeBox = false;
             this.Name = "frmPerfilPersonal";
             this.Text = "Perfil Personal";

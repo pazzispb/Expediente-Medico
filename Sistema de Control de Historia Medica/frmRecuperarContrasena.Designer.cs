@@ -55,7 +55,8 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Font = new System.Drawing.Font("Montserrat Medium", 8.5F, System.Drawing.FontStyle.Bold);
+            this.btnCancelar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnCancelar.Location = new System.Drawing.Point(79, 302);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(92, 23);
@@ -65,7 +66,8 @@
             // 
             // btnEnviar
             // 
-            this.btnEnviar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnviar.Font = new System.Drawing.Font("Montserrat Medium", 8.5F, System.Drawing.FontStyle.Bold);
+            this.btnEnviar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnEnviar.Location = new System.Drawing.Point(314, 302);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Size = new System.Drawing.Size(92, 23);
@@ -77,32 +79,33 @@
             // lblCedula
             // 
             this.lblCedula.AutoSize = true;
-            this.lblCedula.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCedula.Font = new System.Drawing.Font("Montserrat Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCedula.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblCedula.Location = new System.Drawing.Point(76, 236);
             this.lblCedula.Name = "lblCedula";
-            this.lblCedula.Size = new System.Drawing.Size(58, 17);
+            this.lblCedula.Size = new System.Drawing.Size(63, 21);
             this.lblCedula.TabIndex = 31;
             this.lblCedula.Text = "Cédula";
             // 
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.Font = new System.Drawing.Font("Montserrat Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblUsuario.Location = new System.Drawing.Point(76, 194);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(64, 17);
+            this.lblUsuario.Size = new System.Drawing.Size(69, 21);
             this.lblUsuario.TabIndex = 32;
             this.lblUsuario.Text = "Usuario";
-            this.lblUsuario.Click += new System.EventHandler(this.label1_Click);
             // 
             // lbRecupContra
             // 
             this.lbRecupContra.AutoSize = true;
-            this.lbRecupContra.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbRecupContra.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbRecupContra.ForeColor = System.Drawing.Color.White;
-            this.lbRecupContra.Location = new System.Drawing.Point(77, 116);
+            this.lbRecupContra.Location = new System.Drawing.Point(113, 121);
             this.lbRecupContra.Name = "lbRecupContra";
-            this.lbRecupContra.Size = new System.Drawing.Size(329, 33);
+            this.lbRecupContra.Size = new System.Drawing.Size(255, 29);
             this.lbRecupContra.TabIndex = 33;
             this.lbRecupContra.Text = "Recuperar Contraseña";
             this.lbRecupContra.Click += new System.EventHandler(this.lbLogIn_Click);
@@ -120,7 +123,7 @@
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.txtCedula);
             this.Controls.Add(this.btnCancelar);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmRecuperarContrasena";

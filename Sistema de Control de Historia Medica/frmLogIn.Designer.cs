@@ -66,7 +66,6 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(249, 31);
             this.txtUsuario.TabIndex = 2;
-            this.txtUsuario.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // txtContrasena
             // 
@@ -75,19 +74,17 @@
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.Size = new System.Drawing.Size(249, 31);
             this.txtContrasena.TabIndex = 3;
-            this.txtContrasena.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // lbLogIn
             // 
             this.lbLogIn.AutoSize = true;
-            this.lbLogIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLogIn.Font = new System.Drawing.Font("Montserrat", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbLogIn.ForeColor = System.Drawing.Color.White;
-            this.lbLogIn.Location = new System.Drawing.Point(159, 90);
+            this.lbLogIn.Location = new System.Drawing.Point(147, 84);
             this.lbLogIn.Name = "lbLogIn";
-            this.lbLogIn.Size = new System.Drawing.Size(199, 73);
+            this.lbLogIn.Size = new System.Drawing.Size(227, 88);
             this.lbLogIn.TabIndex = 4;
             this.lbLogIn.Text = "LogIn";
-            this.lbLogIn.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblRecuperarContrasena
             // 
@@ -99,7 +96,7 @@
             this.lblRecuperarContrasena.TabIndex = 5;
             this.lblRecuperarContrasena.TabStop = true;
             this.lblRecuperarContrasena.Text = "Recuperar contraseña";
-            this.lblRecuperarContrasena.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.lblRecuperarContrasena.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblRecuperarContrasena_LinkClicked);
             // 
             // frmLogIn
             // 
