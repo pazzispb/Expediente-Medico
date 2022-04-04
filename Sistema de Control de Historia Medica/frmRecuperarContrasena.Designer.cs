@@ -102,7 +102,7 @@
             // 
             this.lbRecupContra.AutoSize = true;
             this.lbRecupContra.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbRecupContra.ForeColor = System.Drawing.Color.White;
+            this.lbRecupContra.ForeColor = System.Drawing.Color.Black;
             this.lbRecupContra.Location = new System.Drawing.Point(113, 121);
             this.lbRecupContra.Name = "lbRecupContra";
             this.lbRecupContra.Size = new System.Drawing.Size(255, 29);

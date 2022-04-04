@@ -45,5 +45,7 @@ namespace Sistema_de_Control_de_Historia_Medica
             AbrirFormulario(new frmRecuperarContrasena()); //Abre el formulario de Recuperar Contraseña
 
         }
+
+
     }
 }

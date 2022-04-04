@@ -28,21 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblCrearCuenta = new System.Windows.Forms.LinkLabel();
             this.btnAcceder = new System.Windows.Forms.Button();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtContrasena = new System.Windows.Forms.TextBox();
             this.lbLogIn = new System.Windows.Forms.Label();
             this.lblRecuperarContrasena = new System.Windows.Forms.LinkLabel();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.lblContrasena = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblCrearCuenta
             // 
             this.lblCrearCuenta.AutoSize = true;
+            this.lblCrearCuenta.Font = new System.Drawing.Font("Montserrat Medium", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCrearCuenta.LinkColor = System.Drawing.Color.Black;
-            this.lblCrearCuenta.Location = new System.Drawing.Point(212, 358);
+            this.lblCrearCuenta.Location = new System.Drawing.Point(208, 358);
             this.lblCrearCuenta.Name = "lblCrearCuenta";
-            this.lblCrearCuenta.Size = new System.Drawing.Size(68, 13);
+            this.lblCrearCuenta.Size = new System.Drawing.Size(81, 15);
             this.lblCrearCuenta.TabIndex = 0;
             this.lblCrearCuenta.TabStop = true;
             this.lblCrearCuenta.Text = "Crear cuenta";
@@ -50,18 +55,19 @@
             // 
             // btnAcceder
             // 
-            this.btnAcceder.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAcceder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnAcceder.Font = new System.Drawing.Font("Montserrat Medium", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAcceder.Location = new System.Drawing.Point(201, 320);
             this.btnAcceder.Name = "btnAcceder";
             this.btnAcceder.Size = new System.Drawing.Size(92, 23);
             this.btnAcceder.TabIndex = 1;
             this.btnAcceder.Text = "Acceder";
-            this.btnAcceder.UseVisualStyleBackColor = true;
+            this.btnAcceder.UseVisualStyleBackColor = false;
             this.btnAcceder.Click += new System.EventHandler(this.btnAcceder_Click);
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(125, 200);
+            this.txtUsuario.Location = new System.Drawing.Point(151, 200);
             this.txtUsuario.Multiline = true;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(249, 31);
@@ -69,7 +75,7 @@
             // 
             // txtContrasena
             // 
-            this.txtContrasena.Location = new System.Drawing.Point(125, 247);
+            this.txtContrasena.Location = new System.Drawing.Point(151, 247);
             this.txtContrasena.Multiline = true;
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.Size = new System.Drawing.Size(249, 31);
@@ -80,7 +86,7 @@
             this.lbLogIn.AutoSize = true;
             this.lbLogIn.Font = new System.Drawing.Font("Montserrat", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbLogIn.ForeColor = System.Drawing.Color.White;
-            this.lbLogIn.Location = new System.Drawing.Point(147, 84);
+            this.lbLogIn.Location = new System.Drawing.Point(146, 84);
             this.lbLogIn.Name = "lbLogIn";
             this.lbLogIn.Size = new System.Drawing.Size(227, 88);
             this.lbLogIn.TabIndex = 4;
@@ -89,14 +95,43 @@
             // lblRecuperarContrasena
             // 
             this.lblRecuperarContrasena.AutoSize = true;
+            this.lblRecuperarContrasena.Font = new System.Drawing.Font("Montserrat SemiBold", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRecuperarContrasena.LinkColor = System.Drawing.Color.Black;
-            this.lblRecuperarContrasena.Location = new System.Drawing.Point(189, 378);
+            this.lblRecuperarContrasena.Location = new System.Drawing.Point(185, 378);
             this.lblRecuperarContrasena.Name = "lblRecuperarContrasena";
-            this.lblRecuperarContrasena.Size = new System.Drawing.Size(113, 13);
+            this.lblRecuperarContrasena.Size = new System.Drawing.Size(134, 15);
             this.lblRecuperarContrasena.TabIndex = 5;
             this.lblRecuperarContrasena.TabStop = true;
             this.lblRecuperarContrasena.Text = "Recuperar contraseña";
             this.lblRecuperarContrasena.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblRecuperarContrasena_LinkClicked);
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblUsuario.Font = new System.Drawing.Font("Montserrat SemiBold", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.Location = new System.Drawing.Point(90, 210);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(51, 15);
+            this.lblUsuario.TabIndex = 6;
+            this.lblUsuario.Text = "Usuario";
+            // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // lblContrasena
+            // 
+            this.lblContrasena.AutoSize = true;
+            this.lblContrasena.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblContrasena.Font = new System.Drawing.Font("Montserrat SemiBold", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContrasena.Location = new System.Drawing.Point(68, 256);
+            this.lblContrasena.Name = "lblContrasena";
+            this.lblContrasena.Size = new System.Drawing.Size(74, 15);
+            this.lblContrasena.TabIndex = 7;
+            this.lblContrasena.Text = "Contraseña";
             // 
             // frmLogIn
             // 
@@ -104,6 +139,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
             this.ClientSize = new System.Drawing.Size(541, 415);
+            this.Controls.Add(this.lblContrasena);
+            this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.lblRecuperarContrasena);
             this.Controls.Add(this.lbLogIn);
             this.Controls.Add(this.txtContrasena);
@@ -127,5 +164,8 @@
         private System.Windows.Forms.TextBox txtContrasena;
         private System.Windows.Forms.Label lbLogIn;
         private System.Windows.Forms.LinkLabel lblRecuperarContrasena;
+        private System.Windows.Forms.Label lblUsuario;
+        private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.Label lblContrasena;
     }
 }
