@@ -40,12 +40,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cmbTipoPadecimiento = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.chbEstadoFechaPadecimiento = new System.Windows.Forms.CheckBox();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(236)))), ((int)(((byte)(177)))));
+            this.panel2.Controls.Add(this.chbEstadoFechaPadecimiento);
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.cmbTipoPadecimiento);
             this.panel2.Controls.Add(this.dateTimePicker1);
@@ -180,6 +182,16 @@
             this.textBox1.Size = new System.Drawing.Size(139, 20);
             this.textBox1.TabIndex = 38;
             // 
+            // chbEstadoFechaPadecimiento
+            // 
+            this.chbEstadoFechaPadecimiento.AutoSize = true;
+            this.chbEstadoFechaPadecimiento.Location = new System.Drawing.Point(184, 149);
+            this.chbEstadoFechaPadecimiento.Name = "chbEstadoFechaPadecimiento";
+            this.chbEstadoFechaPadecimiento.Size = new System.Drawing.Size(71, 17);
+            this.chbEstadoFechaPadecimiento.TabIndex = 39;
+            this.chbEstadoFechaPadecimiento.Text = "No aplica";
+            this.chbEstadoFechaPadecimiento.UseVisualStyleBackColor = true;
+            // 
             // frmRegistrarPadecimientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -210,5 +222,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ComboBox cmbTipoPadecimiento;
+        private System.Windows.Forms.CheckBox chbEstadoFechaPadecimiento;
     }
 }
