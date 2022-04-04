@@ -92,7 +92,7 @@ namespace Sistema_de_Control_de_Historia_Medica
       
         private void fármacosToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            AbrirFormulario(new frmFarmacos()); //Abre e; formulario frmFarmacos
+            AbrirFormulario(new frmFarmacos()); //Abre el formulario frmFarmacos
         }
     }
 }
