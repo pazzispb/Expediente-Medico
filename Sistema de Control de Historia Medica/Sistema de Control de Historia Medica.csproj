@@ -68,6 +68,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsBaseDatos.cs" />
+    <Compile Include="frmFarmacos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFarmacos.Designer.cs">
+      <DependentUpon>frmFarmacos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmRegistrarFarmacos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +154,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmFarmacos.resx">
+      <DependentUpon>frmFarmacos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmRegistrarFarmacos.resx">
       <DependentUpon>frmRegistrarFarmacos.cs</DependentUpon>
     </EmbeddedResource>

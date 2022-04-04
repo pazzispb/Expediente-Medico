@@ -31,17 +31,17 @@
             this.btnCargarPadecimientos = new System.Windows.Forms.Button();
             this.labTitulo = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dtpPadecimiento = new System.Windows.Forms.DateTimePicker();
+            this.txtDescripcionPadecimiento = new System.Windows.Forms.TextBox();
+            this.txtTipoPadecimiento = new System.Windows.Forms.TextBox();
+            this.txtPadecimiento = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnIngresarPadecimientos = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtPadecimiento = new System.Windows.Forms.TextBox();
-            this.txtTipoPadecimiento = new System.Windows.Forms.TextBox();
-            this.txtDescripcionPadecimiento = new System.Windows.Forms.TextBox();
-            this.dtpPadecimiento = new System.Windows.Forms.DateTimePicker();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -86,6 +86,82 @@
             this.panel2.TabIndex = 15;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
+            // dtpPadecimiento
+            // 
+            this.dtpPadecimiento.Enabled = false;
+            this.dtpPadecimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpPadecimiento.Location = new System.Drawing.Point(138, 140);
+            this.dtpPadecimiento.Name = "dtpPadecimiento";
+            this.dtpPadecimiento.Size = new System.Drawing.Size(156, 20);
+            this.dtpPadecimiento.TabIndex = 7;
+            // 
+            // txtDescripcionPadecimiento
+            // 
+            this.txtDescripcionPadecimiento.AcceptsReturn = true;
+            this.txtDescripcionPadecimiento.Enabled = false;
+            this.txtDescripcionPadecimiento.Location = new System.Drawing.Point(388, 76);
+            this.txtDescripcionPadecimiento.Multiline = true;
+            this.txtDescripcionPadecimiento.Name = "txtDescripcionPadecimiento";
+            this.txtDescripcionPadecimiento.Size = new System.Drawing.Size(257, 80);
+            this.txtDescripcionPadecimiento.TabIndex = 6;
+            this.txtDescripcionPadecimiento.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            // 
+            // txtTipoPadecimiento
+            // 
+            this.txtTipoPadecimiento.Enabled = false;
+            this.txtTipoPadecimiento.Location = new System.Drawing.Point(138, 90);
+            this.txtTipoPadecimiento.Name = "txtTipoPadecimiento";
+            this.txtTipoPadecimiento.Size = new System.Drawing.Size(156, 20);
+            this.txtTipoPadecimiento.TabIndex = 5;
+            // 
+            // txtPadecimiento
+            // 
+            this.txtPadecimiento.Enabled = false;
+            this.txtPadecimiento.Location = new System.Drawing.Point(138, 48);
+            this.txtPadecimiento.Name = "txtPadecimiento";
+            this.txtPadecimiento.Size = new System.Drawing.Size(156, 20);
+            this.txtPadecimiento.TabIndex = 4;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(74, 140);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(54, 16);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Fecha:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(385, 49);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(94, 16);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Descripción:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(85, 94);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(43, 16);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Tipo:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(26, 49);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(106, 16);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Padecimiento:";
+            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -97,6 +173,7 @@
             // btnIngresarPadecimientos
             // 
             this.btnIngresarPadecimientos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
+            this.btnIngresarPadecimientos.Enabled = false;
             this.btnIngresarPadecimientos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIngresarPadecimientos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnIngresarPadecimientos.Location = new System.Drawing.Point(545, 12);
@@ -115,78 +192,6 @@
             this.label1.TabIndex = 17;
             this.label1.Text = "Detalles del Padecimiento";
             this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(26, 49);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 16);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Padecimiento:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(85, 94);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 16);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Tipo:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(385, 49);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(94, 16);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Descripción:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(74, 140);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(54, 16);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Fecha:";
-            // 
-            // txtPadecimiento
-            // 
-            this.txtPadecimiento.Location = new System.Drawing.Point(138, 48);
-            this.txtPadecimiento.Name = "txtPadecimiento";
-            this.txtPadecimiento.Size = new System.Drawing.Size(156, 20);
-            this.txtPadecimiento.TabIndex = 4;
-            // 
-            // txtTipoPadecimiento
-            // 
-            this.txtTipoPadecimiento.Location = new System.Drawing.Point(138, 90);
-            this.txtTipoPadecimiento.Name = "txtTipoPadecimiento";
-            this.txtTipoPadecimiento.Size = new System.Drawing.Size(156, 20);
-            this.txtTipoPadecimiento.TabIndex = 5;
-            // 
-            // txtDescripcionPadecimiento
-            // 
-            this.txtDescripcionPadecimiento.AcceptsReturn = true;
-            this.txtDescripcionPadecimiento.Location = new System.Drawing.Point(388, 76);
-            this.txtDescripcionPadecimiento.Multiline = true;
-            this.txtDescripcionPadecimiento.Name = "txtDescripcionPadecimiento";
-            this.txtDescripcionPadecimiento.Size = new System.Drawing.Size(257, 80);
-            this.txtDescripcionPadecimiento.TabIndex = 6;
-            this.txtDescripcionPadecimiento.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
-            // 
-            // dtpPadecimiento
-            // 
-            this.dtpPadecimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpPadecimiento.Location = new System.Drawing.Point(138, 140);
-            this.dtpPadecimiento.Name = "dtpPadecimiento";
-            this.dtpPadecimiento.Size = new System.Drawing.Size(156, 20);
-            this.dtpPadecimiento.TabIndex = 7;
             // 
             // frmPadecimientos
             // 

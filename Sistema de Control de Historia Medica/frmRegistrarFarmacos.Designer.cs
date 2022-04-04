@@ -32,14 +32,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.dtpPadecimiento = new System.Windows.Forms.DateTimePicker();
-            this.txtPadecimiento = new System.Windows.Forms.TextBox();
-            this.txtDescripcionPadecimiento = new System.Windows.Forms.TextBox();
-            this.btnGuardarPadecimiento = new System.Windows.Forms.Button();
+            this.dtpHoraFarmaco = new System.Windows.Forms.DateTimePicker();
+            this.txtFarmaco = new System.Windows.Forms.TextBox();
+            this.txtDescripcionFarmaco = new System.Windows.Forms.TextBox();
+            this.btnGuardarFarmaco = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.chbFrecuenciaDias = new System.Windows.Forms.CheckedListBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbFrecuenciaDiaFarmaco = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -86,44 +86,44 @@
             this.label5.TabIndex = 3;
             this.label5.Text = "Frecuencia:";
             // 
-            // dtpPadecimiento
+            // dtpHoraFarmaco
             // 
-            this.dtpPadecimiento.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpPadecimiento.Location = new System.Drawing.Point(150, 79);
-            this.dtpPadecimiento.Name = "dtpPadecimiento";
-            this.dtpPadecimiento.Size = new System.Drawing.Size(150, 20);
-            this.dtpPadecimiento.TabIndex = 8;
-            this.dtpPadecimiento.Value = new System.DateTime(2022, 4, 4, 10, 25, 0, 0);
+            this.dtpHoraFarmaco.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dtpHoraFarmaco.Location = new System.Drawing.Point(150, 79);
+            this.dtpHoraFarmaco.Name = "dtpHoraFarmaco";
+            this.dtpHoraFarmaco.Size = new System.Drawing.Size(150, 20);
+            this.dtpHoraFarmaco.TabIndex = 8;
+            this.dtpHoraFarmaco.Value = new System.DateTime(2022, 4, 4, 10, 25, 0, 0);
             // 
-            // txtPadecimiento
+            // txtFarmaco
             // 
-            this.txtPadecimiento.Location = new System.Drawing.Point(150, 41);
-            this.txtPadecimiento.Name = "txtPadecimiento";
-            this.txtPadecimiento.Size = new System.Drawing.Size(150, 20);
-            this.txtPadecimiento.TabIndex = 9;
+            this.txtFarmaco.Location = new System.Drawing.Point(150, 41);
+            this.txtFarmaco.Name = "txtFarmaco";
+            this.txtFarmaco.Size = new System.Drawing.Size(150, 20);
+            this.txtFarmaco.TabIndex = 9;
             // 
-            // txtDescripcionPadecimiento
+            // txtDescripcionFarmaco
             // 
-            this.txtDescripcionPadecimiento.Location = new System.Drawing.Point(396, 67);
-            this.txtDescripcionPadecimiento.Multiline = true;
-            this.txtDescripcionPadecimiento.Name = "txtDescripcionPadecimiento";
-            this.txtDescripcionPadecimiento.Size = new System.Drawing.Size(272, 86);
-            this.txtDescripcionPadecimiento.TabIndex = 10;
+            this.txtDescripcionFarmaco.Location = new System.Drawing.Point(396, 67);
+            this.txtDescripcionFarmaco.Multiline = true;
+            this.txtDescripcionFarmaco.Name = "txtDescripcionFarmaco";
+            this.txtDescripcionFarmaco.Size = new System.Drawing.Size(272, 86);
+            this.txtDescripcionFarmaco.TabIndex = 10;
             // 
-            // btnGuardarPadecimiento
+            // btnGuardarFarmaco
             // 
-            this.btnGuardarPadecimiento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGuardarPadecimiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
-            this.btnGuardarPadecimiento.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnGuardarPadecimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardarPadecimiento.ForeColor = System.Drawing.Color.White;
-            this.btnGuardarPadecimiento.Location = new System.Drawing.Point(396, 168);
-            this.btnGuardarPadecimiento.Margin = new System.Windows.Forms.Padding(2);
-            this.btnGuardarPadecimiento.Name = "btnGuardarPadecimiento";
-            this.btnGuardarPadecimiento.Size = new System.Drawing.Size(173, 33);
-            this.btnGuardarPadecimiento.TabIndex = 34;
-            this.btnGuardarPadecimiento.Text = "Guardar datos";
-            this.btnGuardarPadecimiento.UseVisualStyleBackColor = false;
+            this.btnGuardarFarmaco.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGuardarFarmaco.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
+            this.btnGuardarFarmaco.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGuardarFarmaco.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarFarmaco.ForeColor = System.Drawing.Color.White;
+            this.btnGuardarFarmaco.Location = new System.Drawing.Point(396, 168);
+            this.btnGuardarFarmaco.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGuardarFarmaco.Name = "btnGuardarFarmaco";
+            this.btnGuardarFarmaco.Size = new System.Drawing.Size(173, 33);
+            this.btnGuardarFarmaco.TabIndex = 34;
+            this.btnGuardarFarmaco.Text = "Guardar datos";
+            this.btnGuardarFarmaco.UseVisualStyleBackColor = false;
             // 
             // btnCancelar
             // 
@@ -166,14 +166,14 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(236)))), ((int)(((byte)(177)))));
-            this.panel2.Controls.Add(this.comboBox1);
+            this.panel2.Controls.Add(this.cmbFrecuenciaDiaFarmaco);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.chbFrecuenciaDias);
             this.panel2.Controls.Add(this.btnCancelar);
-            this.panel2.Controls.Add(this.btnGuardarPadecimiento);
-            this.panel2.Controls.Add(this.txtDescripcionPadecimiento);
-            this.panel2.Controls.Add(this.txtPadecimiento);
-            this.panel2.Controls.Add(this.dtpPadecimiento);
+            this.panel2.Controls.Add(this.btnGuardarFarmaco);
+            this.panel2.Controls.Add(this.txtDescripcionFarmaco);
+            this.panel2.Controls.Add(this.txtFarmaco);
+            this.panel2.Controls.Add(this.dtpHoraFarmaco);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label2);
@@ -182,18 +182,18 @@
             this.panel2.Size = new System.Drawing.Size(770, 276);
             this.panel2.TabIndex = 17;
             // 
-            // comboBox1
+            // cmbFrecuenciaDiaFarmaco
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbFrecuenciaDiaFarmaco.FormattingEnabled = true;
+            this.cmbFrecuenciaDiaFarmaco.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
             "4 o más"});
-            this.comboBox1.Location = new System.Drawing.Point(150, 230);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(150, 21);
-            this.comboBox1.TabIndex = 45;
+            this.cmbFrecuenciaDiaFarmaco.Location = new System.Drawing.Point(150, 230);
+            this.cmbFrecuenciaDiaFarmaco.Name = "cmbFrecuenciaDiaFarmaco";
+            this.cmbFrecuenciaDiaFarmaco.Size = new System.Drawing.Size(150, 21);
+            this.cmbFrecuenciaDiaFarmaco.TabIndex = 45;
             // 
             // label3
             // 
@@ -213,7 +213,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel2);
             this.Name = "frmRegistrarFarmacos";
-            this.Text = "Registrar Farmacos";
+            this.Text = "Farmacos";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -226,14 +226,14 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dtpPadecimiento;
-        private System.Windows.Forms.TextBox txtPadecimiento;
-        private System.Windows.Forms.TextBox txtDescripcionPadecimiento;
-        private System.Windows.Forms.Button btnGuardarPadecimiento;
+        private System.Windows.Forms.DateTimePicker dtpHoraFarmaco;
+        private System.Windows.Forms.TextBox txtFarmaco;
+        private System.Windows.Forms.TextBox txtDescripcionFarmaco;
+        private System.Windows.Forms.Button btnGuardarFarmaco;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.CheckedListBox chbFrecuenciaDias;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbFrecuenciaDiaFarmaco;
         private System.Windows.Forms.Label label3;
     }
 }
