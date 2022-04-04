@@ -66,10 +66,5 @@ namespace Sistema_de_Control_de_Historia_Medica
                 pdfVisualizador.src = $"{direccion}\\Analiticas\\{lblID.Text}.pdf";
             }
         }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

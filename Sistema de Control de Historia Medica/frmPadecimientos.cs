@@ -37,12 +37,7 @@ namespace Sistema_de_Control_de_Historia_Medica
 
         }
 
-        private void clbEnfermedades_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void frmPadecimientos_Load(object sender, EventArgs e)
+        private void labCentroDeSalud_Click(object sender, EventArgs e)
         {
 
         }
