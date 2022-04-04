@@ -76,6 +76,7 @@
             // 
             // txtDescripcionPadecimiento
             // 
+            this.txtDescripcionPadecimiento.Enabled = false;
             this.txtDescripcionPadecimiento.Location = new System.Drawing.Point(97, 139);
             this.txtDescripcionPadecimiento.Multiline = true;
             this.txtDescripcionPadecimiento.Name = "txtDescripcionPadecimiento";
@@ -84,6 +85,7 @@
             // 
             // txtTipoPadecimiento
             // 
+            this.txtTipoPadecimiento.Enabled = false;
             this.txtTipoPadecimiento.Location = new System.Drawing.Point(97, 72);
             this.txtTipoPadecimiento.Name = "txtTipoPadecimiento";
             this.txtTipoPadecimiento.Size = new System.Drawing.Size(136, 20);
@@ -91,6 +93,7 @@
             // 
             // txtNombrePadecimiento
             // 
+            this.txtNombrePadecimiento.Enabled = false;
             this.txtNombrePadecimiento.Location = new System.Drawing.Point(97, 28);
             this.txtNombrePadecimiento.Name = "txtNombrePadecimiento";
             this.txtNombrePadecimiento.Size = new System.Drawing.Size(136, 20);
@@ -137,7 +140,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(358, 28);
+            this.label4.Location = new System.Drawing.Point(344, 31);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(50, 16);
@@ -150,11 +153,12 @@
             this.dtpFecha.Enabled = false;
             this.dtpFecha.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFecha.Location = new System.Drawing.Point(414, 28);
+            this.dtpFecha.Location = new System.Drawing.Point(398, 28);
             this.dtpFecha.Margin = new System.Windows.Forms.Padding(2);
             this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(138, 23);
+            this.dtpFecha.Size = new System.Drawing.Size(154, 23);
             this.dtpFecha.TabIndex = 10;
+            this.dtpFecha.ValueChanged += new System.EventHandler(this.dtpFecha_ValueChanged);
             // 
             // btnRegistrarPadecimiento
             // 
@@ -180,6 +184,7 @@
             this.btnCargar.TabIndex = 31;
             this.btnCargar.Text = "Cargar";
             this.btnCargar.UseVisualStyleBackColor = false;
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
             // dgvPadecimientos
             // 
