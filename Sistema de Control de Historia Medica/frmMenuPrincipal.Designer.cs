@@ -36,6 +36,7 @@
             this.tsPadecimientos = new System.Windows.Forms.ToolStripMenuItem();
             this.tsResumen = new System.Windows.Forms.ToolStripMenuItem();
             this.tsLogOut = new System.Windows.Forms.ToolStripMenuItem();
+            this.fármacosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ms_BarraMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,8 +55,8 @@
             this.tsLogOut});
             this.ms_BarraMenu.Location = new System.Drawing.Point(0, 0);
             this.ms_BarraMenu.Name = "ms_BarraMenu";
-            this.ms_BarraMenu.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.ms_BarraMenu.Size = new System.Drawing.Size(1300, 32);
+            this.ms_BarraMenu.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.ms_BarraMenu.Size = new System.Drawing.Size(975, 26);
             this.ms_BarraMenu.TabIndex = 1;
             this.ms_BarraMenu.Text = "menuStrip1";
             // 
@@ -64,7 +65,7 @@
             this.tsPerfilPersonal.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsPerfilPersonal.ForeColor = System.Drawing.Color.White;
             this.tsPerfilPersonal.Name = "tsPerfilPersonal";
-            this.tsPerfilPersonal.Size = new System.Drawing.Size(112, 28);
+            this.tsPerfilPersonal.Size = new System.Drawing.Size(100, 22);
             this.tsPerfilPersonal.Text = "Mi cuenta";
             this.tsPerfilPersonal.Click += new System.EventHandler(this.tsPerfilPersonal_Click);
             // 
@@ -73,7 +74,7 @@
             this.tsAnaliticas.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsAnaliticas.ForeColor = System.Drawing.Color.White;
             this.tsAnaliticas.Name = "tsAnaliticas";
-            this.tsAnaliticas.Size = new System.Drawing.Size(110, 28);
+            this.tsAnaliticas.Size = new System.Drawing.Size(94, 22);
             this.tsAnaliticas.Text = "Analíticas";
             this.tsAnaliticas.Click += new System.EventHandler(this.tsAnaliticas_Click);
             // 
@@ -82,7 +83,7 @@
             this.tsCalendario.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsCalendario.ForeColor = System.Drawing.Color.White;
             this.tsCalendario.Name = "tsCalendario";
-            this.tsCalendario.Size = new System.Drawing.Size(273, 28);
+            this.tsCalendario.Size = new System.Drawing.Size(234, 22);
             this.tsCalendario.Text = "Calendario de citas médicas";
             this.tsCalendario.Click += new System.EventHandler(this.tsCalendario_Click);
             // 
@@ -91,16 +92,18 @@
             this.tsDoctores.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsDoctores.ForeColor = System.Drawing.Color.White;
             this.tsDoctores.Name = "tsDoctores";
-            this.tsDoctores.Size = new System.Drawing.Size(104, 28);
+            this.tsDoctores.Size = new System.Drawing.Size(85, 22);
             this.tsDoctores.Text = "Doctores";
             this.tsDoctores.Click += new System.EventHandler(this.tsDoctores_Click);
             // 
             // tsPadecimientos
             // 
+            this.tsPadecimientos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fármacosToolStripMenuItem});
             this.tsPadecimientos.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsPadecimientos.ForeColor = System.Drawing.Color.White;
             this.tsPadecimientos.Name = "tsPadecimientos";
-            this.tsPadecimientos.Size = new System.Drawing.Size(157, 28);
+            this.tsPadecimientos.Size = new System.Drawing.Size(130, 22);
             this.tsPadecimientos.Text = "Padecimientos";
             this.tsPadecimientos.Click += new System.EventHandler(this.tsPadecimientos_Click);
             // 
@@ -109,7 +112,7 @@
             this.tsResumen.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsResumen.ForeColor = System.Drawing.Color.White;
             this.tsResumen.Name = "tsResumen";
-            this.tsResumen.Size = new System.Drawing.Size(109, 28);
+            this.tsResumen.Size = new System.Drawing.Size(87, 22);
             this.tsResumen.Text = "Resumen";
             this.tsResumen.Click += new System.EventHandler(this.tsResumen_Click);
             // 
@@ -118,19 +121,27 @@
             this.tsLogOut.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold);
             this.tsLogOut.ForeColor = System.Drawing.Color.White;
             this.tsLogOut.Name = "tsLogOut";
-            this.tsLogOut.Size = new System.Drawing.Size(90, 28);
+            this.tsLogOut.Size = new System.Drawing.Size(73, 22);
             this.tsLogOut.Text = "LogOut";
             this.tsLogOut.Click += new System.EventHandler(this.tsLogOut_Click);
             // 
+            // fármacosToolStripMenuItem
+            // 
+            this.fármacosToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
+            this.fármacosToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.fármacosToolStripMenuItem.Name = "fármacosToolStripMenuItem";
+            this.fármacosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.fármacosToolStripMenuItem.Text = "Fármacos";
+            // 
             // frmMenuPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1300, 846);
+            this.ClientSize = new System.Drawing.Size(975, 687);
             this.Controls.Add(this.ms_BarraMenu);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.ms_BarraMenu;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmMenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menú principal";
@@ -152,6 +163,7 @@
         private System.Windows.Forms.ToolStripMenuItem tsPadecimientos;
         private System.Windows.Forms.ToolStripMenuItem tsResumen;
         private System.Windows.Forms.ToolStripMenuItem tsLogOut;
+        private System.Windows.Forms.ToolStripMenuItem fármacosToolStripMenuItem;
     }
 }
 
