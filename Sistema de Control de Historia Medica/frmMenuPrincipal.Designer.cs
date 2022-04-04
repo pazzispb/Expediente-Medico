@@ -51,6 +51,7 @@
             this.tsCalendario,
             this.tsDoctores,
             this.tsPadecimientos,
+            this.fármacosToolStripMenuItem,
             this.tsResumen,
             this.tsLogOut});
             this.ms_BarraMenu.Location = new System.Drawing.Point(0, 0);
@@ -99,8 +100,6 @@
             // 
             // tsPadecimientos
             // 
-            this.tsPadecimientos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fármacosToolStripMenuItem});
             this.tsPadecimientos.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsPadecimientos.ForeColor = System.Drawing.Color.White;
             this.tsPadecimientos.Name = "tsPadecimientos";
@@ -128,12 +127,12 @@
             // 
             // fármacosToolStripMenuItem
             // 
-            this.fármacosToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
+            this.fármacosToolStripMenuItem.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold);
             this.fármacosToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.fármacosToolStripMenuItem.Name = "fármacosToolStripMenuItem";
-            this.fármacosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.fármacosToolStripMenuItem.Size = new System.Drawing.Size(91, 22);
             this.fármacosToolStripMenuItem.Text = "Fármacos";
-            this.fármacosToolStripMenuItem.Click += new System.EventHandler(this.fármacosToolStripMenuItem_Click);
+            this.fármacosToolStripMenuItem.Click += new System.EventHandler(this.fármacosToolStripMenuItem_Click_1);
             // 
             // frmMenuPrincipal
             // 
@@ -143,7 +142,7 @@
             this.Controls.Add(this.ms_BarraMenu);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.ms_BarraMenu;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmMenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menú principal";

@@ -182,6 +182,7 @@
             this.btnIngresarPadecimientos.TabIndex = 13;
             this.btnIngresarPadecimientos.Text = "Ingresar Nuevo Padecimiento";
             this.btnIngresarPadecimientos.UseVisualStyleBackColor = false;
+            this.btnIngresarPadecimientos.Click += new System.EventHandler(this.btnIngresarPadecimientos_Click);
             // 
             // label1
             // 
