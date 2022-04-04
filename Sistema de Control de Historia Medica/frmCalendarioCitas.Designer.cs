@@ -73,7 +73,7 @@
             this.btnAñadirCita.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
             this.btnAñadirCita.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAñadirCita.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnAñadirCita.Location = new System.Drawing.Point(328, 137);
+            this.btnAñadirCita.Location = new System.Drawing.Point(328, 143);
             this.btnAñadirCita.Name = "btnAñadirCita";
             this.btnAñadirCita.Size = new System.Drawing.Size(136, 34);
             this.btnAñadirCita.TabIndex = 27;
