@@ -16,6 +16,7 @@ namespace Sistema_de_Control_de_Historia_Medica
         
         string vIDUsuario = frmMenuPrincipal.vIdUsuario;//Id del usuario que tiene la sesion iniciada
         clsBaseDatos bd = new clsBaseDatos();
+        public frmAnaliticas frmAnaliticas;
         public frmRegistrarAnalitica()
         {
             InitializeComponent();
@@ -48,6 +49,7 @@ namespace Sistema_de_Control_de_Historia_Medica
                         string vID = bd.ConsultarValor("SELECT idAnalitica FROM Analiticas ORDER BY idAnalitica DESC LIMIT 1;").ToString(); //obtiene el id de la analitica que se acaba de registrar
                         File.Copy(lblDireccion.Text, $"Analiticas/{vID}.pdf"); //Guarda el archivo bajo el id correspondiente a su registro en la base de datos
                         LimpiarCampos();
+                        frmAnaliticas.CargarAnaliticas();
                     }
                     else MessageBox.Show("Hubo un error al registrar la analitica", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
