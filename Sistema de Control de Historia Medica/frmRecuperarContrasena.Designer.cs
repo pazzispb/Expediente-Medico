@@ -55,46 +55,51 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Font = new System.Drawing.Font("Montserrat Medium", 8.5F, System.Drawing.FontStyle.Bold);
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnCancelar.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnCancelar.Location = new System.Drawing.Point(79, 302);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(92, 23);
             this.btnCancelar.TabIndex = 4;
             this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnEnviar
             // 
-            this.btnEnviar.Font = new System.Drawing.Font("Montserrat Medium", 8.5F, System.Drawing.FontStyle.Bold);
+            this.btnEnviar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnEnviar.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnviar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnEnviar.Location = new System.Drawing.Point(314, 302);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Size = new System.Drawing.Size(92, 23);
             this.btnEnviar.TabIndex = 7;
             this.btnEnviar.Text = "Enviar";
-            this.btnEnviar.UseVisualStyleBackColor = true;
+            this.btnEnviar.UseVisualStyleBackColor = false;
             this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
             // 
             // lblCedula
             // 
             this.lblCedula.AutoSize = true;
-            this.lblCedula.Font = new System.Drawing.Font("Montserrat Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCedula.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblCedula.Location = new System.Drawing.Point(76, 236);
+            this.lblCedula.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblCedula.Font = new System.Drawing.Font("Montserrat Medium", 8.25F, System.Drawing.FontStyle.Bold);
+            this.lblCedula.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.lblCedula.Location = new System.Drawing.Point(97, 236);
             this.lblCedula.Name = "lblCedula";
-            this.lblCedula.Size = new System.Drawing.Size(63, 21);
+            this.lblCedula.Size = new System.Drawing.Size(47, 15);
             this.lblCedula.TabIndex = 31;
             this.lblCedula.Text = "Cédula";
             // 
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Font = new System.Drawing.Font("Montserrat Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblUsuario.Location = new System.Drawing.Point(76, 194);
+            this.lblUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblUsuario.Font = new System.Drawing.Font("Montserrat Medium", 8.25F, System.Drawing.FontStyle.Bold);
+            this.lblUsuario.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.lblUsuario.Location = new System.Drawing.Point(97, 194);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(69, 21);
+            this.lblUsuario.Size = new System.Drawing.Size(51, 15);
             this.lblUsuario.TabIndex = 32;
             this.lblUsuario.Text = "Usuario";
             // 
@@ -102,7 +107,7 @@
             // 
             this.lbRecupContra.AutoSize = true;
             this.lbRecupContra.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbRecupContra.ForeColor = System.Drawing.Color.Black;
+            this.lbRecupContra.ForeColor = System.Drawing.Color.White;
             this.lbRecupContra.Location = new System.Drawing.Point(113, 121);
             this.lbRecupContra.Name = "lbRecupContra";
             this.lbRecupContra.Size = new System.Drawing.Size(255, 29);
