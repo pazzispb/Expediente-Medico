@@ -54,6 +54,18 @@ namespace Sistema_de_Control_de_Historia_Medica
 
         }
 
-     
+        private void btnIngresarPadecimientos_Click(object sender, EventArgs e)
+        {
+            frmRegistrarPadecimientos frm = new frmRegistrarPadecimientos();
+            frm.MdiParent = this.MdiParent;
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.Show();
+
+        }
+
+        private void btnCargarPadecimientos_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

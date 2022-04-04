@@ -29,7 +29,10 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.chbEstadoFechaPadecimiento = new System.Windows.Forms.CheckBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.cmbTipoPadecimiento = new System.Windows.Forms.ComboBox();
+            this.dtpFechaPadecimiento = new System.Windows.Forms.DateTimePicker();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardarPadecimiento = new System.Windows.Forms.Button();
             this.txtDescripcionPadecimiento = new System.Windows.Forms.TextBox();
@@ -38,9 +41,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cmbTipoPadecimiento = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.chbEstadoFechaPadecimiento = new System.Windows.Forms.CheckBox();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +50,7 @@
             this.panel2.Controls.Add(this.chbEstadoFechaPadecimiento);
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.cmbTipoPadecimiento);
-            this.panel2.Controls.Add(this.dateTimePicker1);
+            this.panel2.Controls.Add(this.dtpFechaPadecimiento);
             this.panel2.Controls.Add(this.btnCancelar);
             this.panel2.Controls.Add(this.btnGuardarPadecimiento);
             this.panel2.Controls.Add(this.txtDescripcionPadecimiento);
@@ -64,13 +64,44 @@
             this.panel2.TabIndex = 16;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // dateTimePicker1
+            // chbEstadoFechaPadecimiento
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(184, 122);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(139, 20);
-            this.dateTimePicker1.TabIndex = 36;
+            this.chbEstadoFechaPadecimiento.AutoSize = true;
+            this.chbEstadoFechaPadecimiento.Location = new System.Drawing.Point(184, 149);
+            this.chbEstadoFechaPadecimiento.Name = "chbEstadoFechaPadecimiento";
+            this.chbEstadoFechaPadecimiento.Size = new System.Drawing.Size(71, 17);
+            this.chbEstadoFechaPadecimiento.TabIndex = 39;
+            this.chbEstadoFechaPadecimiento.Text = "No aplica";
+            this.chbEstadoFechaPadecimiento.UseVisualStyleBackColor = true;
+            this.chbEstadoFechaPadecimiento.CheckedChanged += new System.EventHandler(this.chbEstadoFechaPadecimiento_CheckedChanged);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(184, 74);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(139, 20);
+            this.textBox1.TabIndex = 38;
+            // 
+            // cmbTipoPadecimiento
+            // 
+            this.cmbTipoPadecimiento.FormattingEnabled = true;
+            this.cmbTipoPadecimiento.Items.AddRange(new object[] {
+            "Enfermdad",
+            "Cirugía",
+            "Emergencia",
+            "Alergia"});
+            this.cmbTipoPadecimiento.Location = new System.Drawing.Point(184, 31);
+            this.cmbTipoPadecimiento.Name = "cmbTipoPadecimiento";
+            this.cmbTipoPadecimiento.Size = new System.Drawing.Size(139, 21);
+            this.cmbTipoPadecimiento.TabIndex = 37;
+            // 
+            // dtpFechaPadecimiento
+            // 
+            this.dtpFechaPadecimiento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpFechaPadecimiento.Location = new System.Drawing.Point(184, 122);
+            this.dtpFechaPadecimiento.Name = "dtpFechaPadecimiento";
+            this.dtpFechaPadecimiento.Size = new System.Drawing.Size(139, 20);
+            this.dtpFechaPadecimiento.TabIndex = 36;
             // 
             // btnCancelar
             // 
@@ -86,6 +117,7 @@
             this.btnCancelar.TabIndex = 35;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnGuardarPadecimiento
             // 
@@ -162,36 +194,6 @@
             this.label1.TabIndex = 33;
             this.label1.Text = "Datos del Padecimiento";
             // 
-            // cmbTipoPadecimiento
-            // 
-            this.cmbTipoPadecimiento.FormattingEnabled = true;
-            this.cmbTipoPadecimiento.Items.AddRange(new object[] {
-            "Enfermdad",
-            "Cirugía",
-            "Emergencia",
-            "Alergia"});
-            this.cmbTipoPadecimiento.Location = new System.Drawing.Point(184, 31);
-            this.cmbTipoPadecimiento.Name = "cmbTipoPadecimiento";
-            this.cmbTipoPadecimiento.Size = new System.Drawing.Size(139, 21);
-            this.cmbTipoPadecimiento.TabIndex = 37;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(184, 74);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(139, 20);
-            this.textBox1.TabIndex = 38;
-            // 
-            // chbEstadoFechaPadecimiento
-            // 
-            this.chbEstadoFechaPadecimiento.AutoSize = true;
-            this.chbEstadoFechaPadecimiento.Location = new System.Drawing.Point(184, 149);
-            this.chbEstadoFechaPadecimiento.Name = "chbEstadoFechaPadecimiento";
-            this.chbEstadoFechaPadecimiento.Size = new System.Drawing.Size(71, 17);
-            this.chbEstadoFechaPadecimiento.TabIndex = 39;
-            this.chbEstadoFechaPadecimiento.Text = "No aplica";
-            this.chbEstadoFechaPadecimiento.UseVisualStyleBackColor = true;
-            // 
             // frmRegistrarPadecimientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -200,7 +202,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel2);
             this.Name = "frmRegistrarPadecimientos";
-            this.Text = "Registro de Padecimientos";
+            this.Text = " ";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -219,7 +221,7 @@
         private System.Windows.Forms.TextBox txtDescripcionPadecimiento;
         private System.Windows.Forms.Button btnGuardarPadecimiento;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpFechaPadecimiento;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ComboBox cmbTipoPadecimiento;
         private System.Windows.Forms.CheckBox chbEstadoFechaPadecimiento;

@@ -57,6 +57,7 @@
             this.btnCargarPadecimientos.TabIndex = 11;
             this.btnCargarPadecimientos.Text = "Cargar";
             this.btnCargarPadecimientos.UseVisualStyleBackColor = false;
+            this.btnCargarPadecimientos.Click += new System.EventHandler(this.btnCargarPadecimientos_Click);
             // 
             // labTitulo
             // 
@@ -173,7 +174,6 @@
             // btnIngresarPadecimientos
             // 
             this.btnIngresarPadecimientos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
-            this.btnIngresarPadecimientos.Enabled = false;
             this.btnIngresarPadecimientos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIngresarPadecimientos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnIngresarPadecimientos.Location = new System.Drawing.Point(545, 12);
@@ -182,7 +182,7 @@
             this.btnIngresarPadecimientos.TabIndex = 13;
             this.btnIngresarPadecimientos.Text = "Ingresar Nuevo Padecimiento";
             this.btnIngresarPadecimientos.UseVisualStyleBackColor = false;
-          
+            this.btnIngresarPadecimientos.Click += new System.EventHandler(this.btnIngresarPadecimientos_Click);
             // 
             // label1
             // 

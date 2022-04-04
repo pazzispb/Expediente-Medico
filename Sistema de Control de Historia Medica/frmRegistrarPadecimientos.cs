@@ -21,5 +21,23 @@ namespace Sistema_de_Control_de_Historia_Medica
         {
 
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void chbEstadoFechaPadecimiento_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chbEstadoFechaPadecimiento.Checked)
+            {
+                dtpFechaPadecimiento.Enabled = false;
+
+            }
+            else
+            {
+                dtpFechaPadecimiento.Enabled = true;
+            }
+        }
     }
 }
