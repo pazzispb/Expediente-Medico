@@ -92,6 +92,7 @@
             this.tsDoctores.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsDoctores.ForeColor = System.Drawing.Color.White;
             this.tsDoctores.Name = "tsDoctores";
+            this.tsDoctores.ShowShortcutKeys = false;
             this.tsDoctores.Size = new System.Drawing.Size(85, 22);
             this.tsDoctores.Text = "Doctores";
             this.tsDoctores.Click += new System.EventHandler(this.tsDoctores_Click);
@@ -132,6 +133,7 @@
             this.fármacosToolStripMenuItem.Name = "fármacosToolStripMenuItem";
             this.fármacosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.fármacosToolStripMenuItem.Text = "Fármacos";
+            this.fármacosToolStripMenuItem.Click += new System.EventHandler(this.fármacosToolStripMenuItem_Click);
             // 
             // frmMenuPrincipal
             // 

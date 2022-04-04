@@ -88,5 +88,10 @@ namespace Sistema_de_Control_de_Historia_Medica
                     break; //Sal del bucle
                 }
         }
+
+        private void fármacosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new frmFarmacos());
+        }
     }
 }
