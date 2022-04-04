@@ -38,10 +38,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.txtPadecimiento = new System.Windows.Forms.TextBox();
+            this.txtTipoPadecimiento = new System.Windows.Forms.TextBox();
+            this.txtDescripcionPadecimiento = new System.Windows.Forms.TextBox();
+            this.dtpPadecimiento = new System.Windows.Forms.DateTimePicker();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -72,10 +72,10 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(236)))), ((int)(((byte)(177)))));
-            this.panel2.Controls.Add(this.dateTimePicker1);
-            this.panel2.Controls.Add(this.textBox3);
-            this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.dtpPadecimiento);
+            this.panel2.Controls.Add(this.txtDescripcionPadecimiento);
+            this.panel2.Controls.Add(this.txtTipoPadecimiento);
+            this.panel2.Controls.Add(this.txtPadecimiento);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
@@ -156,36 +156,37 @@
             this.label5.TabIndex = 3;
             this.label5.Text = "Fecha:";
             // 
-            // textBox1
+            // txtPadecimiento
             // 
-            this.textBox1.Location = new System.Drawing.Point(138, 48);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(156, 20);
-            this.textBox1.TabIndex = 4;
+            this.txtPadecimiento.Location = new System.Drawing.Point(138, 48);
+            this.txtPadecimiento.Name = "txtPadecimiento";
+            this.txtPadecimiento.Size = new System.Drawing.Size(156, 20);
+            this.txtPadecimiento.TabIndex = 4;
             // 
-            // textBox2
+            // txtTipoPadecimiento
             // 
-            this.textBox2.Location = new System.Drawing.Point(138, 90);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(156, 20);
-            this.textBox2.TabIndex = 5;
+            this.txtTipoPadecimiento.Location = new System.Drawing.Point(138, 90);
+            this.txtTipoPadecimiento.Name = "txtTipoPadecimiento";
+            this.txtTipoPadecimiento.Size = new System.Drawing.Size(156, 20);
+            this.txtTipoPadecimiento.TabIndex = 5;
             // 
-            // textBox3
+            // txtDescripcionPadecimiento
             // 
-            this.textBox3.Location = new System.Drawing.Point(388, 76);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(257, 80);
-            this.textBox3.TabIndex = 6;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.txtDescripcionPadecimiento.AcceptsReturn = true;
+            this.txtDescripcionPadecimiento.Location = new System.Drawing.Point(388, 76);
+            this.txtDescripcionPadecimiento.Multiline = true;
+            this.txtDescripcionPadecimiento.Name = "txtDescripcionPadecimiento";
+            this.txtDescripcionPadecimiento.Size = new System.Drawing.Size(257, 80);
+            this.txtDescripcionPadecimiento.TabIndex = 6;
+            this.txtDescripcionPadecimiento.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
-            // dateTimePicker1
+            // dtpPadecimiento
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(138, 140);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(156, 20);
-            this.dateTimePicker1.TabIndex = 7;
+            this.dtpPadecimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpPadecimiento.Location = new System.Drawing.Point(138, 140);
+            this.dtpPadecimiento.Name = "dtpPadecimiento";
+            this.dtpPadecimiento.Size = new System.Drawing.Size(156, 20);
+            this.dtpPadecimiento.TabIndex = 7;
             // 
             // frmPadecimientos
             // 
@@ -201,7 +202,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimizeBox = false;
             this.Name = "frmPadecimientos";
-            this.Text = "Registro de Padecimientos";
+            this.Text = "Padecimientos";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -218,13 +219,13 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnIngresarPadecimientos;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtDescripcionPadecimiento;
+        private System.Windows.Forms.TextBox txtTipoPadecimiento;
+        private System.Windows.Forms.TextBox txtPadecimiento;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpPadecimiento;
     }
 }
