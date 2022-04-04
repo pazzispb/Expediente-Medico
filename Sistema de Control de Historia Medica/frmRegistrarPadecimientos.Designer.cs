@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardarPadecimiento = new System.Windows.Forms.Button();
             this.txtDescripcionPadecimiento = new System.Windows.Forms.TextBox();
@@ -37,13 +38,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.cmbTipoPadecimiento = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(236)))), ((int)(((byte)(177)))));
+            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.cmbTipoPadecimiento);
             this.panel2.Controls.Add(this.dateTimePicker1);
             this.panel2.Controls.Add(this.btnCancelar);
             this.panel2.Controls.Add(this.btnGuardarPadecimiento);
@@ -57,6 +61,14 @@
             this.panel2.Size = new System.Drawing.Size(770, 216);
             this.panel2.TabIndex = 16;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(184, 122);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(139, 20);
+            this.dateTimePicker1.TabIndex = 36;
             // 
             // btnCancelar
             // 
@@ -148,13 +160,25 @@
             this.label1.TabIndex = 33;
             this.label1.Text = "Datos del Padecimiento";
             // 
-            // dateTimePicker1
+            // cmbTipoPadecimiento
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(184, 70);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(118, 20);
-            this.dateTimePicker1.TabIndex = 36;
+            this.cmbTipoPadecimiento.FormattingEnabled = true;
+            this.cmbTipoPadecimiento.Items.AddRange(new object[] {
+            "Enfermdad",
+            "Cirugía",
+            "Emergencia",
+            "Alergia"});
+            this.cmbTipoPadecimiento.Location = new System.Drawing.Point(184, 31);
+            this.cmbTipoPadecimiento.Name = "cmbTipoPadecimiento";
+            this.cmbTipoPadecimiento.Size = new System.Drawing.Size(139, 21);
+            this.cmbTipoPadecimiento.TabIndex = 37;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(184, 74);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(139, 20);
+            this.textBox1.TabIndex = 38;
             // 
             // frmRegistrarPadecimientos
             // 
@@ -184,5 +208,7 @@
         private System.Windows.Forms.Button btnGuardarPadecimiento;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox cmbTipoPadecimiento;
     }
 }

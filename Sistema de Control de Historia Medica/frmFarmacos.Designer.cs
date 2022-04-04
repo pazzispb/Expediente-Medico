@@ -220,6 +220,7 @@
             this.btnIngresarFarmacos.TabIndex = 39;
             this.btnIngresarFarmacos.Text = "Ingresar Nuevo Fármaco";
             this.btnIngresarFarmacos.UseVisualStyleBackColor = false;
+            this.btnIngresarFarmacos.Click += new System.EventHandler(this.btnIngresarFarmacos_Click);
             // 
             // frmFarmacos
             // 
