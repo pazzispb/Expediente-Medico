@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Sistema_de_Control_de_Historia_Medica
 {
-    public partial class frmRegistrarPadecimientos : Form
+    public partial class frmRegistrarPadecimiento : Form
     {
-        public frmRegistrarPadecimientos()
+        public frmRegistrarPadecimiento()
         {
             InitializeComponent();
-        }
-
-        private void rdbAlergia_CheckedChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

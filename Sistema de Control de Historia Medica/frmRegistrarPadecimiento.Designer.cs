@@ -1,6 +1,6 @@
 ﻿namespace Sistema_de_Control_de_Historia_Medica
 {
-    partial class frmRegistrarPadecimientos
+    partial class frmRegistrarPadecimiento
     {
         /// <summary>
         /// Required designer variable.
@@ -32,6 +32,10 @@
             this.button2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtPadecimiento = new System.Windows.Forms.TextBox();
+            this.rdbEmergencia = new System.Windows.Forms.RadioButton();
+            this.rdbCirugia = new System.Windows.Forms.RadioButton();
+            this.rdbAlergia = new System.Windows.Forms.RadioButton();
+            this.rdbEnfermedad = new System.Windows.Forms.RadioButton();
             this.cbEstadoFecha = new System.Windows.Forms.CheckBox();
             this.dtpFechaPadecimiento = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
@@ -44,7 +48,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.labTitulo = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,8 +78,11 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(236)))), ((int)(((byte)(177)))));
-            this.panel2.Controls.Add(this.comboBox1);
             this.panel2.Controls.Add(this.txtPadecimiento);
+            this.panel2.Controls.Add(this.rdbEmergencia);
+            this.panel2.Controls.Add(this.rdbCirugia);
+            this.panel2.Controls.Add(this.rdbAlergia);
+            this.panel2.Controls.Add(this.rdbEnfermedad);
             this.panel2.Controls.Add(this.cbEstadoFecha);
             this.panel2.Controls.Add(this.dtpFechaPadecimiento);
             this.panel2.Controls.Add(this.label8);
@@ -99,6 +105,50 @@
             this.txtPadecimiento.Name = "txtPadecimiento";
             this.txtPadecimiento.Size = new System.Drawing.Size(133, 20);
             this.txtPadecimiento.TabIndex = 29;
+            // 
+            // rdbEmergencia
+            // 
+            this.rdbEmergencia.AutoSize = true;
+            this.rdbEmergencia.Location = new System.Drawing.Point(405, 35);
+            this.rdbEmergencia.Name = "rdbEmergencia";
+            this.rdbEmergencia.Size = new System.Drawing.Size(81, 17);
+            this.rdbEmergencia.TabIndex = 28;
+            this.rdbEmergencia.TabStop = true;
+            this.rdbEmergencia.Text = "Emergencia";
+            this.rdbEmergencia.UseVisualStyleBackColor = true;
+            // 
+            // rdbCirugia
+            // 
+            this.rdbCirugia.AutoSize = true;
+            this.rdbCirugia.Location = new System.Drawing.Point(314, 35);
+            this.rdbCirugia.Name = "rdbCirugia";
+            this.rdbCirugia.Size = new System.Drawing.Size(59, 17);
+            this.rdbCirugia.TabIndex = 27;
+            this.rdbCirugia.TabStop = true;
+            this.rdbCirugia.Text = "Cirugía";
+            this.rdbCirugia.UseVisualStyleBackColor = true;
+            // 
+            // rdbAlergia
+            // 
+            this.rdbAlergia.AutoSize = true;
+            this.rdbAlergia.Location = new System.Drawing.Point(228, 36);
+            this.rdbAlergia.Name = "rdbAlergia";
+            this.rdbAlergia.Size = new System.Drawing.Size(57, 17);
+            this.rdbAlergia.TabIndex = 26;
+            this.rdbAlergia.TabStop = true;
+            this.rdbAlergia.Text = "Alergia";
+            this.rdbAlergia.UseVisualStyleBackColor = true;
+            // 
+            // rdbEnfermedad
+            // 
+            this.rdbEnfermedad.AutoSize = true;
+            this.rdbEnfermedad.Location = new System.Drawing.Point(125, 37);
+            this.rdbEnfermedad.Name = "rdbEnfermedad";
+            this.rdbEnfermedad.Size = new System.Drawing.Size(82, 17);
+            this.rdbEnfermedad.TabIndex = 25;
+            this.rdbEnfermedad.TabStop = true;
+            this.rdbEnfermedad.Text = "Enfermedad";
+            this.rdbEnfermedad.UseVisualStyleBackColor = true;
             // 
             // cbEstadoFecha
             // 
@@ -214,19 +264,6 @@
             this.labTitulo.TabIndex = 32;
             this.labTitulo.Text = "Registro de Padecimientos";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Enfermedad",
-            "Cirugía",
-            "Emergencia",
-            "Alergia"});
-            this.comboBox1.Location = new System.Drawing.Point(140, 31);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 30;
-            // 
             // frmRegistrarPadecimiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -251,6 +288,10 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txtPadecimiento;
+        private System.Windows.Forms.RadioButton rdbEmergencia;
+        private System.Windows.Forms.RadioButton rdbCirugia;
+        private System.Windows.Forms.RadioButton rdbAlergia;
+        private System.Windows.Forms.RadioButton rdbEnfermedad;
         private System.Windows.Forms.CheckBox cbEstadoFecha;
         private System.Windows.Forms.DateTimePicker dtpFechaPadecimiento;
         private System.Windows.Forms.Label label8;
@@ -263,6 +304,5 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label labTitulo;
-        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
