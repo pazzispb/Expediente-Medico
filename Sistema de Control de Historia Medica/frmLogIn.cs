@@ -12,6 +12,7 @@ namespace Sistema_de_Control_de_Historia_Medica
 {
     public partial class frmLogIn : Form
     {
+        clsBaseDatos bd = new clsBaseDatos(); //objeto de base de datos
         public frmLogIn()
         {
             InitializeComponent();
@@ -30,9 +31,18 @@ namespace Sistema_de_Control_de_Historia_Medica
         }
         private void btnAcceder_Click(object sender, EventArgs e)
         {
-            if (Application.OpenForms.Count < 2) this.Hide(); //Verifica que solo tiene el LogIn abierto
-            AbrirFormulario(new frmMenuPrincipal()); //Abre el formulario de Menu Principal
-            frmMenuPrincipal.vIdUsuario = "1";//Indicamos el ID del usuario que ingreso al sistema
+            string vConsulta = $"SELECT COUNT(idUsuario) FROM Usuarios WHERE usuario = '{txtUsuario.Text}' AND clave = '{txtContrasena.Text}' "; // Cantidad de usuarios que comparten el mismo nombre y contrasena
+            int vResultados = Convert.ToInt32(bd.ConsultarValor(vConsulta));
+
+            if(vResultados == 1)
+            {
+                if (Application.OpenForms.Count < 2) this.Hide(); //Verifica que solo tiene el LogIn abierto
+                AbrirFormulario(new frmMenuPrincipal()); //Abre el formulario de Menu Principal
+                vConsulta = $"SELECT idUsuario FROM Usuarios WHERE usuario = '{txtUsuario.Text}' AND clave = '{txtContrasena.Text}' "; // Cantidad de usuarios que comparten el mismo nombre y contrasena
+                frmMenuPrincipal.vIdUsuario = bd.ConsultarValor(vConsulta).ToString();//Indicamos el ID del usuario que ingreso al sistema
+            }
+            else MessageBox.Show("Usuario y/o contraseña errónea", "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+   
         }
 
         private void frmLogIn_Load(object sender, EventArgs e)
