@@ -46,5 +46,11 @@ namespace Sistema_de_Control_de_Historia_Medica
         {
 
         }
+
+        private void btnRegistrarPadecimiento_Click(object sender, EventArgs e)
+        {
+            frmRegistrarPadecimientos frmRegistrarPadecimientos = new frmRegistrarPadecimientos();
+            frmRegistrarPadecimientos.Show();
+        }
     }
 }
