@@ -28,202 +28,183 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnEditarPadecimientos = new System.Windows.Forms.Button();
-            this.btnAñadirPadecimientos = new System.Windows.Forms.Button();
-            this.btnEliminarPadecimientos = new System.Windows.Forms.Button();
+            this.btnCargarPadecimientos = new System.Windows.Forms.Button();
             this.labTitulo = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.labantecedentes = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnIngresarPadecimientos = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.labCirugias = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.labcondiciones = new System.Windows.Forms.Label();
-            this.listboxCondiciones = new System.Windows.Forms.ListBox();
-            this.listBoxCirugias = new System.Windows.Forms.ListBox();
-            this.checkedListBoxAntecedentes = new System.Windows.Forms.CheckedListBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnEditarPadecimientos
+            // btnCargarPadecimientos
             // 
-            this.btnEditarPadecimientos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
-            this.btnEditarPadecimientos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditarPadecimientos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnEditarPadecimientos.Location = new System.Drawing.Point(355, 417);
-            this.btnEditarPadecimientos.Name = "btnEditarPadecimientos";
-            this.btnEditarPadecimientos.Size = new System.Drawing.Size(99, 34);
-            this.btnEditarPadecimientos.TabIndex = 11;
-            this.btnEditarPadecimientos.Text = "Editar";
-            this.btnEditarPadecimientos.UseVisualStyleBackColor = false;
-            // 
-            // btnAñadirPadecimientos
-            // 
-            this.btnAñadirPadecimientos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
-            this.btnAñadirPadecimientos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAñadirPadecimientos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnAñadirPadecimientos.Location = new System.Drawing.Point(540, 417);
-            this.btnAñadirPadecimientos.Name = "btnAñadirPadecimientos";
-            this.btnAñadirPadecimientos.Size = new System.Drawing.Size(104, 34);
-            this.btnAñadirPadecimientos.TabIndex = 12;
-            this.btnAñadirPadecimientos.Text = "Añadir ";
-            this.btnAñadirPadecimientos.UseVisualStyleBackColor = false;
-            // 
-            // btnEliminarPadecimientos
-            // 
-            this.btnEliminarPadecimientos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
-            this.btnEliminarPadecimientos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarPadecimientos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnEliminarPadecimientos.Location = new System.Drawing.Point(166, 417);
-            this.btnEliminarPadecimientos.Name = "btnEliminarPadecimientos";
-            this.btnEliminarPadecimientos.Size = new System.Drawing.Size(110, 34);
-            this.btnEliminarPadecimientos.TabIndex = 13;
-            this.btnEliminarPadecimientos.Text = "Eliminar";
-            this.btnEliminarPadecimientos.UseVisualStyleBackColor = false;
+            this.btnCargarPadecimientos.BackColor = System.Drawing.Color.Gray;
+            this.btnCargarPadecimientos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCargarPadecimientos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnCargarPadecimientos.Location = new System.Drawing.Point(429, 13);
+            this.btnCargarPadecimientos.Name = "btnCargarPadecimientos";
+            this.btnCargarPadecimientos.Size = new System.Drawing.Size(99, 34);
+            this.btnCargarPadecimientos.TabIndex = 11;
+            this.btnCargarPadecimientos.Text = "Cargar";
+            this.btnCargarPadecimientos.UseVisualStyleBackColor = false;
             // 
             // labTitulo
             // 
             this.labTitulo.AutoSize = true;
             this.labTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labTitulo.Location = new System.Drawing.Point(266, 9);
+            this.labTitulo.Location = new System.Drawing.Point(12, 15);
             this.labTitulo.Name = "labTitulo";
-            this.labTitulo.Size = new System.Drawing.Size(267, 25);
+            this.labTitulo.Size = new System.Drawing.Size(166, 25);
             this.labTitulo.TabIndex = 14;
-            this.labTitulo.Text = "Registrar padecimientos";
+            this.labTitulo.Text = "Padecimientos";
             this.labTitulo.Click += new System.EventHandler(this.labTitulo_Click);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(236)))), ((int)(((byte)(177)))));
-            this.panel2.Controls.Add(this.checkedListBoxAntecedentes);
-            this.panel2.Controls.Add(this.listBoxCirugias);
-            this.panel2.Controls.Add(this.listboxCondiciones);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.labantecedentes);
-            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.dateTimePicker1);
+            this.panel2.Controls.Add(this.textBox3);
+            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.labCirugias);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.labcondiciones);
-            this.panel2.Location = new System.Drawing.Point(12, 54);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Location = new System.Drawing.Point(12, 242);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(770, 341);
+            this.panel2.Size = new System.Drawing.Size(770, 252);
             this.panel2.TabIndex = 15;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // label2
+            // dataGridView1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(508, 55);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 25);
-            this.label2.TabIndex = 14;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 56);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(770, 150);
+            this.dataGridView1.TabIndex = 16;
             // 
-            // labantecedentes
+            // btnIngresarPadecimientos
             // 
-            this.labantecedentes.AutoSize = true;
-            this.labantecedentes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labantecedentes.Location = new System.Drawing.Point(560, 21);
-            this.labantecedentes.Name = "labantecedentes";
-            this.labantecedentes.Size = new System.Drawing.Size(178, 16);
-            this.labantecedentes.TabIndex = 15;
-            this.labantecedentes.Text = "Antecedentes familiares:";
-            this.labantecedentes.Click += new System.EventHandler(this.labCentroDeSalud_Click);
+            this.btnIngresarPadecimientos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
+            this.btnIngresarPadecimientos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIngresarPadecimientos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnIngresarPadecimientos.Location = new System.Drawing.Point(545, 12);
+            this.btnIngresarPadecimientos.Name = "btnIngresarPadecimientos";
+            this.btnIngresarPadecimientos.Size = new System.Drawing.Size(237, 34);
+            this.btnIngresarPadecimientos.TabIndex = 13;
+            this.btnIngresarPadecimientos.Text = "Ingresar Nuevo Padecimiento";
+            this.btnIngresarPadecimientos.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(224, 54);
+            this.label1.Location = new System.Drawing.Point(11, 225);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 25);
-            this.label1.TabIndex = 11;
+            this.label1.Size = new System.Drawing.Size(129, 13);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Detalles del Padecimiento";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // label4
+            // label2
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(508, 10);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(0, 25);
-            this.label4.TabIndex = 8;
-            // 
-            // labCirugias
-            // 
-            this.labCirugias.AutoSize = true;
-            this.labCirugias.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labCirugias.Location = new System.Drawing.Point(321, 21);
-            this.labCirugias.Name = "labCirugias";
-            this.labCirugias.Size = new System.Drawing.Size(68, 16);
-            this.labCirugias.TabIndex = 9;
-            this.labCirugias.Text = "Cirugias:";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(26, 49);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(106, 16);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Padecimiento:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(193, 9);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(85, 94);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 25);
-            this.label3.TabIndex = 5;
+            this.label3.Size = new System.Drawing.Size(43, 16);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Tipo:";
             // 
-            // labcondiciones
+            // label4
             // 
-            this.labcondiciones.AutoSize = true;
-            this.labcondiciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labcondiciones.Location = new System.Drawing.Point(12, 21);
-            this.labcondiciones.Name = "labcondiciones";
-            this.labcondiciones.Size = new System.Drawing.Size(178, 16);
-            this.labcondiciones.TabIndex = 6;
-            this.labcondiciones.Text = "Condiciones especiales:";
-            this.labcondiciones.Click += new System.EventHandler(this.labNombre_Click);
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(385, 49);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(94, 16);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Descripción:";
             // 
-            // listboxCondiciones
+            // label5
             // 
-            this.listboxCondiciones.FormattingEnabled = true;
-            this.listboxCondiciones.Location = new System.Drawing.Point(15, 40);
-            this.listboxCondiciones.Name = "listboxCondiciones";
-            this.listboxCondiciones.Size = new System.Drawing.Size(172, 82);
-            this.listboxCondiciones.TabIndex = 16;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(74, 140);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(54, 16);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Fecha:";
             // 
-            // listBoxCirugias
+            // textBox1
             // 
-            this.listBoxCirugias.FormattingEnabled = true;
-            this.listBoxCirugias.Location = new System.Drawing.Point(270, 40);
-            this.listBoxCirugias.Name = "listBoxCirugias";
-            this.listBoxCirugias.Size = new System.Drawing.Size(172, 82);
-            this.listBoxCirugias.TabIndex = 17;
+            this.textBox1.Location = new System.Drawing.Point(138, 48);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(156, 20);
+            this.textBox1.TabIndex = 4;
             // 
-            // checkedListBoxAntecedentes
+            // textBox2
             // 
-            this.checkedListBoxAntecedentes.FormattingEnabled = true;
-            this.checkedListBoxAntecedentes.Items.AddRange(new object[] {
-            "Tuberculosis",
-            "Diabetes",
-            "Hipertensión"});
-            this.checkedListBoxAntecedentes.Location = new System.Drawing.Point(563, 40);
-            this.checkedListBoxAntecedentes.Name = "checkedListBoxAntecedentes";
-            this.checkedListBoxAntecedentes.Size = new System.Drawing.Size(178, 79);
-            this.checkedListBoxAntecedentes.TabIndex = 18;
+            this.textBox2.Location = new System.Drawing.Point(138, 90);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(156, 20);
+            this.textBox2.TabIndex = 5;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(388, 76);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(257, 80);
+            this.textBox3.TabIndex = 6;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(138, 140);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(156, 20);
+            this.dateTimePicker1.TabIndex = 7;
             // 
             // frmPadecimientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(794, 463);
+            this.ClientSize = new System.Drawing.Size(794, 499);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.labTitulo);
-            this.Controls.Add(this.btnEliminarPadecimientos);
-            this.Controls.Add(this.btnAñadirPadecimientos);
-            this.Controls.Add(this.btnEditarPadecimientos);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Controls.Add(this.btnIngresarPadecimientos);
+            this.Controls.Add(this.btnCargarPadecimientos);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimizeBox = false;
             this.Name = "frmPadecimientos";
             this.Text = "Registro de Padecimientos";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -231,20 +212,19 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnEditarPadecimientos;
-        private System.Windows.Forms.Button btnAñadirPadecimientos;
-        private System.Windows.Forms.Button btnEliminarPadecimientos;
+        private System.Windows.Forms.Button btnCargarPadecimientos;
         private System.Windows.Forms.Label labTitulo;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label labantecedentes;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnIngresarPadecimientos;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label labCirugias;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label labcondiciones;
-        private System.Windows.Forms.ListBox listboxCondiciones;
-        private System.Windows.Forms.ListBox listBoxCirugias;
-        private System.Windows.Forms.CheckedListBox checkedListBoxAntecedentes;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
