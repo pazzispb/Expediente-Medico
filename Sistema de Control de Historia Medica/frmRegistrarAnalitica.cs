@@ -13,6 +13,7 @@ namespace Sistema_de_Control_de_Historia_Medica
 {
     public partial class frmRegistrarAnalitica : Form
     {
+        
         string vIDUsuario = frmMenuPrincipal.vIdUsuario;//Id del usuario que tiene la sesion iniciada
         clsBaseDatos bd = new clsBaseDatos();
         public frmRegistrarAnalitica()

@@ -54,7 +54,6 @@ namespace Sistema_de_Control_de_Historia_Medica
             dgvAnaliticas.DataSource = ds.Tables[0];//Carga la tabla con los resultados de la consulta
             
         }
-
         private void dgvAnaliticas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex > -1)
