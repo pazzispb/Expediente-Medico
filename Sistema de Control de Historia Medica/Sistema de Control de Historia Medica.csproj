@@ -68,6 +68,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsBaseDatos.cs" />
+    <Compile Include="frmRegistrarPadecimientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistrarPadecimientos.Designer.cs">
+      <DependentUpon>frmRegistrarPadecimientos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAnaliticas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegistrarAnalitica.resx">
       <DependentUpon>frmRegistrarAnalitica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistrarPadecimientos.resx">
+      <DependentUpon>frmRegistrarPadecimientos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmResumen.resx">
       <DependentUpon>frmResumen.cs</DependentUpon>
