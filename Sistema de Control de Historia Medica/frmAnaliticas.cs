@@ -29,6 +29,7 @@ namespace Sistema_de_Control_de_Historia_Medica
             {
                 frmRegistrarAnalitica frm = new frmRegistrarAnalitica();
                 frm.MdiParent = this.MdiParent;
+                frm.frmAnaliticas = this;
                 frm.StartPosition = FormStartPosition.CenterScreen;
                 frm.Show();
             }
@@ -47,14 +48,12 @@ namespace Sistema_de_Control_de_Historia_Medica
         {
             CargarAnaliticas();
         }
-        void CargarAnaliticas()
+        public void CargarAnaliticas()
         {
             DataSet ds = bd.ConsultarInfomacion("SELECT idAnalitica as 'ID', fecha as 'Fecha', proposito as 'Propósito', observaciones as 'Observaciones'" +
                 $"FROM Analiticas WHERE idUsuario = {vIDUsuario}");//Carga los registros correspondientes a las analiticas de los usuarios
             dgvAnaliticas.DataSource = ds.Tables[0];//Carga la tabla con los resultados de la consulta
-            
         }
-
         private void dgvAnaliticas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex > -1)
