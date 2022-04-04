@@ -31,7 +31,6 @@
             this.btnAgregarPadecimiento = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.txtPadecimiento = new System.Windows.Forms.TextBox();
             this.cbEstadoFecha = new System.Windows.Forms.CheckBox();
             this.dtpFechaPadecimiento = new System.Windows.Forms.DateTimePicker();
@@ -45,6 +44,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.labTitulo = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,7 +59,6 @@
             this.btnAgregarPadecimiento.TabIndex = 34;
             this.btnAgregarPadecimiento.Text = "Agregar";
             this.btnAgregarPadecimiento.UseVisualStyleBackColor = false;
-            this.btnAgregarPadecimiento.Click += new System.EventHandler(this.btnAgregarPadecimiento_Click);
             // 
             // button2
             // 
@@ -72,7 +71,6 @@
             this.button2.TabIndex = 35;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel2
             // 
@@ -94,20 +92,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(660, 291);
             this.panel2.TabIndex = 33;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Enfermedad",
-            "Cirugía",
-            "Emergencia",
-            "Alergia"});
-            this.comboBox1.Location = new System.Drawing.Point(140, 35);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 30;
             // 
             // txtPadecimiento
             // 
@@ -125,7 +109,6 @@
             this.cbEstadoFecha.TabIndex = 23;
             this.cbEstadoFecha.Text = "No aplica";
             this.cbEstadoFecha.UseVisualStyleBackColor = true;
-            this.cbEstadoFecha.CheckedChanged += new System.EventHandler(this.cbEstadoFecha_CheckedChanged);
             // 
             // dtpFechaPadecimiento
             // 
@@ -231,7 +214,20 @@
             this.labTitulo.TabIndex = 32;
             this.labTitulo.Text = "Registro de Padecimientos";
             // 
-            // frmRegistrarPadecimientos
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Enfermedad",
+            "Cirugía",
+            "Emergencia",
+            "Alergia"});
+            this.comboBox1.Location = new System.Drawing.Point(140, 31);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 30;
+            // 
+            // frmRegistrarPadecimiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -240,7 +236,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.labTitulo);
-            this.Name = "frmRegistrarPadecimientos";
+            this.Name = "frmRegistrarPadecimiento";
             this.Text = "Registrar Padecimiento";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

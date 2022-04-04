@@ -47,41 +47,10 @@ namespace Sistema_de_Control_de_Historia_Medica
 
         }
 
-        static public bool EstaAbierto() //Valida si hay formularios abiertos aparte del Menu Principal y el de Analiticas
-        {
-            if (Application.OpenForms.Count > 3) return true;
-            else return false;
-        }
         private void btnRegistrarPadecimiento_Click(object sender, EventArgs e)
         {
-            if (!EstaAbierto())
-            {
-                frmRegistrarPadecimientos frmRegistrarPadecimientos = new frmRegistrarPadecimientos();
-                frmRegistrarPadecimientos.MdiParent = this.MdiParent;
-                frmRegistrarPadecimientos.vPadecimientos = this;
-                frmRegistrarPadecimientos.Show();
-            }
-            else
-            {
-                MessageBox.Show("Ya tiene la funcionalidad abierta", "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-
+            frmRegistrarPadecimientos frmRegistrarPadecimientos = new frmRegistrarPadecimientos();
+            frmRegistrarPadecimientos.Show();
         }
-
-        private void dtpFecha_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnCargar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        public void cargarPadecimientos()
-        {
-
-        }
-
     }
 }
