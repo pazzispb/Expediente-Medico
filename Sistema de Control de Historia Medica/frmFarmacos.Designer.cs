@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.chbFrecuenciaDias = new System.Windows.Forms.CheckedListBox();
-            this.txtDescripcionPadecimiento = new System.Windows.Forms.TextBox();
-            this.txtPadecimiento = new System.Windows.Forms.TextBox();
-            this.dtpPadecimiento = new System.Windows.Forms.DateTimePicker();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.btnCargarPadecimientos = new System.Windows.Forms.Button();
             this.btnIngresarFarmacos = new System.Windows.Forms.Button();
+            this.txtDosisFarmaco = new System.Windows.Forms.TextBox();
+            this.cmbFrecuencia = new System.Windows.Forms.ComboBox();
+            this.cmbFrecuenciaFarmaco = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtDescripcionFarmaco = new System.Windows.Forms.TextBox();
+            this.txtFarmaco = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -50,123 +50,19 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(236)))), ((int)(((byte)(177)))));
-            this.panel2.Controls.Add(this.comboBox1);
+            this.panel2.Controls.Add(this.txtDosisFarmaco);
+            this.panel2.Controls.Add(this.cmbFrecuencia);
+            this.panel2.Controls.Add(this.cmbFrecuenciaFarmaco);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.chbFrecuenciaDias);
-            this.panel2.Controls.Add(this.txtDescripcionPadecimiento);
-            this.panel2.Controls.Add(this.txtPadecimiento);
-            this.panel2.Controls.Add(this.dtpPadecimiento);
+            this.panel2.Controls.Add(this.txtDescripcionFarmaco);
+            this.panel2.Controls.Add(this.txtFarmaco);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(18, 241);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(770, 269);
+            this.panel2.Size = new System.Drawing.Size(739, 176);
             this.panel2.TabIndex = 18;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Enabled = false;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4 o más"});
-            this.comboBox1.Location = new System.Drawing.Point(150, 230);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(150, 21);
-            this.comboBox1.TabIndex = 45;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(91, 231);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 16);
-            this.label3.TabIndex = 44;
-            this.label3.Text = "Al día:";
-            // 
-            // chbFrecuenciaDias
-            // 
-            this.chbFrecuenciaDias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(236)))), ((int)(((byte)(177)))));
-            this.chbFrecuenciaDias.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.chbFrecuenciaDias.CheckOnClick = true;
-            this.chbFrecuenciaDias.Enabled = false;
-            this.chbFrecuenciaDias.FormattingEnabled = true;
-            this.chbFrecuenciaDias.HorizontalScrollbar = true;
-            this.chbFrecuenciaDias.Items.AddRange(new object[] {
-            "Lun",
-            "Mar",
-            "Mie",
-            "Jue",
-            "Vie",
-            "Sab",
-            "Dom"});
-            this.chbFrecuenciaDias.Location = new System.Drawing.Point(150, 111);
-            this.chbFrecuenciaDias.Margin = new System.Windows.Forms.Padding(1);
-            this.chbFrecuenciaDias.Name = "chbFrecuenciaDias";
-            this.chbFrecuenciaDias.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.chbFrecuenciaDias.Size = new System.Drawing.Size(91, 105);
-            this.chbFrecuenciaDias.TabIndex = 43;
-            // 
-            // txtDescripcionPadecimiento
-            // 
-            this.txtDescripcionPadecimiento.Enabled = false;
-            this.txtDescripcionPadecimiento.Location = new System.Drawing.Point(382, 66);
-            this.txtDescripcionPadecimiento.Multiline = true;
-            this.txtDescripcionPadecimiento.Name = "txtDescripcionPadecimiento";
-            this.txtDescripcionPadecimiento.Size = new System.Drawing.Size(272, 86);
-            this.txtDescripcionPadecimiento.TabIndex = 10;
-            // 
-            // txtPadecimiento
-            // 
-            this.txtPadecimiento.Enabled = false;
-            this.txtPadecimiento.Location = new System.Drawing.Point(150, 41);
-            this.txtPadecimiento.Name = "txtPadecimiento";
-            this.txtPadecimiento.Size = new System.Drawing.Size(150, 20);
-            this.txtPadecimiento.TabIndex = 9;
-            // 
-            // dtpPadecimiento
-            // 
-            this.dtpPadecimiento.Enabled = false;
-            this.dtpPadecimiento.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpPadecimiento.Location = new System.Drawing.Point(150, 79);
-            this.dtpPadecimiento.Name = "dtpPadecimiento";
-            this.dtpPadecimiento.Size = new System.Drawing.Size(150, 20);
-            this.dtpPadecimiento.TabIndex = 8;
-            this.dtpPadecimiento.Value = new System.DateTime(2022, 4, 4, 10, 25, 0, 0);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(54, 79);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(88, 16);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Frecuencia:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(379, 41);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(94, 16);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Descripción:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(70, 41);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 16);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Fármaco:";
             // 
             // label1
             // 
@@ -178,14 +74,14 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(115, 25);
             this.label1.TabIndex = 35;
-            this.label1.Text = "Farmacos";
+            this.label1.Text = "Fármacos";
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(19, 64);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(769, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(738, 150);
             this.dataGridView1.TabIndex = 36;
             // 
             // label6
@@ -202,7 +98,7 @@
             this.btnCargarPadecimientos.BackColor = System.Drawing.Color.Gray;
             this.btnCargarPadecimientos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCargarPadecimientos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCargarPadecimientos.Location = new System.Drawing.Point(446, 24);
+            this.btnCargarPadecimientos.Location = new System.Drawing.Point(413, 24);
             this.btnCargarPadecimientos.Name = "btnCargarPadecimientos";
             this.btnCargarPadecimientos.Size = new System.Drawing.Size(99, 34);
             this.btnCargarPadecimientos.TabIndex = 38;
@@ -214,19 +110,111 @@
             this.btnIngresarFarmacos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
             this.btnIngresarFarmacos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIngresarFarmacos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnIngresarFarmacos.Location = new System.Drawing.Point(551, 24);
+            this.btnIngresarFarmacos.Location = new System.Drawing.Point(520, 24);
             this.btnIngresarFarmacos.Name = "btnIngresarFarmacos";
             this.btnIngresarFarmacos.Size = new System.Drawing.Size(237, 34);
             this.btnIngresarFarmacos.TabIndex = 39;
             this.btnIngresarFarmacos.Text = "Ingresar Nuevo Fármaco";
             this.btnIngresarFarmacos.UseVisualStyleBackColor = false;
-        
+            // 
+            // txtDosisFarmaco
+            // 
+            this.txtDosisFarmaco.Location = new System.Drawing.Point(125, 130);
+            this.txtDosisFarmaco.Name = "txtDosisFarmaco";
+            this.txtDosisFarmaco.Size = new System.Drawing.Size(251, 20);
+            this.txtDosisFarmaco.TabIndex = 59;
+            // 
+            // cmbFrecuencia
+            // 
+            this.cmbFrecuencia.FormattingEnabled = true;
+            this.cmbFrecuencia.Items.AddRange(new object[] {
+            "1 vez",
+            "2 veces",
+            "3 veces",
+            "4 veces",
+            "5 veces",
+            "6 veces",
+            "8 veces",
+            "9 veces",
+            "10 veces"});
+            this.cmbFrecuencia.Location = new System.Drawing.Point(293, 78);
+            this.cmbFrecuencia.Name = "cmbFrecuencia";
+            this.cmbFrecuencia.Size = new System.Drawing.Size(83, 21);
+            this.cmbFrecuencia.TabIndex = 58;
+            // 
+            // cmbFrecuenciaFarmaco
+            // 
+            this.cmbFrecuenciaFarmaco.FormattingEnabled = true;
+            this.cmbFrecuenciaFarmaco.Items.AddRange(new object[] {
+            "Diaria",
+            "Interdiaria",
+            "Semanal",
+            "Mensual"});
+            this.cmbFrecuenciaFarmaco.Location = new System.Drawing.Point(125, 78);
+            this.cmbFrecuenciaFarmaco.Name = "cmbFrecuenciaFarmaco";
+            this.cmbFrecuenciaFarmaco.Size = new System.Drawing.Size(150, 21);
+            this.cmbFrecuenciaFarmaco.TabIndex = 57;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(66, 131);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(51, 16);
+            this.label3.TabIndex = 56;
+            this.label3.Text = "Dosis:";
+            // 
+            // txtDescripcionFarmaco
+            // 
+            this.txtDescripcionFarmaco.Location = new System.Drawing.Point(428, 49);
+            this.txtDescripcionFarmaco.Multiline = true;
+            this.txtDescripcionFarmaco.Name = "txtDescripcionFarmaco";
+            this.txtDescripcionFarmaco.Size = new System.Drawing.Size(272, 86);
+            this.txtDescripcionFarmaco.TabIndex = 53;
+            // 
+            // txtFarmaco
+            // 
+            this.txtFarmaco.Location = new System.Drawing.Point(125, 28);
+            this.txtFarmaco.Name = "txtFarmaco";
+            this.txtFarmaco.Size = new System.Drawing.Size(251, 20);
+            this.txtFarmaco.TabIndex = 52;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(29, 79);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(88, 16);
+            this.label5.TabIndex = 51;
+            this.label5.Text = "Frecuencia:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(425, 24);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(94, 16);
+            this.label4.TabIndex = 50;
+            this.label4.Text = "Descripción:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(45, 28);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(72, 16);
+            this.label2.TabIndex = 49;
+            this.label2.Text = "Fármaco:";
             // 
             // frmFarmacos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 522);
+            this.ClientSize = new System.Drawing.Size(778, 428);
             this.Controls.Add(this.btnIngresarFarmacos);
             this.Controls.Add(this.btnCargarPadecimientos);
             this.Controls.Add(this.label6);
@@ -246,19 +234,19 @@
         #endregion
 
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.CheckedListBox chbFrecuenciaDias;
-        private System.Windows.Forms.TextBox txtDescripcionPadecimiento;
-        private System.Windows.Forms.TextBox txtPadecimiento;
-        private System.Windows.Forms.DateTimePicker dtpPadecimiento;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnCargarPadecimientos;
         private System.Windows.Forms.Button btnIngresarFarmacos;
+        private System.Windows.Forms.TextBox txtDosisFarmaco;
+        private System.Windows.Forms.ComboBox cmbFrecuencia;
+        private System.Windows.Forms.ComboBox cmbFrecuenciaFarmaco;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtDescripcionFarmaco;
+        private System.Windows.Forms.TextBox txtFarmaco;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label2;
     }
 }

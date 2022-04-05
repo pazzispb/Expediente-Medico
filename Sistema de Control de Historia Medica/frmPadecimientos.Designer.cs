@@ -51,7 +51,7 @@
             this.btnCargarPadecimientos.BackColor = System.Drawing.Color.Gray;
             this.btnCargarPadecimientos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCargarPadecimientos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCargarPadecimientos.Location = new System.Drawing.Point(429, 13);
+            this.btnCargarPadecimientos.Location = new System.Drawing.Point(404, 13);
             this.btnCargarPadecimientos.Name = "btnCargarPadecimientos";
             this.btnCargarPadecimientos.Size = new System.Drawing.Size(99, 34);
             this.btnCargarPadecimientos.TabIndex = 11;
@@ -83,7 +83,7 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(12, 242);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(770, 213);
+            this.panel2.Size = new System.Drawing.Size(745, 156);
             this.panel2.TabIndex = 15;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -91,7 +91,7 @@
             // 
             this.dtpPadecimiento.Enabled = false;
             this.dtpPadecimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpPadecimiento.Location = new System.Drawing.Point(138, 140);
+            this.dtpPadecimiento.Location = new System.Drawing.Point(139, 113);
             this.dtpPadecimiento.Name = "dtpPadecimiento";
             this.dtpPadecimiento.Size = new System.Drawing.Size(156, 20);
             this.dtpPadecimiento.TabIndex = 7;
@@ -100,17 +100,17 @@
             // 
             this.txtDescripcionPadecimiento.AcceptsReturn = true;
             this.txtDescripcionPadecimiento.Enabled = false;
-            this.txtDescripcionPadecimiento.Location = new System.Drawing.Point(388, 76);
+            this.txtDescripcionPadecimiento.Location = new System.Drawing.Point(355, 49);
             this.txtDescripcionPadecimiento.Multiline = true;
             this.txtDescripcionPadecimiento.Name = "txtDescripcionPadecimiento";
-            this.txtDescripcionPadecimiento.Size = new System.Drawing.Size(257, 80);
+            this.txtDescripcionPadecimiento.Size = new System.Drawing.Size(361, 80);
             this.txtDescripcionPadecimiento.TabIndex = 6;
             this.txtDescripcionPadecimiento.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // txtTipoPadecimiento
             // 
             this.txtTipoPadecimiento.Enabled = false;
-            this.txtTipoPadecimiento.Location = new System.Drawing.Point(138, 90);
+            this.txtTipoPadecimiento.Location = new System.Drawing.Point(139, 63);
             this.txtTipoPadecimiento.Name = "txtTipoPadecimiento";
             this.txtTipoPadecimiento.Size = new System.Drawing.Size(156, 20);
             this.txtTipoPadecimiento.TabIndex = 5;
@@ -118,7 +118,7 @@
             // txtPadecimiento
             // 
             this.txtPadecimiento.Enabled = false;
-            this.txtPadecimiento.Location = new System.Drawing.Point(138, 48);
+            this.txtPadecimiento.Location = new System.Drawing.Point(139, 21);
             this.txtPadecimiento.Name = "txtPadecimiento";
             this.txtPadecimiento.Size = new System.Drawing.Size(156, 20);
             this.txtPadecimiento.TabIndex = 4;
@@ -127,7 +127,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(74, 140);
+            this.label5.Location = new System.Drawing.Point(75, 113);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(54, 16);
             this.label5.TabIndex = 3;
@@ -137,7 +137,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(385, 49);
+            this.label4.Location = new System.Drawing.Point(352, 22);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(94, 16);
             this.label4.TabIndex = 2;
@@ -147,7 +147,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(85, 94);
+            this.label3.Location = new System.Drawing.Point(86, 67);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(43, 16);
             this.label3.TabIndex = 1;
@@ -157,7 +157,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(26, 49);
+            this.label2.Location = new System.Drawing.Point(27, 22);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(106, 16);
             this.label2.TabIndex = 0;
@@ -166,9 +166,9 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 56);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 55);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(770, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(745, 150);
             this.dataGridView1.TabIndex = 16;
             // 
             // btnIngresarPadecimientos
@@ -176,7 +176,7 @@
             this.btnIngresarPadecimientos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
             this.btnIngresarPadecimientos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIngresarPadecimientos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnIngresarPadecimientos.Location = new System.Drawing.Point(545, 12);
+            this.btnIngresarPadecimientos.Location = new System.Drawing.Point(520, 12);
             this.btnIngresarPadecimientos.Name = "btnIngresarPadecimientos";
             this.btnIngresarPadecimientos.Size = new System.Drawing.Size(237, 34);
             this.btnIngresarPadecimientos.TabIndex = 13;
@@ -198,7 +198,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(794, 469);
+            this.ClientSize = new System.Drawing.Size(770, 412);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel2);
