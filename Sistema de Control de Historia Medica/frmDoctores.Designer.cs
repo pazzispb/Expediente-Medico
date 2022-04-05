@@ -33,7 +33,7 @@
             this.labTitulo = new System.Windows.Forms.Label();
             this.labNombre = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnRegistrarDoctor = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.labCentroDeSalud = new System.Windows.Forms.Label();
             this.txtCentroDeSalud = new System.Windows.Forms.TextBox();
@@ -45,15 +45,9 @@
             this.txtEspecialidad = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Especialidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Teléfono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CentroDeSalud = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnEditarDoctor = new System.Windows.Forms.Button();
-            this.btnEliminarDoctor = new System.Windows.Forms.Button();
             this.btnCitasAgendadas = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.pnRegistrarDoctor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,7 +56,7 @@
             this.btnAñadirDoctor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
             this.btnAñadirDoctor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAñadirDoctor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnAñadirDoctor.Location = new System.Drawing.Point(297, 325);
+            this.btnAñadirDoctor.Location = new System.Drawing.Point(133, 326);
             this.btnAñadirDoctor.Name = "btnAñadirDoctor";
             this.btnAñadirDoctor.Size = new System.Drawing.Size(136, 34);
             this.btnAñadirDoctor.TabIndex = 1;
@@ -76,7 +70,6 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(173, 20);
             this.txtNombre.TabIndex = 4;
-            this.txtNombre.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // labTitulo
             // 
@@ -87,7 +80,6 @@
             this.labTitulo.Size = new System.Drawing.Size(184, 25);
             this.labTitulo.TabIndex = 5;
             this.labTitulo.Text = "Registrar Doctor";
-            this.labTitulo.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // labNombre
             // 
@@ -107,25 +99,25 @@
             this.panel1.Size = new System.Drawing.Size(599, 55);
             this.panel1.TabIndex = 7;
             // 
-            // panel2
+            // pnRegistrarDoctor
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(236)))), ((int)(((byte)(177)))));
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.labCentroDeSalud);
-            this.panel2.Controls.Add(this.txtCentroDeSalud);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.labTelefono);
-            this.panel2.Controls.Add(this.txtTelefono);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.labEspecialidad);
-            this.panel2.Controls.Add(this.txtEspecialidad);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.labNombre);
-            this.panel2.Controls.Add(this.txtNombre);
-            this.panel2.Location = new System.Drawing.Point(0, 49);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(599, 108);
-            this.panel2.TabIndex = 8;
+            this.pnRegistrarDoctor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(236)))), ((int)(((byte)(177)))));
+            this.pnRegistrarDoctor.Controls.Add(this.label2);
+            this.pnRegistrarDoctor.Controls.Add(this.labCentroDeSalud);
+            this.pnRegistrarDoctor.Controls.Add(this.txtCentroDeSalud);
+            this.pnRegistrarDoctor.Controls.Add(this.label1);
+            this.pnRegistrarDoctor.Controls.Add(this.labTelefono);
+            this.pnRegistrarDoctor.Controls.Add(this.txtTelefono);
+            this.pnRegistrarDoctor.Controls.Add(this.label4);
+            this.pnRegistrarDoctor.Controls.Add(this.labEspecialidad);
+            this.pnRegistrarDoctor.Controls.Add(this.txtEspecialidad);
+            this.pnRegistrarDoctor.Controls.Add(this.label3);
+            this.pnRegistrarDoctor.Controls.Add(this.labNombre);
+            this.pnRegistrarDoctor.Controls.Add(this.txtNombre);
+            this.pnRegistrarDoctor.Location = new System.Drawing.Point(0, 49);
+            this.pnRegistrarDoctor.Name = "pnRegistrarDoctor";
+            this.pnRegistrarDoctor.Size = new System.Drawing.Size(599, 108);
+            this.pnRegistrarDoctor.TabIndex = 8;
             // 
             // label2
             // 
@@ -135,7 +127,6 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 25);
             this.label2.TabIndex = 14;
-            this.label2.Click += new System.EventHandler(this.label2_Click_1);
             // 
             // labCentroDeSalud
             // 
@@ -146,7 +137,6 @@
             this.labCentroDeSalud.Size = new System.Drawing.Size(120, 16);
             this.labCentroDeSalud.TabIndex = 15;
             this.labCentroDeSalud.Text = "Centro de salud:";
-            this.labCentroDeSalud.Click += new System.EventHandler(this.label5_Click_1);
             // 
             // txtCentroDeSalud
             // 
@@ -155,7 +145,6 @@
             this.txtCentroDeSalud.Name = "txtCentroDeSalud";
             this.txtCentroDeSalud.Size = new System.Drawing.Size(173, 20);
             this.txtCentroDeSalud.TabIndex = 13;
-            this.txtCentroDeSalud.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
             // label1
             // 
@@ -175,7 +164,6 @@
             this.labTelefono.Size = new System.Drawing.Size(73, 16);
             this.labTelefono.TabIndex = 12;
             this.labTelefono.Text = "Teléfono:";
-            this.labTelefono.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtTelefono
             // 
@@ -192,7 +180,6 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(0, 25);
             this.label4.TabIndex = 8;
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // labEspecialidad
             // 
@@ -203,7 +190,6 @@
             this.labEspecialidad.Size = new System.Drawing.Size(103, 16);
             this.labEspecialidad.TabIndex = 9;
             this.labEspecialidad.Text = "Especialidad:";
-            this.labEspecialidad.Click += new System.EventHandler(this.label5_Click);
             // 
             // txtEspecialidad
             // 
@@ -212,7 +198,6 @@
             this.txtEspecialidad.Name = "txtEspecialidad";
             this.txtEspecialidad.Size = new System.Drawing.Size(173, 20);
             this.txtEspecialidad.TabIndex = 7;
-            this.txtEspecialidad.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label3
             // 
@@ -228,88 +213,25 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Nombre,
-            this.Especialidad,
-            this.Teléfono,
-            this.CentroDeSalud});
             this.dataGridView1.Location = new System.Drawing.Point(0, 163);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.Size = new System.Drawing.Size(599, 150);
             this.dataGridView1.TabIndex = 9;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.MinimumWidth = 6;
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 140;
-            // 
-            // Especialidad
-            // 
-            this.Especialidad.HeaderText = "Especialidad";
-            this.Especialidad.MinimumWidth = 6;
-            this.Especialidad.Name = "Especialidad";
-            this.Especialidad.ReadOnly = true;
-            this.Especialidad.Width = 144;
-            // 
-            // Teléfono
-            // 
-            this.Teléfono.HeaderText = "Teléfono";
-            this.Teléfono.MinimumWidth = 6;
-            this.Teléfono.Name = "Teléfono";
-            this.Teléfono.ReadOnly = true;
-            this.Teléfono.Width = 130;
-            // 
-            // CentroDeSalud
-            // 
-            this.CentroDeSalud.HeaderText = "Centro de salud";
-            this.CentroDeSalud.MinimumWidth = 6;
-            this.CentroDeSalud.Name = "CentroDeSalud";
-            this.CentroDeSalud.ReadOnly = true;
-            this.CentroDeSalud.Width = 140;
-            // 
-            // btnEditarDoctor
-            // 
-            this.btnEditarDoctor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
-            this.btnEditarDoctor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditarDoctor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnEditarDoctor.Location = new System.Drawing.Point(182, 325);
-            this.btnEditarDoctor.Name = "btnEditarDoctor";
-            this.btnEditarDoctor.Size = new System.Drawing.Size(99, 34);
-            this.btnEditarDoctor.TabIndex = 10;
-            this.btnEditarDoctor.Text = "Editar";
-            this.btnEditarDoctor.UseVisualStyleBackColor = false;
-            this.btnEditarDoctor.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnEliminarDoctor
-            // 
-            this.btnEliminarDoctor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
-            this.btnEliminarDoctor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarDoctor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnEliminarDoctor.Location = new System.Drawing.Point(28, 325);
-            this.btnEliminarDoctor.Name = "btnEliminarDoctor";
-            this.btnEliminarDoctor.Size = new System.Drawing.Size(136, 34);
-            this.btnEliminarDoctor.TabIndex = 11;
-            this.btnEliminarDoctor.Text = "Eliminar";
-            this.btnEliminarDoctor.UseVisualStyleBackColor = false;
-            this.btnEliminarDoctor.Click += new System.EventHandler(this.btnEliminarDoctor_Click);
             // 
             // btnCitasAgendadas
             // 
             this.btnCitasAgendadas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
             this.btnCitasAgendadas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCitasAgendadas.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCitasAgendadas.Location = new System.Drawing.Point(458, 324);
+            this.btnCitasAgendadas.Location = new System.Drawing.Point(326, 326);
             this.btnCitasAgendadas.Name = "btnCitasAgendadas";
             this.btnCitasAgendadas.Size = new System.Drawing.Size(114, 35);
             this.btnCitasAgendadas.TabIndex = 35;
             this.btnCitasAgendadas.Text = "Ver doctores";
             this.btnCitasAgendadas.UseVisualStyleBackColor = false;
+            this.btnCitasAgendadas.Click += new System.EventHandler(this.btnCitasAgendadas_Click_1);
             // 
             // frmDoctores
             // 
@@ -317,10 +239,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.btnCitasAgendadas);
-            this.Controls.Add(this.btnEliminarDoctor);
-            this.Controls.Add(this.btnEditarDoctor);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pnRegistrarDoctor);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnAñadirDoctor);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -330,8 +250,8 @@
             this.Load += new System.EventHandler(this.frmDoctores_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.pnRegistrarDoctor.ResumeLayout(false);
+            this.pnRegistrarDoctor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -343,7 +263,7 @@
         private System.Windows.Forms.Label labTitulo;
         private System.Windows.Forms.Label labNombre;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnRegistrarDoctor;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label labEspecialidad;
@@ -355,12 +275,6 @@
         private System.Windows.Forms.Label labCentroDeSalud;
         private System.Windows.Forms.TextBox txtCentroDeSalud;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Especialidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Teléfono;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CentroDeSalud;
-        private System.Windows.Forms.Button btnEditarDoctor;
-        private System.Windows.Forms.Button btnEliminarDoctor;
         private System.Windows.Forms.Button btnCitasAgendadas;
     }
 }

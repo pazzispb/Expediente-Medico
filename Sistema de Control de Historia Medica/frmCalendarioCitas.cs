@@ -13,6 +13,7 @@ namespace Sistema_de_Control_de_Historia_Medica
 {
     public partial class frmCalendarioCitas : Form
     {
+        string vIDUsuario = frmMenuPrincipal.vIdUsuario; //Id del usuario con la sesion abierta
         clsBaseDatos bd = new clsBaseDatos();
         public frmCalendarioCitas()
         {
@@ -54,8 +55,10 @@ namespace Sistema_de_Control_de_Historia_Medica
 
         private void btnAñadirCita_Click_1(object sender, EventArgs e)
         {
-            string vConsulta = $"INSERT INTO Citas (nombreDoctor, horario, centroMedico, fecha) " +
-            $"VALUES ('{cmbDesplegarDoctor.Text}', '{cmbDesplegarHorario.Text}', '{cmbCentro.Text}', {dateTimePicker1.Text})";
+            string idDoctor = "1";
+
+            string vConsulta = $"INSERT INTO Citas (idDoctor, horario, centroMedico, fecha) " +
+            $"VALUES ({idDoctor}, '{cmbDesplegarHorario.Text}', '{cmbCentro.Text}', '{dateTimePicker1.Text}')";
             if (ValidarCamposRellenos())//Si todos los campos tienen un contenido
                 if (bd.EjecutarComando(vConsulta))//Si se agrego el registro
                 {
@@ -95,27 +98,24 @@ namespace Sistema_de_Control_de_Historia_Medica
 
         private void btnCitasAgendadas_Click(object sender, EventArgs e)
         {
-            StreamReader sr = new StreamReader("Agenda de citas.txt");
-            string linea;
-
-            listBoxInfoCitas.Items.Clear();
-            linea = sr.ReadLine();
-
-            while(linea != null)
-            {
-                listBoxInfoCitas.Items.Add(linea);
-                linea = sr.ReadLine();
-            }
-            sr.Close();
+            CargarInfoCita();
             
         }
 
         private void btnEliminarCita_Click(object sender, EventArgs e)
         {
             
-            listBoxInfoCitas.Items.RemoveAt(listBoxInfoCitas.SelectedIndex);
             
             
+            
+        }
+
+        void CargarInfoCita()
+        {
+            DataSet ds = bd.ConsultarInfomacion("SELECT nombreDoctor as 'Nombre', centroMedico as 'Centro medico', fecha as 'Fecha', horario as 'Horario', " +
+                $"FROM Citas WHERE idUsuario = {vIDUsuario}");//Carga los registros correspondientes a las analiticas de los usuarios
+            dgvInfoCitas.DataSource = ds.Tables[0];//Carga la tabla con los resultados de la consulta
+
         }
 
     }
