@@ -39,11 +39,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvPadecimientos = new System.Windows.Forms.DataGridView();
             this.btnIngresarPadecimientos = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPadecimientos)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCargarPadecimientos
@@ -163,13 +163,17 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Padecimiento:";
             // 
-            // dataGridView1
+            // dgvPadecimientos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 55);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(745, 150);
-            this.dataGridView1.TabIndex = 16;
+            this.dgvPadecimientos.AllowUserToAddRows = false;
+            this.dgvPadecimientos.AllowUserToDeleteRows = false;
+            this.dgvPadecimientos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPadecimientos.Location = new System.Drawing.Point(12, 55);
+            this.dgvPadecimientos.Name = "dgvPadecimientos";
+            this.dgvPadecimientos.ReadOnly = true;
+            this.dgvPadecimientos.RowHeadersVisible = false;
+            this.dgvPadecimientos.Size = new System.Drawing.Size(745, 150);
+            this.dgvPadecimientos.TabIndex = 16;
             // 
             // btnIngresarPadecimientos
             // 
@@ -200,7 +204,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(770, 412);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvPadecimientos);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.labTitulo);
             this.Controls.Add(this.btnIngresarPadecimientos);
@@ -209,9 +213,10 @@
             this.MinimizeBox = false;
             this.Name = "frmPadecimientos";
             this.Text = "Padecimientos";
+            this.Load += new System.EventHandler(this.frmPadecimientos_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPadecimientos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -222,7 +227,7 @@
         private System.Windows.Forms.Button btnCargarPadecimientos;
         private System.Windows.Forms.Label labTitulo;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvPadecimientos;
         private System.Windows.Forms.Button btnIngresarPadecimientos;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtDescripcionPadecimiento;

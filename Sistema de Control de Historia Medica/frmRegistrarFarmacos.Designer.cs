@@ -38,8 +38,8 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.cmbFrecuenciaDiaria = new System.Windows.Forms.ComboBox();
+            this.cmbFrecuenciaFarmaco = new System.Windows.Forms.ComboBox();
+            this.cmbVeces = new System.Windows.Forms.ComboBox();
             this.txtDosisFarmaco = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -135,8 +135,8 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(236)))), ((int)(((byte)(177)))));
             this.panel2.Controls.Add(this.txtDosisFarmaco);
-            this.panel2.Controls.Add(this.cmbFrecuenciaDiaria);
-            this.panel2.Controls.Add(this.comboBox1);
+            this.panel2.Controls.Add(this.cmbVeces);
+            this.panel2.Controls.Add(this.cmbFrecuenciaFarmaco);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.btnCancelar);
             this.panel2.Controls.Add(this.btnGuardarFarmaco);
@@ -160,23 +160,23 @@
             this.label3.TabIndex = 44;
             this.label3.Text = "Dosis:";
             // 
-            // comboBox1
+            // cmbFrecuenciaFarmaco
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbFrecuenciaFarmaco.FormattingEnabled = true;
+            this.cmbFrecuenciaFarmaco.Items.AddRange(new object[] {
             "Diaria",
             "Interdiaria",
             "Semanal",
             "Mensual"});
-            this.comboBox1.Location = new System.Drawing.Point(103, 85);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(150, 21);
-            this.comboBox1.TabIndex = 46;
+            this.cmbFrecuenciaFarmaco.Location = new System.Drawing.Point(103, 85);
+            this.cmbFrecuenciaFarmaco.Name = "cmbFrecuenciaFarmaco";
+            this.cmbFrecuenciaFarmaco.Size = new System.Drawing.Size(150, 21);
+            this.cmbFrecuenciaFarmaco.TabIndex = 46;
             // 
-            // cmbFrecuenciaDiaria
+            // cmbVeces
             // 
-            this.cmbFrecuenciaDiaria.FormattingEnabled = true;
-            this.cmbFrecuenciaDiaria.Items.AddRange(new object[] {
+            this.cmbVeces.FormattingEnabled = true;
+            this.cmbVeces.Items.AddRange(new object[] {
             "1 vez",
             "2 veces",
             "3 veces",
@@ -186,10 +186,10 @@
             "8 veces",
             "9 veces",
             "10 veces"});
-            this.cmbFrecuenciaDiaria.Location = new System.Drawing.Point(271, 85);
-            this.cmbFrecuenciaDiaria.Name = "cmbFrecuenciaDiaria";
-            this.cmbFrecuenciaDiaria.Size = new System.Drawing.Size(83, 21);
-            this.cmbFrecuenciaDiaria.TabIndex = 47;
+            this.cmbVeces.Location = new System.Drawing.Point(271, 85);
+            this.cmbVeces.Name = "cmbVeces";
+            this.cmbVeces.Size = new System.Drawing.Size(83, 21);
+            this.cmbVeces.TabIndex = 47;
             // 
             // txtDosisFarmaco
             // 
@@ -226,7 +226,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtDosisFarmaco;
-        private System.Windows.Forms.ComboBox cmbFrecuenciaDiaria;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbVeces;
+        private System.Windows.Forms.ComboBox cmbFrecuenciaFarmaco;
     }
 }

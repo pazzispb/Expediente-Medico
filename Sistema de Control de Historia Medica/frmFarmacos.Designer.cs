@@ -30,7 +30,7 @@
         {
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvFarmacos = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.btnCargarPadecimientos = new System.Windows.Forms.Button();
             this.btnIngresarFarmacos = new System.Windows.Forms.Button();
@@ -44,7 +44,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFarmacos)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -76,13 +76,13 @@
             this.label1.TabIndex = 35;
             this.label1.Text = "Fármacos";
             // 
-            // dataGridView1
+            // dgvFarmacos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(19, 64);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(738, 150);
-            this.dataGridView1.TabIndex = 36;
+            this.dgvFarmacos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFarmacos.Location = new System.Drawing.Point(19, 64);
+            this.dgvFarmacos.Name = "dgvFarmacos";
+            this.dgvFarmacos.Size = new System.Drawing.Size(738, 150);
+            this.dgvFarmacos.TabIndex = 36;
             // 
             // label6
             // 
@@ -116,6 +116,7 @@
             this.btnIngresarFarmacos.TabIndex = 39;
             this.btnIngresarFarmacos.Text = "Ingresar Nuevo Fármaco";
             this.btnIngresarFarmacos.UseVisualStyleBackColor = false;
+            this.btnIngresarFarmacos.Click += new System.EventHandler(this.btnIngresarFarmacos_Click);
             // 
             // txtDosisFarmaco
             // 
@@ -218,14 +219,14 @@
             this.Controls.Add(this.btnIngresarFarmacos);
             this.Controls.Add(this.btnCargarPadecimientos);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvFarmacos);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel2);
             this.Name = "frmFarmacos";
             this.Text = "Fármacos";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFarmacos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -235,7 +236,7 @@
 
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvFarmacos;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnCargarPadecimientos;
         private System.Windows.Forms.Button btnIngresarFarmacos;

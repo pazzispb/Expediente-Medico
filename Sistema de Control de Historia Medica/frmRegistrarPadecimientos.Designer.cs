@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnContenedor = new System.Windows.Forms.Panel();
             this.chbEstadoFechaPadecimiento = new System.Windows.Forms.CheckBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPadecimiento = new System.Windows.Forms.TextBox();
             this.cmbTipoPadecimiento = new System.Windows.Forms.ComboBox();
             this.dtpFechaPadecimiento = new System.Windows.Forms.DateTimePicker();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -41,28 +41,28 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel2.SuspendLayout();
+            this.pnContenedor.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel2
+            // pnContenedor
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(236)))), ((int)(((byte)(177)))));
-            this.panel2.Controls.Add(this.chbEstadoFechaPadecimiento);
-            this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Controls.Add(this.cmbTipoPadecimiento);
-            this.panel2.Controls.Add(this.dtpFechaPadecimiento);
-            this.panel2.Controls.Add(this.btnCancelar);
-            this.panel2.Controls.Add(this.btnGuardarPadecimiento);
-            this.panel2.Controls.Add(this.txtDescripcionPadecimiento);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(12, 55);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(673, 216);
-            this.panel2.TabIndex = 16;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.pnContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(236)))), ((int)(((byte)(177)))));
+            this.pnContenedor.Controls.Add(this.chbEstadoFechaPadecimiento);
+            this.pnContenedor.Controls.Add(this.txtPadecimiento);
+            this.pnContenedor.Controls.Add(this.cmbTipoPadecimiento);
+            this.pnContenedor.Controls.Add(this.dtpFechaPadecimiento);
+            this.pnContenedor.Controls.Add(this.btnCancelar);
+            this.pnContenedor.Controls.Add(this.btnGuardarPadecimiento);
+            this.pnContenedor.Controls.Add(this.txtDescripcionPadecimiento);
+            this.pnContenedor.Controls.Add(this.label5);
+            this.pnContenedor.Controls.Add(this.label4);
+            this.pnContenedor.Controls.Add(this.label3);
+            this.pnContenedor.Controls.Add(this.label2);
+            this.pnContenedor.Location = new System.Drawing.Point(12, 55);
+            this.pnContenedor.Name = "pnContenedor";
+            this.pnContenedor.Size = new System.Drawing.Size(673, 216);
+            this.pnContenedor.TabIndex = 16;
+            this.pnContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // chbEstadoFechaPadecimiento
             // 
@@ -76,13 +76,13 @@
             this.chbEstadoFechaPadecimiento.UseVisualStyleBackColor = true;
             this.chbEstadoFechaPadecimiento.CheckedChanged += new System.EventHandler(this.chbEstadoFechaPadecimiento_CheckedChanged);
             // 
-            // textBox1
+            // txtPadecimiento
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.Location = new System.Drawing.Point(158, 88);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(139, 20);
-            this.textBox1.TabIndex = 38;
+            this.txtPadecimiento.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtPadecimiento.Location = new System.Drawing.Point(158, 88);
+            this.txtPadecimiento.Name = "txtPadecimiento";
+            this.txtPadecimiento.Size = new System.Drawing.Size(139, 20);
+            this.txtPadecimiento.TabIndex = 38;
             // 
             // cmbTipoPadecimiento
             // 
@@ -139,6 +139,7 @@
             this.btnGuardarPadecimiento.TabIndex = 34;
             this.btnGuardarPadecimiento.Text = "Guardar datos";
             this.btnGuardarPadecimiento.UseVisualStyleBackColor = false;
+            this.btnGuardarPadecimiento.Click += new System.EventHandler(this.btnGuardarPadecimiento_Click);
             // 
             // txtDescripcionPadecimiento
             // 
@@ -211,11 +212,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(699, 283);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pnContenedor);
             this.Name = "frmRegistrarPadecimientos";
-            this.Text = " ";
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.Text = " Registro de Padecimeinto";
+            this.Load += new System.EventHandler(this.frmRegistrarPadecimientos_Load);
+            this.pnContenedor.ResumeLayout(false);
+            this.pnContenedor.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -223,7 +225,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnContenedor;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -233,7 +235,7 @@
         private System.Windows.Forms.Button btnGuardarPadecimiento;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.DateTimePicker dtpFechaPadecimiento;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPadecimiento;
         private System.Windows.Forms.ComboBox cmbTipoPadecimiento;
         private System.Windows.Forms.CheckBox chbEstadoFechaPadecimiento;
     }

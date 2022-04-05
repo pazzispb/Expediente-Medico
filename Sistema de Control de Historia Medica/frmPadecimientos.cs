@@ -13,7 +13,8 @@ namespace Sistema_de_Control_de_Historia_Medica
     public partial class frmPadecimientos : Form
     {
        
-        
+        clsBaseDatos bd = new clsBaseDatos();
+
         public frmPadecimientos()
         {
             InitializeComponent();
@@ -57,7 +58,8 @@ namespace Sistema_de_Control_de_Historia_Medica
         private void btnIngresarPadecimientos_Click(object sender, EventArgs e)
         {
             frmRegistrarPadecimientos frm = new frmRegistrarPadecimientos();
-            frm.MdiParent = this.MdiParent;
+            frm.MdiParent = this.MdiParent; // Asignar el mismo padre a ambas clases
+            frm.frmPadecimientos = this;
             frm.StartPosition = FormStartPosition.CenterScreen;
             frm.Show();
 
@@ -65,7 +67,19 @@ namespace Sistema_de_Control_de_Historia_Medica
 
         private void btnCargarPadecimientos_Click(object sender, EventArgs e)
         {
+            cargarPadecimientos();
+        }
 
+        public void cargarPadecimientos()
+        {
+            DataSet ds = bd.ConsultarInfomacion("SELECT tipoPadecimiento as 'Tipo', nombrePadecimiento as 'Nombre', fecha as 'Fecha', descripcion as 'Descripción'" +
+                $"FROM Padecimientos WHERE idUsuario = {frmMenuPrincipal.vIdUsuario}");//Carga los registros correspondientes a las analiticas de los usuarios
+            dgvPadecimientos.DataSource = ds.Tables[0];//Carga la tabla con los resultados de la consulta
+        }
+
+        private void frmPadecimientos_Load(object sender, EventArgs e)
+        {
+            cargarPadecimientos();
         }
     }
 }
