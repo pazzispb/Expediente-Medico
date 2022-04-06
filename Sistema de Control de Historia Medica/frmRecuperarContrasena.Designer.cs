@@ -47,7 +47,7 @@
             // 
             // txtCedula
             // 
-            this.txtCedula.Location = new System.Drawing.Point(157, 228);
+            this.txtCedula.Location = new System.Drawing.Point(155, 228);
             this.txtCedula.Multiline = true;
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.Size = new System.Drawing.Size(249, 31);
