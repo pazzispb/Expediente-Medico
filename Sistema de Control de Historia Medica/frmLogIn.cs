@@ -28,16 +28,10 @@ namespace Sistema_de_Control_de_Historia_Medica
                 frm.Show(); 
             }
             else MessageBox.Show("Cierre la funcionalidad abierta", "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-            if (Application.OpenForms.Count < 2) //Verificamos que solamente este abierto el formulario de LogIn
-            {
-                frm.Show();
-            }
-            else MessageBox.Show("Rellene todos los campos", "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
         private void btnAcceder_Click(object sender, EventArgs e)
         {
-            if (ValidarCamposRellenos() ) //Llamamos la funcion para validar los campos rellenos
+            if (ValidarCamposRellenos()) //Llamamos la funcion para validar los campos rellenos
             {
                 string vConsulta = $"SELECT COUNT(idUsuario) FROM Usuarios WHERE usuario = '{txtUsuario.Text}' AND clave = '{txtContrasena.Text}' "; // Cantidad de usuarios que comparten el mismo nombre y contrasena
                 int vResultados = Convert.ToInt32(bd.ConsultarValor(vConsulta));
@@ -55,12 +49,12 @@ namespace Sistema_de_Control_de_Historia_Medica
         }
         bool ValidarCamposRellenos()
         {
-            foreach (Control c in Controls) //Recorremos cada elemento del formulario
-                if (String.IsNullOrWhiteSpace(c.Text) && typeof(TextBox) == c.getType()) //Si esta vacio
-                {
-                    MessageBox.Show("Rellene los campos vacios", "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return false; //retorna que hay campos no rellenos
-                }
+            
+            if (String.IsNullOrWhiteSpace(txtUsuario.Text) || String.IsNullOrWhiteSpace(txtContrasena.Text)) //Si esta vacio
+            {
+                MessageBox.Show("Rellene los campos vacios", "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false; //retorna que hay campos no rellenos
+            }
             return true; //retorna que los campos estan rellenos
         }
 
