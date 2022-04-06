@@ -56,6 +56,7 @@
             // btnCancelar
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancelar.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.Transparent;
             this.btnCancelar.Location = new System.Drawing.Point(71, 298);
@@ -69,6 +70,7 @@
             // btnEnviar
             // 
             this.btnEnviar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
+            this.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEnviar.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnviar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnEnviar.Location = new System.Drawing.Point(306, 298);
@@ -85,7 +87,7 @@
             this.lblCedula.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(236)))), ((int)(((byte)(177)))));
             this.lblCedula.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCedula.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.lblCedula.Location = new System.Drawing.Point(90, 236);
+            this.lblCedula.Location = new System.Drawing.Point(90, 237);
             this.lblCedula.Name = "lblCedula";
             this.lblCedula.Size = new System.Drawing.Size(56, 18);
             this.lblCedula.TabIndex = 31;
@@ -97,7 +99,7 @@
             this.lblUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(236)))), ((int)(((byte)(177)))));
             this.lblUsuario.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.lblUsuario.Location = new System.Drawing.Point(90, 194);
+            this.lblUsuario.Location = new System.Drawing.Point(90, 193);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(61, 18);
             this.lblUsuario.TabIndex = 32;

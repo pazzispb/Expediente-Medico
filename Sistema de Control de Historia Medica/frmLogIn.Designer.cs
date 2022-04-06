@@ -55,9 +55,10 @@
             // 
             // btnAcceder
             // 
-            this.btnAcceder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnAcceder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
             this.btnAcceder.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAcceder.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAcceder.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnAcceder.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAcceder.Location = new System.Drawing.Point(185, 317);
             this.btnAcceder.Name = "btnAcceder";
             this.btnAcceder.Size = new System.Drawing.Size(145, 35);
@@ -87,8 +88,8 @@
             // 
             this.lbLogIn.AutoSize = true;
             this.lbLogIn.Font = new System.Drawing.Font("Montserrat", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbLogIn.ForeColor = System.Drawing.Color.White;
-            this.lbLogIn.Location = new System.Drawing.Point(157, 84);
+            this.lbLogIn.ForeColor = System.Drawing.Color.Black;
+            this.lbLogIn.Location = new System.Drawing.Point(161, 84);
             this.lbLogIn.Name = "lbLogIn";
             this.lbLogIn.Size = new System.Drawing.Size(227, 88);
             this.lbLogIn.TabIndex = 4;
@@ -111,11 +112,11 @@
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lblUsuario.Font = new System.Drawing.Font("Montserrat SemiBold", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(236)))), ((int)(((byte)(177)))));
+            this.lblUsuario.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.Location = new System.Drawing.Point(101, 210);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(51, 15);
+            this.lblUsuario.Size = new System.Drawing.Size(52, 15);
             this.lblUsuario.TabIndex = 6;
             this.lblUsuario.Text = "Usuario";
             // 
@@ -128,8 +129,8 @@
             // lblContrasena
             // 
             this.lblContrasena.AutoSize = true;
-            this.lblContrasena.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lblContrasena.Font = new System.Drawing.Font("Montserrat SemiBold", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContrasena.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(236)))), ((int)(((byte)(177)))));
+            this.lblContrasena.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContrasena.Location = new System.Drawing.Point(79, 256);
             this.lblContrasena.Name = "lblContrasena";
             this.lblContrasena.Size = new System.Drawing.Size(74, 15);
@@ -140,7 +141,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(236)))), ((int)(((byte)(177)))));
             this.ClientSize = new System.Drawing.Size(541, 415);
             this.Controls.Add(this.lblContrasena);
             this.Controls.Add(this.lblUsuario);
@@ -153,7 +154,6 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmLogIn";
             this.Text = "LogIn";
-            this.Load += new System.EventHandler(this.frmLogIn_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

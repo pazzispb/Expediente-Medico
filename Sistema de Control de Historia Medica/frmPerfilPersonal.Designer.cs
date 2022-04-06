@@ -101,11 +101,12 @@
             // btnEditarPerfil
             // 
             this.btnEditarPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
-            this.btnEditarPerfil.Font = new System.Drawing.Font("Montserrat SemiBold", 8F, System.Drawing.FontStyle.Bold);
+            this.btnEditarPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEditarPerfil.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditarPerfil.ForeColor = System.Drawing.Color.White;
-            this.btnEditarPerfil.Location = new System.Drawing.Point(156, 263);
+            this.btnEditarPerfil.Location = new System.Drawing.Point(154, 261);
             this.btnEditarPerfil.Name = "btnEditarPerfil";
-            this.btnEditarPerfil.Size = new System.Drawing.Size(238, 23);
+            this.btnEditarPerfil.Size = new System.Drawing.Size(238, 27);
             this.btnEditarPerfil.TabIndex = 53;
             this.btnEditarPerfil.Text = "Editar Perfil";
             this.btnEditarPerfil.UseVisualStyleBackColor = false;
