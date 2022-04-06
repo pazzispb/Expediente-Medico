@@ -12,6 +12,8 @@ namespace Sistema_de_Control_de_Historia_Medica
 {
     public partial class frmDoctores : Form
     {
+        string vIDUsuario = frmMenuPrincipal.vIdUsuario; //Id del usuario con la sesion abierta
+        clsBaseDatos bd = new clsBaseDatos();
         public frmDoctores()
         {
             InitializeComponent();
@@ -24,95 +26,27 @@ namespace Sistema_de_Control_de_Historia_Medica
 
         private void btnAñadirDoctor_Click(object sender, EventArgs e)
         {
-            dataGridView1.Rows.Add(txtNombre.Text, txtEspecialidad.Text, txtTelefono.Text, txtCentroDeSalud.Text);
-            LimpiarCampos();
-        }
-
-
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        void LimpiarCampos()
-        {
-            foreach (Control c in panel2.Controls) //Recorremos cada elemento del formulario
-                if (typeof(TextBox) == c.GetType()) //Si esta vacio
+       
+            string vConsulta = $"INSERT INTO Doctores (nombreDoctor, telefono, especialidad, centroMedico ) " +
+            $"VALUES ('{txtNombre.Text}', '{txtTelefono.Text}', '{txtEspecialidad.Text}', '{txtCentroDeSalud.Text}')";
+            if (ValidarCamposRellenos())//Si todos los campos tienen un contenido
+                if (bd.EjecutarComando(vConsulta))//Si se agrego el registro
                 {
-                    c.Text = "";
+                    MessageBox.Show("Doctor registrado con éxito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LimpiarCampos();
+                    CargarDoctores();
                 }
+                else MessageBox.Show("Hubo un error al registrar el doctor", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
+
         }
+
+
+
+
+
+
+
 
         private void btnCitasAgendadas_Click(object sender, EventArgs e)
         {
@@ -122,6 +56,39 @@ namespace Sistema_de_Control_de_Historia_Medica
         private void btnEliminarDoctor_Click(object sender, EventArgs e)
         {
             dataGridView1.Rows.Remove(dataGridView1.CurrentRow);
+        }
+
+        bool ValidarCamposRellenos()
+        {
+            foreach (Control c in pnRegistrarDoctor.Controls) //Recorremos cada elemento del formulario
+                if (String.IsNullOrWhiteSpace(c.Text) && typeof(TextBox) == c.GetType()) //Si esta vacio
+                {
+                    MessageBox.Show("Rellene los campos vacios", "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false; //retorna que hay campos no rellenos
+                }
+            return true; //retorna que los campos estan rellenos
+        }
+        void LimpiarCampos()
+        {
+            foreach (Control c in pnRegistrarDoctor.Controls) //Recorremos cada elemento del formulario
+                if (typeof(TextBox) == c.GetType()) //Si esta vacio
+                {
+                    c.Text = ""; //Limpia el contenido del control
+                }
+
+        }
+
+        private void btnCitasAgendadas_Click_1(object sender, EventArgs e)
+        {
+            CargarDoctores();
+        }
+
+        void CargarDoctores()
+        {
+            DataSet ds = bd.ConsultarInfomacion("SELECT idDoctor as 'ID', nombreDoctor as 'Nombre', especialidad as 'Especialidad', centroMedico as 'Centro medico'" +
+                $"FROM Doctores");//Carga los registros correspondientes a las analiticas de los usuarios
+            dataGridView1.DataSource = ds.Tables[0];//Carga la tabla con los resultados de la consulta
+
         }
     }
 

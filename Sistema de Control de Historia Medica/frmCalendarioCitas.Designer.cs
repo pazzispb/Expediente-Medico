@@ -30,9 +30,9 @@
         {
             this.labTitulo = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnAñadirCita = new System.Windows.Forms.Button();
+            this.pnDatosCita = new System.Windows.Forms.Panel();
             this.MonthCalendar = new System.Windows.Forms.MonthCalendar();
-            this.listBoxInfoCitas = new System.Windows.Forms.ListBox();
+            this.btnAñadirCita = new System.Windows.Forms.Button();
             this.cmbDesplegarHorario = new System.Windows.Forms.ComboBox();
             this.cmbCentro = new System.Windows.Forms.ComboBox();
             this.cmbDesplegarDoctor = new System.Windows.Forms.ComboBox();
@@ -43,7 +43,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.labcondiciones = new System.Windows.Forms.Label();
             this.btnCitasAgendadas = new System.Windows.Forms.Button();
+            this.dgvInfoCitas = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
+            this.pnDatosCita.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInfoCitas)).BeginInit();
             this.SuspendLayout();
             // 
             // labTitulo
@@ -60,13 +63,31 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(236)))), ((int)(((byte)(177)))));
-            this.panel1.Controls.Add(this.btnAñadirCita);
+            this.panel1.Controls.Add(this.dgvInfoCitas);
+            this.panel1.Controls.Add(this.pnDatosCita);
             this.panel1.Controls.Add(this.MonthCalendar);
+            this.panel1.Controls.Add(this.btnAñadirCita);
             this.panel1.Location = new System.Drawing.Point(2, 55);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(784, 338);
+            this.panel1.Size = new System.Drawing.Size(787, 338);
             this.panel1.TabIndex = 16;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // pnDatosCita
+            // 
+            this.pnDatosCita.Controls.Add(this.cmbCentro);
+            this.pnDatosCita.Location = new System.Drawing.Point(5, 5);
+            this.pnDatosCita.Name = "pnDatosCita";
+            this.pnDatosCita.Size = new System.Drawing.Size(323, 132);
+            this.pnDatosCita.TabIndex = 28;
+            // 
+            // MonthCalendar
+            // 
+            this.MonthCalendar.Location = new System.Drawing.Point(517, 9);
+            this.MonthCalendar.MaxDate = new System.DateTime(2022, 12, 31, 0, 0, 0, 0);
+            this.MonthCalendar.Name = "MonthCalendar";
+            this.MonthCalendar.ShowToday = false;
+            this.MonthCalendar.TabIndex = 26;
             // 
             // btnAñadirCita
             // 
@@ -80,25 +101,6 @@
             this.btnAñadirCita.Text = "Añadir cita";
             this.btnAñadirCita.UseVisualStyleBackColor = false;
             this.btnAñadirCita.Click += new System.EventHandler(this.btnAñadirCita_Click_1);
-            // 
-            // MonthCalendar
-            // 
-            this.MonthCalendar.Location = new System.Drawing.Point(517, 9);
-            this.MonthCalendar.MaxDate = new System.DateTime(2022, 12, 31, 0, 0, 0, 0);
-            this.MonthCalendar.Name = "MonthCalendar";
-            this.MonthCalendar.ShowToday = false;
-            this.MonthCalendar.TabIndex = 26;
-            // 
-            // listBoxInfoCitas
-            // 
-            this.listBoxInfoCitas.FormattingEnabled = true;
-            this.listBoxInfoCitas.HorizontalScrollbar = true;
-            this.listBoxInfoCitas.Location = new System.Drawing.Point(15, 238);
-            this.listBoxInfoCitas.Name = "listBoxInfoCitas";
-            this.listBoxInfoCitas.ScrollAlwaysVisible = true;
-            this.listBoxInfoCitas.Size = new System.Drawing.Size(752, 121);
-            this.listBoxInfoCitas.TabIndex = 37;
-            this.listBoxInfoCitas.SelectedIndexChanged += new System.EventHandler(this.listBoxInfoCitas_SelectedIndexChanged);
             // 
             // cmbDesplegarHorario
             // 
@@ -127,7 +129,7 @@
             // cmbCentro
             // 
             this.cmbCentro.FormattingEnabled = true;
-            this.cmbCentro.Location = new System.Drawing.Point(132, 155);
+            this.cmbCentro.Location = new System.Drawing.Point(125, 96);
             this.cmbCentro.Name = "cmbCentro";
             this.cmbCentro.Size = new System.Drawing.Size(184, 21);
             this.cmbCentro.TabIndex = 35;
@@ -219,16 +221,22 @@
             this.btnCitasAgendadas.UseVisualStyleBackColor = false;
             this.btnCitasAgendadas.Click += new System.EventHandler(this.btnCitasAgendadas_Click);
             // 
+            // dgvInfoCitas
+            // 
+            this.dgvInfoCitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvInfoCitas.Location = new System.Drawing.Point(1, 187);
+            this.dgvInfoCitas.Name = "dgvInfoCitas";
+            this.dgvInfoCitas.Size = new System.Drawing.Size(785, 150);
+            this.dgvInfoCitas.TabIndex = 29;
+            // 
             // frmCalendarioCitas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(790, 455);
             this.Controls.Add(this.btnCitasAgendadas);
-            this.Controls.Add(this.listBoxInfoCitas);
             this.Controls.Add(this.cmbDesplegarHorario);
             this.Controls.Add(this.labTitulo);
-            this.Controls.Add(this.cmbCentro);
             this.Controls.Add(this.cmbDesplegarDoctor);
             this.Controls.Add(this.labcondiciones);
             this.Controls.Add(this.btnEditarCita);
@@ -243,6 +251,8 @@
             this.Text = "Calendario de Citas Médicas";
             this.Load += new System.EventHandler(this.frmCalendarioCitas_Load);
             this.panel1.ResumeLayout(false);
+            this.pnDatosCita.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInfoCitas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -251,7 +261,6 @@
         #endregion
         private System.Windows.Forms.Label labTitulo;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ListBox listBoxInfoCitas;
         private System.Windows.Forms.ComboBox cmbDesplegarHorario;
         private System.Windows.Forms.ComboBox cmbCentro;
         private System.Windows.Forms.ComboBox cmbDesplegarDoctor;
@@ -264,5 +273,7 @@
         private System.Windows.Forms.MonthCalendar MonthCalendar;
         private System.Windows.Forms.Button btnCitasAgendadas;
         private System.Windows.Forms.Button btnAñadirCita;
+        private System.Windows.Forms.Panel pnDatosCita;
+        private System.Windows.Forms.DataGridView dgvInfoCitas;
     }
 }

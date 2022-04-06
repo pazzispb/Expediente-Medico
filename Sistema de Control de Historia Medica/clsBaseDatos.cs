@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SQLite;
 using System.Data;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Sistema_de_Control_de_Historia_Medica
 {
@@ -18,6 +19,7 @@ namespace Sistema_de_Control_de_Historia_Medica
             try 
             {
                 conexion = new SQLiteConnection(vCadenaConexion);//Iniciamos el objeto para la conexion con la base de datos
+                CrearTablas();
             }
             catch(Exception ex)
             {
@@ -29,6 +31,18 @@ namespace Sistema_de_Control_de_Historia_Medica
             try
             {
                 conexion.Open(); //Abrimos la conexion
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+        void CrearTablas()
+        {
+            try
+            {
+                string vConsulta = File.ReadAllText("..\\..\\database.db.sql");
+                EjecutarComando(vConsulta);
             }
             catch (Exception ex)
             {

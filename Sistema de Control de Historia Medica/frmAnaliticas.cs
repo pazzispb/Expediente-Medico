@@ -25,11 +25,12 @@ namespace Sistema_de_Control_de_Historia_Medica
         }
         private void btnRegistrarAnalitica_Click(object sender, EventArgs e)
         {
-            if (!EstaAbierto())
+            if (!EstaAbierto()) //Valida si hay formularios abiertos aparte del Menu Principal y el de Analiticas
             {
                 frmRegistrarAnalitica frm = new frmRegistrarAnalitica();
-                frm.MdiParent = this.MdiParent;
-                frm.StartPosition = FormStartPosition.CenterScreen;
+                frm.MdiParent = this.MdiParent; //Para mantenerlos dentro del Area del Menu Principal
+                frm.frmAnaliticas = this; //Le pasamos este formulario para poder actualizar el datagrid view con los Padecimientos
+                frm.StartPosition = FormStartPosition.CenterScreen;//Para que el formulario se centre en el area del menu principal
                 frm.Show();
             }
             else
@@ -47,17 +48,15 @@ namespace Sistema_de_Control_de_Historia_Medica
         {
             CargarAnaliticas();
         }
-        void CargarAnaliticas()
+        public void CargarAnaliticas()
         {
             DataSet ds = bd.ConsultarInfomacion("SELECT idAnalitica as 'ID', fecha as 'Fecha', proposito as 'Propósito', observaciones as 'Observaciones'" +
                 $"FROM Analiticas WHERE idUsuario = {vIDUsuario}");//Carga los registros correspondientes a las analiticas de los usuarios
             dgvAnaliticas.DataSource = ds.Tables[0];//Carga la tabla con los resultados de la consulta
-            
         }
-
         private void dgvAnaliticas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex > -1)
+            if (e.RowIndex > -1) //Si la fila seleccionada no es un header del datagridview
             {
                 lblID.Text = dgvAnaliticas.Rows[e.RowIndex].Cells[0].Value.ToString();
                 dtpFecha.Text = dgvAnaliticas.Rows[e.RowIndex].Cells[1].Value.ToString();
