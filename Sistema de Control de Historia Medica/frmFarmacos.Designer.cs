@@ -29,11 +29,6 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dgvFarmacos = new System.Windows.Forms.DataGridView();
-            this.label6 = new System.Windows.Forms.Label();
-            this.btnCargarPadecimientos = new System.Windows.Forms.Button();
-            this.btnIngresarFarmacos = new System.Windows.Forms.Button();
             this.txtDosisFarmaco = new System.Windows.Forms.TextBox();
             this.cmbFrecuencia = new System.Windows.Forms.ComboBox();
             this.cmbFrecuenciaFarmaco = new System.Windows.Forms.ComboBox();
@@ -43,6 +38,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dgvFarmacos = new System.Windows.Forms.DataGridView();
+            this.label6 = new System.Windows.Forms.Label();
+            this.btnCargarPadecimientos = new System.Windows.Forms.Button();
+            this.btnIngresarFarmacos = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFarmacos)).BeginInit();
             this.SuspendLayout();
@@ -63,60 +63,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(739, 176);
             this.panel2.TabIndex = 18;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(14, 24);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 25);
-            this.label1.TabIndex = 35;
-            this.label1.Text = "Fármacos";
-            // 
-            // dgvFarmacos
-            // 
-            this.dgvFarmacos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFarmacos.Location = new System.Drawing.Point(19, 64);
-            this.dgvFarmacos.Name = "dgvFarmacos";
-            this.dgvFarmacos.Size = new System.Drawing.Size(738, 150);
-            this.dgvFarmacos.TabIndex = 36;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(16, 225);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(106, 13);
-            this.label6.TabIndex = 37;
-            this.label6.Text = "Detalles del Fármaco";
-            // 
-            // btnCargarPadecimientos
-            // 
-            this.btnCargarPadecimientos.BackColor = System.Drawing.Color.Gray;
-            this.btnCargarPadecimientos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCargarPadecimientos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCargarPadecimientos.Location = new System.Drawing.Point(413, 24);
-            this.btnCargarPadecimientos.Name = "btnCargarPadecimientos";
-            this.btnCargarPadecimientos.Size = new System.Drawing.Size(99, 34);
-            this.btnCargarPadecimientos.TabIndex = 38;
-            this.btnCargarPadecimientos.Text = "Cargar";
-            this.btnCargarPadecimientos.UseVisualStyleBackColor = false;
-            // 
-            // btnIngresarFarmacos
-            // 
-            this.btnIngresarFarmacos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
-            this.btnIngresarFarmacos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIngresarFarmacos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnIngresarFarmacos.Location = new System.Drawing.Point(520, 24);
-            this.btnIngresarFarmacos.Name = "btnIngresarFarmacos";
-            this.btnIngresarFarmacos.Size = new System.Drawing.Size(237, 34);
-            this.btnIngresarFarmacos.TabIndex = 39;
-            this.btnIngresarFarmacos.Text = "Ingresar Nuevo Fármaco";
-            this.btnIngresarFarmacos.UseVisualStyleBackColor = false;
-            this.btnIngresarFarmacos.Click += new System.EventHandler(this.btnIngresarFarmacos_Click);
             // 
             // txtDosisFarmaco
             // 
@@ -210,6 +156,61 @@
             this.label2.Size = new System.Drawing.Size(72, 16);
             this.label2.TabIndex = 49;
             this.label2.Text = "Fármaco:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(14, 24);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(115, 25);
+            this.label1.TabIndex = 35;
+            this.label1.Text = "Fármacos";
+            // 
+            // dgvFarmacos
+            // 
+            this.dgvFarmacos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvFarmacos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFarmacos.Location = new System.Drawing.Point(19, 64);
+            this.dgvFarmacos.Name = "dgvFarmacos";
+            this.dgvFarmacos.Size = new System.Drawing.Size(738, 150);
+            this.dgvFarmacos.TabIndex = 36;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(16, 225);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(106, 13);
+            this.label6.TabIndex = 37;
+            this.label6.Text = "Detalles del Fármaco";
+            // 
+            // btnCargarPadecimientos
+            // 
+            this.btnCargarPadecimientos.BackColor = System.Drawing.Color.Gray;
+            this.btnCargarPadecimientos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCargarPadecimientos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnCargarPadecimientos.Location = new System.Drawing.Point(413, 24);
+            this.btnCargarPadecimientos.Name = "btnCargarPadecimientos";
+            this.btnCargarPadecimientos.Size = new System.Drawing.Size(99, 34);
+            this.btnCargarPadecimientos.TabIndex = 38;
+            this.btnCargarPadecimientos.Text = "Cargar";
+            this.btnCargarPadecimientos.UseVisualStyleBackColor = false;
+            // 
+            // btnIngresarFarmacos
+            // 
+            this.btnIngresarFarmacos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
+            this.btnIngresarFarmacos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIngresarFarmacos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnIngresarFarmacos.Location = new System.Drawing.Point(520, 24);
+            this.btnIngresarFarmacos.Name = "btnIngresarFarmacos";
+            this.btnIngresarFarmacos.Size = new System.Drawing.Size(237, 34);
+            this.btnIngresarFarmacos.TabIndex = 39;
+            this.btnIngresarFarmacos.Text = "Ingresar Nuevo Fármaco";
+            this.btnIngresarFarmacos.UseVisualStyleBackColor = false;
+            this.btnIngresarFarmacos.Click += new System.EventHandler(this.btnIngresarFarmacos_Click);
             // 
             // frmFarmacos
             // 

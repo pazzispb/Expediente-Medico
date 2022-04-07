@@ -21,32 +21,17 @@ namespace Sistema_de_Control_de_Historia_Medica
 
         }
 
-        
-
-        private void labTitulo_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labcondiciones_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void frmCalendarioCitas_Load(object sender, EventArgs e)
         {
             var fechaActual = DateTime.Now;
             dateTimePicker1.MinDate = fechaActual;
             MonthCalendar.MinDate = fechaActual;
-        }
 
+            
+            
+            
+        }
 
         private void listBoxInfoCitas_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -63,7 +48,7 @@ namespace Sistema_de_Control_de_Historia_Medica
                 if (bd.EjecutarComando(vConsulta))//Si se agrego el registro
                 {
                         MessageBox.Show("Doctor registrado con éxito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        string vID = bd.ConsultarValor("SELECT idDoctor FROM Analiticas ORDER BY idDoctor DESC LIMIT 1;").ToString(); //obtiene el id del doctor que se acaba de registrar                       
+                        string vID = bd.ConsultarValor("SELECT idDoctor FROM Doctores ORDER BY idDoctor DESC LIMIT 1;").ToString(); //obtiene el id del doctor que se acaba de registrar                       
                         LimpiarCampos();
                 }
                 else MessageBox.Show("Hubo un error al registrar el doctor", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
@@ -80,6 +65,7 @@ namespace Sistema_de_Control_de_Historia_Medica
                 }
             return true; //retorna que los campos estan rellenos
         }
+
         void LimpiarCampos()
         {
             foreach (Control c in pnDatosCita.Controls) //Recorremos cada elemento del formulario
@@ -87,26 +73,6 @@ namespace Sistema_de_Control_de_Historia_Medica
                 {
                     c.Text = ""; //Limpia el contenido del control
                 }
-            
-        }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-            MonthCalendar.SetDate(dateTimePicker1.Value);
-        }
-
-
-        private void btnCitasAgendadas_Click(object sender, EventArgs e)
-        {
-            CargarInfoCita();
-            
-        }
-
-        private void btnEliminarCita_Click(object sender, EventArgs e)
-        {
-            
-            
-            
             
         }
 
@@ -118,5 +84,21 @@ namespace Sistema_de_Control_de_Historia_Medica
 
         }
 
+        private void btnCitasAgendadas_Click(object sender, EventArgs e)
+        {
+            CargarInfoCita();
+        }
+
+        private void dgvInfoCitas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex > -1) //Si la fila seleccionada no es un header del datagridview
+            {
+                cmbDesplegarDoctor.Text = dgvInfoCitas.Rows[e.RowIndex].Cells[0].Value.ToString();
+                cmbDesplegarHorario.Text = dgvInfoCitas.Rows[e.RowIndex].Cells[1].Value.ToString();
+                cmbCentro.Text = dgvInfoCitas.Rows[e.RowIndex].Cells[2].Value.ToString();
+                dateTimePicker1.Text = dgvInfoCitas.Rows[e.RowIndex].Cells[2].Value.ToString();
+
+            }
+        }
     }
 }

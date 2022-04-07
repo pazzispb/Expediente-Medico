@@ -167,6 +167,7 @@
             // 
             this.dgvPadecimientos.AllowUserToAddRows = false;
             this.dgvPadecimientos.AllowUserToDeleteRows = false;
+            this.dgvPadecimientos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPadecimientos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPadecimientos.Location = new System.Drawing.Point(12, 55);
             this.dgvPadecimientos.Name = "dgvPadecimientos";

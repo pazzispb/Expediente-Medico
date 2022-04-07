@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnAñadirDoctor = new System.Windows.Forms.Button();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.labTitulo = new System.Windows.Forms.Label();
             this.labNombre = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAñadirDoctor = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnCitasAgendadas = new System.Windows.Forms.Button();
             this.pnRegistrarDoctor = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.labCentroDeSalud = new System.Windows.Forms.Label();
@@ -44,25 +46,10 @@
             this.labEspecialidad = new System.Windows.Forms.Label();
             this.txtEspecialidad = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnCitasAgendadas = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.pnRegistrarDoctor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.pnRegistrarDoctor.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnAñadirDoctor
-            // 
-            this.btnAñadirDoctor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
-            this.btnAñadirDoctor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAñadirDoctor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnAñadirDoctor.Location = new System.Drawing.Point(133, 326);
-            this.btnAñadirDoctor.Name = "btnAñadirDoctor";
-            this.btnAñadirDoctor.Size = new System.Drawing.Size(136, 34);
-            this.btnAñadirDoctor.TabIndex = 1;
-            this.btnAñadirDoctor.Text = "Añadir Doctor/a";
-            this.btnAñadirDoctor.UseVisualStyleBackColor = false;
-            this.btnAñadirDoctor.Click += new System.EventHandler(this.btnAñadirDoctor_Click);
             // 
             // txtNombre
             // 
@@ -73,13 +60,17 @@
             // 
             // labTitulo
             // 
-            this.labTitulo.AutoSize = true;
+            this.labTitulo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labTitulo.CausesValidation = false;
             this.labTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labTitulo.Location = new System.Drawing.Point(209, 9);
+            this.labTitulo.Location = new System.Drawing.Point(220, 9);
             this.labTitulo.Name = "labTitulo";
+            this.labTitulo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.labTitulo.Size = new System.Drawing.Size(184, 25);
             this.labTitulo.TabIndex = 5;
             this.labTitulo.Text = "Registrar Doctor";
+            this.labTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labTitulo.Click += new System.EventHandler(this.labTitulo_Click);
             // 
             // labNombre
             // 
@@ -93,14 +84,65 @@
             // 
             // panel1
             // 
+            this.panel1.AutoSize = true;
+            this.panel1.Controls.Add(this.btnAñadirDoctor);
+            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.btnCitasAgendadas);
             this.panel1.Controls.Add(this.labTitulo);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(599, 55);
+            this.panel1.Size = new System.Drawing.Size(648, 415);
             this.panel1.TabIndex = 7;
+            // 
+            // btnAñadirDoctor
+            // 
+            this.btnAñadirDoctor.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnAñadirDoctor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
+            this.btnAñadirDoctor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAñadirDoctor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnAñadirDoctor.Location = new System.Drawing.Point(135, 374);
+            this.btnAñadirDoctor.Name = "btnAñadirDoctor";
+            this.btnAñadirDoctor.Size = new System.Drawing.Size(114, 35);
+            this.btnAñadirDoctor.TabIndex = 36;
+            this.btnAñadirDoctor.Text = "Añadir";
+            this.btnAñadirDoctor.UseVisualStyleBackColor = false;
+            this.btnAñadirDoctor.Click += new System.EventHandler(this.btnAñadirDoctor_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 163);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.Size = new System.Drawing.Size(647, 199);
+            this.dataGridView1.TabIndex = 9;
+            // 
+            // btnCitasAgendadas
+            // 
+            this.btnCitasAgendadas.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnCitasAgendadas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
+            this.btnCitasAgendadas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCitasAgendadas.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnCitasAgendadas.Location = new System.Drawing.Point(395, 374);
+            this.btnCitasAgendadas.Name = "btnCitasAgendadas";
+            this.btnCitasAgendadas.Size = new System.Drawing.Size(114, 35);
+            this.btnCitasAgendadas.TabIndex = 35;
+            this.btnCitasAgendadas.Text = "Ver doctores";
+            this.btnCitasAgendadas.UseVisualStyleBackColor = false;
+            this.btnCitasAgendadas.Click += new System.EventHandler(this.btnCitasAgendadas_Click_1);
             // 
             // pnRegistrarDoctor
             // 
+            this.pnRegistrarDoctor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnRegistrarDoctor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(236)))), ((int)(((byte)(177)))));
             this.pnRegistrarDoctor.Controls.Add(this.label2);
             this.pnRegistrarDoctor.Controls.Add(this.labCentroDeSalud);
@@ -116,23 +158,25 @@
             this.pnRegistrarDoctor.Controls.Add(this.txtNombre);
             this.pnRegistrarDoctor.Location = new System.Drawing.Point(0, 49);
             this.pnRegistrarDoctor.Name = "pnRegistrarDoctor";
-            this.pnRegistrarDoctor.Size = new System.Drawing.Size(599, 108);
+            this.pnRegistrarDoctor.Size = new System.Drawing.Size(647, 108);
             this.pnRegistrarDoctor.TabIndex = 8;
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(508, 55);
+            this.label2.Location = new System.Drawing.Point(556, 55);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 25);
             this.label2.TabIndex = 14;
             // 
             // labCentroDeSalud
             // 
+            this.labCentroDeSalud.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labCentroDeSalud.AutoSize = true;
             this.labCentroDeSalud.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labCentroDeSalud.Location = new System.Drawing.Point(273, 69);
+            this.labCentroDeSalud.Location = new System.Drawing.Point(321, 69);
             this.labCentroDeSalud.Name = "labCentroDeSalud";
             this.labCentroDeSalud.Size = new System.Drawing.Size(120, 16);
             this.labCentroDeSalud.TabIndex = 15;
@@ -140,7 +184,8 @@
             // 
             // txtCentroDeSalud
             // 
-            this.txtCentroDeSalud.Location = new System.Drawing.Point(399, 66);
+            this.txtCentroDeSalud.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCentroDeSalud.Location = new System.Drawing.Point(447, 66);
             this.txtCentroDeSalud.Multiline = true;
             this.txtCentroDeSalud.Name = "txtCentroDeSalud";
             this.txtCentroDeSalud.Size = new System.Drawing.Size(173, 20);
@@ -174,18 +219,20 @@
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(508, 10);
+            this.label4.Location = new System.Drawing.Point(556, 10);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(0, 25);
             this.label4.TabIndex = 8;
             // 
             // labEspecialidad
             // 
+            this.labEspecialidad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labEspecialidad.AutoSize = true;
             this.labEspecialidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labEspecialidad.Location = new System.Drawing.Point(294, 22);
+            this.labEspecialidad.Location = new System.Drawing.Point(342, 22);
             this.labEspecialidad.Name = "labEspecialidad";
             this.labEspecialidad.Size = new System.Drawing.Size(103, 16);
             this.labEspecialidad.TabIndex = 9;
@@ -193,7 +240,8 @@
             // 
             // txtEspecialidad
             // 
-            this.txtEspecialidad.Location = new System.Drawing.Point(399, 21);
+            this.txtEspecialidad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtEspecialidad.Location = new System.Drawing.Point(447, 21);
             this.txtEspecialidad.Multiline = true;
             this.txtEspecialidad.Name = "txtEspecialidad";
             this.txtEspecialidad.Size = new System.Drawing.Size(173, 20);
@@ -208,57 +256,29 @@
             this.label3.Size = new System.Drawing.Size(0, 25);
             this.label3.TabIndex = 5;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 163);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(599, 150);
-            this.dataGridView1.TabIndex = 9;
-            // 
-            // btnCitasAgendadas
-            // 
-            this.btnCitasAgendadas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
-            this.btnCitasAgendadas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCitasAgendadas.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCitasAgendadas.Location = new System.Drawing.Point(326, 326);
-            this.btnCitasAgendadas.Name = "btnCitasAgendadas";
-            this.btnCitasAgendadas.Size = new System.Drawing.Size(114, 35);
-            this.btnCitasAgendadas.TabIndex = 35;
-            this.btnCitasAgendadas.Text = "Ver doctores";
-            this.btnCitasAgendadas.UseVisualStyleBackColor = false;
-            this.btnCitasAgendadas.Click += new System.EventHandler(this.btnCitasAgendadas_Click_1);
-            // 
             // frmDoctores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 366);
-            this.Controls.Add(this.btnCitasAgendadas);
-            this.Controls.Add(this.dataGridView1);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(648, 415);
             this.Controls.Add(this.pnRegistrarDoctor);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnAñadirDoctor);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimizeBox = false;
             this.Name = "frmDoctores";
             this.Text = "Registro de Doctores";
-            this.Load += new System.EventHandler(this.frmDoctores_Load);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.pnRegistrarDoctor.ResumeLayout(false);
             this.pnRegistrarDoctor.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button btnAñadirDoctor;
+        
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label labTitulo;
         private System.Windows.Forms.Label labNombre;
@@ -276,5 +296,6 @@
         private System.Windows.Forms.TextBox txtCentroDeSalud;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnCitasAgendadas;
+        private System.Windows.Forms.Button btnAñadirDoctor;
     }
 }

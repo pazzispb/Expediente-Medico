@@ -19,45 +19,12 @@ namespace Sistema_de_Control_de_Historia_Medica
             InitializeComponent();
         }
 
-        private void frmDoctores_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnAñadirDoctor_Click(object sender, EventArgs e)
-        {
-       
-            string vConsulta = $"INSERT INTO Doctores (nombreDoctor, telefono, especialidad, centroMedico ) " +
-            $"VALUES ('{txtNombre.Text}', '{txtTelefono.Text}', '{txtEspecialidad.Text}', '{txtCentroDeSalud.Text}')";
-            if (ValidarCamposRellenos())//Si todos los campos tienen un contenido
-                if (bd.EjecutarComando(vConsulta))//Si se agrego el registro
-                {
-                    MessageBox.Show("Doctor registrado con éxito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LimpiarCampos();
-                    CargarDoctores();
-                }
-                else MessageBox.Show("Hubo un error al registrar el doctor", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-
-
-        }
-
-
-
-
-
-
-
-
         private void btnCitasAgendadas_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btnEliminarDoctor_Click(object sender, EventArgs e)
-        {
-            dataGridView1.Rows.Remove(dataGridView1.CurrentRow);
-        }
-
+       
         bool ValidarCamposRellenos()
         {
             foreach (Control c in pnRegistrarDoctor.Controls) //Recorremos cada elemento del formulario
@@ -81,14 +48,46 @@ namespace Sistema_de_Control_de_Historia_Medica
         private void btnCitasAgendadas_Click_1(object sender, EventArgs e)
         {
             CargarDoctores();
+            
         }
 
         void CargarDoctores()
         {
             DataSet ds = bd.ConsultarInfomacion("SELECT idDoctor as 'ID', nombreDoctor as 'Nombre', especialidad as 'Especialidad', centroMedico as 'Centro medico'" +
-                $"FROM Doctores");//Carga los registros correspondientes a las analiticas de los usuarios
+                $"FROM Doctores");//Carga los registros correspondientes a los resultados de los usuarios
             dataGridView1.DataSource = ds.Tables[0];//Carga la tabla con los resultados de la consulta
 
+        }
+
+        private void labTitulo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAñadirDoctor_Click(object sender, EventArgs e)
+        {
+            string vConsulta = $"INSERT INTO Doctores (nombreDoctor, telefono, especialidad, centroMedico ) " +
+            $"VALUES ('{txtNombre.Text}', '{txtTelefono.Text}', '{txtEspecialidad.Text}', '{txtCentroDeSalud.Text}')";
+            if (ValidarCamposRellenos())//Si todos los campos tienen un contenido
+                if (bd.EjecutarComando(vConsulta))//Si se agrego el registro
+                {
+                    MessageBox.Show("Doctor registrado con éxito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LimpiarCampos();
+                    
+                }
+                else MessageBox.Show("Hubo un error al registrar el doctor", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex > -1) //Si la fila seleccionada no es un header del datagridview
+            {
+                txtNombre.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txtEspecialidad.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                txtTelefono.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                txtCentroDeSalud.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                
+            }
         }
     }
 
