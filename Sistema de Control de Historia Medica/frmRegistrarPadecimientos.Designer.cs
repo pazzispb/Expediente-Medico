@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.pnContenedor = new System.Windows.Forms.Panel();
-            this.chbEstadoFechaPadecimiento = new System.Windows.Forms.CheckBox();
             this.txtPadecimiento = new System.Windows.Forms.TextBox();
             this.cmbTipoPadecimiento = new System.Windows.Forms.ComboBox();
             this.dtpFechaPadecimiento = new System.Windows.Forms.DateTimePicker();
@@ -41,13 +40,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.chbEstadoFecha = new System.Windows.Forms.CheckBox();
             this.pnContenedor.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnContenedor
             // 
             this.pnContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(236)))), ((int)(((byte)(177)))));
-            this.pnContenedor.Controls.Add(this.chbEstadoFechaPadecimiento);
+            this.pnContenedor.Controls.Add(this.chbEstadoFecha);
             this.pnContenedor.Controls.Add(this.txtPadecimiento);
             this.pnContenedor.Controls.Add(this.cmbTipoPadecimiento);
             this.pnContenedor.Controls.Add(this.dtpFechaPadecimiento);
@@ -63,18 +63,6 @@
             this.pnContenedor.Size = new System.Drawing.Size(673, 216);
             this.pnContenedor.TabIndex = 16;
             this.pnContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // chbEstadoFechaPadecimiento
-            // 
-            this.chbEstadoFechaPadecimiento.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.chbEstadoFechaPadecimiento.AutoSize = true;
-            this.chbEstadoFechaPadecimiento.Location = new System.Drawing.Point(158, 163);
-            this.chbEstadoFechaPadecimiento.Name = "chbEstadoFechaPadecimiento";
-            this.chbEstadoFechaPadecimiento.Size = new System.Drawing.Size(71, 17);
-            this.chbEstadoFechaPadecimiento.TabIndex = 39;
-            this.chbEstadoFechaPadecimiento.Text = "No aplica";
-            this.chbEstadoFechaPadecimiento.UseVisualStyleBackColor = true;
-          
             // 
             // txtPadecimiento
             // 
@@ -103,6 +91,7 @@
             // dtpFechaPadecimiento
             // 
             this.dtpFechaPadecimiento.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtpFechaPadecimiento.Checked = false;
             this.dtpFechaPadecimiento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpFechaPadecimiento.Location = new System.Drawing.Point(158, 136);
             this.dtpFechaPadecimiento.Name = "dtpFechaPadecimiento";
@@ -206,6 +195,17 @@
             this.label1.TabIndex = 33;
             this.label1.Text = "Datos del Padecimiento";
             // 
+            // chbEstadoFecha
+            // 
+            this.chbEstadoFecha.AutoSize = true;
+            this.chbEstadoFecha.Location = new System.Drawing.Point(158, 162);
+            this.chbEstadoFecha.Name = "chbEstadoFecha";
+            this.chbEstadoFecha.Size = new System.Drawing.Size(71, 17);
+            this.chbEstadoFecha.TabIndex = 39;
+            this.chbEstadoFecha.Text = "No aplica";
+            this.chbEstadoFecha.UseVisualStyleBackColor = true;
+            this.chbEstadoFecha.CheckedChanged += new System.EventHandler(this.chbEstadoFecha_CheckedChanged);
+            // 
             // frmRegistrarPadecimientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -237,6 +237,6 @@
         private System.Windows.Forms.DateTimePicker dtpFechaPadecimiento;
         private System.Windows.Forms.TextBox txtPadecimiento;
         private System.Windows.Forms.ComboBox cmbTipoPadecimiento;
-        private System.Windows.Forms.CheckBox chbEstadoFechaPadecimiento;
+        private System.Windows.Forms.CheckBox chbEstadoFecha;
     }
 }

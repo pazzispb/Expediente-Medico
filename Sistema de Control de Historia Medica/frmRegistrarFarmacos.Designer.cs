@@ -36,12 +36,12 @@
             this.txtDescripcionFarmaco = new System.Windows.Forms.TextBox();
             this.btnGuardarFarmaco = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cmbFrecuenciaFarmaco = new System.Windows.Forms.ComboBox();
-            this.cmbVeces = new System.Windows.Forms.ComboBox();
+            this.pnContenedor = new System.Windows.Forms.Panel();
             this.txtDosisFarmaco = new System.Windows.Forms.TextBox();
-            this.panel2.SuspendLayout();
+            this.cmbVeces = new System.Windows.Forms.ComboBox();
+            this.cmbFrecuenciaFarmaco = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pnContenedor.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -115,6 +115,7 @@
             this.btnGuardarFarmaco.TabIndex = 34;
             this.btnGuardarFarmaco.Text = "Guardar datos";
             this.btnGuardarFarmaco.UseVisualStyleBackColor = false;
+            this.btnGuardarFarmaco.Click += new System.EventHandler(this.btnGuardarFarmaco_Click);
             // 
             // btnCancelar
             // 
@@ -130,51 +131,37 @@
             this.btnCancelar.TabIndex = 35;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // panel2
+            // pnContenedor
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(236)))), ((int)(((byte)(177)))));
-            this.panel2.Controls.Add(this.txtDosisFarmaco);
-            this.panel2.Controls.Add(this.cmbVeces);
-            this.panel2.Controls.Add(this.cmbFrecuenciaFarmaco);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.btnCancelar);
-            this.panel2.Controls.Add(this.btnGuardarFarmaco);
-            this.panel2.Controls.Add(this.txtDescripcionFarmaco);
-            this.panel2.Controls.Add(this.txtFarmaco);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(18, 64);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(691, 207);
-            this.panel2.TabIndex = 17;
+            this.pnContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(236)))), ((int)(((byte)(177)))));
+            this.pnContenedor.Controls.Add(this.txtDosisFarmaco);
+            this.pnContenedor.Controls.Add(this.cmbVeces);
+            this.pnContenedor.Controls.Add(this.cmbFrecuenciaFarmaco);
+            this.pnContenedor.Controls.Add(this.label3);
+            this.pnContenedor.Controls.Add(this.btnCancelar);
+            this.pnContenedor.Controls.Add(this.btnGuardarFarmaco);
+            this.pnContenedor.Controls.Add(this.txtDescripcionFarmaco);
+            this.pnContenedor.Controls.Add(this.txtFarmaco);
+            this.pnContenedor.Controls.Add(this.label5);
+            this.pnContenedor.Controls.Add(this.label4);
+            this.pnContenedor.Controls.Add(this.label2);
+            this.pnContenedor.Location = new System.Drawing.Point(18, 64);
+            this.pnContenedor.Name = "pnContenedor";
+            this.pnContenedor.Size = new System.Drawing.Size(691, 207);
+            this.pnContenedor.TabIndex = 17;
             // 
-            // label3
+            // txtDosisFarmaco
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(44, 138);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 16);
-            this.label3.TabIndex = 44;
-            this.label3.Text = "Dosis:";
-            // 
-            // cmbFrecuenciaFarmaco
-            // 
-            this.cmbFrecuenciaFarmaco.FormattingEnabled = true;
-            this.cmbFrecuenciaFarmaco.Items.AddRange(new object[] {
-            "Diaria",
-            "Interdiaria",
-            "Semanal",
-            "Mensual"});
-            this.cmbFrecuenciaFarmaco.Location = new System.Drawing.Point(103, 85);
-            this.cmbFrecuenciaFarmaco.Name = "cmbFrecuenciaFarmaco";
-            this.cmbFrecuenciaFarmaco.Size = new System.Drawing.Size(150, 21);
-            this.cmbFrecuenciaFarmaco.TabIndex = 46;
+            this.txtDosisFarmaco.Location = new System.Drawing.Point(103, 137);
+            this.txtDosisFarmaco.Name = "txtDosisFarmaco";
+            this.txtDosisFarmaco.Size = new System.Drawing.Size(251, 20);
+            this.txtDosisFarmaco.TabIndex = 48;
             // 
             // cmbVeces
             // 
+            this.cmbVeces.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbVeces.FormattingEnabled = true;
             this.cmbVeces.Items.AddRange(new object[] {
             "1 vez",
@@ -191,12 +178,29 @@
             this.cmbVeces.Size = new System.Drawing.Size(83, 21);
             this.cmbVeces.TabIndex = 47;
             // 
-            // txtDosisFarmaco
+            // cmbFrecuenciaFarmaco
             // 
-            this.txtDosisFarmaco.Location = new System.Drawing.Point(103, 137);
-            this.txtDosisFarmaco.Name = "txtDosisFarmaco";
-            this.txtDosisFarmaco.Size = new System.Drawing.Size(251, 20);
-            this.txtDosisFarmaco.TabIndex = 48;
+            this.cmbFrecuenciaFarmaco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFrecuenciaFarmaco.FormattingEnabled = true;
+            this.cmbFrecuenciaFarmaco.Items.AddRange(new object[] {
+            "Diaria",
+            "Interdiaria",
+            "Semanal",
+            "Mensual"});
+            this.cmbFrecuenciaFarmaco.Location = new System.Drawing.Point(103, 85);
+            this.cmbFrecuenciaFarmaco.Name = "cmbFrecuenciaFarmaco";
+            this.cmbFrecuenciaFarmaco.Size = new System.Drawing.Size(150, 21);
+            this.cmbFrecuenciaFarmaco.TabIndex = 46;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(44, 138);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(51, 16);
+            this.label3.TabIndex = 44;
+            this.label3.Text = "Dosis:";
             // 
             // frmRegistrarFarmacos
             // 
@@ -204,11 +208,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(723, 287);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pnContenedor);
             this.Name = "frmRegistrarFarmacos";
             this.Text = "Registro de Farmacos";
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.pnContenedor.ResumeLayout(false);
+            this.pnContenedor.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -223,7 +227,7 @@
         private System.Windows.Forms.TextBox txtDescripcionFarmaco;
         private System.Windows.Forms.Button btnGuardarFarmaco;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnContenedor;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtDosisFarmaco;
         private System.Windows.Forms.ComboBox cmbVeces;

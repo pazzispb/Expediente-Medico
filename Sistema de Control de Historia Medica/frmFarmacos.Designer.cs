@@ -41,7 +41,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dgvFarmacos = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnCargarPadecimientos = new System.Windows.Forms.Button();
+            this.btnCargarFarmacos = new System.Windows.Forms.Button();
             this.btnIngresarFarmacos = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFarmacos)).BeginInit();
@@ -73,6 +73,7 @@
             // 
             // cmbFrecuencia
             // 
+            this.cmbFrecuencia.Enabled = false;
             this.cmbFrecuencia.FormattingEnabled = true;
             this.cmbFrecuencia.Items.AddRange(new object[] {
             "1 vez",
@@ -91,6 +92,7 @@
             // 
             // cmbFrecuenciaFarmaco
             // 
+            this.cmbFrecuenciaFarmaco.Enabled = false;
             this.cmbFrecuenciaFarmaco.FormattingEnabled = true;
             this.cmbFrecuenciaFarmaco.Items.AddRange(new object[] {
             "Diaria",
@@ -171,12 +173,17 @@
             // 
             // dgvFarmacos
             // 
+            this.dgvFarmacos.AllowUserToAddRows = false;
+            this.dgvFarmacos.AllowUserToDeleteRows = false;
             this.dgvFarmacos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvFarmacos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvFarmacos.Location = new System.Drawing.Point(19, 64);
             this.dgvFarmacos.Name = "dgvFarmacos";
+            this.dgvFarmacos.ReadOnly = true;
+            this.dgvFarmacos.RowHeadersVisible = false;
             this.dgvFarmacos.Size = new System.Drawing.Size(738, 150);
             this.dgvFarmacos.TabIndex = 36;
+            this.dgvFarmacos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFarmacos_CellDoubleClick);
             // 
             // label6
             // 
@@ -187,17 +194,18 @@
             this.label6.TabIndex = 37;
             this.label6.Text = "Detalles del Fármaco";
             // 
-            // btnCargarPadecimientos
+            // btnCargarFarmacos
             // 
-            this.btnCargarPadecimientos.BackColor = System.Drawing.Color.Gray;
-            this.btnCargarPadecimientos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCargarPadecimientos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCargarPadecimientos.Location = new System.Drawing.Point(413, 24);
-            this.btnCargarPadecimientos.Name = "btnCargarPadecimientos";
-            this.btnCargarPadecimientos.Size = new System.Drawing.Size(99, 34);
-            this.btnCargarPadecimientos.TabIndex = 38;
-            this.btnCargarPadecimientos.Text = "Cargar";
-            this.btnCargarPadecimientos.UseVisualStyleBackColor = false;
+            this.btnCargarFarmacos.BackColor = System.Drawing.Color.Gray;
+            this.btnCargarFarmacos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCargarFarmacos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnCargarFarmacos.Location = new System.Drawing.Point(413, 24);
+            this.btnCargarFarmacos.Name = "btnCargarFarmacos";
+            this.btnCargarFarmacos.Size = new System.Drawing.Size(99, 34);
+            this.btnCargarFarmacos.TabIndex = 38;
+            this.btnCargarFarmacos.Text = "Cargar";
+            this.btnCargarFarmacos.UseVisualStyleBackColor = false;
+            this.btnCargarFarmacos.Click += new System.EventHandler(this.btnCargarFarmacos_Click);
             // 
             // btnIngresarFarmacos
             // 
@@ -218,7 +226,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(778, 428);
             this.Controls.Add(this.btnIngresarFarmacos);
-            this.Controls.Add(this.btnCargarPadecimientos);
+            this.Controls.Add(this.btnCargarFarmacos);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.dgvFarmacos);
             this.Controls.Add(this.label1);
@@ -239,7 +247,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvFarmacos;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button btnCargarPadecimientos;
+        private System.Windows.Forms.Button btnCargarFarmacos;
         private System.Windows.Forms.Button btnIngresarFarmacos;
         private System.Windows.Forms.TextBox txtDosisFarmaco;
         private System.Windows.Forms.ComboBox cmbFrecuencia;

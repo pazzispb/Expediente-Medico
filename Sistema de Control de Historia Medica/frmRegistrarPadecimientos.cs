@@ -34,19 +34,7 @@ namespace Sistema_de_Control_de_Historia_Medica
             return dtpFechaPadecimiento;
         }
 
-        private void chbEstadoFechaPadecimiento_CheckedChanged(object sender, EventArgs e)
-        {
-            if (chbEstadoFechaPadecimiento.Checked)
-            {
-                dtpFechaPadecimiento.Enabled = false;
- 
-            }
-            else
-            {
-                dtpFechaPadecimiento.Enabled = true;
-            }
-        }
-
+      
         private void btnGuardarPadecimiento_Click(object sender, EventArgs e)
         {
 
@@ -55,7 +43,7 @@ namespace Sistema_de_Control_de_Historia_Medica
             if (ValidarCamposRellenos())//Si todos los campos tienen un contenido
                 if (bd.EjecutarComando(vConsulta))//Si se agrego el registro
                 {
-                    MessageBox.Show("Padecimeinto registrada con éxito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Padecimiento registrado con éxito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LimpiarCampos();
                     frmPadecimientos.cargarPadecimientos();
                    
@@ -85,6 +73,19 @@ namespace Sistema_de_Control_de_Historia_Medica
         private void frmRegistrarPadecimientos_Load(object sender, EventArgs e)
         {
             cmbTipoPadecimiento.SelectedIndex = 0;
+        }
+
+        private void chbEstadoFecha_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chbEstadoFecha.Checked)
+            {
+                dtpFechaPadecimiento.Enabled = false;
+            }
+            else
+            {
+                dtpFechaPadecimiento.Enabled = true;
+            }
+
         }
     }
 }
