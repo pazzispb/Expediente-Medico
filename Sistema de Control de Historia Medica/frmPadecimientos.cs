@@ -81,5 +81,16 @@ namespace Sistema_de_Control_de_Historia_Medica
         {
             cargarPadecimientos();
         }
+
+        private void dgvPadecimientos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex > -1) //Si la fila seleccionada no es un header del datagridview
+            {
+                txtTipoPadecimiento.Text = dgvPadecimientos.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txtPadecimiento.Text = dgvPadecimientos.Rows[e.RowIndex].Cells[1].Value.ToString();
+                dtpPadecimiento.Text = dgvPadecimientos.Rows[e.RowIndex].Cells[2].Value.ToString();
+                txtDescripcionPadecimiento.Text = dgvPadecimientos.Rows[e.RowIndex].Cells[3].Value.ToString();
+            }
+        }
     }
 }

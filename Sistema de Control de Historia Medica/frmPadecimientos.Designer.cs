@@ -175,6 +175,7 @@
             this.dgvPadecimientos.RowHeadersVisible = false;
             this.dgvPadecimientos.Size = new System.Drawing.Size(745, 150);
             this.dgvPadecimientos.TabIndex = 16;
+            this.dgvPadecimientos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPadecimientos_CellDoubleClick);
             // 
             // btnIngresarPadecimientos
             // 

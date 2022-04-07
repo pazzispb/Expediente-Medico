@@ -74,7 +74,7 @@
             this.chbEstadoFechaPadecimiento.TabIndex = 39;
             this.chbEstadoFechaPadecimiento.Text = "No aplica";
             this.chbEstadoFechaPadecimiento.UseVisualStyleBackColor = true;
-            this.chbEstadoFechaPadecimiento.CheckedChanged += new System.EventHandler(this.chbEstadoFechaPadecimiento_CheckedChanged);
+          
             // 
             // txtPadecimiento
             // 

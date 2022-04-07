@@ -29,12 +29,17 @@ namespace Sistema_de_Control_de_Historia_Medica
             this.Close();
         }
 
+        private DateTimePicker GetDtpFechaPadecimiento()
+        {
+            return dtpFechaPadecimiento;
+        }
+
         private void chbEstadoFechaPadecimiento_CheckedChanged(object sender, EventArgs e)
         {
             if (chbEstadoFechaPadecimiento.Checked)
             {
                 dtpFechaPadecimiento.Enabled = false;
-
+ 
             }
             else
             {
