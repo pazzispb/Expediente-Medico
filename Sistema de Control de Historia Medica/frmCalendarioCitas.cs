@@ -116,20 +116,21 @@ namespace Sistema_de_Control_de_Historia_Medica
         private void btnEliminar_Click(object sender, EventArgs e)
         {
            
-            if (vEliminar == true)
+            
+            vIdCita = cmbDesplegarDoctor.SelectedValue.ToString();
+
+            string vConsulta = $"DELETE FROM Citas WHERE idCita = {vIdCita}";
+
+            if (bd.EjecutarComando(vConsulta))
             {
-                vIdCita = cmbDesplegarDoctor.SelectedValue.ToString();
-
-                string vConsulta = $"DELETE FROM Citas WHERE idCita = {vIdCita}";
-
-                if (bd.EjecutarComando(vConsulta))
-                {
-                    MessageBox.Show("Doctor eliminado con éxito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LimpiarCampos();
-                }
-                else MessageBox.Show("Hubo un error al eliminar al doctor", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                vEliminar = false;
+                
+                MessageBox.Show("Doctor eliminado con éxito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                string vID = bd.ConsultarValor("SELECT idDoctor FROM Doctores ORDER BY idDoctor DESC LIMIT 1;").ToString(); //obtiene el id del doctor que se acaba de registrar                       
+                LimpiarCampos();
             }
+            else MessageBox.Show("Hubo un error al eliminar al doctor", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            vEliminar = false;
+            
         }
 
         private void cargarCentro()
