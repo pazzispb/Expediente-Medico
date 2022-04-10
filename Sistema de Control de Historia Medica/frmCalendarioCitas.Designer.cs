@@ -55,7 +55,7 @@
             this.labTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labTitulo.Location = new System.Drawing.Point(0, 0);
             this.labTitulo.Name = "labTitulo";
-            this.labTitulo.Size = new System.Drawing.Size(769, 25);
+            this.labTitulo.Size = new System.Drawing.Size(773, 25);
             this.labTitulo.TabIndex = 15;
             this.labTitulo.Text = "Calendario";
             this.labTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -73,7 +73,7 @@
             this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Location = new System.Drawing.Point(2, 55);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(765, 343);
+            this.panel1.Size = new System.Drawing.Size(769, 347);
             this.panel1.TabIndex = 16;
             // 
             // pnDatosCita
@@ -111,14 +111,14 @@
             this.dgvInfoCitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvInfoCitas.Location = new System.Drawing.Point(1, 209);
             this.dgvInfoCitas.Name = "dgvInfoCitas";
-            this.dgvInfoCitas.Size = new System.Drawing.Size(763, 133);
+            this.dgvInfoCitas.Size = new System.Drawing.Size(767, 137);
             this.dgvInfoCitas.TabIndex = 29;
-            this.dgvInfoCitas.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInfoCitas_CellDoubleClick);
+            this.dgvInfoCitas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInfoCitas_CellClick);
             // 
             // MonthCalendar
             // 
             this.MonthCalendar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.MonthCalendar.Location = new System.Drawing.Point(510, 14);
+            this.MonthCalendar.Location = new System.Drawing.Point(514, 14);
             this.MonthCalendar.MaxDate = new System.DateTime(2022, 12, 31, 0, 0, 0, 0);
             this.MonthCalendar.Name = "MonthCalendar";
             this.MonthCalendar.ShowToday = false;
@@ -174,7 +174,7 @@
             this.btnEditarCita.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
             this.btnEditarCita.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditarCita.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnEditarCita.Location = new System.Drawing.Point(140, 414);
+            this.btnEditarCita.Location = new System.Drawing.Point(142, 418);
             this.btnEditarCita.Name = "btnEditarCita";
             this.btnEditarCita.Size = new System.Drawing.Size(98, 33);
             this.btnEditarCita.TabIndex = 32;
@@ -220,7 +220,7 @@
             this.btnCitasAgendadas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
             this.btnCitasAgendadas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCitasAgendadas.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCitasAgendadas.Location = new System.Drawing.Point(335, 407);
+            this.btnCitasAgendadas.Location = new System.Drawing.Point(337, 411);
             this.btnCitasAgendadas.Name = "btnCitasAgendadas";
             this.btnCitasAgendadas.Size = new System.Drawing.Size(144, 47);
             this.btnCitasAgendadas.TabIndex = 34;
@@ -234,7 +234,7 @@
             this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnEliminar.Location = new System.Drawing.Point(584, 414);
+            this.btnEliminar.Location = new System.Drawing.Point(586, 418);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(98, 33);
             this.btnEliminar.TabIndex = 37;
@@ -246,7 +246,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(769, 462);
+            this.ClientSize = new System.Drawing.Size(773, 466);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.cmbDesplegarHorario);
             this.Controls.Add(this.btnCitasAgendadas);

@@ -88,8 +88,8 @@ namespace Sistema_de_Control_de_Historia_Medica
         {
             CargarInfoCita();
         }
-        bool vEliminar = false;
-        private void dgvInfoCitas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        
+        private void dgvInfoCitas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex > -1) //Si la fila seleccionada no es un header del datagridview
             {
@@ -98,7 +98,7 @@ namespace Sistema_de_Control_de_Historia_Medica
                 cmbCentro.Text = dgvInfoCitas.Rows[e.RowIndex].Cells[2].Value.ToString();
                 dateTimePicker1.Text = dgvInfoCitas.Rows[e.RowIndex].Cells[3].Value.ToString();
                 cmbDesplegarHorario.Text = dgvInfoCitas.Rows[e.RowIndex].Cells[4].Value.ToString();
-                vEliminar = true;
+                
             }
         }
         
@@ -127,9 +127,10 @@ namespace Sistema_de_Control_de_Historia_Medica
                 MessageBox.Show("Doctor eliminado con éxito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 string vID = bd.ConsultarValor("SELECT idDoctor FROM Doctores ORDER BY idDoctor DESC LIMIT 1;").ToString(); //obtiene el id del doctor que se acaba de registrar                       
                 LimpiarCampos();
+                
             }
             else MessageBox.Show("Hubo un error al eliminar al doctor", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-            vEliminar = false;
+            
             
         }
 
@@ -141,8 +142,6 @@ namespace Sistema_de_Control_de_Historia_Medica
             cmbCentro.DisplayMember = "Centro Medico";
             cmbCentro.ValueMember = "ID";
         }
-
-
 
     }
 }
