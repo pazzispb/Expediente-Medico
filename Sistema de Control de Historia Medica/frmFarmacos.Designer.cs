@@ -66,6 +66,7 @@
             // 
             // txtDosisFarmaco
             // 
+            this.txtDosisFarmaco.Enabled = false;
             this.txtDosisFarmaco.Location = new System.Drawing.Point(125, 130);
             this.txtDosisFarmaco.Name = "txtDosisFarmaco";
             this.txtDosisFarmaco.Size = new System.Drawing.Size(251, 20);
@@ -116,6 +117,7 @@
             // 
             // txtDescripcionFarmaco
             // 
+            this.txtDescripcionFarmaco.Enabled = false;
             this.txtDescripcionFarmaco.Location = new System.Drawing.Point(428, 49);
             this.txtDescripcionFarmaco.Multiline = true;
             this.txtDescripcionFarmaco.Name = "txtDescripcionFarmaco";
@@ -124,6 +126,7 @@
             // 
             // txtFarmaco
             // 
+            this.txtFarmaco.Enabled = false;
             this.txtFarmaco.Location = new System.Drawing.Point(125, 28);
             this.txtFarmaco.Name = "txtFarmaco";
             this.txtFarmaco.Size = new System.Drawing.Size(251, 20);

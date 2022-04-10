@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pnContenedor = new System.Windows.Forms.Panel();
+            this.chbEstadoFecha = new System.Windows.Forms.CheckBox();
             this.txtPadecimiento = new System.Windows.Forms.TextBox();
             this.cmbTipoPadecimiento = new System.Windows.Forms.ComboBox();
             this.dtpFechaPadecimiento = new System.Windows.Forms.DateTimePicker();
@@ -40,7 +41,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.chbEstadoFecha = new System.Windows.Forms.CheckBox();
             this.pnContenedor.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,6 +63,17 @@
             this.pnContenedor.Size = new System.Drawing.Size(673, 216);
             this.pnContenedor.TabIndex = 16;
             this.pnContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // chbEstadoFecha
+            // 
+            this.chbEstadoFecha.AutoSize = true;
+            this.chbEstadoFecha.Location = new System.Drawing.Point(158, 162);
+            this.chbEstadoFecha.Name = "chbEstadoFecha";
+            this.chbEstadoFecha.Size = new System.Drawing.Size(71, 17);
+            this.chbEstadoFecha.TabIndex = 39;
+            this.chbEstadoFecha.Text = "No aplica";
+            this.chbEstadoFecha.UseVisualStyleBackColor = true;
+            this.chbEstadoFecha.CheckedChanged += new System.EventHandler(this.chbEstadoFecha_CheckedChanged);
             // 
             // txtPadecimiento
             // 
@@ -194,17 +205,6 @@
             this.label1.Size = new System.Drawing.Size(261, 25);
             this.label1.TabIndex = 33;
             this.label1.Text = "Datos del Padecimiento";
-            // 
-            // chbEstadoFecha
-            // 
-            this.chbEstadoFecha.AutoSize = true;
-            this.chbEstadoFecha.Location = new System.Drawing.Point(158, 162);
-            this.chbEstadoFecha.Name = "chbEstadoFecha";
-            this.chbEstadoFecha.Size = new System.Drawing.Size(71, 17);
-            this.chbEstadoFecha.TabIndex = 39;
-            this.chbEstadoFecha.Text = "No aplica";
-            this.chbEstadoFecha.UseVisualStyleBackColor = true;
-            this.chbEstadoFecha.CheckedChanged += new System.EventHandler(this.chbEstadoFecha_CheckedChanged);
             // 
             // frmRegistrarPadecimientos
             // 

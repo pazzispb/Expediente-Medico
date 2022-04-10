@@ -14,6 +14,7 @@ namespace Sistema_de_Control_de_Historia_Medica
     {
         clsBaseDatos bd = new clsBaseDatos();
         public frmPadecimientos frmPadecimientos = new frmPadecimientos();
+
         public frmRegistrarPadecimientos()
         {
             InitializeComponent();
@@ -37,17 +38,33 @@ namespace Sistema_de_Control_de_Historia_Medica
       
         private void btnGuardarPadecimiento_Click(object sender, EventArgs e)
         {
+            if (!chbEstadoFecha.Checked)
+            {
 
-            string vConsulta = $"INSERT INTO Padecimientos (tipoPadecimiento, nombrePadecimiento, fecha, descripcion, idUsuario) " +
-            $"VALUES ('{cmbTipoPadecimiento.Text}', '{txtPadecimiento.Text}', '{dtpFechaPadecimiento.Text}', '{txtDescripcionPadecimiento.Text}', {frmMenuPrincipal.vIdUsuario})";
-            if (ValidarCamposRellenos())//Si todos los campos tienen un contenido
-                if (bd.EjecutarComando(vConsulta))//Si se agrego el registro
-                {
-                    MessageBox.Show("Padecimiento registrado con éxito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LimpiarCampos();
-                    frmPadecimientos.cargarPadecimientos();
-                   
-                }
+                string vConsulta = $"INSERT INTO Padecimientos (tipoPadecimiento, nombrePadecimiento, fecha, descripcion, idUsuario) " +
+                $"VALUES ('{cmbTipoPadecimiento.Text}', '{txtPadecimiento.Text}', '{dtpFechaPadecimiento.Text}', '{txtDescripcionPadecimiento.Text}', {frmMenuPrincipal.vIdUsuario})";
+                if (ValidarCamposRellenos())//Si todos los campos tienen un contenido
+                    if (bd.EjecutarComando(vConsulta))//Si se agrego el registro
+                    {
+                        MessageBox.Show("Padecimiento registrado con éxito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LimpiarCampos();
+                        frmPadecimientos.cargarPadecimientos();
+
+                    }
+            }
+            else
+            {
+                string vConsulta = $"INSERT INTO Padecimientos (tipoPadecimiento, nombrePadecimiento, fecha, descripcion, idUsuario) " +
+                $"VALUES ('{cmbTipoPadecimiento.Text}', '{txtPadecimiento.Text}', '{"No Aplica"}', '{txtDescripcionPadecimiento.Text}', {frmMenuPrincipal.vIdUsuario})";
+                if (ValidarCamposRellenos())//Si todos los campos tienen un contenido
+                    if (bd.EjecutarComando(vConsulta))//Si se agrego el registro
+                    {
+                        MessageBox.Show("Padecimiento registrado con éxito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LimpiarCampos();
+                        frmPadecimientos.cargarPadecimientos();
+
+                    }
+            }
         }
         bool ValidarCamposRellenos()
         {
