@@ -19,10 +19,7 @@ namespace Sistema_de_Control_de_Historia_Medica
             InitializeComponent();
         }
 
-        private void btnCitasAgendadas_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
        
         bool ValidarCamposRellenos()
@@ -45,7 +42,7 @@ namespace Sistema_de_Control_de_Historia_Medica
 
         }
 
-        private void btnCitasAgendadas_Click_1(object sender, EventArgs e)
+        private void btnVerDoctores_Click_1(object sender, EventArgs e)
         {
             CargarDoctores();
             
@@ -82,13 +79,15 @@ namespace Sistema_de_Control_de_Historia_Medica
         {
             if (e.RowIndex > -1) //Si la fila seleccionada no es un header del datagridview
             {
-                txtNombre.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
                 txtEspecialidad.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
                 txtTelefono.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-                txtCentroDeSalud.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                txtNombre.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txtCentroDeSalud.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
                 
             }
         }
+
+        
     }
 
 }

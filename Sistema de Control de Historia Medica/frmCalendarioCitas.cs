@@ -18,6 +18,7 @@ namespace Sistema_de_Control_de_Historia_Medica
         public frmCalendarioCitas()
         {
             InitializeComponent();
+            
 
         }
 
@@ -27,10 +28,9 @@ namespace Sistema_de_Control_de_Historia_Medica
             var fechaActual = DateTime.Now;
             dateTimePicker1.MinDate = fechaActual;
             MonthCalendar.MinDate = fechaActual;
+            cargarDoctores();
+            cargarCentro();
 
-            
-            
-            
         }
 
         private void listBoxInfoCitas_SelectedIndexChanged(object sender, EventArgs e)
@@ -40,19 +40,19 @@ namespace Sistema_de_Control_de_Historia_Medica
 
         private void btnAñadirCita_Click_1(object sender, EventArgs e)
         {
-            string idDoctor = "1";
+            string idDoctor = cmbDesplegarDoctor.SelectedValue.ToString();
 
-            string vConsulta = $"INSERT INTO Citas (idDoctor, horario, centroMedico, fecha) " +
-            $"VALUES ({idDoctor}, '{cmbDesplegarHorario.Text}', '{cmbCentro.Text}', '{dateTimePicker1.Text}')";
+            string vConsulta = $"INSERT INTO Citas (idDoctor, horario, fecha) " +
+            $"VALUES ({idDoctor}, '{cmbDesplegarHorario.Text}', '{dateTimePicker1.Text}')";
             if (ValidarCamposRellenos())//Si todos los campos tienen un contenido
                 if (bd.EjecutarComando(vConsulta))//Si se agrego el registro
                 {
-                        MessageBox.Show("Doctor registrado con éxito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        string vID = bd.ConsultarValor("SELECT idDoctor FROM Doctores ORDER BY idDoctor DESC LIMIT 1;").ToString(); //obtiene el id del doctor que se acaba de registrar                       
-                        LimpiarCampos();
+                    MessageBox.Show("Doctor registrado con éxito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    string vID = bd.ConsultarValor("SELECT idDoctor FROM Doctores ORDER BY idDoctor DESC LIMIT 1;").ToString(); //obtiene el id del doctor que se acaba de registrar                       
+                    LimpiarCampos();
                 }
                 else MessageBox.Show("Hubo un error al registrar el doctor", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                                    
+
         }
 
         bool ValidarCamposRellenos()
@@ -78,8 +78,8 @@ namespace Sistema_de_Control_de_Historia_Medica
 
         void CargarInfoCita()
         {
-            DataSet ds = bd.ConsultarInfomacion("SELECT nombreDoctor as 'Nombre', centroMedico as 'Centro medico', fecha as 'Fecha', horario as 'Horario', " +
-                $"FROM Citas WHERE idUsuario = {vIDUsuario}");//Carga los registros correspondientes a las analiticas de los usuarios
+            DataSet ds = bd.ConsultarInfomacion("SELECT A.idCita as 'ID', B.nombreDoctor as 'Nombre', B.centroMedico as 'Centro medico', A.fecha as 'Fecha', A.horario as 'Horario'" +
+                $"FROM Citas as A INNER JOIN Doctores as B ON A.idDoctor = B.idDoctor");//Carga los registros correspondientes a las analiticas de los usuarios
             dgvInfoCitas.DataSource = ds.Tables[0];//Carga la tabla con los resultados de la consulta
 
         }
@@ -88,17 +88,60 @@ namespace Sistema_de_Control_de_Historia_Medica
         {
             CargarInfoCita();
         }
-
+        bool vEliminar = false;
         private void dgvInfoCitas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex > -1) //Si la fila seleccionada no es un header del datagridview
             {
-                cmbDesplegarDoctor.Text = dgvInfoCitas.Rows[e.RowIndex].Cells[0].Value.ToString();
-                cmbDesplegarHorario.Text = dgvInfoCitas.Rows[e.RowIndex].Cells[1].Value.ToString();
+                vIdCita = dgvInfoCitas.Rows[e.RowIndex].Cells[0].Value.ToString();
+                cmbDesplegarDoctor.Text = dgvInfoCitas.Rows[e.RowIndex].Cells[1].Value.ToString();
                 cmbCentro.Text = dgvInfoCitas.Rows[e.RowIndex].Cells[2].Value.ToString();
-                dateTimePicker1.Text = dgvInfoCitas.Rows[e.RowIndex].Cells[2].Value.ToString();
-
+                dateTimePicker1.Text = dgvInfoCitas.Rows[e.RowIndex].Cells[3].Value.ToString();
+                cmbDesplegarHorario.Text = dgvInfoCitas.Rows[e.RowIndex].Cells[4].Value.ToString();
+                vEliminar = true;
             }
         }
+        
+        private void cargarDoctores()
+        {
+            
+            DataSet ds = bd.ConsultarInfomacion("SELECT idDoctor as 'ID', nombreDoctor as 'Nombre' FROM Doctores");//Carga los registros correspondientes a las analiticas de los usuarios
+            cmbDesplegarDoctor.DataSource = ds.Tables[0];//Carga la tabla con los resultados de la consulta
+            cmbDesplegarDoctor.DisplayMember = "Nombre";
+            cmbDesplegarDoctor.ValueMember = "ID";
+        }
+
+        string vIdCita;
+         //Indica si el usuario desea eliminar
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+           
+            if (vEliminar == true)
+            {
+                vIdCita = cmbDesplegarDoctor.SelectedValue.ToString();
+
+                string vConsulta = $"DELETE FROM Citas WHERE idCita = {vIdCita}";
+
+                if (bd.EjecutarComando(vConsulta))
+                {
+                    MessageBox.Show("Doctor eliminado con éxito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LimpiarCampos();
+                }
+                else MessageBox.Show("Hubo un error al eliminar al doctor", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                vEliminar = false;
+            }
+        }
+
+        private void cargarCentro()
+        {
+            
+            DataSet ds = bd.ConsultarInfomacion("SELECT idDoctor as 'ID', centroMedico as 'Centro Medico' FROM Doctores");//Carga los registros correspondientes a las analiticas de los usuarios
+            cmbCentro.DataSource = ds.Tables[0];//Carga la tabla con los resultados de la consulta
+            cmbCentro.DisplayMember = "Centro Medico";
+            cmbCentro.ValueMember = "ID";
+        }
+
+
+
     }
 }
