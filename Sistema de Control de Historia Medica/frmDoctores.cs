@@ -81,11 +81,11 @@ namespace Sistema_de_Control_de_Historia_Medica
         {
             if (dataGridView1.SelectedRows.Count > 0) //Si la fila seleccionada no es un header del datagridview
             {
-                if (MessageBox.Show("¿Realmente desea eliminar la cita?", "AVERTENCIA", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                if (MessageBox.Show("¿Realmente desea eliminar el doctor?", "AVERTENCIA", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
                     string vIdDoctor = dataGridView1.SelectedRows[0].Cells["ID"].Value.ToString();
 
-                    string vConsulta = $"DELETE FROM Citas WHERE idCita = {vIdDoctor}";
+                    string vConsulta = $"DELETE FROM Doctores WHERE idDoctor = {vIdDoctor}";
 
                     if (bd.EjecutarComando(vConsulta))
                     {
@@ -93,11 +93,16 @@ namespace Sistema_de_Control_de_Historia_Medica
                     }
 
                 }
-                else MessageBox.Show("Hubo un error al eliminar la cita", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                else MessageBox.Show("Hubo un error al eliminar al doctor", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
 
             }
             else MessageBox.Show("No se ha seleccionado ninguna fila", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 
