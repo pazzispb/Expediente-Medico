@@ -104,6 +104,8 @@
             // 
             // dgvInfoCitas
             // 
+            this.dgvInfoCitas.AllowUserToAddRows = false;
+            this.dgvInfoCitas.AllowUserToDeleteRows = false;
             this.dgvInfoCitas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -113,7 +115,7 @@
             this.dgvInfoCitas.Name = "dgvInfoCitas";
             this.dgvInfoCitas.Size = new System.Drawing.Size(767, 137);
             this.dgvInfoCitas.TabIndex = 29;
-            this.dgvInfoCitas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInfoCitas_CellClick);
+            this.dgvInfoCitas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInfoCitas_CellClick);
             // 
             // MonthCalendar
             // 
@@ -180,6 +182,7 @@
             this.btnModificarCita.TabIndex = 32;
             this.btnModificarCita.Text = "Modificar";
             this.btnModificarCita.UseVisualStyleBackColor = false;
+            this.btnModificarCita.Click += new System.EventHandler(this.btnModificarCita_Click);
             // 
             // label2
             // 

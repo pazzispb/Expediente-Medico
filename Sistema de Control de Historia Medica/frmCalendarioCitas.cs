@@ -89,7 +89,7 @@ namespace Sistema_de_Control_de_Historia_Medica
             CargarInfoCita();
         }
         
-        private void dgvInfoCitas_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvInfoCitas_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             
         }
@@ -140,5 +140,43 @@ namespace Sistema_de_Control_de_Historia_Medica
             cmbCentro.ValueMember = "ID";
         }
 
+        private void btnModificarCita_Click(object sender, EventArgs e)
+        {
+            if (dgvInfoCitas.SelectedRows.Count > 0) //Si la fila seleccionada no es un header del datagridview
+            {
+                if (MessageBox.Show("¿Desea actualizar el registro?", "AVERTENCIA", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    string vIdCita = dgvInfoCitas.SelectedRows[0].Cells["ID"].Value.ToString();
+
+                    string vConsulta = $"UPDATE Citas as A INNER JOIN Doctores as B ON A.idCita = B.idCita SET B.Nombre = {cmbDesplegarDoctor.Text}, B.Centro medico = {cmbCentro.Text}" +
+                        $"A.Fecha = {dateTimePicker1.Text}, A.Horario = {cmbDesplegarHorario.Text} WHERE idCita = {vIdCita}";
+                    
+
+
+                    if (bd.EjecutarComando(vConsulta))
+                    {
+                        
+                        CargarInfoCita();
+                    }
+
+                }
+                else MessageBox.Show("Hubo un error al actualizar la cita", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
+
+            }
+            else MessageBox.Show("No se ha seleccionado ninguna fila", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+        }
+
+        
+
+        private void dgvInfoCitas_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow dgv = dgvInfoCitas.Rows[e.RowIndex];
+            cmbDesplegarDoctor.Text = dgv.Cells[1].Value.ToString();
+            cmbCentro.Text = dgv.Cells[2].Value.ToString();
+            dateTimePicker1.Text = dgv.Cells[3].Value.ToString();
+            cmbDesplegarHorario.Text = dgv.Cells[4].Value.ToString();
+        }
     }
 }
