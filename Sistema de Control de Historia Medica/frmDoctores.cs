@@ -63,7 +63,7 @@ namespace Sistema_de_Control_de_Historia_Medica
 
         private void btnAñadirDoctor_Click(object sender, EventArgs e)
         {
-            string vConsulta = $"INSERT INTO Doctores (nombreDoctor, telefono, especialidad, centroMedico ) " +
+            string vConsulta = $"INSERT INTO Doctores ( nombreDoctor, telefono, especialidad, centroMedico ) " +
             $"VALUES ('{txtNombre.Text}', '{txtTelefono.Text}', '{txtEspecialidad.Text}', '{txtCentroDeSalud.Text}')";
             if (ValidarCamposRellenos())//Si todos los campos tienen un contenido
                 if (bd.EjecutarComando(vConsulta))//Si se agrego el registro
@@ -75,19 +75,30 @@ namespace Sistema_de_Control_de_Historia_Medica
                 else MessageBox.Show("Hubo un error al registrar el doctor", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
 
-        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex > -1) //Si la fila seleccionada no es un header del datagridview
-            {
-                txtEspecialidad.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-                txtTelefono.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-                txtNombre.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-                txtCentroDeSalud.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-                
-            }
-        }
-
         
+
+        private void btnEliminarDoctor_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0) //Si la fila seleccionada no es un header del datagridview
+            {
+                if (MessageBox.Show("¿Realmente desea eliminar la cita?", "AVERTENCIA", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    string vIdDoctor = dataGridView1.SelectedRows[0].Cells["ID"].Value.ToString();
+
+                    string vConsulta = $"DELETE FROM Citas WHERE idCita = {vIdDoctor}";
+
+                    if (bd.EjecutarComando(vConsulta))
+                    {
+                        CargarDoctores();
+                    }
+
+                }
+                else MessageBox.Show("Hubo un error al eliminar la cita", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
+
+            }
+            else MessageBox.Show("No se ha seleccionado ninguna fila", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
     }
 
 }

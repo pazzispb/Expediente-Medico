@@ -91,15 +91,7 @@ namespace Sistema_de_Control_de_Historia_Medica
         
         private void dgvInfoCitas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex > -1) //Si la fila seleccionada no es un header del datagridview
-            {
-                vIdCita = dgvInfoCitas.Rows[e.RowIndex].Cells[0].Value.ToString();
-                cmbDesplegarDoctor.Text = dgvInfoCitas.Rows[e.RowIndex].Cells[1].Value.ToString();
-                cmbCentro.Text = dgvInfoCitas.Rows[e.RowIndex].Cells[2].Value.ToString();
-                dateTimePicker1.Text = dgvInfoCitas.Rows[e.RowIndex].Cells[3].Value.ToString();
-                cmbDesplegarHorario.Text = dgvInfoCitas.Rows[e.RowIndex].Cells[4].Value.ToString();
-                
-            }
+            
         }
         
         private void cargarDoctores()
@@ -111,27 +103,32 @@ namespace Sistema_de_Control_de_Historia_Medica
             cmbDesplegarDoctor.ValueMember = "ID";
         }
 
-        string vIdCita;
          //Indica si el usuario desea eliminar
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-           
-            
-            vIdCita = cmbDesplegarDoctor.SelectedValue.ToString();
 
-            string vConsulta = $"DELETE FROM Citas WHERE idCita = {vIdCita}";
-
-            if (bd.EjecutarComando(vConsulta))
+            if (dgvInfoCitas.SelectedRows.Count > 0) //Si la fila seleccionada no es un header del datagridview
             {
-                
-                MessageBox.Show("Doctor eliminado con éxito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                string vID = bd.ConsultarValor("SELECT idDoctor FROM Doctores ORDER BY idDoctor DESC LIMIT 1;").ToString(); //obtiene el id del doctor que se acaba de registrar                       
-                LimpiarCampos();
-                
+                if (MessageBox.Show("¿Realmente desea eliminar la cita?", "AVERTENCIA", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    string vIdCita = dgvInfoCitas.SelectedRows[0].Cells["ID"].Value.ToString();
+
+                    string vConsulta = $"DELETE FROM Citas WHERE idCita = {vIdCita}";
+
+                    if (bd.EjecutarComando(vConsulta))
+                    {
+                        CargarInfoCita();
+                    }
+
+                }
+                else MessageBox.Show("Hubo un error al eliminar la cita", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
+
             }
-            else MessageBox.Show("Hubo un error al eliminar al doctor", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            else MessageBox.Show("No se ha seleccionado ninguna fila", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             
-            
+
+
         }
 
         private void cargarCentro()

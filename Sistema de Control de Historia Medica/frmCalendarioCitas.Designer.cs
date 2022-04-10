@@ -38,7 +38,7 @@
             this.btnAñadirCita = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.cmbDesplegarHorario = new System.Windows.Forms.ComboBox();
-            this.btnEditarCita = new System.Windows.Forms.Button();
+            this.btnModificarCita = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.labcondiciones = new System.Windows.Forms.Label();
@@ -168,18 +168,18 @@
             this.cmbDesplegarHorario.Size = new System.Drawing.Size(184, 21);
             this.cmbDesplegarHorario.TabIndex = 36;
             // 
-            // btnEditarCita
+            // btnModificarCita
             // 
-            this.btnEditarCita.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnEditarCita.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
-            this.btnEditarCita.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditarCita.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnEditarCita.Location = new System.Drawing.Point(142, 418);
-            this.btnEditarCita.Name = "btnEditarCita";
-            this.btnEditarCita.Size = new System.Drawing.Size(98, 33);
-            this.btnEditarCita.TabIndex = 32;
-            this.btnEditarCita.Text = "Editar";
-            this.btnEditarCita.UseVisualStyleBackColor = false;
+            this.btnModificarCita.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnModificarCita.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
+            this.btnModificarCita.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificarCita.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnModificarCita.Location = new System.Drawing.Point(152, 418);
+            this.btnModificarCita.Name = "btnModificarCita";
+            this.btnModificarCita.Size = new System.Drawing.Size(98, 33);
+            this.btnModificarCita.TabIndex = 32;
+            this.btnModificarCita.Text = "Modificar";
+            this.btnModificarCita.UseVisualStyleBackColor = false;
             // 
             // label2
             // 
@@ -234,7 +234,7 @@
             this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnEliminar.Location = new System.Drawing.Point(586, 418);
+            this.btnEliminar.Location = new System.Drawing.Point(562, 418);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(98, 33);
             this.btnEliminar.TabIndex = 37;
@@ -252,7 +252,7 @@
             this.Controls.Add(this.btnCitasAgendadas);
             this.Controls.Add(this.labTitulo);
             this.Controls.Add(this.labcondiciones);
-            this.Controls.Add(this.btnEditarCita);
+            this.Controls.Add(this.btnModificarCita);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
@@ -274,7 +274,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox cmbDesplegarHorario;
         private System.Windows.Forms.ComboBox cmbDesplegarDoctor;
-        private System.Windows.Forms.Button btnEditarCita;
+        private System.Windows.Forms.Button btnModificarCita;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
