@@ -21,7 +21,6 @@ namespace Sistema_de_Control_de_Historia_Medica
         {
             InitializeComponent();
         }
-
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             fdBuscarArchivo.ShowDialog();//Muestra la ventana para buscar el archivo
@@ -32,9 +31,6 @@ namespace Sistema_de_Control_de_Historia_Medica
             {
                 lblDireccion.Text = fdBuscarArchivo.FileName;//Escribe el nombre del archivo en el label
             }
-        }
-        private void frmRegistrarAnalitica_Load(object sender, EventArgs e)
-        {
         }
         private void btnRegistrarAnalitica_Click(object sender, EventArgs e)
         {
