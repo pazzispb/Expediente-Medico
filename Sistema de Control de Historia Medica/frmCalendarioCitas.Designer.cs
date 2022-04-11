@@ -38,11 +38,12 @@
             this.btnAñadirCita = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.cmbDesplegarHorario = new System.Windows.Forms.ComboBox();
-            this.btnEditarCita = new System.Windows.Forms.Button();
+            this.btnModificarCita = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.labcondiciones = new System.Windows.Forms.Label();
             this.btnCitasAgendadas = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.pnDatosCita.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfoCitas)).BeginInit();
@@ -54,7 +55,7 @@
             this.labTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labTitulo.Location = new System.Drawing.Point(0, 0);
             this.labTitulo.Name = "labTitulo";
-            this.labTitulo.Size = new System.Drawing.Size(751, 25);
+            this.labTitulo.Size = new System.Drawing.Size(773, 25);
             this.labTitulo.TabIndex = 15;
             this.labTitulo.Text = "Calendario";
             this.labTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -72,7 +73,7 @@
             this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Location = new System.Drawing.Point(2, 55);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(747, 343);
+            this.panel1.Size = new System.Drawing.Size(769, 347);
             this.panel1.TabIndex = 16;
             // 
             // pnDatosCita
@@ -88,22 +89,6 @@
             // 
             this.cmbCentro.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.cmbCentro.FormattingEnabled = true;
-            this.cmbCentro.Items.AddRange(new object[] {
-            "10:00 AM",
-            "10:30 AM",
-            "11:00 AM",
-            "11:30 AM",
-            "12:00 PM",
-            "12:30 PM",
-            "1:00 PM",
-            "1:30 PM",
-            "2:00 PM",
-            "2:30 PM",
-            "3:00 PM",
-            "3:30 PM",
-            "4:00 PM",
-            "4:30 PM",
-            "5:00 PM"});
             this.cmbCentro.Location = new System.Drawing.Point(125, 96);
             this.cmbCentro.Name = "cmbCentro";
             this.cmbCentro.Size = new System.Drawing.Size(184, 21);
@@ -119,6 +104,8 @@
             // 
             // dgvInfoCitas
             // 
+            this.dgvInfoCitas.AllowUserToAddRows = false;
+            this.dgvInfoCitas.AllowUserToDeleteRows = false;
             this.dgvInfoCitas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -126,13 +113,14 @@
             this.dgvInfoCitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvInfoCitas.Location = new System.Drawing.Point(1, 209);
             this.dgvInfoCitas.Name = "dgvInfoCitas";
-            this.dgvInfoCitas.Size = new System.Drawing.Size(745, 133);
+            this.dgvInfoCitas.Size = new System.Drawing.Size(767, 137);
             this.dgvInfoCitas.TabIndex = 29;
+            this.dgvInfoCitas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInfoCitas_CellClick);
             // 
             // MonthCalendar
             // 
             this.MonthCalendar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.MonthCalendar.Location = new System.Drawing.Point(492, 14);
+            this.MonthCalendar.Location = new System.Drawing.Point(514, 14);
             this.MonthCalendar.MaxDate = new System.DateTime(2022, 12, 31, 0, 0, 0, 0);
             this.MonthCalendar.Name = "MonthCalendar";
             this.MonthCalendar.ShowToday = false;
@@ -182,18 +170,19 @@
             this.cmbDesplegarHorario.Size = new System.Drawing.Size(184, 21);
             this.cmbDesplegarHorario.TabIndex = 36;
             // 
-            // btnEditarCita
+            // btnModificarCita
             // 
-            this.btnEditarCita.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnEditarCita.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
-            this.btnEditarCita.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditarCita.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnEditarCita.Location = new System.Drawing.Point(189, 414);
-            this.btnEditarCita.Name = "btnEditarCita";
-            this.btnEditarCita.Size = new System.Drawing.Size(98, 33);
-            this.btnEditarCita.TabIndex = 32;
-            this.btnEditarCita.Text = "Editar";
-            this.btnEditarCita.UseVisualStyleBackColor = false;
+            this.btnModificarCita.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnModificarCita.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
+            this.btnModificarCita.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificarCita.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnModificarCita.Location = new System.Drawing.Point(152, 418);
+            this.btnModificarCita.Name = "btnModificarCita";
+            this.btnModificarCita.Size = new System.Drawing.Size(98, 33);
+            this.btnModificarCita.TabIndex = 32;
+            this.btnModificarCita.Text = "Modificar";
+            this.btnModificarCita.UseVisualStyleBackColor = false;
+            this.btnModificarCita.Click += new System.EventHandler(this.btnModificarCita_Click);
             // 
             // label2
             // 
@@ -234,7 +223,7 @@
             this.btnCitasAgendadas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
             this.btnCitasAgendadas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCitasAgendadas.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCitasAgendadas.Location = new System.Drawing.Point(374, 407);
+            this.btnCitasAgendadas.Location = new System.Drawing.Point(337, 411);
             this.btnCitasAgendadas.Name = "btnCitasAgendadas";
             this.btnCitasAgendadas.Size = new System.Drawing.Size(144, 47);
             this.btnCitasAgendadas.TabIndex = 34;
@@ -242,23 +231,38 @@
             this.btnCitasAgendadas.UseVisualStyleBackColor = false;
             this.btnCitasAgendadas.Click += new System.EventHandler(this.btnCitasAgendadas_Click);
             // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnEliminar.Location = new System.Drawing.Point(562, 418);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(98, 33);
+            this.btnEliminar.TabIndex = 37;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
             // frmCalendarioCitas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(751, 462);
+            this.ClientSize = new System.Drawing.Size(773, 466);
+            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.cmbDesplegarHorario);
             this.Controls.Add(this.btnCitasAgendadas);
             this.Controls.Add(this.labTitulo);
             this.Controls.Add(this.labcondiciones);
-            this.Controls.Add(this.btnEditarCita);
+            this.Controls.Add(this.btnModificarCita);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimizeBox = false;
             this.Name = "frmCalendarioCitas";
-            this.Text = "Calendario de Citas Médicas";
+            this.Text = "0";
             this.Load += new System.EventHandler(this.frmCalendarioCitas_Load);
             this.panel1.ResumeLayout(false);
             this.pnDatosCita.ResumeLayout(false);
@@ -273,7 +277,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox cmbDesplegarHorario;
         private System.Windows.Forms.ComboBox cmbDesplegarDoctor;
-        private System.Windows.Forms.Button btnEditarCita;
+        private System.Windows.Forms.Button btnModificarCita;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -284,5 +288,6 @@
         private System.Windows.Forms.DataGridView dgvInfoCitas;
         private System.Windows.Forms.Panel pnDatosCita;
         private System.Windows.Forms.ComboBox cmbCentro;
+        private System.Windows.Forms.Button btnEliminar;
     }
 }

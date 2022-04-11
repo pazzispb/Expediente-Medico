@@ -19,10 +19,7 @@ namespace Sistema_de_Control_de_Historia_Medica
             InitializeComponent();
         }
 
-        private void btnCitasAgendadas_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
        
         bool ValidarCamposRellenos()
@@ -45,7 +42,7 @@ namespace Sistema_de_Control_de_Historia_Medica
 
         }
 
-        private void btnCitasAgendadas_Click_1(object sender, EventArgs e)
+        private void btnVerDoctores_Click_1(object sender, EventArgs e)
         {
             CargarDoctores();
             
@@ -66,7 +63,7 @@ namespace Sistema_de_Control_de_Historia_Medica
 
         private void btnAñadirDoctor_Click(object sender, EventArgs e)
         {
-            string vConsulta = $"INSERT INTO Doctores (nombreDoctor, telefono, especialidad, centroMedico ) " +
+            string vConsulta = $"INSERT INTO Doctores ( nombreDoctor, telefono, especialidad, centroMedico ) " +
             $"VALUES ('{txtNombre.Text}', '{txtTelefono.Text}', '{txtEspecialidad.Text}', '{txtCentroDeSalud.Text}')";
             if (ValidarCamposRellenos())//Si todos los campos tienen un contenido
                 if (bd.EjecutarComando(vConsulta))//Si se agrego el registro
@@ -78,17 +75,32 @@ namespace Sistema_de_Control_de_Historia_Medica
                 else MessageBox.Show("Hubo un error al registrar el doctor", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
 
-        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        
+
+        private void btnEliminarDoctor_Click(object sender, EventArgs e)
         {
-            if (e.RowIndex > -1) //Si la fila seleccionada no es un header del datagridview
+            if (dataGridView1.SelectedRows.Count > 0) //Si la fila seleccionada no es un header del datagridview
             {
-                txtNombre.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-                txtEspecialidad.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-                txtTelefono.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-                txtCentroDeSalud.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-                
+                if (MessageBox.Show("¿Realmente desea eliminar el doctor?", "AVERTENCIA", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    string vIdDoctor = dataGridView1.SelectedRows[0].Cells["ID"].Value.ToString();
+
+                    string vConsulta = $"DELETE FROM Doctores WHERE idDoctor = {vIdDoctor}";
+
+                    if (bd.EjecutarComando(vConsulta))
+                    {
+                        CargarDoctores();
+                    }
+
+                }
+                else MessageBox.Show("Hubo un error al eliminar al doctor", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
+
             }
+            else MessageBox.Show("No se ha seleccionado ninguna fila", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+
+        
     }
 
 }
