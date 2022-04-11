@@ -57,6 +57,14 @@ namespace Sistema_de_Control_de_Historia_Medica
             object[] aDatos = vInformacion.Tables[0].Rows[0].ItemArray; // creacion de un arreglo con los datos del usuario, para poder insertarlos dentro de este formulario
 
             txtUsuario.Text = aDatos[0].ToString();
+            txtNombre.Text = aDatos[1].ToString();
+            txtApellido.Text = aDatos[2].ToString();
+            txtCedula.Text = aDatos[3].ToString();
+            dtpFecha.Text = aDatos[4].ToString();
+            txtAltura.Text = aDatos[5].ToString();
+            txtPeso.Text = aDatos[6].ToString();
+            txtSeguroMedico.Text = aDatos[8].ToString();
+            txtTelefono.Text = aDatos[9].ToString();
             cmbTipoSangre.SelectedItem = aDatos[7].ToString();
 
 
@@ -64,5 +72,32 @@ namespace Sistema_de_Control_de_Historia_Medica
 
 
         }
+
+        private void btnEditarPerfil_Click(object sender, EventArgs e)
+        {
+            clsBaseDatos bd = new clsBaseDatos();
+
+            string vConsulta = $"UPDATE Usuarios" +
+            $" SET nombre = '{txtNombre.Text}'," +
+            $"apellido = '{txtApellido.Text}' , cedula = '{txtCedula.Text}', fechaNacimiento = '{dtpFecha.Text}', altura = {txtAltura.Text}, peso = {txtPeso.Text}, tipoSangre = '{cmbTipoSangre.Text}', seguroMedico = '{txtSeguroMedico.Text}', telefono = '{txtTelefono.Text}'" +
+            $" WHERE idUsuario = {frmMenuPrincipal.vIdUsuario} ";
+            if (ValidarCamposRellenos())//Si todos los campos tienen un contenido
+                if (bd.EjecutarComando(vConsulta))
+                {
+                    MessageBox.Show("Usuario registrado con éxito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else MessageBox.Show("Hubo un error al registrar el usuario", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+        }
+        bool ValidarCamposRellenos()
+        {
+            foreach (Control c in pnContenedor.Controls) //Recorremos cada elemento del formulario
+                if (String.IsNullOrWhiteSpace(c.Text)) //Si esta vacio
+                {
+                    MessageBox.Show("Rellene los campos vacios", "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false; //retorna que hay campos no rellenos
+                }
+            return true; //retorna que los campos estan rellenos
+        }
+
     }
 }

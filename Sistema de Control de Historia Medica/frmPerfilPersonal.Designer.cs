@@ -56,7 +56,6 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblMiCuenta = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.pnContenedor.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -110,6 +109,7 @@
             this.btnEditarPerfil.TabIndex = 53;
             this.btnEditarPerfil.Text = "Editar Perfil";
             this.btnEditarPerfil.UseVisualStyleBackColor = false;
+            this.btnEditarPerfil.Click += new System.EventHandler(this.btnEditarPerfil_Click);
             // 
             // txtUsuario
             // 
@@ -352,28 +352,18 @@
             this.lblMiCuenta.AutoSize = true;
             this.lblMiCuenta.Font = new System.Drawing.Font("Montserrat SemiBold", 16F, System.Drawing.FontStyle.Bold);
             this.lblMiCuenta.ForeColor = System.Drawing.Color.Black;
-            this.lblMiCuenta.Location = new System.Drawing.Point(235, 9);
+            this.lblMiCuenta.Location = new System.Drawing.Point(236, 9);
             this.lblMiCuenta.Name = "lblMiCuenta";
             this.lblMiCuenta.Size = new System.Drawing.Size(128, 30);
             this.lblMiCuenta.TabIndex = 53;
             this.lblMiCuenta.Text = "Mi Cuenta";
             this.lblMiCuenta.Click += new System.EventHandler(this.label1_Click);
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(464, 363);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 54;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // frmPerfilPersonal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 366);
-            this.Controls.Add(this.button2);
+            this.ClientSize = new System.Drawing.Size(603, 384);
             this.Controls.Add(this.lblMiCuenta);
             this.Controls.Add(this.pnContenedor);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -418,6 +408,5 @@
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.Label lblMiCuenta;
         private System.Windows.Forms.Button btnEditarPerfil;
-        private System.Windows.Forms.Button button2;
     }
 }
