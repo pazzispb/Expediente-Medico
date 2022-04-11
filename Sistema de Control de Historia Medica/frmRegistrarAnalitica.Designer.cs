@@ -215,7 +215,6 @@
             this.MinimizeBox = false;
             this.Name = "frmRegistrarAnalitica";
             this.Text = "frmRegistrarAnalitica";
-            this.Load += new System.EventHandler(this.frmRegistrarAnalitica_Load);
             this.pnContenedor.ResumeLayout(false);
             this.pnContenedor.PerformLayout();
             this.ResumeLayout(false);

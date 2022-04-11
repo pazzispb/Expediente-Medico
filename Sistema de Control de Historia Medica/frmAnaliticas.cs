@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Reflection;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Sistema_de_Control_de_Historia_Medica
 {
@@ -15,6 +16,7 @@ namespace Sistema_de_Control_de_Historia_Medica
     {
         string vIDUsuario = frmMenuPrincipal.vIdUsuario; //Id del usuario con la sesion abierta
         clsBaseDatos bd = new clsBaseDatos();
+        bool vBorrar = false;
         public frmAnaliticas()
         {
             InitializeComponent();
@@ -22,6 +24,7 @@ namespace Sistema_de_Control_de_Historia_Medica
         private void frmAnaliticas_Load(object sender, EventArgs e)
         {
             CargarAnaliticas();
+            pdfVisualizador.src = "";
         }
         private void btnRegistrarAnalitica_Click(object sender, EventArgs e)
         {
@@ -63,8 +66,38 @@ namespace Sistema_de_Control_de_Historia_Medica
                 txtPropositoAnalitica.Text = dgvAnaliticas.Rows[e.RowIndex].Cells[2].Value.ToString();
                 txtObservaciones.Text = dgvAnaliticas.Rows[e.RowIndex].Cells[2].Value.ToString();
                 string direccion = Assembly.GetExecutingAssembly().Location.Substring(0, Assembly.GetExecutingAssembly().Location.LastIndexOf('\\'));//Obtener la direccion del programa en ejecucion
-                pdfVisualizador.src = $"{direccion}\\Analiticas\\{lblID.Text}.pdf";
+                pdfVisualizador.LoadFile($"{direccion}\\Analiticas\\{lblID.Text}.pdf");
+                vBorrar = true;
             }
+        }
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            if (vBorrar)
+            {
+                if (MessageBox.Show("¿Realmente desea eliminar esta analítica?", "ADVERTENCIA", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    string vConsulta = $"DELETE FROM Analiticas WHERE idAnalitica = {lblID.Text}";
+
+                    if (bd.EjecutarComando(vConsulta))
+                    {
+                        File.Delete($"Analiticas/{lblID.Text}.pdf");
+                        LimpiarCampos();
+                        CargarAnaliticas();
+                    }
+                }
+                else MessageBox.Show("Hubo un error al eliminar la analítica", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+            else MessageBox.Show("Seleccione una analítica para eliminar", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+        }
+        void LimpiarCampos()
+        {
+            foreach (Control c in pnContenedor.Controls) //Recorremos cada elemento del formulario
+                if (typeof(TextBox) == c.GetType()) //Si es un textbox
+                {
+                    c.Text = ""; //Limpia el contenido del control
+                }
+            lblID.Text = "00";
+            pdfVisualizador.LoadFile("Empty"); //Limpia el visor de pdf
         }
     }
 }
