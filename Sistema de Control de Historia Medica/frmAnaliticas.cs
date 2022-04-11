@@ -92,12 +92,12 @@ namespace Sistema_de_Control_de_Historia_Medica
         void LimpiarCampos()
         {
             foreach (Control c in pnContenedor.Controls) //Recorremos cada elemento del formulario
-                if (typeof(TextBox) == c.GetType()) //Si esta vacio
+                if (typeof(TextBox) == c.GetType()) //Si es un textbox
                 {
                     c.Text = ""; //Limpia el contenido del control
                 }
             lblID.Text = "00";
-            pdfVisualizador.LoadFile("Empty");
+            pdfVisualizador.LoadFile("Empty"); //Limpia el visor de pdf
         }
     }
 }

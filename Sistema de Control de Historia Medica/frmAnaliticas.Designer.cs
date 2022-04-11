@@ -113,7 +113,7 @@
             this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnBorrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBorrar.ForeColor = System.Drawing.Color.White;
-            this.btnBorrar.Location = new System.Drawing.Point(0, 154);
+            this.btnBorrar.Location = new System.Drawing.Point(0, 150);
             this.btnBorrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(634, 30);
@@ -126,10 +126,10 @@
             // 
             this.pdfVisualizador.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pdfVisualizador.Enabled = true;
-            this.pdfVisualizador.Location = new System.Drawing.Point(0, 184);
+            this.pdfVisualizador.Location = new System.Drawing.Point(0, 180);
             this.pdfVisualizador.Name = "pdfVisualizador";
             this.pdfVisualizador.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("pdfVisualizador.OcxState")));
-            this.pdfVisualizador.Size = new System.Drawing.Size(634, 216);
+            this.pdfVisualizador.Size = new System.Drawing.Size(634, 220);
             this.pdfVisualizador.TabIndex = 13;
             // 
             // txtObservaciones
@@ -270,7 +270,7 @@
             // 
             // btnCargar
             // 
-            this.btnCargar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnCargar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCargar.BackColor = System.Drawing.Color.Gray;
             this.btnCargar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCargar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
