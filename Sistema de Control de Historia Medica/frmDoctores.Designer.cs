@@ -111,6 +111,7 @@
             this.btnModificarDoctor.TabIndex = 38;
             this.btnModificarDoctor.Text = "Modificar";
             this.btnModificarDoctor.UseVisualStyleBackColor = false;
+            this.btnModificarDoctor.Click += new System.EventHandler(this.btnModificarDoctor_Click);
             // 
             // btnEliminarDoctor
             // 
@@ -153,6 +154,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(823, 199);
             this.dataGridView1.TabIndex = 9;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // btnVerDoctores
             // 

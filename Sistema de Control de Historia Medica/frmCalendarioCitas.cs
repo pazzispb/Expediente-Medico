@@ -47,11 +47,11 @@ namespace Sistema_de_Control_de_Historia_Medica
             if (ValidarCamposRellenos())//Si todos los campos tienen un contenido
                 if (bd.EjecutarComando(vConsulta))//Si se agrego el registro
                 {
-                    MessageBox.Show("Doctor registrado con éxito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Cita registrada con éxito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     string vID = bd.ConsultarValor("SELECT idDoctor FROM Doctores ORDER BY idDoctor DESC LIMIT 1;").ToString(); //obtiene el id del doctor que se acaba de registrar                       
                     LimpiarCampos();
                 }
-                else MessageBox.Show("Hubo un error al registrar el doctor", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                else MessageBox.Show("Hubo un error al registrar la cita", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
         }
 
