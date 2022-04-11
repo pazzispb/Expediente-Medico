@@ -16,5 +16,10 @@ namespace Sistema_de_Control_de_Historia_Medica
         {
             InitializeComponent();
         }
+
+        private void btnGenerar_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
