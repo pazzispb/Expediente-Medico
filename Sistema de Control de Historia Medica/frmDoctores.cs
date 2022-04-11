@@ -50,7 +50,7 @@ namespace Sistema_de_Control_de_Historia_Medica
 
         void CargarDoctores()
         {
-            DataSet ds = bd.ConsultarInfomacion("SELECT idDoctor as 'ID', nombreDoctor as 'Nombre', especialidad as 'Especialidad', centroMedico as 'Centro medico'" +
+            DataSet ds = bd.ConsultarInfomacion("SELECT idDoctor as 'ID', nombreDoctor as 'Nombre', telefono as 'Telefono', especialidad as 'Especialidad', centroMedico as 'Centro medico'" +
                 $"FROM Doctores");//Carga los registros correspondientes a los resultados de los usuarios
             dataGridView1.DataSource = ds.Tables[0];//Carga la tabla con los resultados de la consulta
 
@@ -100,7 +100,40 @@ namespace Sistema_de_Control_de_Historia_Medica
             else MessageBox.Show("No se ha seleccionado ninguna fila", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-        
+        private void btnModificarDoctor_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0) //Si la fila seleccionada no es un header del datagridview
+            {
+                if (MessageBox.Show("¿Desea actualizar el registro?", "AVERTENCIA", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    string vIdDoctor = dataGridView1.SelectedRows[0].Cells["ID"].Value.ToString();
+
+                    string vConsulta = $"UPDATE Doctores SET nombreDoctor = '{txtNombre.Text}', telefono = '{txtTelefono.Text}', especialidad = '{txtEspecialidad.Text}', centroMedico = '{txtCentroDeSalud.Text}' WHERE idDoctor = {vIdDoctor}";
+
+
+                    if (bd.EjecutarComando(vConsulta))
+                    {
+
+                        CargarDoctores();
+                    }
+
+                }
+                else MessageBox.Show("Hubo un error al actualizar el doctor", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
+
+            }
+            else MessageBox.Show("No se ha seleccionado ninguna fila", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow dgv = dataGridView1.Rows[e.RowIndex];
+            txtNombre.Text = dgv.Cells[1].Value.ToString();
+            txtTelefono.Text = dgv.Cells[2].Value.ToString();
+            txtEspecialidad.Text = dgv.Cells[3].Value.ToString();
+            txtCentroDeSalud.Text = dgv.Cells[4].Value.ToString();
+        }
     }
 
 }
