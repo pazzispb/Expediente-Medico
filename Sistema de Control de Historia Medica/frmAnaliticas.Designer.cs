@@ -31,7 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAnaliticas));
             this.dgvAnaliticas = new System.Windows.Forms.DataGridView();
             this.gbDetalleAnalitica = new System.Windows.Forms.GroupBox();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnContenedor = new System.Windows.Forms.Panel();
+            this.btnBorrar = new System.Windows.Forms.Button();
             this.pdfVisualizador = new AxAcroPDFLib.AxAcroPDF();
             this.txtObservaciones = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -47,7 +48,7 @@
             this.btnCargar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAnaliticas)).BeginInit();
             this.gbDetalleAnalitica.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.pnContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pdfVisualizador)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -60,7 +61,7 @@
             this.dgvAnaliticas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAnaliticas.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvAnaliticas.Location = new System.Drawing.Point(0, 53);
-            this.dgvAnaliticas.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvAnaliticas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvAnaliticas.Name = "dgvAnaliticas";
             this.dgvAnaliticas.ReadOnly = true;
             this.dgvAnaliticas.RowHeadersVisible = false;
@@ -73,45 +74,62 @@
             // gbDetalleAnalitica
             // 
             this.gbDetalleAnalitica.BackColor = System.Drawing.Color.Transparent;
-            this.gbDetalleAnalitica.Controls.Add(this.panel2);
+            this.gbDetalleAnalitica.Controls.Add(this.pnContenedor);
             this.gbDetalleAnalitica.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.gbDetalleAnalitica.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbDetalleAnalitica.Location = new System.Drawing.Point(0, 197);
-            this.gbDetalleAnalitica.Margin = new System.Windows.Forms.Padding(2);
+            this.gbDetalleAnalitica.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gbDetalleAnalitica.Name = "gbDetalleAnalitica";
-            this.gbDetalleAnalitica.Padding = new System.Windows.Forms.Padding(2);
+            this.gbDetalleAnalitica.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gbDetalleAnalitica.Size = new System.Drawing.Size(638, 417);
             this.gbDetalleAnalitica.TabIndex = 1;
             this.gbDetalleAnalitica.TabStop = false;
             this.gbDetalleAnalitica.Text = "Detalle de la analítica";
             // 
-            // panel2
+            // pnContenedor
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(236)))), ((int)(((byte)(177)))));
-            this.panel2.Controls.Add(this.pdfVisualizador);
-            this.panel2.Controls.Add(this.txtObservaciones);
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.txtPropositoAnalitica);
-            this.panel2.Controls.Add(this.lblID);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.dtpFecha);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.panel2.Location = new System.Drawing.Point(2, 15);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(634, 400);
-            this.panel2.TabIndex = 30;
+            this.pnContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(236)))), ((int)(((byte)(177)))));
+            this.pnContenedor.Controls.Add(this.btnBorrar);
+            this.pnContenedor.Controls.Add(this.pdfVisualizador);
+            this.pnContenedor.Controls.Add(this.txtObservaciones);
+            this.pnContenedor.Controls.Add(this.label8);
+            this.pnContenedor.Controls.Add(this.label2);
+            this.pnContenedor.Controls.Add(this.txtPropositoAnalitica);
+            this.pnContenedor.Controls.Add(this.lblID);
+            this.pnContenedor.Controls.Add(this.label4);
+            this.pnContenedor.Controls.Add(this.label7);
+            this.pnContenedor.Controls.Add(this.dtpFecha);
+            this.pnContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnContenedor.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.pnContenedor.Location = new System.Drawing.Point(2, 15);
+            this.pnContenedor.Name = "pnContenedor";
+            this.pnContenedor.Size = new System.Drawing.Size(634, 400);
+            this.pnContenedor.TabIndex = 30;
+            // 
+            // btnBorrar
+            // 
+            this.btnBorrar.BackColor = System.Drawing.Color.Gray;
+            this.btnBorrar.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBorrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBorrar.ForeColor = System.Drawing.Color.White;
+            this.btnBorrar.Location = new System.Drawing.Point(0, 154);
+            this.btnBorrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBorrar.Name = "btnBorrar";
+            this.btnBorrar.Size = new System.Drawing.Size(634, 30);
+            this.btnBorrar.TabIndex = 36;
+            this.btnBorrar.Text = "Borrar";
+            this.btnBorrar.UseVisualStyleBackColor = false;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // pdfVisualizador
             // 
             this.pdfVisualizador.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pdfVisualizador.Enabled = true;
-            this.pdfVisualizador.Location = new System.Drawing.Point(0, 156);
+            this.pdfVisualizador.Location = new System.Drawing.Point(0, 184);
             this.pdfVisualizador.Name = "pdfVisualizador";
             this.pdfVisualizador.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("pdfVisualizador.OcxState")));
-            this.pdfVisualizador.Size = new System.Drawing.Size(634, 244);
+            this.pdfVisualizador.Size = new System.Drawing.Size(634, 216);
             this.pdfVisualizador.TabIndex = 13;
             // 
             // txtObservaciones
@@ -120,7 +138,7 @@
             this.txtObservaciones.Enabled = false;
             this.txtObservaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtObservaciones.Location = new System.Drawing.Point(124, 89);
-            this.txtObservaciones.Margin = new System.Windows.Forms.Padding(2);
+            this.txtObservaciones.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtObservaciones.Multiline = true;
             this.txtObservaciones.Name = "txtObservaciones";
             this.txtObservaciones.Size = new System.Drawing.Size(496, 49);
@@ -143,7 +161,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(15, 22);
+            this.label2.Location = new System.Drawing.Point(15, 23);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(22, 16);
@@ -156,7 +174,7 @@
             this.txtPropositoAnalitica.Enabled = false;
             this.txtPropositoAnalitica.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPropositoAnalitica.Location = new System.Drawing.Point(188, 54);
-            this.txtPropositoAnalitica.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPropositoAnalitica.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPropositoAnalitica.Multiline = true;
             this.txtPropositoAnalitica.Name = "txtPropositoAnalitica";
             this.txtPropositoAnalitica.Size = new System.Drawing.Size(432, 23);
@@ -179,7 +197,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(422, 22);
+            this.label4.Location = new System.Drawing.Point(422, 23);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(50, 16);
@@ -205,7 +223,7 @@
             this.dtpFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFecha.Location = new System.Drawing.Point(482, 20);
-            this.dtpFecha.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpFecha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(138, 22);
             this.dtpFecha.TabIndex = 8;
@@ -230,7 +248,7 @@
             this.btnRegistrarAnalitica.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrarAnalitica.ForeColor = System.Drawing.Color.White;
             this.btnRegistrarAnalitica.Location = new System.Drawing.Point(366, 15);
-            this.btnRegistrarAnalitica.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRegistrarAnalitica.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRegistrarAnalitica.Name = "btnRegistrarAnalitica";
             this.btnRegistrarAnalitica.Size = new System.Drawing.Size(256, 30);
             this.btnRegistrarAnalitica.TabIndex = 3;
@@ -258,7 +276,7 @@
             this.btnCargar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCargar.ForeColor = System.Drawing.Color.White;
             this.btnCargar.Location = new System.Drawing.Point(264, 15);
-            this.btnCargar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCargar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCargar.Name = "btnCargar";
             this.btnCargar.Size = new System.Drawing.Size(98, 30);
             this.btnCargar.TabIndex = 35;
@@ -274,15 +292,15 @@
             this.ClientSize = new System.Drawing.Size(638, 614);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.gbDetalleAnalitica);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MinimizeBox = false;
             this.Name = "frmAnaliticas";
             this.Text = "Registro de Analíticas";
             this.Load += new System.EventHandler(this.frmAnaliticas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAnaliticas)).EndInit();
             this.gbDetalleAnalitica.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.pnContenedor.ResumeLayout(false);
+            this.pnContenedor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pdfVisualizador)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -305,8 +323,9 @@
         private System.Windows.Forms.DateTimePicker dtpFecha;
         private System.Windows.Forms.TextBox txtPropositoAnalitica;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnContenedor;
         private System.Windows.Forms.Button btnCargar;
         private AxAcroPDFLib.AxAcroPDF pdfVisualizador;
+        private System.Windows.Forms.Button btnBorrar;
     }
 }
