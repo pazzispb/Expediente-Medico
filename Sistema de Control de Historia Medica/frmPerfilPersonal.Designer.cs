@@ -380,6 +380,7 @@
             this.MinimizeBox = false;
             this.Name = "frmPerfilPersonal";
             this.Text = "Perfil Personal";
+            this.Load += new System.EventHandler(this.frmPerfilPersonal_Load);
             this.pnContenedor.ResumeLayout(false);
             this.pnContenedor.PerformLayout();
             this.ResumeLayout(false);
