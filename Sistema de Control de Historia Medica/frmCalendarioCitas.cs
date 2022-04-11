@@ -148,9 +148,7 @@ namespace Sistema_de_Control_de_Historia_Medica
                 {
                     string vIdCita = dgvInfoCitas.SelectedRows[0].Cells["ID"].Value.ToString();
 
-                    string vConsulta = $"UPDATE Citas as A INNER JOIN Doctores as B ON A.idCita = B.idCita SET B.Nombre = {cmbDesplegarDoctor.Text}, B.Centro medico = {cmbCentro.Text}" +
-                        $"A.Fecha = {dateTimePicker1.Text}, A.Horario = {cmbDesplegarHorario.Text} WHERE idCita = {vIdCita}";
-                    
+                    string vConsulta = $"UPDATE Citas SET Fecha = {dateTimePicker1.Text}, Horario = {cmbDesplegarHorario.Text} WHERE idCita = {vIdCita}";
 
 
                     if (bd.EjecutarComando(vConsulta))
