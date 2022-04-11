@@ -17,31 +17,6 @@ namespace Sistema_de_Control_de_Historia_Medica
             InitializeComponent();
         }
 
-        private void txtClave_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtClave2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtNombre_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void frmPerfilPersonal_Load(object sender, EventArgs e) // evento que se activa cuando se abre un formulario
         {
             clsBaseDatos bd = new clsBaseDatos();
@@ -66,11 +41,6 @@ namespace Sistema_de_Control_de_Historia_Medica
             txtSeguroMedico.Text = aDatos[8].ToString();
             txtTelefono.Text = aDatos[9].ToString();
             cmbTipoSangre.SelectedItem = aDatos[7].ToString();
-
-
-
-
-
         }
 
         private void btnEditarPerfil_Click(object sender, EventArgs e)

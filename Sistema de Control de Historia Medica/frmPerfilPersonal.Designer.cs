@@ -39,12 +39,10 @@
             this.txtAltura = new System.Windows.Forms.TextBox();
             this.txtPeso = new System.Windows.Forms.TextBox();
             this.cmbTipoSangre = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.txtCedula = new System.Windows.Forms.TextBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.lblNumero = new System.Windows.Forms.Label();
             this.lblSeguroM = new System.Windows.Forms.Label();
             this.lblSangre = new System.Windows.Forms.Label();
@@ -75,12 +73,10 @@
             this.pnContenedor.Controls.Add(this.txtAltura);
             this.pnContenedor.Controls.Add(this.txtPeso);
             this.pnContenedor.Controls.Add(this.cmbTipoSangre);
-            this.pnContenedor.Controls.Add(this.label13);
             this.pnContenedor.Controls.Add(this.dtpFecha);
             this.pnContenedor.Controls.Add(this.txtCedula);
             this.pnContenedor.Controls.Add(this.txtApellido);
             this.pnContenedor.Controls.Add(this.txtNombre);
-            this.pnContenedor.Controls.Add(this.label12);
             this.pnContenedor.Controls.Add(this.lblNumero);
             this.pnContenedor.Controls.Add(this.lblSeguroM);
             this.pnContenedor.Controls.Add(this.lblSangre);
@@ -193,15 +189,6 @@
             this.cmbTipoSangre.Size = new System.Drawing.Size(73, 25);
             this.cmbTipoSangre.TabIndex = 45;
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(275, 279);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(0, 17);
-            this.label13.TabIndex = 44;
-            // 
             // dtpFecha
             // 
             this.dtpFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -234,16 +221,6 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(196, 23);
             this.txtNombre.TabIndex = 40;
-            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(6, 279);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(0, 17);
-            this.label12.TabIndex = 39;
             // 
             // lblNumero
             // 
@@ -334,7 +311,6 @@
             this.lblNombre.Size = new System.Drawing.Size(63, 18);
             this.lblNombre.TabIndex = 30;
             this.lblNombre.Text = "Nombre";
-            this.lblNombre.Click += new System.EventHandler(this.label3_Click);
             // 
             // lblUsuario
             // 
@@ -357,13 +333,12 @@
             this.lblMiCuenta.Size = new System.Drawing.Size(128, 30);
             this.lblMiCuenta.TabIndex = 53;
             this.lblMiCuenta.Text = "Mi Cuenta";
-            this.lblMiCuenta.Click += new System.EventHandler(this.label1_Click);
             // 
             // frmPerfilPersonal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(603, 384);
+            this.ClientSize = new System.Drawing.Size(603, 358);
             this.Controls.Add(this.lblMiCuenta);
             this.Controls.Add(this.pnContenedor);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -390,12 +365,10 @@
         private System.Windows.Forms.TextBox txtAltura;
         private System.Windows.Forms.TextBox txtPeso;
         private System.Windows.Forms.ComboBox cmbTipoSangre;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.DateTimePicker dtpFecha;
         private System.Windows.Forms.TextBox txtCedula;
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label lblNumero;
         private System.Windows.Forms.Label lblSeguroM;
         private System.Windows.Forms.Label lblSangre;
