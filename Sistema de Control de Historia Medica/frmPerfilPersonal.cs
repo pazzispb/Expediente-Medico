@@ -31,7 +31,7 @@ namespace Sistema_de_Control_de_Historia_Medica
 
             object[] aDatos = vInformacion.Tables[0].Rows[0].ItemArray; // creacion de un arreglo con los datos del usuario, para poder insertarlos dentro de este formulario
 
-            txtUsuario.Text = aDatos[0].ToString();
+            txtUsuario.Text = aDatos[0].ToString(); // creacion de arreglos para cada campo 
             txtNombre.Text = aDatos[1].ToString();
             txtApellido.Text = aDatos[2].ToString();
             txtCedula.Text = aDatos[3].ToString();
@@ -54,9 +54,9 @@ namespace Sistema_de_Control_de_Historia_Medica
             if (ValidarCamposRellenos())//Si todos los campos tienen un contenido
                 if (bd.EjecutarComando(vConsulta))
                 {
-                    MessageBox.Show("Usuario registrado con éxito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Perfil actualizado de manera exitosa", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                else MessageBox.Show("Hubo un error al registrar el usuario", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                else MessageBox.Show("Hubo un error al actualizar los datos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
         bool ValidarCamposRellenos()
         {
