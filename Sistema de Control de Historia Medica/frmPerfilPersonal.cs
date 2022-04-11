@@ -57,6 +57,8 @@ namespace Sistema_de_Control_de_Historia_Medica
             object[] aDatos = vInformacion.Tables[0].Rows[0].ItemArray; // creacion de un arreglo con los datos del usuario, para poder insertarlos dentro de este formulario
 
             txtUsuario.Text = aDatos[0].ToString();
+            cmbTipoSangre.SelectedItem = aDatos[7].ToString();
+
 
 
 
