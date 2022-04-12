@@ -42,7 +42,7 @@ namespace Sistema_de_Control_de_Historia_Medica
         {
             string idDoctor = cmbDesplegarDoctor.SelectedValue.ToString();
 
-            string vConsulta = $"INSERT INTO Citas (idDoctor, doctorCita, centroCita horario, fecha) " +
+            string vConsulta = $"INSERT INTO Citas (idDoctor, doctorCita, centroCita, horario, fecha) " +
             $"VALUES ({idDoctor}, '{cmbDesplegarDoctor.Text}', '{cmbCentro.Text}', '{cmbDesplegarHorario.Text}', '{dateTimePicker1.Text}')";
             if (ValidarCamposRellenos())//Si todos los campos tienen un contenido
                 if (bd.EjecutarComando(vConsulta))//Si se agrego el registro
@@ -119,7 +119,7 @@ namespace Sistema_de_Control_de_Historia_Medica
                     {
                         CargarInfoCita();
                     }
-
+                    MessageBox.Show("Cita eliminada con exito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else MessageBox.Show("Hubo un error al eliminar la cita", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
@@ -156,7 +156,7 @@ namespace Sistema_de_Control_de_Historia_Medica
                         
                         CargarInfoCita();
                     }
-
+                    MessageBox.Show("Cita modificada con exito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else MessageBox.Show("Hubo un error al actualizar la cita", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
