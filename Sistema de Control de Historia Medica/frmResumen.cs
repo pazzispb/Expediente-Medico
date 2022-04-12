@@ -23,7 +23,7 @@ namespace Sistema_de_Control_de_Historia_Medica
         clsBaseDatos bd = new clsBaseDatos();
         string[] aCampos = { "nombre", "edad", "fecha", "seguro", "altura", "peso", "sangre", "enfermedades", "condiciones", "alergias", "emergencias", "farmacos", "analiticas" };
         string[] aResultados;
-        private void btnGenerar_Click(object sender, EventArgs e)
+        private void btnGenerar_Click(object sender, EventArgs e) 
         {
             RellenarResultados();
             PdfTextField vCampo; //Objeto para manejar los campos del formulario
