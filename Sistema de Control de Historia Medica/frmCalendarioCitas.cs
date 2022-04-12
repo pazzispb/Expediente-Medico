@@ -28,6 +28,8 @@ namespace Sistema_de_Control_de_Historia_Medica
             var fechaActual = DateTime.Now;
             dateTimePicker1.MinDate = fechaActual;
             MonthCalendar.MinDate = fechaActual;
+            
+
             cargarDoctores();
             cargarCentro();
 
@@ -175,6 +177,11 @@ namespace Sistema_de_Control_de_Historia_Medica
             cmbCentro.Text = dgv.Cells[2].Value.ToString();
             dateTimePicker1.Text = dgv.Cells[3].Value.ToString();
             cmbDesplegarHorario.Text = dgv.Cells[4].Value.ToString();
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            MonthCalendar.SetDate(dateTimePicker1.Value);
         }
     }
 }

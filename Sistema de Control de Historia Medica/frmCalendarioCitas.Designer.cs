@@ -120,6 +120,7 @@
             // MonthCalendar
             // 
             this.MonthCalendar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.MonthCalendar.Enabled = false;
             this.MonthCalendar.Location = new System.Drawing.Point(514, 14);
             this.MonthCalendar.MaxDate = new System.DateTime(2022, 12, 31, 0, 0, 0, 0);
             this.MonthCalendar.Name = "MonthCalendar";
@@ -145,6 +146,7 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(245, 20);
             this.dateTimePicker1.TabIndex = 30;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // cmbDesplegarHorario
             // 
