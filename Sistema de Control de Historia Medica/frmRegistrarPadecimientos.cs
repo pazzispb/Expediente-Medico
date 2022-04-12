@@ -72,7 +72,7 @@ namespace Sistema_de_Control_de_Historia_Medica
 
         private void frmRegistrarPadecimientos_Load(object sender, EventArgs e)
         {
-            cmbTipoPadecimiento.SelectedIndex = 0;
+            cmbTipoPadecimiento.SelectedIndex = 0; 
         }
 
         private void chbEstadoFecha_CheckedChanged(object sender, EventArgs e)

@@ -23,21 +23,17 @@ namespace Sistema_de_Control_de_Historia_Medica
         {
             if (ValidarCamposRellenos()) //Llamamos la funcion para validar los campos rellenos
             {
-                string vConsulta = $"SELECT COUNT(idUsuario) FROM Usuarios WHERE usuario = '{txtUsuario.Text}' AND cedula = '{txtCedula.Text}' "; // Cantidad de usuarios que comparten el mismo nombre y contrasena
+                string vConsulta = $"SELECT COUNT(idUsuario) FROM Usuarios WHERE usuario = '{txtUsuario.Text}' AND cedula = '{txtCedula.Text}' "; // Cantidad de usuarios que comparten el mismo nombre y cedula
                 int vResultados = Convert.ToInt32(bd.ConsultarValor(vConsulta));
 
                 if (vResultados == 1)
                 {
-                    vConsulta = $"SELECT clave FROM Usuarios WHERE usuario = '{txtUsuario.Text}' AND cedula = '{txtCedula.Text}' "; // Cantidad de usuarios que comparten el mismo nombre y contrasena
+                    vConsulta = $"SELECT clave FROM Usuarios WHERE usuario = '{txtUsuario.Text}' AND cedula = '{txtCedula.Text}' "; // Cantidad de usuarios que comparten el mismo nombre y cedula
                     MessageBox.Show(bd.ConsultarValor(vConsulta).ToString(), "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Information);//Indicamos el ID del usuario que ingreso al sistema
                 }
                 else MessageBox.Show("No existe usuario con esa cédula y/o username", "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             } 
-
-
-
-
         }
         bool ValidarCamposRellenos()
         {
