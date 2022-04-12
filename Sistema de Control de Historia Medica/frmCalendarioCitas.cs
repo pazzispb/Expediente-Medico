@@ -42,8 +42,8 @@ namespace Sistema_de_Control_de_Historia_Medica
         {
             string idDoctor = cmbDesplegarDoctor.SelectedValue.ToString();
 
-            string vConsulta = $"INSERT INTO Citas (idDoctor, horario, fecha) " +
-            $"VALUES ({idDoctor}, '{cmbDesplegarHorario.Text}', '{dateTimePicker1.Text}')";
+            string vConsulta = $"INSERT INTO Citas (idDoctor, doctorCita, centroCita horario, fecha) " +
+            $"VALUES ({idDoctor}, '{cmbDesplegarDoctor.Text}', '{cmbCentro.Text}', '{cmbDesplegarHorario.Text}', '{dateTimePicker1.Text}')";
             if (ValidarCamposRellenos())//Si todos los campos tienen un contenido
                 if (bd.EjecutarComando(vConsulta))//Si se agrego el registro
                 {
@@ -78,8 +78,8 @@ namespace Sistema_de_Control_de_Historia_Medica
 
         void CargarInfoCita()
         {
-            DataSet ds = bd.ConsultarInfomacion("SELECT A.idCita as 'ID', B.nombreDoctor as 'Nombre', B.centroMedico as 'Centro medico', A.fecha as 'Fecha', A.horario as 'Horario'" +
-                $"FROM Citas as A INNER JOIN Doctores as B ON A.idDoctor = B.idDoctor");//Carga los registros correspondientes a las analiticas de los usuarios
+            DataSet ds = bd.ConsultarInfomacion("SELECT idCita as 'ID', doctorCita as 'Nombre', centroCita as 'Centro medico', fecha as 'Fecha', horario as 'Horario'" +
+                $"FROM Citas");//Carga los registros correspondientes a las analiticas de los usuarios
             dgvInfoCitas.DataSource = ds.Tables[0];//Carga la tabla con los resultados de la consulta
 
         }
@@ -148,7 +148,7 @@ namespace Sistema_de_Control_de_Historia_Medica
                 {
                     string vIdCita = dgvInfoCitas.SelectedRows[0].Cells["ID"].Value.ToString();
 
-                    string vConsulta = $"UPDATE Citas SET Fecha = {dateTimePicker1.Text}, Horario = {cmbDesplegarHorario.Text} WHERE idCita = {vIdCita}";
+                    string vConsulta = $"UPDATE Citas SET doctorCita = '{cmbDesplegarDoctor.Text}', centroCita = '{cmbCentro.Text}', fecha = '{dateTimePicker1.Text}', horario = '{cmbDesplegarHorario.Text}' WHERE idCita = {vIdCita}";
 
 
                     if (bd.EjecutarComando(vConsulta))
