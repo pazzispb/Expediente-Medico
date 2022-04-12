@@ -141,10 +141,9 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(60, 162);
+            this.dateTimePicker1.Location = new System.Drawing.Point(21, 162);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(134, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(245, 20);
             this.dateTimePicker1.TabIndex = 30;
             // 
             // cmbDesplegarHorario

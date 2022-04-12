@@ -92,6 +92,8 @@ namespace Sistema_de_Control_de_Historia_Medica
                         CargarDoctores();
                     }
 
+                    MessageBox.Show("Doctor eliminado con exito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 }
                 else MessageBox.Show("Hubo un error al eliminar al doctor", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
@@ -117,7 +119,7 @@ namespace Sistema_de_Control_de_Historia_Medica
                         CargarDoctores();
                         LimpiarCampos();
                     }
-
+                    MessageBox.Show("Doctor modificado con exito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else MessageBox.Show("Hubo un error al actualizar el doctor", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
