@@ -66,6 +66,9 @@ namespace Sistema_de_Control_de_Historia_Medica
                 txtPropositoAnalitica.Text = dgvAnaliticas.Rows[e.RowIndex].Cells[2].Value.ToString();
                 txtObservaciones.Text = dgvAnaliticas.Rows[e.RowIndex].Cells[2].Value.ToString();
                 string direccion = Assembly.GetExecutingAssembly().Location.Substring(0, Assembly.GetExecutingAssembly().Location.LastIndexOf('\\'));//Obtener la direccion del programa en ejecucion
+                direccion = direccion.Substring(0, direccion.LastIndexOf('\\'));
+                direccion = direccion.Substring(0, direccion.LastIndexOf('\\'));
+                MessageBox.Show(direccion);
                 pdfVisualizador.LoadFile($"{direccion}\\Analiticas\\{lblID.Text}.pdf");
                 vBorrar = true;
             }
@@ -80,7 +83,7 @@ namespace Sistema_de_Control_de_Historia_Medica
 
                     if (bd.EjecutarComando(vConsulta))
                     {
-                        File.Delete($"Analiticas/{lblID.Text}.pdf");
+                        File.Delete($"../../Analiticas/{lblID.Text}.pdf");
                         LimpiarCampos();
                         CargarAnaliticas();
                     }
