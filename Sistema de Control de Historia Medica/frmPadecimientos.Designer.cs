@@ -42,6 +42,7 @@
             this.dgvPadecimientos = new System.Windows.Forms.DataGridView();
             this.btnIngresarPadecimientos = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtFechaNoAplica = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPadecimientos)).BeginInit();
             this.SuspendLayout();
@@ -73,6 +74,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(236)))), ((int)(((byte)(177)))));
+            this.panel2.Controls.Add(this.txtFechaNoAplica);
             this.panel2.Controls.Add(this.dtpPadecimiento);
             this.panel2.Controls.Add(this.txtDescripcionPadecimiento);
             this.panel2.Controls.Add(this.txtTipoPadecimiento);
@@ -200,6 +202,15 @@
             this.label1.Text = "Detalles del Padecimiento";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // txtFechaNoAplica
+            // 
+            this.txtFechaNoAplica.Enabled = false;
+            this.txtFechaNoAplica.Location = new System.Drawing.Point(139, 113);
+            this.txtFechaNoAplica.Name = "txtFechaNoAplica";
+            this.txtFechaNoAplica.Size = new System.Drawing.Size(156, 20);
+            this.txtFechaNoAplica.TabIndex = 8;
+            this.txtFechaNoAplica.Visible = false;
+            // 
             // frmPadecimientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -240,5 +251,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dtpPadecimiento;
+        private System.Windows.Forms.TextBox txtFechaNoAplica;
     }
 }
