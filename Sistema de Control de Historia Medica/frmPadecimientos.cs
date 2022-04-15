@@ -82,6 +82,8 @@ namespace Sistema_de_Control_de_Historia_Medica
             cargarPadecimientos();
         }
 
+      
+
         private void dgvPadecimientos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex > -1 && dgvPadecimientos.Rows[e.RowIndex].Cells[2].Value.ToString()!= "No Aplica")

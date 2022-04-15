@@ -97,6 +97,7 @@
             this.dtpPadecimiento.Name = "dtpPadecimiento";
             this.dtpPadecimiento.Size = new System.Drawing.Size(156, 20);
             this.dtpPadecimiento.TabIndex = 7;
+            this.dtpPadecimiento.Visible = false;
             // 
             // txtDescripcionPadecimiento
             // 
@@ -209,7 +210,6 @@
             this.txtFechaNoAplica.Name = "txtFechaNoAplica";
             this.txtFechaNoAplica.Size = new System.Drawing.Size(156, 20);
             this.txtFechaNoAplica.TabIndex = 8;
-            this.txtFechaNoAplica.Visible = false;
             // 
             // frmPadecimientos
             // 
