@@ -68,7 +68,6 @@ namespace Sistema_de_Control_de_Historia_Medica
                 string direccion = Assembly.GetExecutingAssembly().Location.Substring(0, Assembly.GetExecutingAssembly().Location.LastIndexOf('\\'));//Obtener la direccion del programa en ejecucion
                 direccion = direccion.Substring(0, direccion.LastIndexOf('\\'));
                 direccion = direccion.Substring(0, direccion.LastIndexOf('\\'));
-                MessageBox.Show(direccion);
                 pdfVisualizador.LoadFile($"{direccion}\\Analiticas\\{lblID.Text}.pdf");
                 vBorrar = true;
             }
