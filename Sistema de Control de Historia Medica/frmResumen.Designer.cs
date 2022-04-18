@@ -53,10 +53,10 @@
             // 
             this.pdfVisor.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pdfVisor.Enabled = true;
-            this.pdfVisor.Location = new System.Drawing.Point(0, 76);
+            this.pdfVisor.Location = new System.Drawing.Point(0, 60);
             this.pdfVisor.Name = "pdfVisor";
             this.pdfVisor.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("pdfVisor.OcxState")));
-            this.pdfVisor.Size = new System.Drawing.Size(874, 394);
+            this.pdfVisor.Size = new System.Drawing.Size(874, 410);
             this.pdfVisor.TabIndex = 35;
             // 
             // btnGenerar

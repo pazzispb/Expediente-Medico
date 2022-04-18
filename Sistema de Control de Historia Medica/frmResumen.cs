@@ -49,24 +49,24 @@ namespace Sistema_de_Control_de_Historia_Medica
             string vNombre = $"{aDatosUsuario[0].ToString()} {aDatosUsuario[1].ToString()}";//Nombre completo del usuario
             DateTime fechaActual = DateTime.Now;//Fecha de hoy
             DateTime fechaNacimiento = Convert.ToDateTime(aDatosUsuario[2].ToString()); //Fecha de nacimiento del usuario
-            string vEdad = ((fechaActual - fechaNacimiento).Days / 365).ToString();//edad del usuario en años
+            string vEdad = ((fechaActual - fechaNacimiento).Days / 365).ToString(); //edad del usuario en años
             string vFecha = aDatosUsuario[2].ToString(),
                 vSeguro = aDatosUsuario[3].ToString(),
                 vAltura = $"{aDatosUsuario[4].ToString()}m",
                 vPeso = $"{aDatosUsuario[5].ToString()}kg",
                 vSangre = aDatosUsuario[6].ToString();
             string vEnfermedades = CargarDatosEnfermedades(), vCondiciones = CargarDatosCondiciones(), vAlergias = CargarDatosAlergias(), vEmergencias = CargarDatosEmergencias(), vFarmacos = CargarDatosFarmacos(), vAnaliticas = CargarDatosAnaliticas();
-            aResultados = new string[]{ vNombre, vEdad, vFecha, vSeguro, vAltura, vPeso, vSangre, vEnfermedades, vCondiciones, vAlergias, vEmergencias, vFarmacos, vAnaliticas };
+            aResultados = new string[]{ vNombre, vEdad, vFecha, vSeguro, vAltura, vPeso, vSangre, vEnfermedades, vCondiciones, vAlergias, vEmergencias, vFarmacos, vAnaliticas }; //Cargamos los datos al arreglo
         }
         string CargarDatosAnaliticas()
         {
             string vRetorno = "";
             DataSet resultado = bd.ConsultarInfomacion("SELECT fecha, proposito, observaciones FROM Analiticas");
-            if (resultado.Tables[0].Rows.Count == 0) return "No hay analíticas registradas";
-            foreach (DataRow row in resultado.Tables[0].Rows)
+            if (resultado.Tables[0].Rows.Count == 0) return "No hay analíticas registradas"; //si no hay registros de la consulta
+            foreach (DataRow row in resultado.Tables[0].Rows) //para cada fila dentro de la tabla del dataset
             {
-                vRetorno += $"Fecha: {row.ItemArray[0].ToString()}. Proposito: {row.ItemArray[1].ToString()}. " +
-                    $"Obsevaciones realizadas: {row.ItemArray[2].ToString()}\n";
+                vRetorno += $"-Fecha: {row.ItemArray[0].ToString()}. -Propósito: {row.ItemArray[1].ToString()}. " +
+                    $"-Obsevaciones realizadas: {row.ItemArray[2].ToString()}\n";
             }
             return vRetorno;
         }
@@ -74,12 +74,12 @@ namespace Sistema_de_Control_de_Historia_Medica
         {
             string vRetorno = "";
             DataSet resultado = bd.ConsultarInfomacion("SELECT nombrePadecimiento, descripcion, fecha FROM Padecimientos WHERE tipoPadecimiento = 'Enfermedad'");
-            if (resultado.Tables[0].Rows.Count == 0) return "No hay enefermedades registradas";
-            foreach (DataRow row in resultado.Tables[0].Rows)
+            if (resultado.Tables[0].Rows.Count == 0) return "No hay enfermedades registradas"; //si no hay registros de la consulta
+            foreach (DataRow row in resultado.Tables[0].Rows) //para cada fila dentro de la tabla del dataset
             {
-                vRetorno += $"{row.ItemArray[0].ToString()}. Descripción: {row.ItemArray[1].ToString()}. ";
-                if(row.ItemArray[2].ToString() != "No aplica")
-                    vRetorno += $"Fecha de diagnóstico: {row.ItemArray[2].ToString()}\n";
+                vRetorno += $"-Nombre: {row.ItemArray[0].ToString()}. -Descripción: {row.ItemArray[1].ToString()}. ";
+                if(row.ItemArray[2].ToString() != "No aplica") //si la fecha aplica
+                    vRetorno += $"-Fecha de diagnóstico: {row.ItemArray[2].ToString()}\n";
                 else vRetorno += $"\n";
             }
             return vRetorno;
@@ -88,12 +88,12 @@ namespace Sistema_de_Control_de_Historia_Medica
         {
             string vRetorno = "";
             DataSet resultado = bd.ConsultarInfomacion("SELECT nombrePadecimiento, descripcion, fecha FROM Padecimientos WHERE tipoPadecimiento = 'Condición'");
-            if (resultado.Tables[0].Rows.Count == 0) return "No hay condiciones registradas";
-            foreach (DataRow row in resultado.Tables[0].Rows)
+            if (resultado.Tables[0].Rows.Count == 0) return "No hay condiciones registradas"; //si no hay registros de la consulta
+            foreach (DataRow row in resultado.Tables[0].Rows) //para cada fila dentro de la tabla del dataset
             {
-                vRetorno += $"{row.ItemArray[0].ToString()}. Descripción: {row.ItemArray[1].ToString()}. ";
-                if (row.ItemArray[2].ToString() != "No aplica")
-                    vRetorno += $"Fecha de diagnóstico: {row.ItemArray[2].ToString()}\n";
+                vRetorno += $"-Nombre: {row.ItemArray[0].ToString()}. -Descripción: {row.ItemArray[1].ToString()}. ";
+                if (row.ItemArray[2].ToString() != "No aplica") //si la fecha aplica
+                    vRetorno += $"-Fecha de diagnóstico: {row.ItemArray[2].ToString()}\n";
                 else vRetorno += $"\n";
             }
             return vRetorno;
@@ -102,12 +102,12 @@ namespace Sistema_de_Control_de_Historia_Medica
         {
             string vRetorno = "";
             DataSet resultado = bd.ConsultarInfomacion("SELECT nombrePadecimiento, descripcion, fecha FROM Padecimientos WHERE tipoPadecimiento = 'Alergia'");
-            if (resultado.Tables[0].Rows.Count == 0) return "No hay alergias registradas";
-            foreach (DataRow row in resultado.Tables[0].Rows)
+            if (resultado.Tables[0].Rows.Count == 0) return "No hay alergias registradas"; //si no hay registros de la consulta
+            foreach (DataRow row in resultado.Tables[0].Rows) //para cada fila dentro de la tabla del dataset
             {
-                vRetorno += $"{row.ItemArray[0].ToString()}. Descripción: {row.ItemArray[1].ToString()}. ";
-                if (row.ItemArray[2].ToString() != "No aplica")
-                    vRetorno += $"Fecha de diagnóstico: {row.ItemArray[2].ToString()}\n";
+                vRetorno += $"-Tipo de alergia: {row.ItemArray[0].ToString()}. -Descripción: {row.ItemArray[1].ToString()}. ";
+                if (row.ItemArray[2].ToString() != "No aplica") //si la fecha aplica
+                    vRetorno += $"-Fecha de diagnóstico: {row.ItemArray[2].ToString()}\n";
                 else vRetorno += $"\n";
             }
             return vRetorno;
@@ -116,12 +116,12 @@ namespace Sistema_de_Control_de_Historia_Medica
         {
             string vRetorno = "";
             DataSet resultado = bd.ConsultarInfomacion("SELECT nombrePadecimiento, descripcion, fecha FROM Padecimientos WHERE tipoPadecimiento = 'Emergencia' OR tipoPadecimiento = 'Cirugía'");
-            if (resultado.Tables[0].Rows.Count == 0) return "No hay emergencias o cirugías registradas";
-            foreach (DataRow row in resultado.Tables[0].Rows)
+            if (resultado.Tables[0].Rows.Count == 0) return "No hay emergencias o cirugías registradas"; //si no hay registros de la consulta
+            foreach (DataRow row in resultado.Tables[0].Rows) //para cada fila dentro de la tabla del dataset
             {
-                vRetorno += $"{row.ItemArray[0].ToString()}. Descripción: {row.ItemArray[1].ToString()}. ";
-                if (row.ItemArray[2].ToString() != "No aplica")
-                    vRetorno += $"Fecha: {row.ItemArray[2].ToString()}\n";
+                vRetorno += $"-Padecimiento: {row.ItemArray[0].ToString()}. -Descripción: {row.ItemArray[1].ToString()}. ";
+                if (row.ItemArray[2].ToString() != "No aplica") //si la fecha aplica
+                    vRetorno += $"-Fecha: {row.ItemArray[2].ToString()}\n";
                 else vRetorno += $"\n";
             }
             return vRetorno;
@@ -130,11 +130,11 @@ namespace Sistema_de_Control_de_Historia_Medica
         {
             string vRetorno = "";
             DataSet resultado = bd.ConsultarInfomacion("SELECT nombreFarmaco, dosisFarmaco, veces, frecuenciaFarmaco, descripcionFarmaco FROM Farmacos");
-            if (resultado.Tables[0].Rows.Count == 0) return "No hay fármacos registrados";
-            foreach (DataRow row in resultado.Tables[0].Rows)
+            if (resultado.Tables[0].Rows.Count == 0) return "No hay fármacos registrados"; //si no hay registros de la consulta
+            foreach (DataRow row in resultado.Tables[0].Rows) //para cada fila dentro de la tabla del dataset
             {
-                vRetorno += $"{row.ItemArray[0].ToString()}. Dosis: {row.ItemArray[1].ToString()}. " +
-                    $"Frecuencia: {row.ItemArray[2].ToString()} de forma {row.ItemArray[3].ToString()}. Descripción: {row.ItemArray[4].ToString()}";
+                vRetorno += $"-Nombre: {row.ItemArray[0].ToString()}. -Dosis: {row.ItemArray[1].ToString()}. " +
+                    $"-Frecuencia: {row.ItemArray[2].ToString()} de forma {row.ItemArray[3].ToString()}. -Descripción: {row.ItemArray[4].ToString()}";
             }
             return vRetorno;
         }
