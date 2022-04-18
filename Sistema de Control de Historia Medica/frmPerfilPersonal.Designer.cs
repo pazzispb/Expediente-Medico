@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.frmPerfilPersonalbox = new System.Data.SQLite.SQLiteCommand();
             this.pnContenedor = new System.Windows.Forms.Panel();
             this.btnEditarPerfil = new System.Windows.Forms.Button();
             this.txtUsuario = new System.Windows.Forms.TextBox();
@@ -56,10 +55,6 @@
             this.lblMiCuenta = new System.Windows.Forms.Label();
             this.pnContenedor.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // frmPerfilPersonalbox
-            // 
-            this.frmPerfilPersonalbox.CommandText = null;
             // 
             // pnContenedor
             // 
@@ -124,6 +119,7 @@
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(168, 23);
             this.txtTelefono.TabIndex = 51;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // txtSeguroMedico
             // 
@@ -160,6 +156,7 @@
             this.txtAltura.Name = "txtAltura";
             this.txtAltura.Size = new System.Drawing.Size(86, 23);
             this.txtAltura.TabIndex = 47;
+            this.txtAltura.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAltura_KeyPress);
             // 
             // txtPeso
             // 
@@ -168,6 +165,7 @@
             this.txtPeso.Name = "txtPeso";
             this.txtPeso.Size = new System.Drawing.Size(80, 23);
             this.txtPeso.TabIndex = 46;
+            this.txtPeso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPeso_KeyPress);
             // 
             // cmbTipoSangre
             // 
@@ -354,8 +352,6 @@
         }
 
         #endregion
-
-        private System.Data.SQLite.SQLiteCommand frmPerfilPersonalbox;
         private System.Windows.Forms.Panel pnContenedor;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtTelefono;
