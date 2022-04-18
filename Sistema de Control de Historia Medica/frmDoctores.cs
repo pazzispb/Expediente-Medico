@@ -17,7 +17,7 @@ namespace Sistema_de_Control_de_Historia_Medica
         {
             InitializeComponent();
         }
-        bool ValidarCamposRellenos()
+        bool ValidarCamposRellenos() //Valida que los campos del contenedor esten todos llenos
         {
             foreach (Control c in pnRegistrarDoctor.Controls) //Recorremos cada elemento del contenedor que posee los campos
                 if (String.IsNullOrWhiteSpace(c.Text) && typeof(TextBox) == c.GetType()) //Si esta vacio y es un textbox
@@ -42,7 +42,7 @@ namespace Sistema_de_Control_de_Historia_Medica
         void CargarDoctores() //Rellenar el datagridview del formulario con la informacion de los doctores
         {
             DataSet ds = bd.ConsultarInfomacion("SELECT idDoctor as 'ID', nombreDoctor as 'Nombre', telefono as 'Telefono', especialidad as 'Especialidad', centroMedico as 'Centro medico'" +
-                $"FROM Doctores");//Trae los doctores desde la base de datos y los almacena en un dataset
+                $"FROM Doctores WHERE idUsuario = {frmMenuPrincipal.vIdUsuario}");//Trae los doctores correspondientes al usuario con la sesion iniciada desde la base de datos y los almacena en un dataset
             dataGridView1.DataSource = ds.Tables[0];//Carga el datagridview con lo que se encuentra almacenado en el dataset
         }
         private void btnAñadirDoctor_Click(object sender, EventArgs e)
@@ -64,9 +64,9 @@ namespace Sistema_de_Control_de_Historia_Medica
             {
                 if (MessageBox.Show("¿Realmente desea eliminar el doctor?", "AVERTENCIA", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
-                    string vIdDoctor = dataGridView1.SelectedRows[0].Cells["ID"].Value.ToString();
+                    string vIdDoctor = dataGridView1.SelectedRows[0].Cells["ID"].Value.ToString();//Obtenemos el id del doctor a eliminar
                     string vConsulta = $"DELETE FROM Doctores WHERE idDoctor = {vIdDoctor}";
-                    if (bd.EjecutarComando(vConsulta))
+                    if (bd.EjecutarComando(vConsulta))//Si se elimino el registro
                     {
                         CargarDoctores();
                         MessageBox.Show("Doctor eliminado con exito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -82,9 +82,9 @@ namespace Sistema_de_Control_de_Historia_Medica
             {
                 if (MessageBox.Show("¿Desea actualizar el registro?", "AVERTENCIA", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
-                    string vIdDoctor = dataGridView1.SelectedRows[0].Cells["ID"].Value.ToString();
+                    string vIdDoctor = dataGridView1.SelectedRows[0].Cells["ID"].Value.ToString(); //Obtenemos el id del doctor a actualizar
                     string vConsulta = $"UPDATE Doctores SET nombreDoctor = '{txtNombre.Text}', telefono = '{txtTelefono.Text}', especialidad = '{txtEspecialidad.Text}', centroMedico = '{txtCentroDeSalud.Text}' WHERE idDoctor = {vIdDoctor}";
-                    if (bd.EjecutarComando(vConsulta))
+                    if (bd.EjecutarComando(vConsulta)) //Si se modifico el registro
                     {
                         MessageBox.Show("Doctor modificado con exito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         CargarDoctores();
