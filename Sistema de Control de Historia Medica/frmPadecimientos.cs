@@ -13,7 +13,7 @@ namespace Sistema_de_Control_de_Historia_Medica
     public partial class frmPadecimientos : Form
     {
        
-        clsBaseDatos bd = new clsBaseDatos();
+        clsBaseDatos bd = new clsBaseDatos(); //objeto de base de datos
 
         public frmPadecimientos()
         {
@@ -27,7 +27,6 @@ namespace Sistema_de_Control_de_Historia_Medica
             frm.StartPosition = FormStartPosition.CenterScreen; //Lo centramos en la pantalla
             frm.Show();
         }
-
         private void btnCargarPadecimientos_Click(object sender, EventArgs e)
         {
             cargarPadecimientos(); //Cargamos los padecimientos del usuario al datagrid

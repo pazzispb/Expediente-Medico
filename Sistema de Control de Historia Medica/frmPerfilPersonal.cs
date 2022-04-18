@@ -16,22 +16,17 @@ namespace Sistema_de_Control_de_Historia_Medica
         {
             InitializeComponent();
         }
-
+        clsBaseDatos bd = new clsBaseDatos(); //objeto de base de datos
         private void frmPerfilPersonal_Load(object sender, EventArgs e) // evento que se activa cuando se abre un formulario
         {
-            clsBaseDatos bd = new clsBaseDatos();
-
+            clsBaseDatos bd = new clsBaseDatos(); //objeto de base de datos
             string vConsulta = $"SELECT usuario, nombre, apellido, cedula, fechaNacimiento, altura, peso, tipoSangre, " +
-                $"seguroMedico, telefono FROM Usuarios WHERE idUsuario ={frmMenuPrincipal.vIdUsuario}"; // pasar la consulta relacionada con el id correspondiente
-
-
-            DataSet vInformacion = new DataSet(); // objeto creado para almacenar la informacion extraida de la base de datos 
-
-            vInformacion = bd.ConsultarInfomacion(vConsulta); // almacenar en memoria para utilizar en este formulario
-
-            object[] aDatos = vInformacion.Tables[0].Rows[0].ItemArray; // creacion de un arreglo con los datos del usuario, para poder insertarlos dentro de este formulario
-
-            txtUsuario.Text = aDatos[0].ToString(); // creacion de arreglos para cada campo 
+                $"seguroMedico, telefono FROM Usuarios WHERE idUsuario = {frmMenuPrincipal.vIdUsuario}"; //creamos la consulta
+            DataSet vInformacion = new DataSet(); //objeto creado para almacenar la informacion extraida de la base de datos 
+            vInformacion = bd.ConsultarInfomacion(vConsulta); //almacenar en memoria para utilizar en este formulario
+            object[] aDatos = vInformacion.Tables[0].Rows[0].ItemArray; //creacion de un arreglo con los datos del usuario para poder insertarlos dentro de este formulario
+            //asignamos cada datos del usuario con su respectivo campo dentro del formulario
+            txtUsuario.Text = aDatos[0].ToString();
             txtNombre.Text = aDatos[1].ToString();
             txtApellido.Text = aDatos[2].ToString();
             txtCedula.Text = aDatos[3].ToString();
@@ -42,17 +37,14 @@ namespace Sistema_de_Control_de_Historia_Medica
             txtTelefono.Text = aDatos[9].ToString();
             cmbTipoSangre.SelectedItem = aDatos[7].ToString();
         }
-
         private void btnEditarPerfil_Click(object sender, EventArgs e)
         {
-            clsBaseDatos bd = new clsBaseDatos();
-
             string vConsulta = $"UPDATE Usuarios" +
             $" SET nombre = '{txtNombre.Text}'," +
             $"apellido = '{txtApellido.Text}' , cedula = '{txtCedula.Text}', fechaNacimiento = '{dtpFecha.Text}', altura = {txtAltura.Text}, peso = {txtPeso.Text}, tipoSangre = '{cmbTipoSangre.Text}', seguroMedico = '{txtSeguroMedico.Text}', telefono = '{txtTelefono.Text}'" +
             $" WHERE idUsuario = {frmMenuPrincipal.vIdUsuario} ";
             if (ValidarCamposRellenos())//Si todos los campos tienen un contenido
-                if (bd.EjecutarComando(vConsulta))
+                if (bd.EjecutarComando(vConsulta)) //si se modifico el registro
                 {
                     MessageBox.Show("Perfil actualizado de manera exitosa", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
