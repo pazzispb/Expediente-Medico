@@ -85,7 +85,7 @@
             this.pnDatosCita.Location = new System.Drawing.Point(7, 5);
             this.pnDatosCita.Margin = new System.Windows.Forms.Padding(4);
             this.pnDatosCita.Name = "pnDatosCita";
-            this.pnDatosCita.Size = new System.Drawing.Size(431, 166);
+            this.pnDatosCita.Size = new System.Drawing.Size(434, 166);
             this.pnDatosCita.TabIndex = 38;
             // 
             // cmbCentro
