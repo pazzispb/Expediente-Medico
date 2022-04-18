@@ -53,6 +53,7 @@ namespace Sistema_de_Control_de_Historia_Medica
                 if (bd.EjecutarComando(vConsulta))//Si se agrego el registro en la base de datos
                 {
                     MessageBox.Show("Doctor registrado con éxito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    CargarDoctores();
                     LimpiarCampos();
                 }
                 else MessageBox.Show("Hubo un error al registrar el doctor", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
