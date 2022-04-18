@@ -65,7 +65,8 @@ namespace Sistema_de_Control_de_Historia_Medica
             try
             {
                 AbrirConexion();
-                SQLiteCommand sQLiteCommand = new SQLiteCommand(vConsulta, conexion);//Iniciamos un objeto para ejecutar comando en la base de datos
+                SQLiteCommand sQLiteCommand = new SQLiteCommand("PRAGMA foreign_keys=ON;" + vConsulta, conexion);//Iniciamos un objeto para ejecutar comando en la base de datos
+                //PRAGMA foreign_keys = ON; Es para que los contraints de foreign keys funcionen (ON DELETE CASCADE)
                 if (sQLiteCommand.ExecuteNonQuery() > 0) //Si afecto registros
                 {
                     CerrarConexion(); 

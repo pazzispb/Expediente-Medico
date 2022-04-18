@@ -52,7 +52,7 @@
             // labTitulo
             // 
             this.labTitulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.labTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labTitulo.Font = new System.Drawing.Font("Montserrat", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labTitulo.Location = new System.Drawing.Point(0, 0);
             this.labTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labTitulo.Name = "labTitulo";
@@ -91,21 +91,23 @@
             // cmbCentro
             // 
             this.cmbCentro.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cmbCentro.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCentro.FormattingEnabled = true;
             this.cmbCentro.Location = new System.Drawing.Point(167, 118);
             this.cmbCentro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbCentro.Name = "cmbCentro";
-            this.cmbCentro.Size = new System.Drawing.Size(244, 24);
+            this.cmbCentro.Size = new System.Drawing.Size(244, 32);
             this.cmbCentro.TabIndex = 37;
             // 
             // cmbDesplegarDoctor
             // 
             this.cmbDesplegarDoctor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDesplegarDoctor.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbDesplegarDoctor.FormattingEnabled = true;
             this.cmbDesplegarDoctor.Location = new System.Drawing.Point(103, 10);
             this.cmbDesplegarDoctor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbDesplegarDoctor.Name = "cmbDesplegarDoctor";
-            this.cmbDesplegarDoctor.Size = new System.Drawing.Size(244, 24);
+            this.cmbDesplegarDoctor.Size = new System.Drawing.Size(244, 32);
             this.cmbDesplegarDoctor.TabIndex = 34;
             // 
             // dgvInfoCitas
@@ -130,6 +132,7 @@
             // 
             this.MonthCalendar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.MonthCalendar.Enabled = false;
+            this.MonthCalendar.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MonthCalendar.Location = new System.Drawing.Point(685, 17);
             this.MonthCalendar.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
             this.MonthCalendar.MaxDate = new System.DateTime(2022, 12, 31, 0, 0, 0, 0);
@@ -141,7 +144,7 @@
             // 
             this.btnAñadirCita.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
             this.btnAñadirCita.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAñadirCita.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAñadirCita.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAñadirCita.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnAñadirCita.Location = new System.Drawing.Point(455, 193);
             this.btnAñadirCita.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -154,16 +157,18 @@
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Location = new System.Drawing.Point(28, 199);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(363, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(363, 28);
             this.dateTimePicker1.TabIndex = 30;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // cmbDesplegarHorario
             // 
             this.cmbDesplegarHorario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDesplegarHorario.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbDesplegarHorario.FormattingEnabled = true;
             this.cmbDesplegarHorario.Items.AddRange(new object[] {
             "10:00 AM",
@@ -184,7 +189,7 @@
             this.cmbDesplegarHorario.Location = new System.Drawing.Point(112, 132);
             this.cmbDesplegarHorario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbDesplegarHorario.Name = "cmbDesplegarHorario";
-            this.cmbDesplegarHorario.Size = new System.Drawing.Size(244, 24);
+            this.cmbDesplegarHorario.Size = new System.Drawing.Size(244, 32);
             this.cmbDesplegarHorario.TabIndex = 36;
             // 
             // btnModificarCita
@@ -192,7 +197,7 @@
             this.btnModificarCita.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnModificarCita.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
             this.btnModificarCita.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnModificarCita.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificarCita.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificarCita.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnModificarCita.Location = new System.Drawing.Point(156, 514);
             this.btnModificarCita.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -207,11 +212,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(236)))), ((int)(((byte)(177)))));
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(20, 192);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(137, 20);
+            this.label2.Size = new System.Drawing.Size(146, 24);
             this.label2.TabIndex = 29;
             this.label2.Text = "Centro médico:";
             // 
@@ -219,11 +224,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(236)))), ((int)(((byte)(177)))));
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(20, 135);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 20);
+            this.label1.Size = new System.Drawing.Size(78, 24);
             this.label1.TabIndex = 28;
             this.label1.Text = "Horario:";
             // 
@@ -231,11 +236,11 @@
             // 
             this.labcondiciones.AutoSize = true;
             this.labcondiciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(236)))), ((int)(((byte)(177)))));
-            this.labcondiciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labcondiciones.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labcondiciones.Location = new System.Drawing.Point(20, 84);
             this.labcondiciones.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labcondiciones.Name = "labcondiciones";
-            this.labcondiciones.Size = new System.Drawing.Size(72, 20);
+            this.labcondiciones.Size = new System.Drawing.Size(74, 24);
             this.labcondiciones.TabIndex = 27;
             this.labcondiciones.Text = "Doctor:";
             // 
@@ -244,7 +249,7 @@
             this.btnCitasAgendadas.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnCitasAgendadas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
             this.btnCitasAgendadas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCitasAgendadas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCitasAgendadas.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCitasAgendadas.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnCitasAgendadas.Location = new System.Drawing.Point(363, 514);
             this.btnCitasAgendadas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -260,7 +265,7 @@
             this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnEliminar.Location = new System.Drawing.Point(688, 514);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
