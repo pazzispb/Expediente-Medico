@@ -47,58 +47,64 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Montserrat", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(258, 22);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(345, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(210, 25);
+            this.label1.Size = new System.Drawing.Size(289, 39);
             this.label1.TabIndex = 34;
             this.label1.Text = "Datos del Farmaco";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(23, 35);
+            this.label2.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(31, 43);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 16);
+            this.label2.Size = new System.Drawing.Size(91, 24);
             this.label2.TabIndex = 0;
             this.label2.Text = "Fármaco:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(393, 21);
+            this.label4.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(524, 26);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(94, 16);
+            this.label4.Size = new System.Drawing.Size(120, 24);
             this.label4.TabIndex = 2;
             this.label4.Text = "Descripción:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(7, 86);
+            this.label5.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(9, 106);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(88, 16);
+            this.label5.Size = new System.Drawing.Size(113, 24);
             this.label5.TabIndex = 3;
             this.label5.Text = "Frecuencia:";
             // 
             // txtFarmaco
             // 
-            this.txtFarmaco.Location = new System.Drawing.Point(103, 35);
+            this.txtFarmaco.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFarmaco.Location = new System.Drawing.Point(137, 43);
+            this.txtFarmaco.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtFarmaco.Name = "txtFarmaco";
-            this.txtFarmaco.Size = new System.Drawing.Size(251, 20);
+            this.txtFarmaco.Size = new System.Drawing.Size(333, 28);
             this.txtFarmaco.TabIndex = 9;
             // 
             // txtDescripcionFarmaco
             // 
-            this.txtDescripcionFarmaco.Location = new System.Drawing.Point(396, 46);
+            this.txtDescripcionFarmaco.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescripcionFarmaco.Location = new System.Drawing.Point(528, 57);
+            this.txtDescripcionFarmaco.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDescripcionFarmaco.Multiline = true;
             this.txtDescripcionFarmaco.Name = "txtDescripcionFarmaco";
-            this.txtDescripcionFarmaco.Size = new System.Drawing.Size(272, 86);
+            this.txtDescripcionFarmaco.Size = new System.Drawing.Size(361, 105);
             this.txtDescripcionFarmaco.TabIndex = 10;
             // 
             // btnGuardarFarmaco
@@ -106,12 +112,12 @@
             this.btnGuardarFarmaco.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGuardarFarmaco.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
             this.btnGuardarFarmaco.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnGuardarFarmaco.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarFarmaco.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardarFarmaco.ForeColor = System.Drawing.Color.White;
-            this.btnGuardarFarmaco.Location = new System.Drawing.Point(396, 139);
-            this.btnGuardarFarmaco.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGuardarFarmaco.Location = new System.Drawing.Point(528, 171);
+            this.btnGuardarFarmaco.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGuardarFarmaco.Name = "btnGuardarFarmaco";
-            this.btnGuardarFarmaco.Size = new System.Drawing.Size(173, 33);
+            this.btnGuardarFarmaco.Size = new System.Drawing.Size(231, 41);
             this.btnGuardarFarmaco.TabIndex = 34;
             this.btnGuardarFarmaco.Text = "Guardar datos";
             this.btnGuardarFarmaco.UseVisualStyleBackColor = false;
@@ -122,12 +128,12 @@
             this.btnCancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCancelar.BackColor = System.Drawing.Color.Gray;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(573, 139);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancelar.Location = new System.Drawing.Point(764, 171);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(95, 33);
+            this.btnCancelar.Size = new System.Drawing.Size(127, 41);
             this.btnCancelar.TabIndex = 35;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -147,21 +153,25 @@
             this.pnContenedor.Controls.Add(this.label5);
             this.pnContenedor.Controls.Add(this.label4);
             this.pnContenedor.Controls.Add(this.label2);
-            this.pnContenedor.Location = new System.Drawing.Point(18, 64);
+            this.pnContenedor.Location = new System.Drawing.Point(24, 79);
+            this.pnContenedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnContenedor.Name = "pnContenedor";
-            this.pnContenedor.Size = new System.Drawing.Size(691, 207);
+            this.pnContenedor.Size = new System.Drawing.Size(921, 255);
             this.pnContenedor.TabIndex = 17;
             // 
             // txtDosisFarmaco
             // 
-            this.txtDosisFarmaco.Location = new System.Drawing.Point(103, 137);
+            this.txtDosisFarmaco.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDosisFarmaco.Location = new System.Drawing.Point(137, 169);
+            this.txtDosisFarmaco.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDosisFarmaco.Name = "txtDosisFarmaco";
-            this.txtDosisFarmaco.Size = new System.Drawing.Size(251, 20);
+            this.txtDosisFarmaco.Size = new System.Drawing.Size(333, 28);
             this.txtDosisFarmaco.TabIndex = 48;
             // 
             // cmbVeces
             // 
             this.cmbVeces.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbVeces.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbVeces.FormattingEnabled = true;
             this.cmbVeces.Items.AddRange(new object[] {
             "1 vez",
@@ -173,44 +183,50 @@
             "8 veces",
             "9 veces",
             "10 veces"});
-            this.cmbVeces.Location = new System.Drawing.Point(271, 85);
+            this.cmbVeces.Location = new System.Drawing.Point(361, 105);
+            this.cmbVeces.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbVeces.Name = "cmbVeces";
-            this.cmbVeces.Size = new System.Drawing.Size(83, 21);
+            this.cmbVeces.Size = new System.Drawing.Size(109, 32);
             this.cmbVeces.TabIndex = 47;
             // 
             // cmbFrecuenciaFarmaco
             // 
             this.cmbFrecuenciaFarmaco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFrecuenciaFarmaco.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbFrecuenciaFarmaco.FormattingEnabled = true;
             this.cmbFrecuenciaFarmaco.Items.AddRange(new object[] {
             "Diaria",
             "Interdiaria",
             "Semanal",
             "Mensual"});
-            this.cmbFrecuenciaFarmaco.Location = new System.Drawing.Point(103, 85);
+            this.cmbFrecuenciaFarmaco.Location = new System.Drawing.Point(137, 105);
+            this.cmbFrecuenciaFarmaco.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbFrecuenciaFarmaco.Name = "cmbFrecuenciaFarmaco";
-            this.cmbFrecuenciaFarmaco.Size = new System.Drawing.Size(150, 21);
+            this.cmbFrecuenciaFarmaco.Size = new System.Drawing.Size(199, 32);
             this.cmbFrecuenciaFarmaco.TabIndex = 46;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(44, 138);
+            this.label3.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(59, 170);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 16);
+            this.label3.Size = new System.Drawing.Size(62, 24);
             this.label3.TabIndex = 44;
             this.label3.Text = "Dosis:";
             // 
             // frmRegistrarFarmacos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(723, 287);
+            this.ClientSize = new System.Drawing.Size(964, 353);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pnContenedor);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmRegistrarFarmacos";
             this.Text = "Registro de Farmacos";
+            this.Load += new System.EventHandler(this.frmRegistrarFarmacos_Load);
             this.pnContenedor.ResumeLayout(false);
             this.pnContenedor.PerformLayout();
             this.ResumeLayout(false);
