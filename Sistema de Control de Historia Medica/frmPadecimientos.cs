@@ -19,94 +19,55 @@ namespace Sistema_de_Control_de_Historia_Medica
         {
             InitializeComponent();
         }
-
-        private void labTitulo_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labNombre_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void txtTelefono_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labCentroDeSalud_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnIngresarPadecimientos_Click(object sender, EventArgs e)
         {
             frmRegistrarPadecimientos frm = new frmRegistrarPadecimientos();
-            frm.MdiParent = this.MdiParent; // Asignar el mismo padre a ambas clases
-            frm.frmPadecimientos = this;
-            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.MdiParent = this.MdiParent; // Asignar el mismo padre a ambas formularios
+            frm.frmPadecimientos = this; //Le pasamos este formulario para que pueda ejercer operaciones sobre el
+            frm.StartPosition = FormStartPosition.CenterScreen; //Lo centramos en la pantalla
             frm.Show();
-
         }
 
         private void btnCargarPadecimientos_Click(object sender, EventArgs e)
         {
-            cargarPadecimientos();
+            cargarPadecimientos(); //Cargamos los padecimientos del usuario al datagrid
         }
-
-        public void cargarPadecimientos()
+        public void cargarPadecimientos() //Cargamos los padecimientos del usuario al datagrid
         {
             DataSet ds = bd.ConsultarInfomacion("SELECT tipoPadecimiento as 'Tipo', nombrePadecimiento as 'Nombre', fecha as 'Fecha', descripcion as 'Descripción'" +
-                $"FROM Padecimientos WHERE idUsuario = {frmMenuPrincipal.vIdUsuario}");//Carga los registros correspondientes a las analiticas de los usuarios
-            dgvPadecimientos.DataSource = ds.Tables[0];//Carga la tabla con los resultados de la consulta
+                $"FROM Padecimientos WHERE idUsuario = {frmMenuPrincipal.vIdUsuario}");//Trae los padecimientos correspondientes al usuario con la sesion iniciada desde la base de datos y los almacena en un dataset
+            dgvPadecimientos.DataSource = ds.Tables[0];//Carga el datagridview con lo que se encuentra almacenado en el dataset
         }
-
         private void frmPadecimientos_Load(object sender, EventArgs e)
         {
             cargarPadecimientos();
         }
-
-      
-
         private void dgvPadecimientos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex > -1 && dgvPadecimientos.Rows[e.RowIndex].Cells[2].Value.ToString()!= "No Aplica")
+            if (e.RowIndex > -1) //Si la celda seleccionada no es un header
             {
-                dtpPadecimiento.Visible = true;
-                txtFechaNoAplica.Visible = false;
-
-                txtTipoPadecimiento.Text = dgvPadecimientos.Rows[e.RowIndex].Cells[0].Value.ToString();
-                txtPadecimiento.Text = dgvPadecimientos.Rows[e.RowIndex].Cells[1].Value.ToString();
-                dtpPadecimiento.Text = dgvPadecimientos.Rows[e.RowIndex].Cells[2].Value.ToString();
-                txtDescripcionPadecimiento.Text = dgvPadecimientos.Rows[e.RowIndex].Cells[3].Value.ToString();
+                if (dgvPadecimientos.Rows[e.RowIndex].Cells[2].Value.ToString() != "No Aplica") //Si el campo de fecha de la celda seleccionada no dice no aplica
+                {
+                    dtpPadecimiento.Visible = true; //visibilizamos el datetimepicker
+                    txtFechaNoAplica.Visible = false; //Invisibilizamos el textbox que dice no aplica
+                    //Cargamos cada valor de las columnas de la fila actual con su respectivo campo del formulario
+                    txtTipoPadecimiento.Text = dgvPadecimientos.Rows[e.RowIndex].Cells[0].Value.ToString();
+                    txtPadecimiento.Text = dgvPadecimientos.Rows[e.RowIndex].Cells[1].Value.ToString();
+                    dtpPadecimiento.Text = dgvPadecimientos.Rows[e.RowIndex].Cells[2].Value.ToString();
+                    txtDescripcionPadecimiento.Text = dgvPadecimientos.Rows[e.RowIndex].Cells[3].Value.ToString();
+                }
+                else
+                {
+                    dtpPadecimiento.Visible = false; //invisibilizamos el datetimepicker
+                    txtFechaNoAplica.Visible = true; //visibilizamos el textbox que dice no aplica
+                    //Cargamos cada valor de las columnas de la fila actual con su respectivo campo del formulario
+                    txtTipoPadecimiento.Text = dgvPadecimientos.Rows[e.RowIndex].Cells[0].Value.ToString();
+                    txtPadecimiento.Text = dgvPadecimientos.Rows[e.RowIndex].Cells[1].Value.ToString();
+                    txtFechaNoAplica.Text = dgvPadecimientos.Rows[e.RowIndex].Cells[2].Value.ToString();
+                    txtDescripcionPadecimiento.Text = dgvPadecimientos.Rows[e.RowIndex].Cells[3].Value.ToString();
+                }
             }
-            else
-            {
-                dtpPadecimiento.Visible = false;
-                txtFechaNoAplica.Visible = true;
-
-                txtTipoPadecimiento.Text = dgvPadecimientos.Rows[e.RowIndex].Cells[0].Value.ToString();
-                txtPadecimiento.Text = dgvPadecimientos.Rows[e.RowIndex].Cells[1].Value.ToString();
-                txtFechaNoAplica.Text = dgvPadecimientos.Rows[e.RowIndex].Cells[2].Value.ToString();
-                txtDescripcionPadecimiento.Text = dgvPadecimientos.Rows[e.RowIndex].Cells[3].Value.ToString();
-
-            }
+            
         }
     }
 }
