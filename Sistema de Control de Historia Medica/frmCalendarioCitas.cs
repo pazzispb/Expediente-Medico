@@ -131,7 +131,6 @@ namespace Sistema_de_Control_de_Historia_Medica
             dateTimePicker1.Value = Convert.ToDateTime(dgv.Cells[3].Value.ToString());
             cmbDesplegarHorario.Text = dgv.Cells[4].Value.ToString();
         }
-
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e) //Cuando el datetimepicker cambie de valor
         {
             MonthCalendar.SetDate(dateTimePicker1.Value); //El calendario toma esa misma fecha

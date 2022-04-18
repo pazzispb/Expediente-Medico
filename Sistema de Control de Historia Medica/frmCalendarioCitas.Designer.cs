@@ -73,7 +73,7 @@
             this.panel1.Controls.Add(this.btnAñadirCita);
             this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Location = new System.Drawing.Point(3, 68);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1025, 427);
             this.panel1.TabIndex = 16;
@@ -83,7 +83,7 @@
             this.pnDatosCita.Controls.Add(this.cmbCentro);
             this.pnDatosCita.Controls.Add(this.cmbDesplegarDoctor);
             this.pnDatosCita.Location = new System.Drawing.Point(7, 5);
-            this.pnDatosCita.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnDatosCita.Margin = new System.Windows.Forms.Padding(4);
             this.pnDatosCita.Name = "pnDatosCita";
             this.pnDatosCita.Size = new System.Drawing.Size(431, 166);
             this.pnDatosCita.TabIndex = 38;
@@ -94,7 +94,7 @@
             this.cmbCentro.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCentro.FormattingEnabled = true;
             this.cmbCentro.Location = new System.Drawing.Point(167, 118);
-            this.cmbCentro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbCentro.Margin = new System.Windows.Forms.Padding(4);
             this.cmbCentro.Name = "cmbCentro";
             this.cmbCentro.Size = new System.Drawing.Size(244, 32);
             this.cmbCentro.TabIndex = 37;
@@ -105,7 +105,7 @@
             this.cmbDesplegarDoctor.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbDesplegarDoctor.FormattingEnabled = true;
             this.cmbDesplegarDoctor.Location = new System.Drawing.Point(103, 10);
-            this.cmbDesplegarDoctor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbDesplegarDoctor.Margin = new System.Windows.Forms.Padding(4);
             this.cmbDesplegarDoctor.Name = "cmbDesplegarDoctor";
             this.cmbDesplegarDoctor.Size = new System.Drawing.Size(244, 32);
             this.cmbDesplegarDoctor.TabIndex = 34;
@@ -120,7 +120,7 @@
             this.dgvInfoCitas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvInfoCitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvInfoCitas.Location = new System.Drawing.Point(1, 257);
-            this.dgvInfoCitas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvInfoCitas.Margin = new System.Windows.Forms.Padding(4);
             this.dgvInfoCitas.Name = "dgvInfoCitas";
             this.dgvInfoCitas.ReadOnly = true;
             this.dgvInfoCitas.RowHeadersWidth = 51;
@@ -146,10 +146,10 @@
             this.btnAñadirCita.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAñadirCita.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAñadirCita.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnAñadirCita.Location = new System.Drawing.Point(455, 193);
-            this.btnAñadirCita.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAñadirCita.Location = new System.Drawing.Point(453, 194);
+            this.btnAñadirCita.Margin = new System.Windows.Forms.Padding(4);
             this.btnAñadirCita.Name = "btnAñadirCita";
-            this.btnAñadirCita.Size = new System.Drawing.Size(181, 42);
+            this.btnAñadirCita.Size = new System.Drawing.Size(216, 42);
             this.btnAñadirCita.TabIndex = 27;
             this.btnAñadirCita.Text = "Añadir cita";
             this.btnAñadirCita.UseVisualStyleBackColor = false;
@@ -159,7 +159,7 @@
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Location = new System.Drawing.Point(28, 199);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(363, 28);
             this.dateTimePicker1.TabIndex = 30;
@@ -187,7 +187,7 @@
             "4:30 PM",
             "5:00 PM"});
             this.cmbDesplegarHorario.Location = new System.Drawing.Point(112, 132);
-            this.cmbDesplegarHorario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbDesplegarHorario.Margin = new System.Windows.Forms.Padding(4);
             this.cmbDesplegarHorario.Name = "cmbDesplegarHorario";
             this.cmbDesplegarHorario.Size = new System.Drawing.Size(244, 32);
             this.cmbDesplegarHorario.TabIndex = 36;
@@ -200,7 +200,7 @@
             this.btnModificarCita.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificarCita.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnModificarCita.Location = new System.Drawing.Point(156, 514);
-            this.btnModificarCita.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnModificarCita.Margin = new System.Windows.Forms.Padding(4);
             this.btnModificarCita.Name = "btnModificarCita";
             this.btnModificarCita.Size = new System.Drawing.Size(149, 41);
             this.btnModificarCita.TabIndex = 32;
@@ -252,7 +252,7 @@
             this.btnCitasAgendadas.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCitasAgendadas.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnCitasAgendadas.Location = new System.Drawing.Point(363, 514);
-            this.btnCitasAgendadas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCitasAgendadas.Margin = new System.Windows.Forms.Padding(4);
             this.btnCitasAgendadas.Name = "btnCitasAgendadas";
             this.btnCitasAgendadas.Size = new System.Drawing.Size(279, 41);
             this.btnCitasAgendadas.TabIndex = 34;
@@ -268,7 +268,7 @@
             this.btnEliminar.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnEliminar.Location = new System.Drawing.Point(688, 514);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(192, 41);
             this.btnEliminar.TabIndex = 37;
