@@ -63,9 +63,10 @@ CREATE TABLE IF NOT EXISTS "Citas" (
 	"idCita"	INTEGER,
 	"idUsuario"	INTEGER NOT NULL,
 	PRIMARY KEY("idCita" AUTOINCREMENT),
-	FOREIGN KEY("idDoctor") REFERENCES "Doctores"("idDoctor"),
+	FOREIGN KEY("idDoctor") REFERENCES "Doctores"("idDoctor") ON DELETE CASCADE,
 	FOREIGN KEY("idUsuario") REFERENCES "Usuarios"("idUsuario")
 );
+PRAGMA foreign_keys = ON;
 INSERT OR IGNORE INTO Usuarios(usuario, clave, nombre, apellido, cedula, fechaNacimiento, altura, peso, tipoSangre, seguroMedico, telefono)
 VALUES("ADMIN", "1234", "ADMIN", "ADMIN", "00000000", "4/5/2022", 0, 0, "O+", "HUMANO", "809000000" );
 COMMIT;
