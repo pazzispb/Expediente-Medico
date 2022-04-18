@@ -74,7 +74,6 @@
             this.labTitulo.TabIndex = 5;
             this.labTitulo.Text = "Registrar Doctor";
             this.labTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.labTitulo.Click += new System.EventHandler(this.labTitulo_Click);
             // 
             // labNombre
             // 

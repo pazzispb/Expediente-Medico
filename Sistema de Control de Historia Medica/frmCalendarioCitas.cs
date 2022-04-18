@@ -26,9 +26,6 @@ namespace Sistema_de_Control_de_Historia_Medica
             cargarDoctores();
             cargarCentro();
         }
-
-       
-
         private void btnAñadirCita_Click_1(object sender, EventArgs e)
         {
             if (ValidarCamposRellenos()) {
@@ -46,7 +43,6 @@ namespace Sistema_de_Control_de_Historia_Medica
                     else MessageBox.Show("Hubo un error al registrar la cita", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
         }
-
         bool ValidarCamposRellenos()
         {
             foreach (Control c in pnDatosCita.Controls) //Recorremos cada elemento del formulario
@@ -57,7 +53,6 @@ namespace Sistema_de_Control_de_Historia_Medica
                 }
             return true; //retorna que los campos estan rellenos
         }
-
         void LimpiarCampos()
         {
             foreach (Control c in pnDatosCita.Controls) //Recorremos cada elemento del formulario
@@ -66,7 +61,6 @@ namespace Sistema_de_Control_de_Historia_Medica
                     c.Text = ""; //Limpia el contenido del control
                 }
         }
-
         void CargarInfoCita()
         {
             DataSet ds = bd.ConsultarInfomacion("SELECT idCita as 'ID', doctorCita as 'Doctor', centroCita as 'Centro medico', fecha as 'Fecha', horario as 'Horario'" +
@@ -74,13 +68,10 @@ namespace Sistema_de_Control_de_Historia_Medica
             dgvInfoCitas.DataSource = ds.Tables[0];//Carga la tabla con los resultados de la consulta
 
         }
-
         private void btnCitasAgendadas_Click(object sender, EventArgs e)
         {
             CargarInfoCita();
         }
-        
-        
         private void cargarDoctores()
         {
             DataSet ds = bd.ConsultarInfomacion("SELECT idDoctor as 'ID', nombreDoctor as 'Nombre' FROM Doctores");//Carga los registros correspondientes a las analiticas de los usuarios
