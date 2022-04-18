@@ -60,7 +60,7 @@
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(24, 297);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(985, 217);
             this.panel2.TabIndex = 18;
@@ -70,7 +70,7 @@
             this.txtDosisFarmaco.Enabled = false;
             this.txtDosisFarmaco.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDosisFarmaco.Location = new System.Drawing.Point(167, 160);
-            this.txtDosisFarmaco.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDosisFarmaco.Margin = new System.Windows.Forms.Padding(4);
             this.txtDosisFarmaco.Name = "txtDosisFarmaco";
             this.txtDosisFarmaco.Size = new System.Drawing.Size(333, 28);
             this.txtDosisFarmaco.TabIndex = 59;
@@ -91,7 +91,7 @@
             "9 veces",
             "10 veces"});
             this.cmbFrecuencia.Location = new System.Drawing.Point(391, 96);
-            this.cmbFrecuencia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbFrecuencia.Margin = new System.Windows.Forms.Padding(4);
             this.cmbFrecuencia.Name = "cmbFrecuencia";
             this.cmbFrecuencia.Size = new System.Drawing.Size(109, 32);
             this.cmbFrecuencia.TabIndex = 58;
@@ -107,7 +107,7 @@
             "Semanal",
             "Mensual"});
             this.cmbFrecuenciaFarmaco.Location = new System.Drawing.Point(167, 96);
-            this.cmbFrecuenciaFarmaco.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbFrecuenciaFarmaco.Margin = new System.Windows.Forms.Padding(4);
             this.cmbFrecuenciaFarmaco.Name = "cmbFrecuenciaFarmaco";
             this.cmbFrecuenciaFarmaco.Size = new System.Drawing.Size(199, 32);
             this.cmbFrecuenciaFarmaco.TabIndex = 57;
@@ -128,10 +128,10 @@
             this.txtDescripcionFarmaco.Enabled = false;
             this.txtDescripcionFarmaco.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescripcionFarmaco.Location = new System.Drawing.Point(571, 60);
-            this.txtDescripcionFarmaco.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDescripcionFarmaco.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescripcionFarmaco.Multiline = true;
             this.txtDescripcionFarmaco.Name = "txtDescripcionFarmaco";
-            this.txtDescripcionFarmaco.Size = new System.Drawing.Size(361, 105);
+            this.txtDescripcionFarmaco.Size = new System.Drawing.Size(361, 128);
             this.txtDescripcionFarmaco.TabIndex = 53;
             // 
             // txtFarmaco
@@ -139,7 +139,7 @@
             this.txtFarmaco.Enabled = false;
             this.txtFarmaco.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFarmaco.Location = new System.Drawing.Point(167, 34);
-            this.txtFarmaco.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFarmaco.Margin = new System.Windows.Forms.Padding(4);
             this.txtFarmaco.Name = "txtFarmaco";
             this.txtFarmaco.Size = new System.Drawing.Size(333, 28);
             this.txtFarmaco.TabIndex = 52;
@@ -195,7 +195,7 @@
             this.dgvFarmacos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvFarmacos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvFarmacos.Location = new System.Drawing.Point(25, 79);
-            this.dgvFarmacos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvFarmacos.Margin = new System.Windows.Forms.Padding(4);
             this.dgvFarmacos.Name = "dgvFarmacos";
             this.dgvFarmacos.ReadOnly = true;
             this.dgvFarmacos.RowHeadersVisible = false;
@@ -222,7 +222,7 @@
             this.btnCargarFarmacos.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCargarFarmacos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnCargarFarmacos.Location = new System.Drawing.Point(551, 30);
-            this.btnCargarFarmacos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCargarFarmacos.Margin = new System.Windows.Forms.Padding(4);
             this.btnCargarFarmacos.Name = "btnCargarFarmacos";
             this.btnCargarFarmacos.Size = new System.Drawing.Size(132, 42);
             this.btnCargarFarmacos.TabIndex = 38;
@@ -237,7 +237,7 @@
             this.btnIngresarFarmacos.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIngresarFarmacos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnIngresarFarmacos.Location = new System.Drawing.Point(693, 30);
-            this.btnIngresarFarmacos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnIngresarFarmacos.Margin = new System.Windows.Forms.Padding(4);
             this.btnIngresarFarmacos.Name = "btnIngresarFarmacos";
             this.btnIngresarFarmacos.Size = new System.Drawing.Size(316, 42);
             this.btnIngresarFarmacos.TabIndex = 39;
@@ -256,7 +256,7 @@
             this.Controls.Add(this.dgvFarmacos);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmFarmacos";
             this.Text = "Fármacos";
             this.panel2.ResumeLayout(false);
