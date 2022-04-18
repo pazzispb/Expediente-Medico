@@ -55,7 +55,7 @@
             this.labTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labTitulo.Location = new System.Drawing.Point(0, 0);
             this.labTitulo.Name = "labTitulo";
-            this.labTitulo.Size = new System.Drawing.Size(773, 25);
+            this.labTitulo.Size = new System.Drawing.Size(773, 42);
             this.labTitulo.TabIndex = 15;
             this.labTitulo.Text = "Calendario";
             this.labTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -130,6 +130,7 @@
             // btnAñadirCita
             // 
             this.btnAñadirCita.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
+            this.btnAñadirCita.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAñadirCita.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAñadirCita.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnAñadirCita.Location = new System.Drawing.Point(341, 157);
@@ -144,12 +145,14 @@
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(21, 162);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(245, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(273, 20);
             this.dateTimePicker1.TabIndex = 30;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // cmbDesplegarHorario
             // 
+            this.cmbDesplegarHorario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDesplegarHorario.Enabled = false;
             this.cmbDesplegarHorario.FormattingEnabled = true;
             this.cmbDesplegarHorario.Items.AddRange(new object[] {
             "10:00 AM",
@@ -176,11 +179,12 @@
             // 
             this.btnModificarCita.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnModificarCita.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
+            this.btnModificarCita.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnModificarCita.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificarCita.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnModificarCita.Location = new System.Drawing.Point(152, 418);
+            this.btnModificarCita.Location = new System.Drawing.Point(117, 418);
             this.btnModificarCita.Name = "btnModificarCita";
-            this.btnModificarCita.Size = new System.Drawing.Size(98, 33);
+            this.btnModificarCita.Size = new System.Drawing.Size(112, 33);
             this.btnModificarCita.TabIndex = 32;
             this.btnModificarCita.Text = "Modificar";
             this.btnModificarCita.UseVisualStyleBackColor = false;
@@ -223,11 +227,12 @@
             // 
             this.btnCitasAgendadas.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnCitasAgendadas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
+            this.btnCitasAgendadas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCitasAgendadas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCitasAgendadas.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCitasAgendadas.Location = new System.Drawing.Point(337, 411);
+            this.btnCitasAgendadas.Location = new System.Drawing.Point(272, 418);
             this.btnCitasAgendadas.Name = "btnCitasAgendadas";
-            this.btnCitasAgendadas.Size = new System.Drawing.Size(144, 47);
+            this.btnCitasAgendadas.Size = new System.Drawing.Size(209, 33);
             this.btnCitasAgendadas.TabIndex = 34;
             this.btnCitasAgendadas.Text = "Ver Citas Agendadas";
             this.btnCitasAgendadas.UseVisualStyleBackColor = false;
@@ -237,11 +242,12 @@
             // 
             this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnEliminar.Location = new System.Drawing.Point(562, 418);
+            this.btnEliminar.Location = new System.Drawing.Point(516, 418);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(98, 33);
+            this.btnEliminar.Size = new System.Drawing.Size(144, 33);
             this.btnEliminar.TabIndex = 37;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;

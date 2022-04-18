@@ -28,8 +28,7 @@ namespace Sistema_de_Control_de_Historia_Medica
             var fechaActual = DateTime.Now;
             dateTimePicker1.MinDate = fechaActual;
             MonthCalendar.MinDate = fechaActual;
-            
-
+            cmbDesplegarHorario.SelectedIndex = 0;
             cargarDoctores();
             cargarCentro();
 
