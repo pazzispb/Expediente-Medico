@@ -63,7 +63,7 @@ namespace Sistema_de_Control_de_Historia_Medica
                 lblID.Text = dgvAnaliticas.Rows[e.RowIndex].Cells[0].Value.ToString();
                 dtpFecha.Text = dgvAnaliticas.Rows[e.RowIndex].Cells[1].Value.ToString();
                 txtPropositoAnalitica.Text = dgvAnaliticas.Rows[e.RowIndex].Cells[2].Value.ToString();
-                txtObservaciones.Text = dgvAnaliticas.Rows[e.RowIndex].Cells[2].Value.ToString();
+                txtObservaciones.Text = dgvAnaliticas.Rows[e.RowIndex].Cells[3].Value.ToString();
                 string direccion = Assembly.GetExecutingAssembly().Location.Substring(0, Assembly.GetExecutingAssembly().Location.LastIndexOf('\\'));//Obtener la direccion del programa en ejecucion
                 direccion = direccion.Substring(0, direccion.LastIndexOf('\\'));
                 direccion = direccion.Substring(0, direccion.LastIndexOf('\\'));//Se corta la cadena hasta llega a donde se encuentran la carpeta que posee las analiticas
