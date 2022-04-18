@@ -26,8 +26,6 @@ namespace Sistema_de_Control_de_Historia_Medica
         private void frmCalendarioCitas_Load(object sender, EventArgs e)
         {
             var fechaActual = DateTime.Now;
-            dateTimePicker1.MinDate = fechaActual;
-            MonthCalendar.MinDate = fechaActual;
             cmbDesplegarHorario.SelectedIndex = 0;
             cargarDoctores();
             cargarCentro();
@@ -42,7 +40,6 @@ namespace Sistema_de_Control_de_Historia_Medica
         private void btnAñadirCita_Click_1(object sender, EventArgs e)
         {
             string idDoctor = cmbDesplegarDoctor.SelectedValue.ToString();
-
             string vConsulta = $"INSERT INTO Citas (idDoctor, doctorCita, centroCita, horario, fecha) " +
             $"VALUES ({idDoctor}, '{cmbDesplegarDoctor.Text}', '{cmbCentro.Text}', '{cmbDesplegarHorario.Text}', '{dateTimePicker1.Text}')";
             if (ValidarCamposRellenos())//Si todos los campos tienen un contenido
@@ -97,7 +94,6 @@ namespace Sistema_de_Control_de_Historia_Medica
         
         private void cargarDoctores()
         {
-            
             DataSet ds = bd.ConsultarInfomacion("SELECT idDoctor as 'ID', nombreDoctor as 'Nombre' FROM Doctores");//Carga los registros correspondientes a las analiticas de los usuarios
             cmbDesplegarDoctor.DataSource = ds.Tables[0];//Carga la tabla con los resultados de la consulta
             cmbDesplegarDoctor.DisplayMember = "Nombre";
@@ -107,7 +103,6 @@ namespace Sistema_de_Control_de_Historia_Medica
          //Indica si el usuario desea eliminar
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-
             if (dgvInfoCitas.SelectedRows.Count > 0) //Si la fila seleccionada no es un header del datagridview
             {
                 if (MessageBox.Show("¿Realmente desea eliminar la cita?", "AVERTENCIA", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
@@ -174,7 +169,7 @@ namespace Sistema_de_Control_de_Historia_Medica
             DataGridViewRow dgv = dgvInfoCitas.Rows[e.RowIndex];
             cmbDesplegarDoctor.Text = dgv.Cells[1].Value.ToString();
             cmbCentro.Text = dgv.Cells[2].Value.ToString();
-            dateTimePicker1.Text = dgv.Cells[3].Value.ToString();
+            dateTimePicker1.Value = Convert.ToDateTime(dgv.Cells[3].Value.ToString());
             cmbDesplegarHorario.Text = dgv.Cells[4].Value.ToString();
         }
 

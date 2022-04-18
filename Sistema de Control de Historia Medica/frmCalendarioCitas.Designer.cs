@@ -96,6 +96,7 @@
             // 
             // cmbDesplegarDoctor
             // 
+            this.cmbDesplegarDoctor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDesplegarDoctor.FormattingEnabled = true;
             this.cmbDesplegarDoctor.Location = new System.Drawing.Point(77, 8);
             this.cmbDesplegarDoctor.Name = "cmbDesplegarDoctor";
@@ -152,7 +153,6 @@
             // cmbDesplegarHorario
             // 
             this.cmbDesplegarHorario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbDesplegarHorario.Enabled = false;
             this.cmbDesplegarHorario.FormattingEnabled = true;
             this.cmbDesplegarHorario.Items.AddRange(new object[] {
             "10:00 AM",
