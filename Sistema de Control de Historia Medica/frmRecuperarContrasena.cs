@@ -17,44 +17,30 @@ namespace Sistema_de_Control_de_Historia_Medica
         {
             InitializeComponent();
         }
-
-
         private void btnEnviar_Click(object sender, EventArgs e)
         {
-            if (ValidarCamposRellenos()) //Llamamos la funcion para validar los campos rellenos
+            if (ValidarCamposRellenos()) //validamos que no hayan campos rellenos
             {
-                string vConsulta = $"SELECT COUNT(idUsuario) FROM Usuarios WHERE usuario = '{txtUsuario.Text}' AND cedula = '{txtCedula.Text}' "; // Cantidad de usuarios que comparten el mismo nombre y contrasena
-                int vResultados = Convert.ToInt32(bd.ConsultarValor(vConsulta));
-
-                if (vResultados == 1)
+                string vConsulta = $"SELECT COUNT(idUsuario) FROM Usuarios WHERE usuario = '{txtUsuario.Text}' AND cedula = '{txtCedula.Text}' ";
+                int vResultados = Convert.ToInt32(bd.ConsultarValor(vConsulta)); //Cantidad de usuarios que comparten el mismo usernmae y cedula
+                if (vResultados == 1) //si existe uno
                 {
-                    vConsulta = $"SELECT clave FROM Usuarios WHERE usuario = '{txtUsuario.Text}' AND cedula = '{txtCedula.Text}' "; // Cantidad de usuarios que comparten el mismo nombre y contrasena
-                    MessageBox.Show(bd.ConsultarValor(vConsulta).ToString(), "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Information);//Indicamos el ID del usuario que ingreso al sistema
+                    vConsulta = $"SELECT clave FROM Usuarios WHERE usuario = '{txtUsuario.Text}' AND cedula = '{txtCedula.Text}' ";
+                    MessageBox.Show(bd.ConsultarValor(vConsulta).ToString(), "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Information);//mostramos la clave del usuario
                 }
                 else MessageBox.Show("No existe usuario con esa cédula y/o username", "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
             } 
-
-
-
-
         }
         bool ValidarCamposRellenos()
         {
             foreach (Control c in Controls) //Recorremos cada elemento del formulario
-                if (String.IsNullOrWhiteSpace(c.Text) && typeof(TextBox) == c.GetType()) //Si esta vacio
+                if (String.IsNullOrWhiteSpace(c.Text) && typeof(TextBox) == c.GetType()) //Si esta vacio y es un textbox
                 {
                     MessageBox.Show("Rellene los campos vacios", "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false; //retorna que hay campos no rellenos
                 }
             return true; //retorna que los campos estan rellenos
         }
-
-        private void lbLogIn_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Close();

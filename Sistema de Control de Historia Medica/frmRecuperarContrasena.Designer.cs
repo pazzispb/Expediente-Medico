@@ -41,7 +41,7 @@
             // 
             this.txtUsuario.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.Location = new System.Drawing.Point(164, 142);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(331, 28);
             this.txtUsuario.TabIndex = 6;
@@ -50,7 +50,7 @@
             // 
             this.txtCedula.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCedula.Location = new System.Drawing.Point(162, 196);
-            this.txtCedula.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCedula.Margin = new System.Windows.Forms.Padding(4);
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.Size = new System.Drawing.Size(331, 28);
             this.txtCedula.TabIndex = 5;
@@ -62,7 +62,7 @@
             this.btnCancelar.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.Transparent;
             this.btnCancelar.Location = new System.Drawing.Point(50, 270);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(133, 42);
             this.btnCancelar.TabIndex = 4;
@@ -77,7 +77,7 @@
             this.btnEnviar.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnviar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnEnviar.Location = new System.Drawing.Point(363, 270);
-            this.btnEnviar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEnviar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Size = new System.Drawing.Size(133, 42);
             this.btnEnviar.TabIndex = 7;
@@ -122,14 +122,13 @@
             this.lbRecupContra.Size = new System.Drawing.Size(336, 37);
             this.lbRecupContra.TabIndex = 33;
             this.lbRecupContra.Text = "Recuperar Contraseña";
-            this.lbRecupContra.Click += new System.EventHandler(this.lbLogIn_Click);
             // 
             // frmRecuperarContrasena
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(236)))), ((int)(((byte)(177)))));
-            this.ClientSize = new System.Drawing.Size(560, 374);
+            this.ClientSize = new System.Drawing.Size(560, 357);
             this.Controls.Add(this.lbRecupContra);
             this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.lblCedula);
