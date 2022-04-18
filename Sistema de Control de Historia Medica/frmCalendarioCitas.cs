@@ -18,39 +18,33 @@ namespace Sistema_de_Control_de_Historia_Medica
         public frmCalendarioCitas()
         {
             InitializeComponent();
-            
-
         }
-
-
         private void frmCalendarioCitas_Load(object sender, EventArgs e)
         {
             var fechaActual = DateTime.Now;
             cmbDesplegarHorario.SelectedIndex = 0;
             cargarDoctores();
             cargarCentro();
-
         }
 
-        private void listBoxInfoCitas_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void btnAñadirCita_Click_1(object sender, EventArgs e)
         {
-            string idDoctor = cmbDesplegarDoctor.SelectedValue.ToString();
-            string vConsulta = $"INSERT INTO Citas (idDoctor, doctorCita, centroCita, horario, fecha) " +
-            $"VALUES ({idDoctor}, '{cmbDesplegarDoctor.Text}', '{cmbCentro.Text}', '{cmbDesplegarHorario.Text}', '{dateTimePicker1.Text}')";
-            if (ValidarCamposRellenos())//Si todos los campos tienen un contenido
-                if (bd.EjecutarComando(vConsulta))//Si se agrego el registro
-                {
-                    MessageBox.Show("Cita registrada con éxito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    string vID = bd.ConsultarValor("SELECT idDoctor FROM Doctores ORDER BY idDoctor DESC LIMIT 1;").ToString(); //obtiene el id del doctor que se acaba de registrar                       
-                    LimpiarCampos();
-                }
-                else MessageBox.Show("Hubo un error al registrar la cita", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-
+            if (ValidarCamposRellenos()) {
+                string idDoctor = cmbDesplegarDoctor.SelectedValue.ToString();
+                string vConsulta = $"INSERT INTO Citas (idDoctor, doctorCita, centroCita, horario, fecha, idUsuario) " +
+                $"VALUES ({idDoctor}, '{cmbDesplegarDoctor.Text}', '{cmbCentro.Text}', '{cmbDesplegarHorario.Text}', '{dateTimePicker1.Text}', {frmMenuPrincipal.vIdUsuario})";
+                if (ValidarCamposRellenos())//Si todos los campos tienen un contenido
+                    if (bd.EjecutarComando(vConsulta))//Si se agrego el registro
+                    {
+                        MessageBox.Show("Cita registrada con éxito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        string vID = bd.ConsultarValor("SELECT idDoctor FROM Doctores ORDER BY idDoctor DESC LIMIT 1;").ToString(); //obtiene el id del doctor que se acaba de registrar                       
+                        LimpiarCampos();
+                        CargarInfoCita();
+                    }
+                    else MessageBox.Show("Hubo un error al registrar la cita", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
         }
 
         bool ValidarCamposRellenos()
@@ -71,12 +65,11 @@ namespace Sistema_de_Control_de_Historia_Medica
                 {
                     c.Text = ""; //Limpia el contenido del control
                 }
-            
         }
 
         void CargarInfoCita()
         {
-            DataSet ds = bd.ConsultarInfomacion("SELECT idCita as 'ID', doctorCita as 'Nombre', centroCita as 'Centro medico', fecha as 'Fecha', horario as 'Horario'" +
+            DataSet ds = bd.ConsultarInfomacion("SELECT idCita as 'ID', doctorCita as 'Doctor', centroCita as 'Centro medico', fecha as 'Fecha', horario as 'Horario'" +
                 $"FROM Citas");//Carga los registros correspondientes a las analiticas de los usuarios
             dgvInfoCitas.DataSource = ds.Tables[0];//Carga la tabla con los resultados de la consulta
 
@@ -87,10 +80,6 @@ namespace Sistema_de_Control_de_Historia_Medica
             CargarInfoCita();
         }
         
-        private void dgvInfoCitas_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
         
         private void cargarDoctores()
         {
@@ -114,17 +103,13 @@ namespace Sistema_de_Control_de_Historia_Medica
                     if (bd.EjecutarComando(vConsulta))
                     {
                         CargarInfoCita();
+                        MessageBox.Show("Cita eliminada con exito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
-                    MessageBox.Show("Cita eliminada con exito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else MessageBox.Show("Hubo un error al eliminar la cita", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 }
-                else MessageBox.Show("Hubo un error al eliminar la cita", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-
 
             }
             else MessageBox.Show("No se ha seleccionado ninguna fila", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            
-
-
         }
 
         private void cargarCentro()
@@ -149,21 +134,15 @@ namespace Sistema_de_Control_de_Historia_Medica
 
                     if (bd.EjecutarComando(vConsulta))
                     {
-                        
+                        MessageBox.Show("Cita modificada con exito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         CargarInfoCita();
                     }
-                    MessageBox.Show("Cita modificada con exito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else MessageBox.Show("Hubo un error al actualizar la cita", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 }
-                else MessageBox.Show("Hubo un error al actualizar la cita", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-
-
             }
             else MessageBox.Show("No se ha seleccionado ninguna fila", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
-
-        
-
         private void dgvInfoCitas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow dgv = dgvInfoCitas.Rows[e.RowIndex];

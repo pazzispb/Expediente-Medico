@@ -59,8 +59,10 @@ CREATE TABLE IF NOT EXISTS "Citas" (
 	"fecha"	TEXT NOT NULL,
 	"idDoctor"	INTEGER NOT NULL,
 	"idCita"	INTEGER,
+	"idUsuario"	INTEGER,
 	PRIMARY KEY("idCita" AUTOINCREMENT),
-	FOREIGN KEY("idDoctor") REFERENCES "Doctores"("idDoctor")
+	FOREIGN KEY("idDoctor") REFERENCES "Doctores"("idDoctor"),
+	FOREIGN KEY("idUsuario") REFERENCES "Usuarios"("idUsuario")
 );
 INSERT OR IGNORE INTO Usuarios(usuario, clave, nombre, apellido, cedula, fechaNacimiento, altura, peso, tipoSangre, seguroMedico, telefono)
 VALUES("ADMIN", "1234", "ADMIN", "ADMIN", "00000000", "4/5/2022", 0, 0, "O+", "HUMANO", "809000000" );

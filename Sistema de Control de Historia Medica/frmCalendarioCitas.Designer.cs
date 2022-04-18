@@ -270,7 +270,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimizeBox = false;
             this.Name = "frmCalendarioCitas";
-            this.Text = "0";
+            this.Text = "Citas";
             this.Load += new System.EventHandler(this.frmCalendarioCitas_Load);
             this.panel1.ResumeLayout(false);
             this.pnDatosCita.ResumeLayout(false);
