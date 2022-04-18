@@ -70,7 +70,7 @@ namespace Sistema_de_Control_de_Historia_Medica
         void CargarInfoCita()
         {
             DataSet ds = bd.ConsultarInfomacion("SELECT idCita as 'ID', doctorCita as 'Doctor', centroCita as 'Centro medico', fecha as 'Fecha', horario as 'Horario'" +
-                $"FROM Citas");//Carga los registros correspondientes a las analiticas de los usuarios
+                $"FROM Citas WHERE idUsuario = {frmMenuPrincipal.vIdUsuario}");//Carga los registros correspondientes a las analiticas de los usuarios
             dgvInfoCitas.DataSource = ds.Tables[0];//Carga la tabla con los resultados de la consulta
 
         }
