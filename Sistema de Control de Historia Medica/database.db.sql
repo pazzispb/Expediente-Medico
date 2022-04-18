@@ -29,7 +29,9 @@ CREATE TABLE IF NOT EXISTS "Doctores" (
 	"centroMedico"	TEXT NOT NULL,
 	"especialidad"	TEXT NOT NULL,
 	"telefono"	TEXT NOT NULL,
-	PRIMARY KEY("idDoctor" AUTOINCREMENT)
+	"idUsuario"	INTEGER NOT NULL,
+	PRIMARY KEY("idDoctor" AUTOINCREMENT),	
+	FOREIGN KEY("idUsuario") REFERENCES "Usuarios"("idUsuario")
 );
 CREATE TABLE IF NOT EXISTS "Padecimientos" (
 	"tipoPadecimiento"	TEXT NOT NULL,
@@ -59,7 +61,7 @@ CREATE TABLE IF NOT EXISTS "Citas" (
 	"fecha"	TEXT NOT NULL,
 	"idDoctor"	INTEGER NOT NULL,
 	"idCita"	INTEGER,
-	"idUsuario"	INTEGER,
+	"idUsuario"	INTEGER NOT NULL,
 	PRIMARY KEY("idCita" AUTOINCREMENT),
 	FOREIGN KEY("idDoctor") REFERENCES "Doctores"("idDoctor"),
 	FOREIGN KEY("idUsuario") REFERENCES "Usuarios"("idUsuario")

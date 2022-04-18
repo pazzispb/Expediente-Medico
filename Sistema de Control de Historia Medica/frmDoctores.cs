@@ -63,14 +63,13 @@ namespace Sistema_de_Control_de_Historia_Medica
 
         private void btnAñadirDoctor_Click(object sender, EventArgs e)
         {
-            string vConsulta = $"INSERT INTO Doctores ( nombreDoctor, telefono, especialidad, centroMedico ) " +
-            $"VALUES ('{txtNombre.Text}', '{txtTelefono.Text}', '{txtEspecialidad.Text}', '{txtCentroDeSalud.Text}')";
+            string vConsulta = $"INSERT INTO Doctores ( nombreDoctor, telefono, especialidad, centroMedico, idUsuario ) " +
+            $"VALUES ('{txtNombre.Text}', '{txtTelefono.Text}', '{txtEspecialidad.Text}', '{txtCentroDeSalud.Text}', {frmMenuPrincipal.vIdUsuario})";
             if (ValidarCamposRellenos())//Si todos los campos tienen un contenido
                 if (bd.EjecutarComando(vConsulta))//Si se agrego el registro
                 {
                     MessageBox.Show("Doctor registrado con éxito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LimpiarCampos();
-                    
                 }
                 else MessageBox.Show("Hubo un error al registrar el doctor", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
