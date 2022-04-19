@@ -55,32 +55,35 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(84, 20);
+            this.txtNombre.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(112, 25);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(173, 20);
+            this.txtNombre.Size = new System.Drawing.Size(229, 28);
             this.txtNombre.TabIndex = 4;
             // 
             // labTitulo
             // 
             this.labTitulo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labTitulo.CausesValidation = false;
-            this.labTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labTitulo.Location = new System.Drawing.Point(308, 9);
+            this.labTitulo.Font = new System.Drawing.Font("Montserrat", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labTitulo.Location = new System.Drawing.Point(375, 9);
+            this.labTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labTitulo.Name = "labTitulo";
             this.labTitulo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labTitulo.Size = new System.Drawing.Size(184, 25);
+            this.labTitulo.Size = new System.Drawing.Size(361, 45);
             this.labTitulo.TabIndex = 5;
             this.labTitulo.Text = "Registrar Doctor";
             this.labTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.labTitulo.Click += new System.EventHandler(this.labTitulo_Click);
             // 
             // labNombre
             // 
             this.labNombre.AutoSize = true;
-            this.labNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labNombre.Location = new System.Drawing.Point(12, 21);
+            this.labNombre.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labNombre.Location = new System.Drawing.Point(16, 26);
+            this.labNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labNombre.Name = "labNombre";
-            this.labNombre.Size = new System.Drawing.Size(66, 16);
+            this.labNombre.Size = new System.Drawing.Size(87, 24);
             this.labNombre.TabIndex = 6;
             this.labNombre.Text = "Nombre:";
             // 
@@ -95,32 +98,38 @@
             this.panel1.Controls.Add(this.labTitulo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(824, 415);
+            this.panel1.Size = new System.Drawing.Size(1099, 511);
             this.panel1.TabIndex = 7;
             // 
             // btnModificarDoctor
             // 
             this.btnModificarDoctor.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnModificarDoctor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
-            this.btnModificarDoctor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificarDoctor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnModificarDoctor.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificarDoctor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnModificarDoctor.Location = new System.Drawing.Point(286, 374);
+            this.btnModificarDoctor.Location = new System.Drawing.Point(381, 460);
+            this.btnModificarDoctor.Margin = new System.Windows.Forms.Padding(4);
             this.btnModificarDoctor.Name = "btnModificarDoctor";
-            this.btnModificarDoctor.Size = new System.Drawing.Size(114, 35);
+            this.btnModificarDoctor.Size = new System.Drawing.Size(152, 43);
             this.btnModificarDoctor.TabIndex = 38;
             this.btnModificarDoctor.Text = "Modificar";
             this.btnModificarDoctor.UseVisualStyleBackColor = false;
+            this.btnModificarDoctor.Click += new System.EventHandler(this.btnModificarDoctor_Click);
             // 
             // btnEliminarDoctor
             // 
             this.btnEliminarDoctor.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnEliminarDoctor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
-            this.btnEliminarDoctor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarDoctor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEliminarDoctor.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarDoctor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnEliminarDoctor.Location = new System.Drawing.Point(136, 374);
+            this.btnEliminarDoctor.Location = new System.Drawing.Point(181, 460);
+            this.btnEliminarDoctor.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminarDoctor.Name = "btnEliminarDoctor";
-            this.btnEliminarDoctor.Size = new System.Drawing.Size(114, 35);
+            this.btnEliminarDoctor.Size = new System.Drawing.Size(152, 43);
             this.btnEliminarDoctor.TabIndex = 37;
             this.btnEliminarDoctor.Text = "Eliminar";
             this.btnEliminarDoctor.UseVisualStyleBackColor = false;
@@ -130,11 +139,13 @@
             // 
             this.btnAñadirDoctor.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnAñadirDoctor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
-            this.btnAñadirDoctor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAñadirDoctor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAñadirDoctor.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAñadirDoctor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnAñadirDoctor.Location = new System.Drawing.Point(579, 374);
+            this.btnAñadirDoctor.Location = new System.Drawing.Point(772, 460);
+            this.btnAñadirDoctor.Margin = new System.Windows.Forms.Padding(4);
             this.btnAñadirDoctor.Name = "btnAñadirDoctor";
-            this.btnAñadirDoctor.Size = new System.Drawing.Size(114, 35);
+            this.btnAñadirDoctor.Size = new System.Drawing.Size(152, 43);
             this.btnAñadirDoctor.TabIndex = 36;
             this.btnAñadirDoctor.Text = "Añadir";
             this.btnAñadirDoctor.UseVisualStyleBackColor = false;
@@ -149,20 +160,26 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 163);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 201);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(823, 199);
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(1097, 245);
             this.dataGridView1.TabIndex = 9;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // btnVerDoctores
             // 
             this.btnVerDoctores.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnVerDoctores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(169)))), ((int)(((byte)(110)))));
-            this.btnVerDoctores.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerDoctores.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnVerDoctores.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerDoctores.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnVerDoctores.Location = new System.Drawing.Point(433, 374);
+            this.btnVerDoctores.Location = new System.Drawing.Point(577, 460);
+            this.btnVerDoctores.Margin = new System.Windows.Forms.Padding(4);
             this.btnVerDoctores.Name = "btnVerDoctores";
-            this.btnVerDoctores.Size = new System.Drawing.Size(114, 35);
+            this.btnVerDoctores.Size = new System.Drawing.Size(152, 43);
             this.btnVerDoctores.TabIndex = 35;
             this.btnVerDoctores.Text = "Ver doctores";
             this.btnVerDoctores.UseVisualStyleBackColor = false;
@@ -185,9 +202,11 @@
             this.pnRegistrarDoctor.Controls.Add(this.label3);
             this.pnRegistrarDoctor.Controls.Add(this.labNombre);
             this.pnRegistrarDoctor.Controls.Add(this.txtNombre);
-            this.pnRegistrarDoctor.Location = new System.Drawing.Point(0, 49);
+            this.pnRegistrarDoctor.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnRegistrarDoctor.Location = new System.Drawing.Point(0, 60);
+            this.pnRegistrarDoctor.Margin = new System.Windows.Forms.Padding(4);
             this.pnRegistrarDoctor.Name = "pnRegistrarDoctor";
-            this.pnRegistrarDoctor.Size = new System.Drawing.Size(823, 108);
+            this.pnRegistrarDoctor.Size = new System.Drawing.Size(1097, 133);
             this.pnRegistrarDoctor.TabIndex = 8;
             // 
             // label2
@@ -195,54 +214,62 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(732, 55);
+            this.label2.Location = new System.Drawing.Point(976, 68);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 25);
+            this.label2.Size = new System.Drawing.Size(0, 31);
             this.label2.TabIndex = 14;
             // 
             // labCentroDeSalud
             // 
             this.labCentroDeSalud.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labCentroDeSalud.AutoSize = true;
-            this.labCentroDeSalud.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labCentroDeSalud.Location = new System.Drawing.Point(497, 69);
+            this.labCentroDeSalud.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labCentroDeSalud.Location = new System.Drawing.Point(663, 85);
+            this.labCentroDeSalud.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labCentroDeSalud.Name = "labCentroDeSalud";
-            this.labCentroDeSalud.Size = new System.Drawing.Size(120, 16);
+            this.labCentroDeSalud.Size = new System.Drawing.Size(155, 24);
             this.labCentroDeSalud.TabIndex = 15;
             this.labCentroDeSalud.Text = "Centro de salud:";
             // 
             // txtCentroDeSalud
             // 
             this.txtCentroDeSalud.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCentroDeSalud.Location = new System.Drawing.Point(623, 66);
+            this.txtCentroDeSalud.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCentroDeSalud.Location = new System.Drawing.Point(831, 81);
+            this.txtCentroDeSalud.Margin = new System.Windows.Forms.Padding(4);
             this.txtCentroDeSalud.Name = "txtCentroDeSalud";
-            this.txtCentroDeSalud.Size = new System.Drawing.Size(173, 20);
+            this.txtCentroDeSalud.Size = new System.Drawing.Size(229, 28);
             this.txtCentroDeSalud.TabIndex = 13;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(224, 54);
+            this.label1.Location = new System.Drawing.Point(299, 66);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 25);
+            this.label1.Size = new System.Drawing.Size(0, 31);
             this.label1.TabIndex = 11;
             // 
             // labTelefono
             // 
             this.labTelefono.AutoSize = true;
-            this.labTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labTelefono.Location = new System.Drawing.Point(10, 66);
+            this.labTelefono.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labTelefono.Location = new System.Drawing.Point(13, 81);
+            this.labTelefono.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labTelefono.Name = "labTelefono";
-            this.labTelefono.Size = new System.Drawing.Size(73, 16);
+            this.labTelefono.Size = new System.Drawing.Size(92, 24);
             this.labTelefono.TabIndex = 12;
             this.labTelefono.Text = "Teléfono:";
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(84, 65);
+            this.txtTelefono.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefono.Location = new System.Drawing.Point(112, 80);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(173, 20);
+            this.txtTelefono.Size = new System.Drawing.Size(229, 28);
             this.txtTelefono.TabIndex = 10;
             // 
             // label4
@@ -250,48 +277,53 @@
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(732, 10);
+            this.label4.Location = new System.Drawing.Point(976, 12);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(0, 25);
+            this.label4.Size = new System.Drawing.Size(0, 31);
             this.label4.TabIndex = 8;
             // 
             // labEspecialidad
             // 
             this.labEspecialidad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labEspecialidad.AutoSize = true;
-            this.labEspecialidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labEspecialidad.Location = new System.Drawing.Point(518, 22);
+            this.labEspecialidad.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labEspecialidad.Location = new System.Drawing.Point(691, 27);
+            this.labEspecialidad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labEspecialidad.Name = "labEspecialidad";
-            this.labEspecialidad.Size = new System.Drawing.Size(103, 16);
+            this.labEspecialidad.Size = new System.Drawing.Size(126, 24);
             this.labEspecialidad.TabIndex = 9;
             this.labEspecialidad.Text = "Especialidad:";
             // 
             // txtEspecialidad
             // 
             this.txtEspecialidad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEspecialidad.Location = new System.Drawing.Point(623, 21);
+            this.txtEspecialidad.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEspecialidad.Location = new System.Drawing.Point(831, 26);
+            this.txtEspecialidad.Margin = new System.Windows.Forms.Padding(4);
             this.txtEspecialidad.Name = "txtEspecialidad";
-            this.txtEspecialidad.Size = new System.Drawing.Size(173, 20);
+            this.txtEspecialidad.Size = new System.Drawing.Size(229, 28);
             this.txtEspecialidad.TabIndex = 7;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(193, 9);
+            this.label3.Location = new System.Drawing.Point(257, 11);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 25);
+            this.label3.Size = new System.Drawing.Size(0, 31);
             this.label3.TabIndex = 5;
             // 
             // frmDoctores
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(824, 415);
+            this.ClientSize = new System.Drawing.Size(1099, 511);
             this.Controls.Add(this.pnRegistrarDoctor);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MinimizeBox = false;
             this.Name = "frmDoctores";
             this.Text = "Registro de Doctores";

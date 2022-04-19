@@ -14,16 +14,14 @@ CREATE TABLE IF NOT EXISTS "Usuarios" (
 	"telefono"	TEXT NOT NULL,
 	PRIMARY KEY("idUsuario")
 );
-INSERT OR IGNORE INTO Usuarios(usuario, clave, nombre, apellido, cedula, fechaNacimiento, altura, peso, tipoSangre, seguroMedico, telefono)
-VALUES("ADMIN", "1234", "ADMIN", "ADMIN", "00000000", "4/5/2022", 0, 0, "O+", "HUMANO", "809000000" );
 CREATE TABLE IF NOT EXISTS "Analiticas" (
 	"idAnalitica"	INTEGER,
 	"fecha"	TEXT NOT NULL,
 	"proposito"	TEXT NOT NULL,
 	"observaciones"	TEXT NOT NULL,
 	"idUsuario"	INTEGER,
-	FOREIGN KEY("idUsuario") REFERENCES "Usuarios"("idUsuario"),
-	PRIMARY KEY("idAnalitica" AUTOINCREMENT)
+	PRIMARY KEY("idAnalitica" AUTOINCREMENT),
+	FOREIGN KEY("idUsuario") REFERENCES "Usuarios"("idUsuario")
 );
 CREATE TABLE IF NOT EXISTS "Doctores" (
 	"idDoctor"	INTEGER,
@@ -31,16 +29,9 @@ CREATE TABLE IF NOT EXISTS "Doctores" (
 	"centroMedico"	TEXT NOT NULL,
 	"especialidad"	TEXT NOT NULL,
 	"telefono"	TEXT NOT NULL,
-	PRIMARY KEY("idDoctor" AUTOINCREMENT)
-);
-CREATE TABLE IF NOT EXISTS "Citas" (
-	"horario"	TEXT NOT NULL,
-	"fecha"	TEXT NOT NULL,
-	"idDoctor"	INTEGER NOT NULL,
-	"centroMedico"	TEXT NOT NULL,
-	"idCita"	INTEGER,
-	FOREIGN KEY("idDoctor") REFERENCES "Doctores"("idDoctor"),
-	PRIMARY KEY("idCita" AUTOINCREMENT)
+	"idUsuario"	INTEGER NOT NULL,
+	PRIMARY KEY("idDoctor" AUTOINCREMENT),	
+	FOREIGN KEY("idUsuario") REFERENCES "Usuarios"("idUsuario")
 );
 CREATE TABLE IF NOT EXISTS "Padecimientos" (
 	"tipoPadecimiento"	TEXT NOT NULL,
@@ -49,8 +40,8 @@ CREATE TABLE IF NOT EXISTS "Padecimientos" (
 	"descripcion"	TEXT NOT NULL,
 	"idPadecimeinto"	INTEGER,
 	"idUsuario"	INTEGER NOT NULL,
-	FOREIGN KEY("idUsuario") REFERENCES "Usuarios"("idUsuario"),
-	PRIMARY KEY("idPadecimeinto" AUTOINCREMENT)
+	PRIMARY KEY("idPadecimeinto" AUTOINCREMENT),
+	FOREIGN KEY("idUsuario") REFERENCES "Usuarios"("idUsuario")
 );
 CREATE TABLE IF NOT EXISTS "Farmacos" (
 	"nombreFarmaco"	TEXT NOT NULL,
@@ -60,7 +51,22 @@ CREATE TABLE IF NOT EXISTS "Farmacos" (
 	"veces"	TEXT NOT NULL,
 	"idFarmaco"	INTEGER,
 	"idUsuario"	INTEGER NOT NULL,
-	FOREIGN KEY("idUsuario") REFERENCES "Usuarios"("idUsuario"),
-	PRIMARY KEY("idFarmaco" AUTOINCREMENT)
+	PRIMARY KEY("idFarmaco" AUTOINCREMENT),
+	FOREIGN KEY("idUsuario") REFERENCES "Usuarios"("idUsuario")
 );
+CREATE TABLE IF NOT EXISTS "Citas" (
+	"doctorCita"	TEXT NOT NULL,
+	"centroCita"	TEXT NOT NULL,
+	"horario"	TEXT NOT NULL,
+	"fecha"	TEXT NOT NULL,
+	"idDoctor"	INTEGER NOT NULL,
+	"idCita"	INTEGER,
+	"idUsuario"	INTEGER NOT NULL,
+	PRIMARY KEY("idCita" AUTOINCREMENT),
+	FOREIGN KEY("idDoctor") REFERENCES "Doctores"("idDoctor") ON DELETE CASCADE,
+	FOREIGN KEY("idUsuario") REFERENCES "Usuarios"("idUsuario")
+);
+PRAGMA foreign_keys=ON;
+INSERT OR IGNORE INTO Usuarios(usuario, clave, nombre, apellido, cedula, fechaNacimiento, altura, peso, tipoSangre, seguroMedico, telefono)
+VALUES("ADMIN", "1234", "ADMIN", "ADMIN", "00000000", "4/5/2022", 0, 0, "O+", "HUMANO", "809000000" );
 COMMIT;

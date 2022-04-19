@@ -36,7 +36,7 @@ namespace Sistema_de_Control_de_Historia_Medica
                 string vConsulta = $"SELECT COUNT(idUsuario) FROM Usuarios WHERE usuario = '{txtUsuario.Text}' AND clave = '{txtContrasena.Text}' "; // Cantidad de usuarios que comparten el mismo nombre y contrasena
                 int vResultados = Convert.ToInt32(bd.ConsultarValor(vConsulta));
 
-                if (vResultados == 1 )
+                if (vResultados == 1 ) //Si hay un usuario que posee las credenciales proporcionadas
                 {
                     if (Application.OpenForms.Count < 2) this.Hide(); //Verifica que solo tiene el LogIn abierto
                     AbrirFormulario(new frmMenuPrincipal()); //Abre el formulario de Menu Principal
@@ -48,9 +48,8 @@ namespace Sistema_de_Control_de_Historia_Medica
             }
    
         }
-        bool ValidarCamposRellenos()
+        bool ValidarCamposRellenos() //Valida que todos los campos esten llenos
         {
-            
             if (String.IsNullOrWhiteSpace(txtUsuario.Text) || String.IsNullOrWhiteSpace(txtContrasena.Text)) //Si esta vacio
             {
                 MessageBox.Show("Rellene los campos vacios", "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -62,9 +61,6 @@ namespace Sistema_de_Control_de_Historia_Medica
         private void lblRecuperarContrasena_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             AbrirFormulario(new frmRecuperarContrasena()); //Abre el formulario de Recuperar Contraseña
-
         }
-
-
     }
 }

@@ -13,15 +13,12 @@ namespace Sistema_de_Control_de_Historia_Medica
 {
     public partial class frmRegistrarAnalitica : Form
     {
-        
-        string vIDUsuario = frmMenuPrincipal.vIdUsuario;//Id del usuario que tiene la sesion iniciada
-        clsBaseDatos bd = new clsBaseDatos();
-        public frmAnaliticas frmAnaliticas;
+        clsBaseDatos bd = new clsBaseDatos(); //Objeto de base de datos
+        public frmAnaliticas frmAnaliticas; //Formulario de analiticas
         public frmRegistrarAnalitica()
         {
             InitializeComponent();
         }
-
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             fdBuscarArchivo.ShowDialog();//Muestra la ventana para buscar el archivo
@@ -33,30 +30,29 @@ namespace Sistema_de_Control_de_Historia_Medica
                 lblDireccion.Text = fdBuscarArchivo.FileName;//Escribe el nombre del archivo en el label
             }
         }
-        private void frmRegistrarAnalitica_Load(object sender, EventArgs e)
-        {
-        }
         private void btnRegistrarAnalitica_Click(object sender, EventArgs e)
         {
             if (ValidarArchivo()) //valida si el archivo seleccionado es valido
             {
                 string vConsulta = $"INSERT INTO Analiticas (fecha, proposito, observaciones, idUsuario) " +
-                $"VALUES ('{dtpFecha.Text}', '{txtPropositoAnalitica.Text}', '{txtObservaciones.Text}', {vIDUsuario})";
+                $"VALUES ('{dtpFecha.Text}', '{txtPropositoAnalitica.Text}', '{txtObservaciones.Text}', {frmMenuPrincipal.vIdUsuario})";
                 if (ValidarCamposRellenos())//Si todos los campos tienen un contenido
                     if (bd.EjecutarComando(vConsulta))//Si se agrego el registro
                     {
                         MessageBox.Show("Analitica registrada con éxito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         string vID = bd.ConsultarValor("SELECT idAnalitica FROM Analiticas ORDER BY idAnalitica DESC LIMIT 1;").ToString(); //obtiene el id de la analitica que se acaba de registrar
-                        File.Copy(lblDireccion.Text, $"Analiticas/{vID}.pdf"); //Guarda el archivo bajo el id correspondiente a su registro en la base de datos
+                        if(File.Exists($"../../Analiticas/{vID}.pdf")) //Si existe el archivo a almacenar en la ubicacion donde lo deseo
+                            File.Delete($"../../Analiticas/{vID}.pdf"); //Borralo
+                        File.Copy(lblDireccion.Text, $"../../Analiticas/{vID}.pdf"); //Guarda el archivo bajo el id correspondiente a su registro en la base de datos
                         LimpiarCampos();
                         frmAnaliticas.CargarAnaliticas();
                     }
                     else MessageBox.Show("Hubo un error al registrar la analitica", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
         }
-        bool ValidarCamposRellenos()
+        bool ValidarCamposRellenos() //Valida que los campos del contenedor esten todos llenos
         {
-            foreach (Control c in pnContenedor.Controls) //Recorremos cada elemento del formulario
+            foreach (Control c in pnContenedor.Controls) //Recorremos cada elemento del contenedor que posee los campos
                 if (String.IsNullOrWhiteSpace(c.Text)) //Si esta vacio
                 {
                     MessageBox.Show("Rellene los campos vacios", "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -64,10 +60,10 @@ namespace Sistema_de_Control_de_Historia_Medica
                 }
             return true; //retorna que los campos estan rellenos
         }
-        void LimpiarCampos()
+        void LimpiarCampos() 
         {
-            foreach (Control c in pnContenedor.Controls) //Recorremos cada elemento del formulario
-                if (typeof(TextBox) == c.GetType()) //Si esta vacio
+            foreach (Control c in pnContenedor.Controls) //Recorremos cada elemento del contenedor que posee los campos
+                if (typeof(TextBox) == c.GetType()) //Si es un textbox
                 {
                     c.Text = ""; //Limpia el contenido del control
                 }

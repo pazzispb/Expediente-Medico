@@ -12,8 +12,8 @@ namespace Sistema_de_Control_de_Historia_Medica
 {
     public partial class frmMenuPrincipal : Form
     {
-        bool vCancelarCierre = true;
-        static public string vIdUsuario;
+        bool vCancelarCierre = true; //Variable para ibhabilitar que el formulario se cierre
+        static public string vIdUsuario; //Variable que el almacena el id del usuario con la sesion iniciada
         public frmMenuPrincipal()
         {
             InitializeComponent();
@@ -32,8 +32,6 @@ namespace Sistema_de_Control_de_Historia_Medica
         private void tsCalendario_Click(object sender, EventArgs e)
         {
             AbrirFormulario(new frmCalendarioCitas());
-            
-            
         }
 
         private void tsDoctores_Click(object sender, EventArgs e)
@@ -70,13 +68,11 @@ namespace Sistema_de_Control_de_Historia_Medica
             }
             else MessageBox.Show("Cierre la funcionalidad abierta", "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
-
         private void frmMenuPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
             e.Cancel = vCancelarCierre; //Evita el cierre del formulario
             if (vCancelarCierre) MessageBox.Show("Debe cerrar sesión antes de cerrar", "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
-
         private void tsLogOut_Click(object sender, EventArgs e)
         {
             foreach (Form frm in Application.OpenForms) //Recorre los formularios abiertos
@@ -88,8 +84,6 @@ namespace Sistema_de_Control_de_Historia_Medica
                     break; //Sal del bucle
                 }
         }
-
-      
         private void fármacosToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             AbrirFormulario(new frmFarmacos()); //Abre el formulario frmFarmacos

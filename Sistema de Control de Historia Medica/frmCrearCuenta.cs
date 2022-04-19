@@ -26,8 +26,8 @@ namespace Sistema_de_Control_de_Historia_Medica
                 $"apellido, cedula, fechaNacimiento, altura, peso, tipoSangre, seguroMedico, telefono) " +
                 $"VALUES ('{txtUsuario.Text}', '{txtClave.Text}', '{txtNombre.Text}', '{txtApellido.Text}', '{txtCedula.Text}', " +
                 $"'{dtpFecha.Text}', {txtAltura.Text}, {txtPeso.Text}, '{cmbTipoSangre.Text}', '{txtSeguroMedico.Text}', '{txtTelefono.Text}')";
-                if (ValidarCamposRellenos())//Si todos los campos tienen un contenido
-                    if (bd.EjecutarComando(vConsulta))
+                if (ValidarCamposRellenos()) //Si todos los campos tienen un contenido
+                    if (bd.EjecutarComando(vConsulta))//Si se agrego el registro
                     {
                         MessageBox.Show("Usuario registrado con éxito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         LimpiarCampos();
@@ -35,11 +35,11 @@ namespace Sistema_de_Control_de_Historia_Medica
                     else MessageBox.Show("Hubo un error al registrar el usuario", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
         }
-        bool ValidarClaves()
+        bool ValidarClaves() 
         {
-            if(txtClave.Text == txtClave2.Text)
+            if(txtClave.Text == txtClave2.Text) 
             {
-                return true;
+                return true; //Si las claves coinciden
             }
             else
             {
@@ -47,9 +47,9 @@ namespace Sistema_de_Control_de_Historia_Medica
                 return false;
             }
         }
-        bool ValidarCamposRellenos()
+        bool ValidarCamposRellenos() //Valida que los campos del contenedor esten todos llenos
         {
-            foreach (Control c in pnContenedor.Controls) //Recorremos cada elemento del formulario
+            foreach (Control c in pnContenedor.Controls) //Recorremos cada elemento del contenedor que posee los campos
                 if (String.IsNullOrWhiteSpace(c.Text)) //Si esta vacio
                 {
                     MessageBox.Show("Rellene los campos vacios", "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -88,8 +88,8 @@ namespace Sistema_de_Control_de_Historia_Medica
         }
         void LimpiarCampos()
         {
-            foreach (Control c in pnContenedor.Controls) //Recorremos cada elemento del formulario
-                if (typeof(TextBox) == c.GetType()) //Si esta vacio
+            foreach (Control c in pnContenedor.Controls) //Recorremos cada elemento del contenedor que posee los campos
+                if (typeof(TextBox) == c.GetType()) //Si es un textbox
                 {
                     c.Text = "";
                 }
