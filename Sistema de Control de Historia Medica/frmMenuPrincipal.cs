@@ -66,7 +66,25 @@ namespace Sistema_de_Control_de_Historia_Medica
                 frm.StartPosition = FormStartPosition.CenterScreen;//Centrar el formulario en la pantalla
                 frm.Show(); //Mostrar el formulario
             }
-            else MessageBox.Show("Cierre la funcionalidad abierta", "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            else
+            {
+                if(MessageBox.Show("Cierre la funcionalidad abierta. ¿Desea cerrarla para abrir la otra?", "ATENCIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    foreach (Form frm1 in Application.OpenForms) //Recorre los formularios abiertos
+                        if (!(typeof(frmLogIn) == frm1.GetType()) && !(typeof(frmMenuPrincipal) == frm1.GetType())) //Si no es el formulario del Login o del menu principal
+                        {
+                            frm1.Close();
+                            frm.MdiParent = this; //Asignamos a ese objeto el formulario padre, que será este
+                            frm.StartPosition = FormStartPosition.CenterScreen;//Centrar el formulario en la pantalla
+                            frm.Show(); //Mostrar el formulario
+                            break; //Sal del bucle
+                        }
+                }
+                else
+                {
+                    MessageBox.Show("Debe cerrar la funcionalidad abierta antes de proceder con la otra", "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
         }
         private void frmMenuPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
