@@ -45,7 +45,8 @@ namespace Sistema_de_Control_de_Historia_Medica
                             File.Delete($"../../Analiticas/{vID}.pdf"); //Borralo
                         File.Copy(lblDireccion.Text, $"../../Analiticas/{vID}.pdf"); //Guarda el archivo bajo el id correspondiente a su registro en la base de datos
                         LimpiarCampos();
-                        frmAnaliticas.CargarAnaliticas();
+                        frmAnaliticas.CargarAnaliticas();//recargo el datagridview de analiticas
+                        this.Close();
                     }
                     else MessageBox.Show("Hubo un error al registrar la analitica", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
@@ -77,6 +78,11 @@ namespace Sistema_de_Control_de_Historia_Medica
                 MessageBox.Show("Seleccione un archivo valido", "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
+        }
+
+        private void frmRegistrarAnalitica_Load(object sender, EventArgs e)
+        {
+            dtpFecha.MaxDate = DateTime.Today;//fecha de hoy
         }
     }
 }
