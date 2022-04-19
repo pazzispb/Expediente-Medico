@@ -31,6 +31,7 @@ namespace Sistema_de_Control_de_Historia_Medica
                     {
                         MessageBox.Show("Usuario registrado con éxito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         LimpiarCampos();
+                        this.Close();
                     }
                     else MessageBox.Show("Hubo un error al registrar el usuario", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
