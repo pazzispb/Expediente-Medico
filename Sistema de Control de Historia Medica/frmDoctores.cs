@@ -97,12 +97,15 @@ namespace Sistema_de_Control_de_Historia_Medica
         }
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow dgv = dataGridView1.Rows[e.RowIndex];//Fila que esta seleccionada
-            //Carga la informacion de la fila a los textbox correspondientes
-            txtNombre.Text = dgv.Cells[1].Value.ToString();
-            txtTelefono.Text = dgv.Cells[2].Value.ToString();
-            txtEspecialidad.Text = dgv.Cells[3].Value.ToString();
-            txtCentroDeSalud.Text = dgv.Cells[4].Value.ToString();
+            if (e.RowIndex > -1)//Si no es un header que se creo
+            {
+                DataGridViewRow dgv = dataGridView1.Rows[e.RowIndex];//Fila que esta seleccionada
+                //Carga la informacion de la fila a los textbox correspondientes
+                txtNombre.Text = dgv.Cells[1].Value.ToString();
+                txtTelefono.Text = dgv.Cells[2].Value.ToString();
+                txtEspecialidad.Text = dgv.Cells[3].Value.ToString();
+                txtCentroDeSalud.Text = dgv.Cells[4].Value.ToString();
+            }
         }
     }
 }

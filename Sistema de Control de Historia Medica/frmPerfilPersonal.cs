@@ -60,7 +60,6 @@ namespace Sistema_de_Control_de_Historia_Medica
                 }
             return true; //retorna que los campos estan rellenos
         }
-
         private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar)) //si el caracter ingresador es un digito
@@ -68,7 +67,6 @@ namespace Sistema_de_Control_de_Historia_Medica
                 e.Handled = true; //maneja el evento
             }
         }
-
         private void txtAltura_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == '.' && txtAltura.Text.IndexOf(".") != -1) e.Handled = true; //si es un punto y ya hay puntos dentro del campo

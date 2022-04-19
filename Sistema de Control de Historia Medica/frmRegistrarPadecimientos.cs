@@ -34,6 +34,7 @@ namespace Sistema_de_Control_de_Historia_Medica
                         MessageBox.Show("Padecimiento registrado con éxito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         LimpiarCampos();
                         frmPadecimientos.cargarPadecimientos(); //actualiza el datagridview del formulario padecimientos
+                        this.Close();
                     }
                     else
                     {
