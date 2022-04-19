@@ -113,7 +113,7 @@
             this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnBorrar.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBorrar.ForeColor = System.Drawing.Color.White;
-            this.btnBorrar.Location = new System.Drawing.Point(0, 183);
+            this.btnBorrar.Location = new System.Drawing.Point(0, 174);
             this.btnBorrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(693, 30);
@@ -126,10 +126,10 @@
             // 
             this.pdfVisualizador.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pdfVisualizador.Enabled = true;
-            this.pdfVisualizador.Location = new System.Drawing.Point(0, 213);
+            this.pdfVisualizador.Location = new System.Drawing.Point(0, 204);
             this.pdfVisualizador.Name = "pdfVisualizador";
             this.pdfVisualizador.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("pdfVisualizador.OcxState")));
-            this.pdfVisualizador.Size = new System.Drawing.Size(693, 187);
+            this.pdfVisualizador.Size = new System.Drawing.Size(693, 196);
             this.pdfVisualizador.TabIndex = 13;
             // 
             // txtObservaciones
@@ -137,7 +137,7 @@
             this.txtObservaciones.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtObservaciones.Enabled = false;
             this.txtObservaciones.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtObservaciones.Location = new System.Drawing.Point(174, 89);
+            this.txtObservaciones.Location = new System.Drawing.Point(173, 89);
             this.txtObservaciones.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtObservaciones.Multiline = true;
             this.txtObservaciones.Name = "txtObservaciones";
@@ -149,7 +149,7 @@
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(41, 106);
+            this.label8.Location = new System.Drawing.Point(40, 106);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(117, 20);
@@ -173,7 +173,7 @@
             this.txtPropositoAnalitica.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPropositoAnalitica.Enabled = false;
             this.txtPropositoAnalitica.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPropositoAnalitica.Location = new System.Drawing.Point(238, 54);
+            this.txtPropositoAnalitica.Location = new System.Drawing.Point(237, 54);
             this.txtPropositoAnalitica.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPropositoAnalitica.Multiline = true;
             this.txtPropositoAnalitica.Name = "txtPropositoAnalitica";
@@ -185,7 +185,7 @@
             this.lblID.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblID.AutoSize = true;
             this.lblID.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.Location = new System.Drawing.Point(79, 21);
+            this.lblID.Location = new System.Drawing.Point(78, 21);
             this.lblID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(27, 20);
@@ -197,7 +197,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(451, 23);
+            this.label4.Location = new System.Drawing.Point(450, 23);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(54, 20);
@@ -209,7 +209,7 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(41, 58);
+            this.label7.Location = new System.Drawing.Point(40, 58);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(188, 20);
@@ -222,7 +222,7 @@
             this.dtpFecha.Enabled = false;
             this.dtpFecha.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFecha.Location = new System.Drawing.Point(532, 20);
+            this.dtpFecha.Location = new System.Drawing.Point(531, 20);
             this.dtpFecha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(138, 24);
@@ -250,7 +250,7 @@
             this.btnRegistrarAnalitica.Location = new System.Drawing.Point(425, 15);
             this.btnRegistrarAnalitica.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRegistrarAnalitica.Name = "btnRegistrarAnalitica";
-            this.btnRegistrarAnalitica.Size = new System.Drawing.Size(256, 30);
+            this.btnRegistrarAnalitica.Size = new System.Drawing.Size(254, 30);
             this.btnRegistrarAnalitica.TabIndex = 3;
             this.btnRegistrarAnalitica.Text = "Registrar nueva analítica";
             this.btnRegistrarAnalitica.UseVisualStyleBackColor = false;

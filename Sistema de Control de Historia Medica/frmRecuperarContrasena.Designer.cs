@@ -141,6 +141,7 @@
             this.MinimizeBox = false;
             this.Name = "frmRecuperarContrasena";
             this.Text = "Recuperar Contraseña";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmRecuperarContrasena_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

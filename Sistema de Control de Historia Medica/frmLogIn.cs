@@ -20,6 +20,7 @@ namespace Sistema_de_Control_de_Historia_Medica
         private void lblCrearCuenta_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             AbrirFormulario(new frmCrearCuenta()); //Muestra el formulario de Crear Cuenta
+            this.Hide();
         }
         public void AbrirFormulario(Form frm) //Recibe el formulario que deseo abrir
         {
@@ -46,7 +47,6 @@ namespace Sistema_de_Control_de_Historia_Medica
                 }
                 else MessageBox.Show("Usuario y/o contraseña errónea", "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-   
         }
         bool ValidarCamposRellenos() //Valida que todos los campos esten llenos
         {
@@ -61,6 +61,7 @@ namespace Sistema_de_Control_de_Historia_Medica
         private void lblRecuperarContrasena_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             AbrirFormulario(new frmRecuperarContrasena()); //Abre el formulario de Recuperar Contraseña
+            this.Hide();
         }
     }
 }

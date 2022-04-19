@@ -45,5 +45,15 @@ namespace Sistema_de_Control_de_Historia_Medica
         {
             Close();
         }
+
+        private void frmRecuperarContrasena_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            foreach (Form frm in Application.OpenForms) //Recorre los formularios abiertos
+                if (typeof(frmLogIn) == frm.GetType()) //Buscar el formulario de LogIn
+                {
+                    frm.Show(); //Muestra el formulario
+                    break; //Sal del bucle
+                }
+        }
     }
 }
