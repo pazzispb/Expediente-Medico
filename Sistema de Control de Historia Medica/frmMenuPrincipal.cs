@@ -83,6 +83,10 @@ namespace Sistema_de_Control_de_Historia_Medica
                         }
                     e.Cancel = vCancelarCierre;
                 }
+                else
+                {
+                    MessageBox.Show("Debe cerrar la sesión antes de salir", "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
         }
         private void tsLogOut_Click(object sender, EventArgs e)
         {
