@@ -61,7 +61,7 @@ namespace Sistema_de_Control_de_Historia_Medica
         string CargarDatosAnaliticas()
         {
             string vRetorno = "";
-            DataSet resultado = bd.ConsultarInfomacion("SELECT fecha, proposito, observaciones FROM Analiticas");
+            DataSet resultado = bd.ConsultarInfomacion($"SELECT fecha, proposito, observaciones FROM Analiticas WHERE idUsuario = {frmMenuPrincipal.vIdUsuario}");
             if (resultado.Tables[0].Rows.Count == 0) return "No hay analíticas registradas"; //si no hay registros de la consulta
             foreach (DataRow row in resultado.Tables[0].Rows) //para cada fila dentro de la tabla del dataset
             {
@@ -73,7 +73,7 @@ namespace Sistema_de_Control_de_Historia_Medica
         string CargarDatosEnfermedades()
         {
             string vRetorno = "";
-            DataSet resultado = bd.ConsultarInfomacion("SELECT nombrePadecimiento, descripcion, fecha FROM Padecimientos WHERE tipoPadecimiento = 'Enfermedad'");
+            DataSet resultado = bd.ConsultarInfomacion($"SELECT nombrePadecimiento, descripcion, fecha FROM Padecimientos WHERE tipoPadecimiento = 'Enfermedad' AND idUsuario = {frmMenuPrincipal.vIdUsuario}");
             if (resultado.Tables[0].Rows.Count == 0) return "No hay enfermedades registradas"; //si no hay registros de la consulta
             foreach (DataRow row in resultado.Tables[0].Rows) //para cada fila dentro de la tabla del dataset
             {
@@ -87,7 +87,7 @@ namespace Sistema_de_Control_de_Historia_Medica
         string CargarDatosCondiciones()
         {
             string vRetorno = "";
-            DataSet resultado = bd.ConsultarInfomacion("SELECT nombrePadecimiento, descripcion, fecha FROM Padecimientos WHERE tipoPadecimiento = 'Condición'");
+            DataSet resultado = bd.ConsultarInfomacion($"SELECT nombrePadecimiento, descripcion, fecha FROM Padecimientos WHERE tipoPadecimiento = 'Condición' AND idUsuario = {frmMenuPrincipal.vIdUsuario}");
             if (resultado.Tables[0].Rows.Count == 0) return "No hay condiciones registradas"; //si no hay registros de la consulta
             foreach (DataRow row in resultado.Tables[0].Rows) //para cada fila dentro de la tabla del dataset
             {
@@ -101,7 +101,7 @@ namespace Sistema_de_Control_de_Historia_Medica
         string CargarDatosAlergias()
         {
             string vRetorno = "";
-            DataSet resultado = bd.ConsultarInfomacion("SELECT nombrePadecimiento, descripcion, fecha FROM Padecimientos WHERE tipoPadecimiento = 'Alergia'");
+            DataSet resultado = bd.ConsultarInfomacion($"SELECT nombrePadecimiento, descripcion, fecha FROM Padecimientos WHERE tipoPadecimiento = 'Alergia' AND idUsuario = {frmMenuPrincipal.vIdUsuario}");
             if (resultado.Tables[0].Rows.Count == 0) return "No hay alergias registradas"; //si no hay registros de la consulta
             foreach (DataRow row in resultado.Tables[0].Rows) //para cada fila dentro de la tabla del dataset
             {
@@ -115,7 +115,7 @@ namespace Sistema_de_Control_de_Historia_Medica
         string CargarDatosEmergencias()
         {
             string vRetorno = "";
-            DataSet resultado = bd.ConsultarInfomacion("SELECT nombrePadecimiento, descripcion, fecha FROM Padecimientos WHERE tipoPadecimiento = 'Emergencia' OR tipoPadecimiento = 'Cirugía'");
+            DataSet resultado = bd.ConsultarInfomacion($"SELECT nombrePadecimiento, descripcion, fecha FROM Padecimientos WHERE tipoPadecimiento = 'Emergencia' OR tipoPadecimiento = 'Cirugía' AND idUsuario = {frmMenuPrincipal.vIdUsuario}");
             if (resultado.Tables[0].Rows.Count == 0) return "No hay emergencias o cirugías registradas"; //si no hay registros de la consulta
             foreach (DataRow row in resultado.Tables[0].Rows) //para cada fila dentro de la tabla del dataset
             {
@@ -129,7 +129,7 @@ namespace Sistema_de_Control_de_Historia_Medica
         string CargarDatosFarmacos()
         {
             string vRetorno = "";
-            DataSet resultado = bd.ConsultarInfomacion("SELECT nombreFarmaco, dosisFarmaco, veces, frecuenciaFarmaco, descripcionFarmaco FROM Farmacos");
+            DataSet resultado = bd.ConsultarInfomacion($"SELECT nombreFarmaco, dosisFarmaco, veces, frecuenciaFarmaco, descripcionFarmaco FROM Farmacos WHERE idUsuario = {frmMenuPrincipal.vIdUsuario}");
             if (resultado.Tables[0].Rows.Count == 0) return "No hay fármacos registrados"; //si no hay registros de la consulta
             foreach (DataRow row in resultado.Tables[0].Rows) //para cada fila dentro de la tabla del dataset
             {

@@ -70,8 +70,19 @@ namespace Sistema_de_Control_de_Historia_Medica
         }
         private void frmMenuPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
-            e.Cancel = vCancelarCierre; //Evita el cierre del formulario
-            if (vCancelarCierre) MessageBox.Show("Debe cerrar sesión antes de cerrar", "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            e.Cancel = vCancelarCierre; //Evita (true) o autoriza (false) el cierre del formulario
+            if (vCancelarCierre == true)
+                if(MessageBox.Show("¿Desea cerrar la sesión?", "ATENCIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    foreach (Form frm in Application.OpenForms) //Recorre los formularios abiertos
+                        if (typeof(frmLogIn) == frm.GetType()) //Buscar el formulario de LogIn
+                        {
+                            frm.Show(); //Muestra el formulario
+                            vCancelarCierre = false; //Permite el cierre del formulario de Menu
+                            break; //Sal del bucle
+                        }
+                    e.Cancel = vCancelarCierre;
+                }
         }
         private void tsLogOut_Click(object sender, EventArgs e)
         {
