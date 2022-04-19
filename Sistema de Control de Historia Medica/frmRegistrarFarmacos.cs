@@ -29,6 +29,7 @@ namespace Sistema_de_Control_de_Historia_Medica
                     MessageBox.Show("Fármaco registrado con éxito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     frmFarmacos.cargarFarmacos();//actualiza el datagrid del formulario farmacos
                     LimpiarCampos();
+                    this.Close();
                 }
         }
         bool ValidarCamposRellenos()

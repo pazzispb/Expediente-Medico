@@ -82,7 +82,7 @@
             this.btnBuscar.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
             this.btnBuscar.Location = new System.Drawing.Point(128, 173);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(84, 33);
             this.btnBuscar.TabIndex = 34;
@@ -107,7 +107,7 @@
             this.txtObservaciones.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtObservaciones.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtObservaciones.Location = new System.Drawing.Point(136, 106);
-            this.txtObservaciones.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtObservaciones.Margin = new System.Windows.Forms.Padding(2);
             this.txtObservaciones.Multiline = true;
             this.txtObservaciones.Name = "txtObservaciones";
             this.txtObservaciones.Size = new System.Drawing.Size(473, 49);
@@ -130,7 +130,7 @@
             this.txtPropositoAnalitica.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPropositoAnalitica.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPropositoAnalitica.Location = new System.Drawing.Point(207, 47);
-            this.txtPropositoAnalitica.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPropositoAnalitica.Margin = new System.Windows.Forms.Padding(2);
             this.txtPropositoAnalitica.Multiline = true;
             this.txtPropositoAnalitica.Name = "txtPropositoAnalitica";
             this.txtPropositoAnalitica.Size = new System.Drawing.Size(402, 44);
@@ -166,7 +166,7 @@
             this.dtpFecha.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFecha.Location = new System.Drawing.Point(499, 14);
-            this.dtpFecha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpFecha.Margin = new System.Windows.Forms.Padding(2);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(110, 24);
             this.dtpFecha.TabIndex = 8;
@@ -191,7 +191,7 @@
             this.btnRegistrarAnalitica.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrarAnalitica.ForeColor = System.Drawing.Color.White;
             this.btnRegistrarAnalitica.Location = new System.Drawing.Point(12, 291);
-            this.btnRegistrarAnalitica.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRegistrarAnalitica.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegistrarAnalitica.Name = "btnRegistrarAnalitica";
             this.btnRegistrarAnalitica.Size = new System.Drawing.Size(624, 33);
             this.btnRegistrarAnalitica.TabIndex = 33;
@@ -216,6 +216,7 @@
             this.MinimizeBox = false;
             this.Name = "frmRegistrarAnalitica";
             this.Text = "frmRegistrarAnalitica";
+            this.Load += new System.EventHandler(this.frmRegistrarAnalitica_Load);
             this.pnContenedor.ResumeLayout(false);
             this.pnContenedor.PerformLayout();
             this.ResumeLayout(false);

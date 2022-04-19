@@ -20,7 +20,7 @@ namespace Sistema_de_Control_de_Historia_Medica
         {
             InitializeComponent();
         }
-        clsBaseDatos bd = new clsBaseDatos();
+        clsBaseDatos bd = new clsBaseDatos(); //objeto de base de datos
         string[] aCampos = { "nombre", "edad", "fecha", "seguro", "altura", "peso", "sangre", "enfermedades", "condiciones", "alergias", "emergencias", "farmacos", "analiticas" }; //campos del formulario
         string[] aResultados; //valores que se van a ingresar dentro de cada uno de los campos
         private void btnGenerar_Click(object sender, EventArgs e) 

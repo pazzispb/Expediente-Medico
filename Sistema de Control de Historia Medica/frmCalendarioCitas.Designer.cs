@@ -55,7 +55,7 @@
             this.labTitulo.Font = new System.Drawing.Font("Montserrat", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labTitulo.Location = new System.Drawing.Point(0, 0);
             this.labTitulo.Name = "labTitulo";
-            this.labTitulo.Size = new System.Drawing.Size(773, 42);
+            this.labTitulo.Size = new System.Drawing.Size(773, 43);
             this.labTitulo.TabIndex = 15;
             this.labTitulo.Text = "Calendario";
             this.labTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -274,7 +274,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimizeBox = false;
             this.Name = "frmCalendarioCitas";
             this.Text = "Citas";
