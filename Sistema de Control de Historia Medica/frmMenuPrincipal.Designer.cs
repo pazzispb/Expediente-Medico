@@ -31,9 +31,10 @@
             this.ms_BarraMenu = new System.Windows.Forms.MenuStrip();
             this.tsPerfilPersonal = new System.Windows.Forms.ToolStripMenuItem();
             this.tsAnaliticas = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsCalendario = new System.Windows.Forms.ToolStripMenuItem();
             this.tsDoctores = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsCalendario = new System.Windows.Forms.ToolStripMenuItem();
             this.tsPadecimientos = new System.Windows.Forms.ToolStripMenuItem();
+            this.fármacosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsResumen = new System.Windows.Forms.ToolStripMenuItem();
             this.tsLogOut = new System.Windows.Forms.ToolStripMenuItem();
             this.ms_BarraMenu.SuspendLayout();
@@ -47,9 +48,10 @@
             this.ms_BarraMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsPerfilPersonal,
             this.tsAnaliticas,
-            this.tsCalendario,
             this.tsDoctores,
+            this.tsCalendario,
             this.tsPadecimientos,
+            this.fármacosToolStripMenuItem,
             this.tsResumen,
             this.tsLogOut});
             this.ms_BarraMenu.Location = new System.Drawing.Point(0, 0);
@@ -77,6 +79,16 @@
             this.tsAnaliticas.Text = "Analíticas";
             this.tsAnaliticas.Click += new System.EventHandler(this.tsAnaliticas_Click);
             // 
+            // tsDoctores
+            // 
+            this.tsDoctores.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsDoctores.ForeColor = System.Drawing.Color.White;
+            this.tsDoctores.Name = "tsDoctores";
+            this.tsDoctores.ShowShortcutKeys = false;
+            this.tsDoctores.Size = new System.Drawing.Size(104, 28);
+            this.tsDoctores.Text = "Doctores";
+            this.tsDoctores.Click += new System.EventHandler(this.tsDoctores_Click);
+            // 
             // tsCalendario
             // 
             this.tsCalendario.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -86,15 +98,6 @@
             this.tsCalendario.Text = "Calendario de citas médicas";
             this.tsCalendario.Click += new System.EventHandler(this.tsCalendario_Click);
             // 
-            // tsDoctores
-            // 
-            this.tsDoctores.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsDoctores.ForeColor = System.Drawing.Color.White;
-            this.tsDoctores.Name = "tsDoctores";
-            this.tsDoctores.Size = new System.Drawing.Size(104, 28);
-            this.tsDoctores.Text = "Doctores";
-            this.tsDoctores.Click += new System.EventHandler(this.tsDoctores_Click);
-            // 
             // tsPadecimientos
             // 
             this.tsPadecimientos.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -103,6 +106,15 @@
             this.tsPadecimientos.Size = new System.Drawing.Size(157, 28);
             this.tsPadecimientos.Text = "Padecimientos";
             this.tsPadecimientos.Click += new System.EventHandler(this.tsPadecimientos_Click);
+            // 
+            // fármacosToolStripMenuItem
+            // 
+            this.fármacosToolStripMenuItem.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.fármacosToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.fármacosToolStripMenuItem.Name = "fármacosToolStripMenuItem";
+            this.fármacosToolStripMenuItem.Size = new System.Drawing.Size(110, 28);
+            this.fármacosToolStripMenuItem.Text = "Fármacos";
+            this.fármacosToolStripMenuItem.Click += new System.EventHandler(this.fármacosToolStripMenuItem_Click_1);
             // 
             // tsResumen
             // 
@@ -126,6 +138,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1300, 846);
             this.Controls.Add(this.ms_BarraMenu);
             this.IsMdiContainer = true;
@@ -152,6 +165,7 @@
         private System.Windows.Forms.ToolStripMenuItem tsPadecimientos;
         private System.Windows.Forms.ToolStripMenuItem tsResumen;
         private System.Windows.Forms.ToolStripMenuItem tsLogOut;
+        private System.Windows.Forms.ToolStripMenuItem fármacosToolStripMenuItem;
     }
 }
 
