@@ -44,6 +44,8 @@ namespace Sistema_de_Control_de_Historia_Medica
 
                     vConsulta = $"SELECT idUsuario FROM Usuarios WHERE usuario = '{txtUsuario.Text}' AND clave = '{txtContrasena.Text}' "; // Cantidad de usuarios que comparten el mismo nombre y contrasena
                     frmMenuPrincipal.vIdUsuario = bd.ConsultarValor(vConsulta).ToString();//Indicamos el ID del usuario que ingreso al sistema
+                    txtContrasena.Clear();//Limpiamos el campo
+                    txtUsuario.Clear(); //Limpiamos el campo
                 }
                 else MessageBox.Show("Usuario y/o contraseña errónea", "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
