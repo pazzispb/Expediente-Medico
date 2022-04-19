@@ -43,7 +43,7 @@ namespace Sistema_de_Control_de_Historia_Medica
         }
         private void dgvPadecimientos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex > -1) //Si la celda seleccionada no es un header
+            if (e.RowIndex > -1) //Si la celda seleccionada no es un header (solo seleccionar contenido)
             {
                 if (dgvPadecimientos.Rows[e.RowIndex].Cells[2].Value.ToString() != "No Aplica") //Si el campo de fecha de la celda seleccionada no dice no aplica
                 {

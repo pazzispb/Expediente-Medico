@@ -82,7 +82,7 @@ namespace Sistema_de_Control_de_Historia_Medica
             {
                 if (MessageBox.Show("¿Desea actualizar el registro?", "AVERTENCIA", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
-                    string vIdDoctor = dataGridView1.SelectedRows[0].Cells["ID"].Value.ToString(); //Obtenemos el id del doctor a actualizar
+                    string vIdDoctor = dataGridView1.SelectedRows[0].Cells["ID"].Value.ToString(); //Obtenemos el id del doctor a actualizar, especificando que solo se selccione la primera fila
                     string vConsulta = $"UPDATE Doctores SET nombreDoctor = '{txtNombre.Text}', telefono = '{txtTelefono.Text}', especialidad = '{txtEspecialidad.Text}', centroMedico = '{txtCentroDeSalud.Text}' WHERE idDoctor = {vIdDoctor}";
                     if (bd.EjecutarComando(vConsulta)) //Si se modifico el registro
                     {
@@ -97,7 +97,7 @@ namespace Sistema_de_Control_de_Historia_Medica
         }
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex > -1)//Si no es un header que se creo
+            if (e.RowIndex > -1)//Si no es un header que se creo, para que solo seleccione el contenido
             {
                 DataGridViewRow dgv = dataGridView1.Rows[e.RowIndex];//Fila que esta seleccionada
                 //Carga la informacion de la fila a los textbox correspondientes
