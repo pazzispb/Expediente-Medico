@@ -48,7 +48,7 @@ namespace Sistema_de_Control_de_Historia_Medica
                 {
                     MessageBox.Show("Perfil actualizado de manera exitosa", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                else MessageBox.Show("Hubo un error al actualizar los datos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                else MessageBox.Show("Hubo un error al actualizar los datos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
         bool ValidarCamposRellenos()
         {

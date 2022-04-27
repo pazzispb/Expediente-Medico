@@ -12,8 +12,8 @@ namespace Sistema_de_Control_de_Historia_Medica
 {
     internal class clsBaseDatos
     {
-        string vCadenaConexion = "Data Source=\"..\\..\\database.db\"; Version=3;New=True;Compress=True;";
-        SQLiteConnection conexion;
+        string vCadenaConexion = "Data Source=\"..\\..\\database.db\"; Version=3;New=True;Compress=True;"; //Ruta y parametros para conectar
+        SQLiteConnection conexion;//maneja las conexiones
         public clsBaseDatos()
         {
             try 
@@ -41,8 +41,8 @@ namespace Sistema_de_Control_de_Historia_Medica
         {
             try
             {
-                string vConsulta = File.ReadAllText("..\\..\\database.db.sql");
-                EjecutarComando(vConsulta);
+                string vConsulta = File.ReadAllText("..\\..\\database.db.sql");//lee lo que esta en este archivo
+                EjecutarComando(vConsulta);//ejecutalo
             }
             catch (Exception ex)
             {
@@ -60,7 +60,7 @@ namespace Sistema_de_Control_de_Historia_Medica
                 MessageBox.Show(ex.Message, "ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-        public bool EjecutarComando(string vConsulta) //Para realizar INSERTS o UPDATES
+        public bool EjecutarComando(string vConsulta) //Para realizar INSERTS o UPDATES o DELETE
         {
             try
             {
@@ -84,7 +84,7 @@ namespace Sistema_de_Control_de_Historia_Medica
             }
             return false;
         }
-        public DataSet ConsultarInfomacion(string vConsulta) //Para solicitar registros a la base de datos
+        public DataSet ConsultarInfomacion(string vConsulta) //Para solicitar registros a la base de datos SELECT
         {
             try
             {
@@ -103,7 +103,7 @@ namespace Sistema_de_Control_de_Historia_Medica
             return null; //retorna null si hubo errores en la ejecucion
             
         }
-        public object ConsultarValor(string vConsulta) //Para solicitar un valor en concreto a la base de datos
+        public object ConsultarValor(string vConsulta) //Para solicitar un valor en concreto a la base de datos SELECT
         {
             try
             {

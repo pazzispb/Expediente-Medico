@@ -37,7 +37,7 @@ namespace Sistema_de_Control_de_Historia_Medica
         }
         private void dgvFarmacos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex > -1) //Si la fila clickeada no es un header del datagridview
+            if (e.RowIndex > -1) //Si la fila clickeada no es un header del datagridview, solo incluir el contenido
             {
                 //Rellenar cada campo del formulario con su respectiva columna de la fila seleccionada
                 txtFarmaco.Text = dgvFarmacos.Rows[e.RowIndex].Cells[0].Value.ToString();

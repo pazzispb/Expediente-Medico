@@ -41,6 +41,7 @@ namespace Sistema_de_Control_de_Historia_Medica
                 {
                     if (Application.OpenForms.Count < 2) this.Hide(); //Verifica que solo tiene el LogIn abierto
                     AbrirFormulario(new frmMenuPrincipal()); //Abre el formulario de Menu Principal
+
                     vConsulta = $"SELECT idUsuario FROM Usuarios WHERE usuario = '{txtUsuario.Text}' AND clave = '{txtContrasena.Text}' "; // Cantidad de usuarios que comparten el mismo nombre y contrasena
                     frmMenuPrincipal.vIdUsuario = bd.ConsultarValor(vConsulta).ToString();//Indicamos el ID del usuario que ingreso al sistema
                     txtContrasena.Clear();//Limpiamos el campo
