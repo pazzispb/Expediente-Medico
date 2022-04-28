@@ -59,15 +59,5 @@ namespace Sistema_de_Control_de_Historia_Medica.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap cover3 {
-            get {
-                object obj = ResourceManager.GetObject("cover3", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }
