@@ -41,7 +41,9 @@ namespace Sistema_de_Control_de_Historia_Medica
                     {
                         MessageBox.Show("Analitica registrada con éxito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         string vID = bd.ConsultarValor("SELECT idAnalitica FROM Analiticas ORDER BY idAnalitica DESC LIMIT 1;").ToString(); //obtiene el id de la analitica que se acaba de registrar
-                        if(File.Exists($"../../Analiticas/{vID}.pdf")) //Si existe el archivo a almacenar en la ubicacion donde lo deseo
+                        if (!Directory.Exists($"../../Analiticas"))
+                            Directory.CreateDirectory($"../../Analiticas");
+                        if (File.Exists($"../../Analiticas/{vID}.pdf")) //Si existe el archivo a almacenar en la ubicacion donde lo deseo
                             File.Delete($"../../Analiticas/{vID}.pdf"); //Borralo
                         File.Copy(lblDireccion.Text, $"../../Analiticas/{vID}.pdf"); //Guarda el archivo bajo el id correspondiente a su registro en la base de datos
                         LimpiarCampos();
